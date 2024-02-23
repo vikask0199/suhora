@@ -27,9 +27,9 @@ const Footer = ({ currentTheme }: footerThemeProps) => (
                 justify="space-between"
                 align="start"
                 direction={{ base: 'column', lg: 'row' }}
-                py={{ base: '12', md: '16' }}
+                py={{ base: '8', md: '12' }}
                 spacing="8">
-                <Stack spacing={{ base: '6', md: '8' }} align="start" maxW="30%">
+                <Stack spacing={{ base: '2', md: '4' }} align="start"  maxW={{ md: '100%', lg: '30%' }}>
                     <Flex h={20} alignItems="center" ml="-4">
                         <Image h="100%" src={currentTheme === 'dark' ? LogoWhite : LogoDark} />
                     </Flex>
@@ -38,12 +38,12 @@ const Footer = ({ currentTheme }: footerThemeProps) => (
                 <SimpleGrid columns={{ base: 2, md: 4 }} gap="8" width={{ base: 'full', lg: 'auto' }}>
                     {links.map((group, idx) => (
                         <Stack key={idx} spacing="4" minW={{ lg: '40' }}>
-                            <Text fontSize="sm" fontWeight="semibold" color="fg.subtle">
+                            <Text fontSize="lg" ml="4" fontWeight="semibold" color="fg.subtle">
                                 {group.title}
                             </Text>
-                            <Stack spacing="3" shouldWrapChildren>
+                            <Stack spacing="" shouldWrapChildren>
                                 {group.links.map((link, idx) => (
-                                    <Button key={idx} as="a" variant="text" colorScheme="gray" href={link.href}>
+                                    <Button key={idx} as="a" fontSize="md" variant="text" href={link.href}>
                                         {link.label}
                                     </Button>
                                 ))}
@@ -54,8 +54,8 @@ const Footer = ({ currentTheme }: footerThemeProps) => (
             </Stack>
             <Divider />
             <Stack
-                pt="8"
-                pb="12"
+                pt="2"
+                pb="2"
                 justify="space-between"
                 direction={{ base: 'column-reverse', md: 'row' }}
                 align="center">
