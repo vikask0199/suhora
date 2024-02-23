@@ -1,26 +1,26 @@
 import { Flex, Text } from "@chakra-ui/react"
-import { Gallery } from "./Gallery"
+import { ServiceGallery } from "./ServiceGallery"
 import theme from "../../../theme"
 
-const SecondCarousel = () => {
+const ServiceCarousel = () => {
     return (
         <Flex
             maxW="5xl"
             mx="auto"
             px={{ base: '4', md: '8', lg: '5' }}
-            py={{ base: '4', md: '0', lg: '0' }}
+            py={{ base: '4', md: '8', lg: '12' }}
             direction="column"
-            gap="2">
+            gap="4">
 
             <Flex justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
                 <Text>
-                    <Text as="span" color={theme.companyTheme.color.secondry}>Our </Text>
-                    <Text as="span" color="black">Products</Text>
+                    <Text as="span">Industry We </Text>
+                    <Text as="span" color={theme.companyTheme.color.secondry}>Serve</Text>
                 </Text>
             </Flex>
-            <Gallery />
+            <ServiceGallery />
         </Flex>
     )
 }
 
-export default SecondCarousel
+export default ServiceCarousel

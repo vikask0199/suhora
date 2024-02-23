@@ -1,11 +1,17 @@
 import HomeHeader from "../components/home/HomeHeader"
-import SecondCarousel from "../components/home/secondCarousel/SecondCarousel"
+import { AboutSuhora } from "../components/home/aboutSuhora/AboutSuhora"
+import ProductCarousel from "../components/home/productCarousel/ProductCarousel"
+import ServiceCarousel from "../components/home/servicesCarousel/ServicesCarousel"
+import { WhatWeDo } from "../components/home/whatWeDo/WhatWeDo"
 
 const HomePage = () => {
   return (
     <>
       <HomeHeader />
-      <SecondCarousel />
+      <AboutSuhora />
+      <ProductCarousel />
+      <ServiceCarousel />
+      <WhatWeDo />
     </>
   )
 }

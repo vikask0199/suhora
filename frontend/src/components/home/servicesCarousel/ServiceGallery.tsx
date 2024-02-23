@@ -1,3 +1,4 @@
+import { StarIcon } from '@chakra-ui/icons'
 import {
   AspectRatio,
   Box,
@@ -13,15 +14,14 @@ import {
   UnorderedList,
   useColorModeValue
 } from '@chakra-ui/react'
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { IoChevronBackOutline, IoChevronForwardOutline } from 'react-icons/io5'
-import { products } from "../../../constant/secondCarouselData.ts"
-import { Carousel, CarouselSlide, useCarousel } from './Carousel'
-import theme from "../../../theme.ts";
-import { StarIcon } from '@chakra-ui/icons'
+import { products } from "../../../constant/productCarouselData.ts"
+import theme from "../../../theme.ts"
+import { Carousel, CarouselSlide, useCarousel } from './ServiceCarousel.tsx'
 
 
-export const Gallery = () => {
+export const ServiceGallery = () => {
   const aspectRatio = 3 / 3
   const [currentSlide, setCurrentSlide] = useState(0)
 
@@ -31,6 +31,7 @@ export const Gallery = () => {
 
   const hasPrevious = currentSlide !== 0
   const hasNext = currentSlide < products.length - 1
+
 
   return (
     <Stack spacing="4" >
@@ -43,10 +44,10 @@ export const Gallery = () => {
             },
           },
         }}>
-        <Carousel ref={ref} boxShadow='xl'>
+        <Carousel ref={ref} boxShadow='xl' >
           {products.map((image, i) => (
             <CarouselSlide key={i}>
-              <Flex direction={{ base: "column", md: "row" }}>
+              <Flex direction={{ base: "column", md: "row-reverse" }}>
                 <Box w={{ base: "100%", md: "50%" }}>
                   <AspectRatio ratio={aspectRatio}>
                     <Image src={image.imageUrl} />
@@ -57,11 +58,11 @@ export const Gallery = () => {
                   <Box backgroundColor="#BEC1DD" color="#3F53E9" w="fit-content" px="8" fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>SUHORA</Box>
                   <Box fontSize={theme.fonts.description}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti laborum repudiandae obcaecati sapiente magnam! Officiis quae, similique minus harum quas eum, quidem vero labore magni iste.</Box>
                   <UnorderedList listStyleType="none" fontSize={theme.fonts.list}>
-                    <ListItem display="flex" mb="2" alignItems="center" gap={2}><StarIcon /> Item 1 Lorem, ipsum.</ListItem>
-                    <ListItem display="flex" mb="2" alignItems="center" gap={2}><StarIcon /> Item 1 Lorem, ipsum.</ListItem>
-                    <ListItem display="flex" mb="2" alignItems="center" gap={2}><StarIcon /> Item 1 Lorem, ipsum.</ListItem>
-                    <ListItem display="flex" mb="2" alignItems="center" gap={2}><StarIcon /> Item 1 Lorem, ipsum.</ListItem>
-                    <ListItem display="flex" mb="2" alignItems="center" gap={2}><StarIcon /> Item 1 Lorem, ipsum.</ListItem>
+                    <ListItem display="flex" mb="2" alignItems="center" gap={2}><StarIcon color={theme.companyTheme.color.secondry} /> Item 1 Lorem, ipsum.</ListItem>
+                    <ListItem display="flex" mb="2" alignItems="center" gap={2}><StarIcon color={theme.companyTheme.color.secondry} /> Item 1 Lorem, ipsum.</ListItem>
+                    <ListItem display="flex" mb="2" alignItems="center" gap={2}><StarIcon color={theme.companyTheme.color.secondry} /> Item 1 Lorem, ipsum.</ListItem>
+                    <ListItem display="flex" mb="2" alignItems="center" gap={2}><StarIcon color={theme.companyTheme.color.secondry} /> Item 1 Lorem, ipsum.</ListItem>
+                    <ListItem display="flex" mb="2" alignItems="center" gap={2}><StarIcon color={theme.companyTheme.color.secondry} /> Item 1 Lorem, ipsum.</ListItem>
                   </UnorderedList>
                   <Button width="fit-content" px="8" backgroundColor={theme.companyTheme.color.secondry} color="white" _hover={{ backgroundColor: theme.companyTheme.color.primary }}>
                     Learn More

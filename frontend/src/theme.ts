@@ -3,13 +3,11 @@ const theme = extendTheme({
   colors: {
     light: {
       bg: "white",
-      primary: "black",
-      shadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
+      text: "black",
     },
     dark: {
       bg: "gray.800",
-      primary: "white",
-      shadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
+      text: "white",
     },
   },
   fonts: {
