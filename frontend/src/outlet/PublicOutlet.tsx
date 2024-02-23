@@ -13,7 +13,7 @@ const PublicOutlet = ({ toggleTheme, currentTheme }: PublicOutletProps) => {
         <>
             <Navbar toggleTheme={toggleTheme} currentTheme={currentTheme} />
             <Outlet />
-            <Footer currentTheme={currentTheme}/>
+            {/* <Footer currentTheme={currentTheme}/> */}
         </>
     )
 }

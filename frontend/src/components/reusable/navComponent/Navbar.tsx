@@ -19,7 +19,7 @@ type navBarProps = {
 }
 
 const Navbar = ({ currentTheme, toggleTheme }: navBarProps) => (
-    <Box as="section" minH="lg">
+    <Box as="section">
         <Box borderBottomWidth="1px" position="relative" zIndex="tooltip">
             <Container h={20} maxW="100%">
                 <HStack justify="space-between" alignItems="center">

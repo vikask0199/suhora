@@ -1,9 +1,9 @@
-import HomeHeader from "../components/home/HomeHeader"
+import HomeCarousel from "../components/home/homeCarousel/HomeCarousel"
 
 const HomePage = () => {
   return (
     <>
-      <HomeHeader />
+      <HomeCarousel />
     </>
   )
 }

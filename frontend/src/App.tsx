@@ -1,5 +1,4 @@
 
-import { useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import PublicOutlet from './outlet/PublicOutlet';
 import HomePage from './pages/HomePage';
