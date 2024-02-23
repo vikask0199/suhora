@@ -1,12 +1,15 @@
-import { Box } from "@chakra-ui/react";
+import { Box, HStack } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
+import { IoIosArrowBack } from "react-icons/io";
+import { IoIosArrowForward } from "react-icons/io";
+import { Text } from "@chakra-ui/react";
 
 const HomeCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const totalItems = 6;
 
   const images = [
-    'https://img.freepik.com/free-photo/majestic-mountain-peak-tranquil-winter-landscape-generated-by-ai_188544-15662.jpg',
+    'https://m.media-amazon.com/images/I/61HKEoYWwsL._AC_UF1000,1000_QL80_.jpg',
     'https://wallpapers.com/images/featured/beautiful-3vau5vtfa3qn7k8v.jpg',
     'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5xTleKB4CNB-4j68dFuh2CpygeSyfciMZYFho1Rrj-p8kVF7FOeWf-4iLoi2U_JGO6A0&usqp=CAU',
     'https://wallpapers.com/images/featured/nature-2ygv7ssy2k0lxlzu.jpg',
@@ -23,51 +26,50 @@ const HomeCarousel = () => {
   };
 
   useEffect(() => {
-    const intervalId = setInterval(nextSlide, 3000);
+    const intervalId = setInterval(nextSlide, 300000000);
 
     return () => clearInterval(intervalId);
   }, []);
 
   return (
-    <Box overflow="hidden">
-      <Box style={{ width: '250vw', height: '50vh', position: 'relative', marginTop: "30px" }}>
+    <Box overflow="hidden" className="backgroundImage">
+      <Box style={{ width: '250vw', height: '50vh', position: 'relative', marginTop: "160px" , marginLeft:"15vw"}}>
         <Box
           style={{
             display: 'flex',
             transition: 'transform 0.5s ease',
-            transform: `translateX(-${currentIndex * 24}vw)`,
+            transform: `translateX(-${currentIndex * 34}vw)`,
           }}
         >
           {images.map((image, index) => (
             <Box
               key={index}
               style={{
-                width: '20vw',
+                width: '25vw',
                 height: '30vh',
                 background: `url(${image})`, 
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
-                margin: '5vh',
+                margin: '5vh 9vh',
                 borderRadius: '2vh',
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',   
-                fontSize: '3em',
               }}
-              className={`${currentIndex === index - 1 ? "animation" : ""}`}
+              className={`${currentIndex === index  ? "animation" : ""}`}
             >
               {/* {index + 1} */}
             </Box>
           ))}
         </Box>
       </Box>
-      <button onClick={prevSlide} style={{ position: 'absolute', top: '50%', left: '0', zIndex: '1' }}>
-        Prev
-      </button>
-      <button onClick={nextSlide} style={{ position: 'absolute', top: '50%', right: '0', zIndex: '1' }}>
-        Next
-      </button>
-    </Box>
+
+         <HStack position="absolute" bottom='56vh' left="24.5vh">
+            <Box fontSize="xx-large" cursor="pointer" color="white" onClick={prevSlide}><IoIosArrowBack/></Box>
+            <Text fontSize="lg" color="white">{currentIndex +1}/{totalItems}</Text>
+            <Box fontSize="xx-large" cursor="pointer" color="white" onClick={nextSlide}><IoIosArrowForward/></Box>
+         </HStack>
+    </Box>  
   );
 };
 
