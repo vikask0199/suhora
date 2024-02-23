@@ -3,10 +3,10 @@ const theme = extendTheme({
   colors: {
     light: {
       bg: "white",
-      text: "black",
+      text: "#171923",
     },
     dark: {
-      bg: "gray.800",
+      bg: "#14151E",
       text: "white",
     },
   },

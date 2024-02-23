@@ -14,7 +14,7 @@ import {
   UnorderedList,
   useColorModeValue
 } from '@chakra-ui/react'
-import { useEffect, useRef, useState } from 'react'
+import { useState } from 'react'
 import { IoChevronBackOutline, IoChevronForwardOutline } from 'react-icons/io5'
 import { products } from "../../../constant/productCarouselData.ts"
 import theme from "../../../theme.ts"
@@ -28,7 +28,7 @@ export const ServiceGallery = () => {
   const [ref, slider] = useCarousel({
     slideChanged: (slider) => setCurrentSlide(slider.track.details.rel),
   })
-
+  
   const hasPrevious = currentSlide !== 0
   const hasNext = currentSlide < products.length - 1
 

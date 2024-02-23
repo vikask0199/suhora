@@ -9,8 +9,8 @@ export const WhatWeDo = () => (
             <Stack spacing={{ base: '4', md: '5' }} direction="column">
                 <Flex justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
                     <Text>
-                        <Text as="span" color={theme.companyTheme.color.secondry}>Our </Text>
-                        <Text as="span">Products</Text>
+                        <Text as="span" color={theme.companyTheme.color.secondry}>What </Text>
+                        <Text as="span">We Do</Text>
                     </Text>
                 </Flex>
                 <Text fontSize={theme.fonts.subHeading.size} fontWeight={theme.fonts.subHeading.weight} textAlign="center">
