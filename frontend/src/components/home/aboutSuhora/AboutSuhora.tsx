@@ -11,10 +11,17 @@ import { stats } from '../../../constant/aboutSuhoraData'
 import theme from "../../../theme"
 import { Stat } from './Stat'
 
-export const AboutSuhora = () => {
+interface aboutSuhoraProps{
+    currentTheme:string
+}
+
+export const AboutSuhora = ({currentTheme}:aboutSuhoraProps) => {
     const isMobile = useBreakpointValue({ base: true, md: false })
+
+    const backgroundColor = currentTheme === 'light' ? 'gray.200' : '#282b3c';
+
     return (
-        <Box >
+        <Box background={backgroundColor}>
             <Container py={{ base: '16', md: '12' }} maxW="5xl">
                 <Stack spacing={{ base: '12', md: '12' }} textAlign="center" align="center">
                     <Stack spacing={{ base: '4', md: '5' }}>

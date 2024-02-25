@@ -1,12 +1,186 @@
-import { Box, HStack } from "@chakra-ui/react";
-import { useEffect, useState } from "react";
-import { IoIosArrowBack } from "react-icons/io";
-import { IoIosArrowForward } from "react-icons/io";
-import { Text } from "@chakra-ui/react";
-import "./HomeHeader.css"
+import { useEffect } from "react";
+import image1 from "../../../assets/img/homeCarouselImages/img1.png";
+import image2 from "../../../assets/img/homeCarouselImages/img2.jpg";
+import image3 from "../../../assets/img/homeCarouselImages/img3.jpg";
+import image4 from "../../../assets/img/homeCarouselImages/img4.jpg";
+import "./HomeHeader.css";
 
 const HomeCarousel = () => {
-  //   const [currentIndex, setCurrentIndex] = useState(0);
+  useEffect(() => {
+    const nextDom = document.getElementById('next') as HTMLButtonElement;
+    const prevDom = document.getElementById('prev') as HTMLButtonElement;
+    const carouselDom = document.querySelector('.carousel') as HTMLElement;
+    const SliderDom = carouselDom.querySelector('.carousel .list') as HTMLElement;
+    const thumbnailBorderDom = document.querySelector('.carousel .thumbnail') as HTMLElement;
+    const thumbnailItemsDom = thumbnailBorderDom.querySelectorAll('.item');
+    const timeDom = document.querySelector('.carousel .time') as HTMLElement;
+
+    thumbnailBorderDom.appendChild(thumbnailItemsDom[0]);
+
+    const timeRunning = 3000;
+    const timeAutoNext = 7000;
+
+    const showSlider = (type: 'next' | 'prev') => {
+      const SliderItemsDom = SliderDom.querySelectorAll('.carousel .list .item');
+      const thumbnailItemsDom = document.querySelectorAll('.carousel .thumbnail .item');
+
+      if (type === 'next') {
+        SliderDom.appendChild(SliderItemsDom[0]);
+        thumbnailBorderDom.appendChild(thumbnailItemsDom[0]);
+        carouselDom.classList.add('next');
+      } else {
+        SliderDom.prepend(SliderItemsDom[SliderItemsDom.length - 1]);
+        thumbnailBorderDom.prepend(thumbnailItemsDom[thumbnailItemsDom.length - 1]);
+        carouselDom.classList.add('prev');
+      }
+      clearTimeout(runTimeOut);
+      runTimeOut = setTimeout(() => {
+        carouselDom.classList.remove('next');
+        carouselDom.classList.remove('prev');
+      }, timeRunning);
+
+      clearTimeout(runNextAuto);
+      runNextAuto = setTimeout(() => {
+        nextDom.click();
+      }, timeAutoNext);
+    };
+
+    nextDom.onclick = () => showSlider('next');
+    prevDom.onclick = () => showSlider('prev');
+
+    let runTimeOut: NodeJS.Timeout;
+    let runNextAuto = setTimeout(() => {
+      nextDom.click();
+    }, timeAutoNext);
+
+    return () => {
+      clearTimeout(runTimeOut);
+      clearTimeout(runNextAuto);
+    };
+  }, []);
+
+  return (
+      <div className="carousel">
+        <div className="list">
+            <div className="item">
+                <img src={image1} />
+                <div className="content">
+                    <div className="author">VIKAS</div>
+                    <div className="title">SUHORA SLIDER</div>
+                    <div className="topic">SERVICES</div>
+                    <div className="des">
+                   Hello please provide content for this page
+                    </div>
+                    <div className="buttons">
+                        <button>SEE MORE</button>
+                        
+                    </div>
+                </div>
+            </div>
+            <div className="item">
+                <img src={image2} />
+                <div className="content">
+                    <div className="author">VIKAS</div>
+                    <div className="title">SUHORA SLIDER</div>
+                    <div className="topic">SERVICES</div>
+                    <div className="des">Hello please provide content for this page
+                    </div>
+                    <div className="buttons">
+                        <button>SEE MORE</button>
+                        
+                    </div>
+                </div>
+            </div>
+            <div className="item">
+                <img src={image3} />
+                <div className="content">
+                    <div className="author">VIKAS</div>
+                    <div className="title">SUHORA SLIDER</div>
+                    <div className="topic">SERVICES</div>
+                    <div className="des">Hello please provide content for this page
+                    </div>
+                    <div className="buttons">
+                        <button>SEE MORE</button>
+                        
+                    </div>
+                </div>
+            </div>
+            <div className="item">
+                <img src={image4} />
+                <div className="content">
+                    <div className="author">VIKAS</div>
+                    <div className="title">SUHORA SLIDER</div>
+                    <div className="topic">SERVICES</div>
+                    <div className="des">Hello please provide content for this page
+                    </div>
+                    <div className="buttons">
+                        <button>SEE MORE</button>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+     
+        <div className="thumbnail">
+            <div className="item">
+                <img src={image1}/>
+                <div className="content">
+                    <div className="title">
+                        Name Slider
+                    </div>
+                    <div className="description">
+                        Description
+                    </div>
+                </div>
+            </div>
+            <div className="item">
+                <img src={image2} />
+                <div className="content">
+                    <div className="title">
+                        Name Slider
+                    </div>
+                    <div className="description">
+                        Description
+                    </div>
+                </div>
+            </div>
+            <div className="item">
+                <img src={image3} />
+                <div className="content">
+                    <div className="title">
+                        Name Slider
+                    </div>
+                    <div className="description">
+                        Description
+                    </div>
+                </div>
+            </div>
+            <div className="item">
+                <img src={image4} />
+                <div className="content">
+                    <div className="title">
+                        Name Slider
+                    </div>
+                    <div className="description">
+                        Description
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div className="arrows">
+            <button id="prev">{"<"}</button>
+            <button id="next">{">"}</button>
+        </div>
+      <div className="time"></div>
+    </div>
+  );
+}
+
+export default HomeCarousel;
+
+
+//   const [currentIndex, setCurrentIndex] = useState(0);
   //   const totalItems = 6;
 
   //   const images = [
@@ -73,154 +247,3 @@ const HomeCarousel = () => {
   //     </Box>  
   //   );
   // };
-  const [items, setItems] = useState<HTMLElement[] | null>(null);
-  const [thumbnails, setThumbnails] = useState<HTMLElement[] | null>(null);
-  const [itemActive, setItemActive] = useState<number>(0);
-
-  useEffect(() => {
-    const sliderItems = document.querySelectorAll('.slider .list .item');
-    const sliderThumbnails = document.querySelectorAll('.thumbnail .item');
-    setItems(Array.from(sliderItems) as HTMLElement[]);
-    setThumbnails(Array.from(sliderThumbnails) as HTMLElement[]);
-  }, []);
-
-  useEffect(() => {
-    if (items && thumbnails) {
-      const itemActiveOld = document.querySelector('.slider .list .item.active') as HTMLElement;
-      const thumbnailActiveOld = document.querySelector('.thumbnail .item.active') as HTMLElement;
-      itemActiveOld.classList.remove('active');
-      thumbnailActiveOld.classList.remove('active');
-
-      items[itemActive].classList.add('active');
-      thumbnails[itemActive].classList.add('active');
-    }
-  }, [items, thumbnails, itemActive]);
-
-  const handleNext = () => {
-    if (items) {
-      setItemActive((prevItemActive) => (prevItemActive + 1) % items.length);
-    }
-  };
-
-  const handlePrev = () => {
-    if (items) {
-      setItemActive((prevItemActive) =>
-        prevItemActive === 0 ? items.length - 1 : prevItemActive - 1
-      );
-    }
-  };
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      handleNext();
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [itemActive]);
-
-
-  return (
-    <div className="slider">
-      <div className="list">
-      <div className="item active">
-                <img src="image/img1.png" />
-                <div className="content">
-                    <p>design</p>
-                    <h2>Slider 01</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.
-                    </p>
-                </div>
-            </div>
-            <div className="item">
-                <img src="image/img2.jpg" />
-                <div className="content">
-                    <p>design</p>
-                    <h2>Slider 02</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.
-                    </p>
-                </div>
-            </div>
-            <div className="item">
-                <img src="image/img3.jpg" />
-                <div className="content">
-                    <p>design</p>
-                    <h2>Slider 03</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.
-                    </p>
-                </div>
-            </div>
-            <div className="item">
-                <img src="image/img4.jpg" />
-                <div className="content">
-                    <p>design</p>
-                    <h2>Slider 04</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.
-                    </p>
-                </div>
-            </div>
-            <div className="item">
-                <img src="image/img5.jpg" />
-                <div className="content">
-                    <p>design</p>
-                    <h2>Slider 05</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.
-                    </p>
-                </div>
-            </div>
-      </div>
-      {/* button arrows */}
-      <div className="arrows">
-        <button id="prev" onClick={handlePrev}>
-          {'<'}
-        </button>
-        <button id="next" onClick={handleNext}>
-          {'>'}
-        </button>
-      </div>
-      {/* thumbnail */}
-      <div className="thumbnail">
-        <div className="item active">
-          <img src="image/img1.png" />
-            <div className="content">
-              Name Slider
-            </div>
-        </div>
-        <div className="item">
-          <img src="image/img2.jpg" />
-            <div className="content">
-              Name Slider
-            </div>
-        </div>
-        <div className="item">
-          <img src="image/img3.jpg" />
-            <div className="content">
-              Name Slider
-            </div>
-        </div>
-        <div className="item">
-          <img src="image/img4.jpg" />
-            <div className="content">
-              Name Slider
-            </div>
-        </div>
-        <div className="item">
-          <img src="image/img5.jpg" />
-            <div className="content">
-              Name Slider
-            </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-export default HomeCarousel;

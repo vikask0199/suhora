@@ -28,7 +28,7 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<PublicOutlet toggleTheme={toggleColorMode} currentTheme={colorMode} />}>
-          <Route index element={<HomePage />} />
+          <Route index element={<HomePage currentTheme={colorMode}/>} />
         </Route>
       </Routes>
     </>

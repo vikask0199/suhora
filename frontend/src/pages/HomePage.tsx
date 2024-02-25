@@ -4,13 +4,20 @@ import HomeCarousel from "../components/home/homeCarousel/HomeCarousel"
 import ProductCarousel from "../components/home/productCarousel/ProductCarousel"
 import ServiceCarousel from "../components/home/servicesCarousel/ServicesCarousel"
 import { WhatWeDo } from "../components/home/whatWeDo/WhatWeDo"
-const HomePage = () => {
+
+interface homePageProps {
+  currentTheme: string,
+}
+
+const HomePage = ({ currentTheme }: homePageProps) => {
+
+
   return (
     <>
       <HomeCarousel />
-      <AboutSuhora />
+      <AboutSuhora currentTheme={currentTheme} />
       <ProductCarousel />
-      <ServiceCarousel />
+      <ServiceCarousel currentTheme={currentTheme}/>
       <WhatWeDo />
     </>
   )
