@@ -63,7 +63,7 @@ const HomeCarousel = () => {
   }, []);
 
   return (
-      <div className="carousel">
+      <div className="carousel" >
         <div className="list">
             <div className="item">
                 <img src={defence} />

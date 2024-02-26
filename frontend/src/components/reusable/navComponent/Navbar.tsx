@@ -5,7 +5,8 @@ import {
     Container,
     Flex,
     HStack,
-    Image
+    Image,
+    useColorModeValue
 } from '@chakra-ui/react'
 import LogoDark from '../../../assets/img/logo/suhora_logo.png'
 import LogoWhite from '../../../assets/img/logo/suhora_white.png'
@@ -14,44 +15,74 @@ import { MobileDrawer } from './MobileDrawer'
 import { MoonIcon, SunIcon } from '@chakra-ui/icons'
 import { DocumentPopoverProduct } from './DocumentPopoverProduct'
 import { DocumentPopoverResources } from './DocumentPopoverResources'
+import { useEffect, useState } from 'react'
+import { NavLink } from 'react-router-dom'
 
 type navBarProps = {
     toggleTheme: () => void;
     currentTheme: string;
 }
 
-const Navbar = ({ currentTheme, toggleTheme }: navBarProps) => (
-    <Box as="section">
-        <Box borderBottomWidth="1px" position="relative" zIndex="tooltip">
-            <Container h={20} maxW="100%">
-                <HStack justify="space-between" alignItems="center">
-                    <Flex h={20} alignItems="center" ml="-4">
-                        <Image h="100%" src={currentTheme === 'dark' ? LogoWhite : LogoDark} />
-                    </Flex>
-                    <HStack spacing="10">
-                        <HStack spacing="3">
-                            <MobileDrawer currentTheme={currentTheme} toggleTheme={toggleTheme} />
+const Navbar = ({ currentTheme, toggleTheme }: navBarProps) => {
+
+    const [scrollBgColor, setScrollBgColor] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 0) {
+                setScrollBgColor(true);
+            } else {
+                setScrollBgColor(false);
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
+    const navbarBgColor = useColorModeValue(scrollBgColor ? "white" : "transparent", scrollBgColor ? "#1A202C" : "transparent");
+
+
+    return (
+        <Box h={20} position='fixed' zIndex={1000} top={0} width="100%" bg={navbarBgColor}>
+            <Box as="section">
+                <Box borderBottomWidth="1px" position="relative" zIndex="tooltip">
+                    <Container h={20} maxW="100%">
+                        <HStack justify="space-between" alignItems="center">
+                            <Flex h={20} alignItems="center" ml="-4">
+                                <Image h="100%" src={currentTheme === 'dark' ? LogoWhite : LogoDark} />
+                            </Flex>
+                            <HStack spacing="10">
+                                <HStack spacing="3">
+                                    <MobileDrawer currentTheme={currentTheme} toggleTheme={toggleTheme} />
+                                </HStack>
+                                <ButtonGroup
+                                    size="md"
+                                    variant="text"
+                                    display={{ base: 'none', lg: 'flex' }}>
+                                    <Button>Home</Button>
+                                    <DocumentPopoverProduct />
+                                    <DocumentPopoverServices />
+                                    <DocumentPopoverResources />
+                                    <NavLink to="/contact-us">
+                                        <Button>Contact us</Button>
+                                    </NavLink>
+                                    <Button onClick={toggleTheme}>
+                                        {
+                                            currentTheme === 'dark' ? <SunIcon /> : <MoonIcon />
+                                        }
+                                    </Button>
+                                </ButtonGroup>
+                            </HStack>
                         </HStack>
-                        <ButtonGroup
-                            size="md"
-                            variant="text"
-                            display={{ base: 'none', lg: 'flex' }}>
-                            <Button>Home</Button>
-                            <DocumentPopoverProduct />
-                            <DocumentPopoverServices />
-                            <DocumentPopoverResources />
-                            <Button>Contact us</Button>
-                            <Button onClick={toggleTheme}>
-                                {
-                                    currentTheme === 'dark' ? <SunIcon /> : <MoonIcon />
-                                }
-                            </Button>
-                        </ButtonGroup>
-                    </HStack>
-                </HStack>
-            </Container>
+                    </Container>
+                </Box>
+            </Box>
         </Box>
-    </Box>
-)
+    )
+}
 
 export default Navbar

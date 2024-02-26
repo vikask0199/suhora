@@ -4,6 +4,7 @@ import { DocumentCollapseServices } from './DocumentCollapseServices'
 import { ToggleButton } from './ToggleButton'
 import { DocumentCollapseProducts } from './DocumentCollapseProducts'
 import { DocumentCollapseResources } from './DocumentCollapseResources'
+import { NavLink } from 'react-router-dom'
 
 type mobileDrawerprops = {
   toggleTheme: () => void;
@@ -21,8 +22,8 @@ export const MobileDrawer = ({ toggleTheme, currentTheme }: mobileDrawerprops) =
         display={{ base: 'inline-flex', lg: 'none' }}
       />
       <Drawer placement="top" isOpen={isOpen} onClose={onClose}>
-        <DrawerContent>
-          <DrawerBody mt="72px" p="4">
+        <DrawerContent marginTop={20}>
+          <DrawerBody p="4">
             <Stack spacing="1">
               <Button size="lg" variant="tertiary" justifyContent="start">
                 Home
@@ -30,9 +31,11 @@ export const MobileDrawer = ({ toggleTheme, currentTheme }: mobileDrawerprops) =
               <DocumentCollapseServices />
               <DocumentCollapseProducts />
               <DocumentCollapseResources />
-              <Button size="lg" variant="tertiary" justifyContent="start">
-                Contact us
-              </Button>
+              <NavLink to="/contact-us">
+                <Button size="lg" variant="tertiary" justifyContent="start">
+                  Contact us
+                </Button>
+              </NavLink>
               <Button onClick={toggleTheme}>
                 {
                   currentTheme === 'dark' ? <SunIcon /> : <MoonIcon />
