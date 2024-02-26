@@ -42,7 +42,7 @@
 .carousel .list .item .topic {
     font-size: 5em;
     font-weight: bold;
-    line-height: 1.3em;
+    line-height: 1em;
 }
 
 .carousel .list .item .topic {
@@ -75,7 +75,7 @@
 .thumbnail {
     position: absolute;
     bottom: 50px;
-    left: 50%;
+    left: 40%;
     width: max-content;
     z-index: 100;
     display: flex;
@@ -83,8 +83,8 @@
 }
 
 .thumbnail .item {
-    width: 150px;
-    height: 220px;
+    height: 160px;
+    width: 230px;
     flex-shrink: 0;
     position: relative;
 }

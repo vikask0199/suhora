@@ -9,9 +9,11 @@ import {
 } from '@chakra-ui/react'
 import LogoDark from '../../../assets/img/logo/suhora_logo.png'
 import LogoWhite from '../../../assets/img/logo/suhora_white.png'
-import { DocumentPopover } from './DocumentPopover'
+import { DocumentPopoverServices } from './DocumentPopoverServices'
 import { MobileDrawer } from './MobileDrawer'
 import { MoonIcon, SunIcon } from '@chakra-ui/icons'
+import { DocumentPopoverProduct } from './DocumentPopoverProduct'
+import { DocumentPopoverResources } from './DocumentPopoverResources'
 
 type navBarProps = {
     toggleTheme: () => void;
@@ -34,10 +36,11 @@ const Navbar = ({ currentTheme, toggleTheme }: navBarProps) => (
                             size="md"
                             variant="text"
                             display={{ base: 'none', lg: 'flex' }}>
-                            <Button>Dashbaord</Button>
-                            <Button>Analysis</Button>
-                            <DocumentPopover />
-                            <Button>History</Button>
+                            <Button>Home</Button>
+                            <DocumentPopoverProduct />
+                            <DocumentPopoverServices />
+                            <DocumentPopoverResources />
+                            <Button>Contact us</Button>
                             <Button onClick={toggleTheme}>
                                 {
                                     currentTheme === 'dark' ? <SunIcon /> : <MoonIcon />

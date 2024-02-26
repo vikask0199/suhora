@@ -20,7 +20,7 @@ const theme = extendTheme({
       weight: "bold",
     },
     subHeadingSecond: {
-      size: ["sm","md", "lg"],
+      size: ["sm", "md", "lg"],
       weight: "semibold",
     },
     description: "md",
@@ -32,6 +32,9 @@ const theme = extendTheme({
       secondry: "#1266A0",
     }
   },
+  carouselBgColor: {
+    bg: "#2D3748"
+  },
   components: {
     Button: {
       variants: {
@@ -39,8 +42,8 @@ const theme = extendTheme({
           width: "fit-content",
           px: "8",
           _hover: {
-            bg: "teal.500", 
-            color: "white", 
+            bg: "teal.500",
+            color: "white",
           },
         },
       },

@@ -1,8 +1,11 @@
 import { useEffect } from "react";
-import image1 from "../../../assets/img/homeCarouselImages/img1.png";
-import image2 from "../../../assets/img/homeCarouselImages/img2.jpg";
-import image3 from "../../../assets/img/homeCarouselImages/img3.jpg";
-import image4 from "../../../assets/img/homeCarouselImages/img4.jpg";
+import agri from "../../../assets/img/services/agri.jpg";
+import defence from "../../../assets/img/services/defense.jpg";
+import disaster from "../../../assets/img/services/disaster.jpg";
+import energy from "../../../assets/img/services/energy.jpg";
+import forest from "../../../assets/img/services/forest.jpg";
+import infra from "../../../assets/img/services/infra.jpg";
+import mining from "../../../assets/img/services/mining.jpg";
 import "./HomeHeader.css";
 
 const HomeCarousel = () => {
@@ -63,11 +66,10 @@ const HomeCarousel = () => {
       <div className="carousel">
         <div className="list">
             <div className="item">
-                <img src={image1} />
+                <img src={defence} />
                 <div className="content">
-                    <div className="author">VIKAS</div>
-                    <div className="title">SUHORA SLIDER</div>
-                    <div className="topic">SERVICES</div>
+                     {/* <div className="author">VIKAS</div> */}
+                    <div className="title">Defense & Intelligence</div>
                     <div className="des">
                    Hello please provide content for this page
                     </div>
@@ -78,11 +80,10 @@ const HomeCarousel = () => {
                 </div>
             </div>
             <div className="item">
-                <img src={image2} />
+                <img src={disaster} />
                 <div className="content">
-                    <div className="author">VIKAS</div>
-                    <div className="title">SUHORA SLIDER</div>
-                    <div className="topic">SERVICES</div>
+                     {/* <div className="author">VIKAS</div> */}
+                    <div className="title">Disaster & Insurance</div>
                     <div className="des">Hello please provide content for this page
                     </div>
                     <div className="buttons">
@@ -92,11 +93,11 @@ const HomeCarousel = () => {
                 </div>
             </div>
             <div className="item">
-                <img src={image3} />
+                <img src={energy} />
                 <div className="content">
-                    <div className="author">VIKAS</div>
-                    <div className="title">SUHORA SLIDER</div>
-                    <div className="topic">SERVICES</div>
+                     {/* <div className="author">VIKAS</div> */}
+                    <div className="title">Renewable Energy</div>
+                   
                     <div className="des">Hello please provide content for this page
                     </div>
                     <div className="buttons">
@@ -106,16 +107,57 @@ const HomeCarousel = () => {
                 </div>
             </div>
             <div className="item">
-                <img src={image4} />
+                <img src={mining} />
                 <div className="content">
-                    <div className="author">VIKAS</div>
-                    <div className="title">SUHORA SLIDER</div>
-                    <div className="topic">SERVICES</div>
+                     {/* <div className="author">VIKAS</div> */}
+                    <div className="title">Mining</div>
+                   
                     <div className="des">Hello please provide content for this page
                     </div>
                     <div className="buttons">
                         <button>SEE MORE</button>
                         
+                    </div>
+                </div>
+            </div>
+            <div className="item">
+                <img src={infra} />
+                <div className="content">
+                     {/* <div className="author">VIKAS</div> */}
+                    <div className="title">Infrastructure</div>
+                   
+                    <div className="des">Hello please provide content for this page
+                    </div>
+                    <div className="buttons">
+                        <button>SEE MORE</button>
+                        
+                    </div>
+                </div>
+            </div>
+            <div className="item">
+                <img src={forest} />
+                <div className="content">
+                     {/* <div className="author">VIKAS</div> */}
+                    <div className="title">Forestry</div>
+                   
+                    <div className="des">Hello please provide content for this page
+                    </div>
+                    <div className="buttons">
+                        <button>SEE MORE</button>
+                        
+                    </div>
+                </div>
+            </div>
+            <div className="item">
+                <img src={agri} />
+                <div className="content">
+                     {/* <div className="author">VIKAS</div> */}
+                    <div className="title">Agriculture</div>
+                   
+                    <div className="des">Hello please provide content for this page
+                    </div>
+                    <div className="buttons">
+                        <button>SEE MORE</button>
                     </div>
                 </div>
             </div>
@@ -123,10 +165,10 @@ const HomeCarousel = () => {
      
         <div className="thumbnail">
             <div className="item">
-                <img src={image1}/>
+                <img src={defence}/>
                 <div className="content">
                     <div className="title">
-                        Name Slider
+                    Defense & Intelligence
                     </div>
                     <div className="description">
                         Description
@@ -134,10 +176,10 @@ const HomeCarousel = () => {
                 </div>
             </div>
             <div className="item">
-                <img src={image2} />
+                <img src={disaster} />
                 <div className="content">
                     <div className="title">
-                        Name Slider
+                    Disaster & Insurance
                     </div>
                     <div className="description">
                         Description
@@ -145,10 +187,10 @@ const HomeCarousel = () => {
                 </div>
             </div>
             <div className="item">
-                <img src={image3} />
+                <img src={energy} />
                 <div className="content">
                     <div className="title">
-                        Name Slider
+                    Renewable Energy
                     </div>
                     <div className="description">
                         Description
@@ -156,10 +198,43 @@ const HomeCarousel = () => {
                 </div>
             </div>
             <div className="item">
-                <img src={image4} />
+                <img src={mining} />
                 <div className="content">
                     <div className="title">
-                        Name Slider
+                    Mining
+                    </div>
+                    <div className="description">
+                        Description
+                    </div>
+                </div>
+            </div>
+            <div className="item">
+                <img src={infra} />
+                <div className="content">
+                    <div className="title">
+                    Infrastructure
+                    </div>
+                    <div className="description">
+                        Description
+                    </div>
+                </div>
+            </div>
+            <div className="item">
+                <img src={forest} />
+                <div className="content">
+                    <div className="title">
+                    Forestry
+                    </div>
+                    <div className="description">
+                        Description
+                    </div>
+                </div>
+            </div>
+            <div className="item">
+                <img src={agri} />
+                <div className="content">
+                    <div className="title">
+                    Agriculture
                     </div>
                     <div className="description">
                         Description
