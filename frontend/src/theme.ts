@@ -1,41 +1,53 @@
-import { StyleFunctionProps, extendTheme } from "@chakra-ui/react";
+import { extendTheme } from "@chakra-ui/react";
 const theme = extendTheme({
   colors: {
     light: {
       bg: "white",
-      primary: "black",
+      text: "#171923",
     },
     dark: {
-      bg: "gray.800",
-      primary: "white",
+      bg: "#0a0a0f",
+      text: "white",
     },
   },
-//   styles: {
-//     global: (props: StyleFunctionProps) => ({
-//       body: {
-//         bg: props.colorMode === "dark" ? "gray.800" : "white",
-//         color: props.colorMode === "dark" ? "white" : "black",
-//       },
-//     }),
-//   },
+  fonts: {
+    mainHeading: {
+      size: ["2xl", "3xl", "4xl", "5xl"],
+      weight: "bold",
+    },
+    subHeading: {
+      size: ["md", "lg", "xl", "2xl", "3xl"],
+      weight: "bold",
+    },
+    subHeadingSecond: {
+      size: ["sm", "md", "lg"],
+      weight: "semibold",
+    },
+    description: "md",
+    list: "sm",
+  },
+  companyTheme: {
+    color: {
+      primary: "#174773",
+      secondry: "#1266A0",
+    }
+  },
+  carouselBgColor: {
+    bg: "#2D3748"
+  },
   components: {
-    // Container: {
-    //   baseStyle: {
-    //     bg: "primary",
-    //     color: "secondary",
-    //   },
-    // },
-    // Button: {
-    //   variants: {
-    //     solid: (props: StyleFunctionProps) => ({
-    //       bg: props.colorMode === "dark" ? "red" : "yellow",
-    //       color: props.colorMode === "dark" ? "green" : "pink",
-    //       _hover: {
-    //         bg: props.colorMode === "dark" ? "primary.400" : "primary.600",
-    //       },
-    //     }),
-    //   },
-    // },
+    Button: {
+      variants: {
+        productButton: {
+          width: "fit-content",
+          px: "8",
+          _hover: {
+            bg: "teal.500",
+            color: "white",
+          },
+        },
+      },
+    },
   },
   config: {
     initialColorMode: "light",
