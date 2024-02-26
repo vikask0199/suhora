@@ -23,6 +23,7 @@ const theme = extendTheme({
       size: ["sm", "md", "lg"],
       weight: "semibold",
     },
+    body: "Century Gothic, sans-serif",
     description: "md",
     list: "sm",
   },
