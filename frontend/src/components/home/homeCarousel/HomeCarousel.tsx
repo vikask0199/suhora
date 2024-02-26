@@ -11,7 +11,7 @@ const HomeCarousel = () => {
   const images = [
     'https://m.media-amazon.com/images/I/61HKEoYWwsL._AC_UF1000,1000_QL80_.jpg',
     'https://wallpapers.com/images/featured/beautiful-3vau5vtfa3qn7k8v.jpg',
-    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5xTleKB4CNB-4j68dFuh2CpygeSyfciMZYFho1Rrj-p8kVF7FOeWf-4iLoi2U_JGO6A0&usqp=CAU',
+    'https://c4.wallpaperflare.com/wallpaper/100/702/409/shallow-focus-photography-of-red-dragonfly-wallpaper-thumb.jpg',
     'https://wallpapers.com/images/featured/nature-2ygv7ssy2k0lxlzu.jpg',
     'https://webneel.com/wallpaper/sites/default/files/images/08-2018/2-nature-wallpaper-grass.jpg',
     'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfUoQf0a1023gexLX5Nfwtay3o4NClwNut5QiuSj64d7_NFWOjCmum3Mq3Cp6uHV0gfnE&usqp=CAU',
@@ -26,7 +26,7 @@ const HomeCarousel = () => {
   };
 
   useEffect(() => {
-    const intervalId = setInterval(nextSlide, 300000000);
+    const intervalId = setInterval(nextSlide, 3000);
 
     return () => clearInterval(intervalId);
   }, []);
