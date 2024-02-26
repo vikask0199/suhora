@@ -4,6 +4,7 @@ import HomeCarousel from "../components/home/homeCarousel/HomeCarousel"
 import ProductCarousel from "../components/home/productCarousel/ProductCarousel"
 import ServiceCarousel from "../components/home/servicesCarousel/ServicesCarousel"
 import { WhatWeDo } from "../components/home/whatWeDo/WhatWeDo"
+import SpadePage from "./SpadePage"
 
 interface homePageProps {
   currentTheme: string,
@@ -19,6 +20,7 @@ const HomePage = ({ currentTheme }: homePageProps) => {
       <ProductCarousel />
       <ServiceCarousel currentTheme={currentTheme}/>
       <WhatWeDo />
+      <SpadePage />
     </>
   )
 }
