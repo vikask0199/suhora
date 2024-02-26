@@ -1,7 +1,7 @@
-
+import SpadeHeader from "../components/products/spade/SpadeHeader"
 const SpadePage = () => {
   return (
-    <div>SpadePage</div>
+    <div> <SpadeHeader/></div>
   )
 }
 
