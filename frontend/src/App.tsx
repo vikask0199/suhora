@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import PublicOutlet from './outlet/PublicOutlet';
 import HomePage from './pages/HomePage';
 import { useColorMode } from '@chakra-ui/react';
+import ContactPage from './pages/ContactPage';
 
 function App() {
   // const [currentTheme, setCurrentTheme] = useState<'light' | 'dark'>('light');
@@ -22,13 +23,14 @@ function App() {
   //   localStorage.setItem('theme', newTheme);
   // };
 
-  const { colorMode , toggleColorMode } = useColorMode()
+  const { colorMode, toggleColorMode } = useColorMode()
 
   return (
     <>
       <Routes>
         <Route path="/" element={<PublicOutlet toggleTheme={toggleColorMode} currentTheme={colorMode} />}>
-          <Route index element={<HomePage currentTheme={colorMode}/>} />
+          <Route index element={<HomePage currentTheme={colorMode} />} />
+          <Route path="contact-us" element={<ContactPage />} />
         </Route>
       </Routes>
     </>
