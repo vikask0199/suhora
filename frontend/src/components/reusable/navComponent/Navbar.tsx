@@ -46,8 +46,7 @@ const Navbar = ({ currentTheme, toggleTheme }: navBarProps) => {
     }, []);
 
 
-    const navbarBgColor = useColorModeValue(scrollBgColor ? "white" : "transparent", scrollBgColor ? "#1A202C" : "transparent");
-    console.log(navbarBgColor)
+    const navbarBgColor = useColorModeValue(scrollBgColor ? "white" : "white", scrollBgColor ? "#1A202C" : "transparent");
 
 
     return (
