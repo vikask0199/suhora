@@ -18,6 +18,7 @@ import { DocumentPopoverResources } from './DocumentPopoverResources'
 import { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { DocumentPopoverServices } from './DocumentPopoverServices'
+import theme from '../../../theme'
 
 type navBarProps = {
     toggleTheme: () => void;
@@ -44,13 +45,15 @@ const Navbar = ({ currentTheme, toggleTheme }: navBarProps) => {
         };
     }, []);
 
+
     const navbarBgColor = useColorModeValue(scrollBgColor ? "white" : "transparent", scrollBgColor ? "#1A202C" : "transparent");
+    console.log(navbarBgColor)
 
 
     return (
-        <Box h={20} position='fixed' zIndex={1000} top={0} width="100%" bg={navbarBgColor}>
+        <Box h={20} position='fixed' zIndex={1000} top={0} width="100%" bg={navbarBgColor}  boxShadow="2xl">
             <Box as="section">
-                <Box borderBottomWidth="1px" position="relative" zIndex="tooltip">
+                <Box position="relative" zIndex="tooltip">
                     <Container h={20} maxW="100%">
                         <HStack justify="space-between" alignItems="center">
                             <Flex h={20} alignItems="center" ml="-4">
@@ -74,7 +77,7 @@ const Navbar = ({ currentTheme, toggleTheme }: navBarProps) => {
                                     </NavLink>
                                     <Button onClick={toggleTheme}>
                                         {
-                                            currentTheme === 'dark' ? <SunIcon /> : <MoonIcon />
+                                            currentTheme === 'dark' ? <SunIcon color="yellow" fontSize={theme.fonts.subHeadingSecond.size}/> : <MoonIcon />
                                         }
                                     </Button>
                                 </ButtonGroup>

@@ -18,7 +18,7 @@ export const stats = [
       cta: 'Learn more',
     },
     {
-      label: 'Real Time Insights',
+      label: 'Near Real Time Insights',
       description: 'Join our friendly and helpful developer community on Discord',
       value: '8.3K',
       cta: 'Learn more',

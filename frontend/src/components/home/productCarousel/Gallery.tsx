@@ -47,21 +47,21 @@ export const Gallery = () => {
           {products.map((image, i) => (
             <CarouselSlide key={i}>
               <Flex direction={{ base: "column", md: "row" }}>
-                <Box w={{ base: "100%", md: "50%" }}>
+                <Box w={{ base: "100%", md: "50%" }} padding={7}>
                   <AspectRatio ratio={aspectRatio}>
                     <Image src={image.imageUrl} />
                   </AspectRatio>
                 </Box>
                 <Flex w={{ base: "100%", md: "50%" }} p={8} direction="column" rowGap={4} justifyContent="center">
-                  <Box fontSize={theme.fonts.subHeading.size} fontWeight={theme.fonts.subHeading.weight}>SPADE</Box>
-                  <Box backgroundColor="#BEC1DD" color="#3F53E9" w="fit-content" px="8" fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>SUHORA</Box>
-                  <Box fontSize={theme.fonts.description}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti laborum repudiandae obcaecati sapiente magnam! Officiis quae, similique minus harum quas eum, quidem vero labore magni iste.</Box>
+                  <Box fontSize={theme.fonts.subHeading.size} fontWeight={theme.fonts.subHeading.weight}>{image.name}</Box>
+                  {/* <Box backgroundColor="#BEC1DD" color="#3F53E9" w="fit-content" px="8" fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>SUHORA</Box> */}
+                  <Box fontSize={theme.fonts.description}>{image.description}</Box>
                   <UnorderedList listStyleType="none" fontSize={theme.fonts.list}>
-                    <ListItem display="flex" mb="2" alignItems="center" gap={2}><StarIcon color={theme.companyTheme.color.secondry}/> Item 1 Lorem, ipsum.</ListItem>
-                    <ListItem display="flex" mb="2" alignItems="center" gap={2}><StarIcon color={theme.companyTheme.color.secondry}/> Item 1 Lorem, ipsum.</ListItem>
-                    <ListItem display="flex" mb="2" alignItems="center" gap={2}><StarIcon color={theme.companyTheme.color.secondry}/> Item 1 Lorem, ipsum.</ListItem>
-                    <ListItem display="flex" mb="2" alignItems="center" gap={2}><StarIcon color={theme.companyTheme.color.secondry}/> Item 1 Lorem, ipsum.</ListItem>
-                    <ListItem display="flex" mb="2" alignItems="center" gap={2}><StarIcon color={theme.companyTheme.color.secondry}/> Item 1 Lorem, ipsum.</ListItem>
+                    <ListItem display="flex" mb="2" alignItems="center" gap={2}><StarIcon color={theme.companyTheme.color.secondry} />{image.point1}</ListItem>
+                    <ListItem display="flex" mb="2" alignItems="center" gap={2}><StarIcon color={theme.companyTheme.color.secondry} /> {image.point2}</ListItem>
+                    <ListItem display="flex" mb="2" alignItems="center" gap={2}><StarIcon color={theme.companyTheme.color.secondry} /> {image.point3}</ListItem>
+                    <ListItem display="flex" mb="2" alignItems="center" gap={2}><StarIcon color={theme.companyTheme.color.secondry} />{image.point4}</ListItem>
+                    <ListItem display="flex" mb="2" alignItems="center" gap={2}><StarIcon color={theme.companyTheme.color.secondry} />{image.point5}</ListItem>
                   </UnorderedList>
                   <Button width="fit-content" px="8" backgroundColor={theme.companyTheme.color.secondry} color="white" _hover={{ backgroundColor: theme.companyTheme.color.primary }}>
                     Learn More

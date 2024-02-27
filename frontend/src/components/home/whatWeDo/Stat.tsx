@@ -10,10 +10,12 @@ interface StatProps {
 }
 
 export const Stat = (props: StatProps) => {
+
   const { label, description, value, cta } = props
+  
   return (
-    <Stack spacing="3" flex="1">
-      <Flex direction="column" justifyContent="space-between" >
+    <Stack spacing="3" flex="1" >
+      <Flex direction="column" justifyContent="space-between" minH={130}>
         <Stack>
           <Text fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>
             {label}
@@ -21,7 +23,6 @@ export const Stat = (props: StatProps) => {
           <Text>{description}</Text>
         </Stack>
         <Button
-          alignSelf="start"
           size="lg"
           variant="link"
           colorScheme="blue"
