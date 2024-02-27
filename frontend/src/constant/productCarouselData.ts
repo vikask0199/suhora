@@ -3,7 +3,7 @@
 export const products = [
   {
     id: '1',
-    name: 'Bamboo Tan',
+    name: 'SPADE',
     currency: 'USD',
     price: 199,
     flag: 'new',
@@ -12,11 +12,16 @@ export const products = [
     rating: 4,
     ratingCount: 1,
     description:
-      'With a sleek design and a captivating essence, this is a modern Classic made for every occasion.',
+      'A seamless SaaS platform delivering comprehensive access to multi-sensor satellite data for a spectrum of commercial applications.',
+    point1: 'Data Insight & Analytics As-a-Service through Platform & API',
+    point2: 'Multi Mission Planning & Tasking & Visualization Platform',
+    point3: 'Guaranteed collection, Fastest tasking, Secure downlink',
+    point4: '24/7 all weather Surveillance using Optical and SAR Constellation',
+    point5: 'Most Cost-Effective Solution available in Market',
   },
   {
     id: '2',
-    name: 'Iconic Turquoise',
+    name: 'LANCE',
     currency: 'USD',
     price: 199,
     salePrice: 179.99,
@@ -26,11 +31,16 @@ export const products = [
     rating: 4,
     ratingCount: 12,
     description:
-      ' captivating essence, this is a modern Classic made for every occasion.',
+      'Advanced, near real-time ISR solutions, elevating maritime and land surveillance for defense and intelligence sectors.',
+    point1: 'Data Insight & Analytics As-a-Service through Platform & API',
+    point2: 'Multi Mission Planning & Tasking & Visualization Platform',
+    point3: 'Guaranteed collection, Fastest tasking, Secure downlink',
+    point4: '24/7 all weather Surveillance using Optical and SAR Constellation',
+    point5: 'Most Cost-Effective Solution available in Market',
   },
   {
     id: '3',
-    name: 'Marble Leather',
+    name: 'SID',
     currency: 'USD',
     price: 199,
     imageUrl:
@@ -38,18 +48,11 @@ export const products = [
     rating: 4,
     ratingCount: 12,
     description:
-      'With a sleek design and a captivating essence, this is a modern Classic made for every occasion.',
-  },
-  {
-    id: '4',
-    name: 'Silve wolf',
-    currency: 'GBP',
-    price: 199,
-    imageUrl:
-      'https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=680&q=80',
-    rating: 5,
-    ratingCount: 1,
-    description:
-      'With a sleek design and a captivating essence, this is a modern Classic made for every occasion.',
+      'Integrated space analytics and rapid satellite data converge to enhance disaster response and streamline insurance management.',
+    point1: 'Data Insight & Analytics As-a-Service through Platform & API',
+    point2: 'Multi Mission Planning & Tasking & Visualization Platform',
+    point3: 'Guaranteed collection, Fastest tasking, Secure downlink',
+    point4: '24/7 all weather Surveillance using Optical and SAR Constellation',
+    point5: 'Most Cost-Effective Solution available in Market',
   },
 ]
