@@ -1,4 +1,4 @@
-import { Heading, Stack, StackProps, Text } from '@chakra-ui/react'
+import { Stack, StackProps, Text } from '@chakra-ui/react'
 
 interface StatProps extends StackProps {
   label: string
@@ -12,7 +12,7 @@ export const Stat = (props: StatProps) => {
       {/* <Heading size={{ base: 'lg', md: 'xl' }} color="accent">
         {value}
       </Heading> */}
-      <Text fontSize="lg" fontWeight="medium" color="fg.muted">
+      <Text fontSize="lg" fontWeight="medium">
         {label}
       </Text>
     </Stack>

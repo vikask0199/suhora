@@ -20,7 +20,7 @@ export const WhatWeDo = () => {
                             <Text as="span">We Do</Text>
                         </Text>
                     </Flex>
-                    <Text fontSize={theme.fonts.subHeading.size} fontWeight={theme.fonts.subHeading.weight} textAlign="center">
+                    <Text fontSize={theme.fonts.subHeading.size} color={theme.companyTheme.color.third} fontWeight={theme.fonts.subHeading.weight} textAlign="center">
                         Everything you need to build modern UI and great products.
                     </Text>
                 </Stack>

@@ -1,6 +1,6 @@
 import { Flex, Text } from "@chakra-ui/react"
-import { Gallery } from "./Gallery"
 import theme from "../../../theme"
+import { Gallery } from "./Gallery"
 
 const SecondCarousel = () => {
     return (

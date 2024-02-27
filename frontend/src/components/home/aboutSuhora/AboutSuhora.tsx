@@ -7,8 +7,11 @@ import {
     Text,
     useBreakpointValue
 } from '@chakra-ui/react';
-import { FaClock, FaHandHoldingDollar, FaSatellite } from "react-icons/fa6";
-import { RiThunderstormsFill } from "react-icons/ri";
+import { FaRegClock } from "react-icons/fa6";
+import { MdOutlineSatelliteAlt } from 'react-icons/md';
+
+import { TbWorldDollar } from 'react-icons/tb';
+import { TiWeatherPartlySunny } from "react-icons/ti";
 import { stats } from '../../../constant/aboutSuhoraData';
 import theme from "../../../theme";
 import { Stat } from './Stat';
@@ -18,7 +21,7 @@ interface aboutSuhoraProps {
 }
 
 export const AboutSuhora = ({ currentTheme }: aboutSuhoraProps) => {
-    const arrayIcon = [<FaSatellite />, <RiThunderstormsFill />, <FaClock />, <FaHandHoldingDollar />]
+    const arrayIcon = [<MdOutlineSatelliteAlt />, <TiWeatherPartlySunny />, <FaRegClock />, <TbWorldDollar />]
 
     const isMobile = useBreakpointValue({ base: true, md: false })
 
@@ -35,7 +38,7 @@ export const AboutSuhora = ({ currentTheme }: aboutSuhoraProps) => {
                                 <Text as="span" color={theme.companyTheme.color.secondry}>Suhora</Text>
                             </Text>
                         </Flex>
-                        <Text fontSize={theme.fonts.subHeading.size} fontWeight={theme.fonts.subHeading.weight} maxW="5xl" >
+                        <Text color={theme.companyTheme.color.third} fontSize={theme.fonts.subHeading.size} fontWeight={theme.fonts.subHeading.weight} maxW="5xl" >
                             Multi band high resolution image from various satellite.
                         </Text>
                         <Text textAlign="justify">

@@ -1,8 +1,10 @@
 
 import { AboutSuhora } from "../components/home/aboutSuhora/AboutSuhora"
 import HomeCarousel from "../components/home/homeCarousel/HomeCarousel"
+import HomeServices from "../components/home/ourServices/HomeServices"
+import { OurPartners } from "../components/home/partners/OurPartners"
 import ProductCarousel from "../components/home/productCarousel/ProductCarousel"
-import ServiceCarousel from "../components/home/servicesCarousel/ServicesCarousel"
+import IndustryCarousel from "../components/home/servicesCarousel/IndustriesCarousel"
 import { WhatWeDo } from "../components/home/whatWeDo/WhatWeDo"
 
 interface homePageProps {
@@ -17,8 +19,10 @@ const HomePage = ({ currentTheme }: homePageProps) => {
       <HomeCarousel />
       <AboutSuhora currentTheme={currentTheme} />
       <ProductCarousel />
-      <ServiceCarousel currentTheme={currentTheme}/>
+      <IndustryCarousel currentTheme={currentTheme}/>
       <WhatWeDo />
+      <HomeServices currentTheme={currentTheme}/>
+      <OurPartners />
     </>
   )
 }

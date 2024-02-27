@@ -23,6 +23,9 @@ const theme = extendTheme({
       size: ["sm", "md", "lg"],
       weight: "semibold",
     },
+    subHeadingThird: {
+      weight: "normal",
+    },
     body: "Century Gothic, sans-serif",
     description: "md",
     list: "sm",
@@ -31,6 +34,7 @@ const theme = extendTheme({
     color: {
       primary: "#174773",
       secondry: "#1266A0",
+      third: "#1767A0"
     }
   },
   aboutIcon: {

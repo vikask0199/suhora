@@ -1,4 +1,4 @@
-import Hydrology from "../components/New/Hydrology"
+import Hydrology from "../components/services/Hydrology"
 
 type hydrologyThemeProps = {
     currentTheme: string
