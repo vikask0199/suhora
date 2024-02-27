@@ -1,9 +1,10 @@
 
+import { useColorMode } from '@chakra-ui/react';
 import { Route, Routes } from 'react-router-dom';
 import PublicOutlet from './outlet/PublicOutlet';
-import HomePage from './pages/HomePage';
-import { useColorMode } from '@chakra-ui/react';
 import ContactPage from './pages/ContactPage';
+import HomePage from './pages/HomePage';
+import HydrologyPage from './pages/HydrologyPage';
 
 function App() {
   // const [currentTheme, setCurrentTheme] = useState<'light' | 'dark'>('light');
@@ -31,6 +32,7 @@ function App() {
         <Route path="/" element={<PublicOutlet toggleTheme={toggleColorMode} currentTheme={colorMode} />}>
           <Route index element={<HomePage currentTheme={colorMode} />} />
           <Route path="contact-us" element={<ContactPage />} />
+          <Route path="hydrology" element={<HydrologyPage currentTheme={colorMode} />} />
         </Route>
       </Routes>
     </>

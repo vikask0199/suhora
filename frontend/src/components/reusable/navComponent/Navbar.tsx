@@ -10,13 +10,14 @@ import {
 } from '@chakra-ui/react'
 import LogoDark from '../../../assets/img/logo/suhora_logo.png'
 import LogoWhite from '../../../assets/img/logo/suhora_white.png'
-import { DocumentPopoverServices } from './DocumentPopoverServices'
+import { DocumentPopoverIndustries } from './DocumentPopoverIndustries'
 import { MobileDrawer } from './MobileDrawer'
 import { MoonIcon, SunIcon } from '@chakra-ui/icons'
 import { DocumentPopoverProduct } from './DocumentPopoverProduct'
 import { DocumentPopoverResources } from './DocumentPopoverResources'
 import { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
+import { DocumentPopoverServices } from './DocumentPopoverServices'
 
 type navBarProps = {
     toggleTheme: () => void;
@@ -60,11 +61,12 @@ const Navbar = ({ currentTheme, toggleTheme }: navBarProps) => {
                                     <MobileDrawer currentTheme={currentTheme} toggleTheme={toggleTheme} />
                                 </HStack>
                                 <ButtonGroup
-                                    size="md"
+                                    size="sm"
                                     variant="text"
                                     display={{ base: 'none', lg: 'flex' }}>
                                     <Button>Home</Button>
                                     <DocumentPopoverProduct />
+                                    <DocumentPopoverIndustries />
                                     <DocumentPopoverServices />
                                     <DocumentPopoverResources />
                                     <NavLink to="/contact-us">
