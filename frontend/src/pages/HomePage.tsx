@@ -1,4 +1,5 @@
 
+import Hydrology from "../components/New/Hydrology"
 import { AboutSuhora } from "../components/home/aboutSuhora/AboutSuhora"
 import HomeCarousel from "../components/home/homeCarousel/HomeCarousel"
 import ProductCarousel from "../components/home/productCarousel/ProductCarousel"
@@ -14,7 +15,8 @@ const HomePage = ({ currentTheme }: homePageProps) => {
 
   return (
     <>
-      <HomeCarousel />
+      {/* <HomeCarousel /> */}
+      <Hydrology/>
       <AboutSuhora currentTheme={currentTheme} />
       <ProductCarousel />
       <ServiceCarousel currentTheme={currentTheme}/>
