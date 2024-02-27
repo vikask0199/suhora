@@ -8,7 +8,7 @@ type hydrologyThemeProps = {
 const HydrologyPage = ({ currentTheme }: hydrologyThemeProps) => {
     return (
         <>
-            <Hydrology />
+            <Hydrology currentTheme={currentTheme} />
         </>
     )
 }

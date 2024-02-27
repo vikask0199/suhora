@@ -4,7 +4,16 @@ import { BsFillPatchCheckFill } from "react-icons/bs";
 import { FaArrowRight } from "react-icons/fa";
 import { FaArrowDownLong } from "react-icons/fa6";
 
-const Hydrology = () => {
+
+type hydrologyThemeProps = {
+    currentTheme: string
+}
+
+
+const Hydrology = ({ currentTheme }: hydrologyThemeProps) => {
+    const backgroundColor = currentTheme === 'light' ? 'gray.200' : '#282b3c';
+
+
     return (
         <Box>
             <Box position="relative">
@@ -28,6 +37,11 @@ const Hydrology = () => {
                 <Heading as='h1' size='xl' color="teal" top="50%" left="44.1%" position="absolute">Hydrology</Heading>
             </Box>
 
+       <Box  background={backgroundColor} 
+        mx="auto"
+        px={{ base: '4', md: '8', lg: '5' }}
+        py={{ base: '4', md: '8', lg: '12' }}
+       >
             <Box display="flex" justifyContent="center" p="5vh">
                 <Heading as='h1' size='xl' color="teal">
                     Hydrology
@@ -35,7 +49,7 @@ const Hydrology = () => {
             </Box>
 
             <Box>
-                <Box display="flex" m="auto" w="63%" fontSize="lg" p="2vh" color="grey">
+                <Box display="flex" m="auto" w="63%" fontSize="lg" p="2vh" color="grey" >
                     <Text>
                         Any large infrastructure project – ranging from buildings to bridges, roads and dams – experience significant risk through its entire life cycle. In the typical planning process, the management of risk isn’t accounted for which leads to significant challenges for all involved entities.
                     </Text>
@@ -46,9 +60,18 @@ const Hydrology = () => {
                     </Text>
                 </Box>
             </Box>
+       </Box>
 
-            <Box display="flex" justifyContent="center" py="5vh">
-                <Box h="auto" maxW="5xl" bg="whitesmoke">
+            <Box display="flex" justifyContent="center"
+                maxW="5xl"
+                mx="auto"
+                px={{ base: '4', md: '8', lg: '5' }}
+                py={{ base: '4', md: '8', lg: '12' }}
+                boxShadow='xl'
+                mb="10vh"
+                mt="10vh"
+            >
+                <Box h="auto" maxW="5xl">
                     <Flex justifyContent="space-between">
                         <Box>
                             <Box>
@@ -90,84 +113,85 @@ const Hydrology = () => {
             </Box>
 
 
+         <Box  background={backgroundColor}
+           mb="10vh"
+           px={{ base: '4', md: '8', lg: '5' }}
+           py={{ base: '4', md: '8', lg: '12' }}
+         >
+            <Box display="flex" justifyContent="center"
+                maxW="5xl"
+                mx="auto"
+                px={{ base: '4', md: '8', lg: '5' }}
+                py={{ base: '4', md: '8', lg: '12' }}
+                boxShadow='xl'
+               >
+                <Box>
+                    <Box display="flex" justifyContent="center">
+                        <Flex>
+                            <Box m="3vh" display="flex" flexDirection='column' justifyContent="center" alignItems="center">
+                                <Box><Image h="10vh" src="https://www.freeiconspng.com/thumbs/satellite-png/satellite-png-2.png" /></Box>
+                                <Box color="grey" fontSize="md" w="10vw" textAlign='center'>SATELLILTE DATA</Box>
+                                <Box color="gray" mt="2vh" fontSize="3vh"><FaArrowDownLong /></Box>
+                            </Box>
+                            <Box m="3vh" display="flex" flexDirection='column' justifyContent="center" alignItems="center">
+                                <Box><Image h="10vh" src="https://www.freeiconspng.com/thumbs/satellite-png/satellite-png-2.png" /></Box>
+                                <Box color="grey" fontSize="md" w="10vw" textAlign='center'>ECONOMIC & AFFLUENCE DATA </Box>
+                                <Box color="gray" mt="2vh" fontSize="3vh"><FaArrowDownLong /></Box>
 
-            <Box display="flex" justifyContent="center" py="5vh" >
-              <Box maxW="5xl" h="auto" bg="whitesmoke">
-                <Box display="flex" justifyContent="center">
-                  <Flex>
-                    <Box m="5vh" display="flex" flexDirection='column' justifyContent="center" alignItems="center"> 
-                        <Box><Image h="10vh" src="https://www.freeiconspng.com/thumbs/satellite-png/satellite-png-2.png"/></Box>
-                        <Box color="grey" fontSize="md"  w="10vw" textAlign='center'>SATELLILTE DATA</Box>
-                        <Box color="gray" mt="2vh" fontSize="3vh"><FaArrowDownLong/></Box>
+                            </Box>
+                            <Box m="3vh" display="flex" flexDirection='column' justifyContent="center" alignItems="center">
+                                <Box><Image h="10vh" src="https://www.freeiconspng.com/thumbs/satellite-png/satellite-png-2.png" /></Box>
+                                <Box color="grey" fontSize="md" w="10vw" textAlign='center'>WEATHER DATA</Box>
+                                <Box color="gray" mt="2vh" fontSize="3vh"><FaArrowDownLong /></Box>
+                            </Box>
+                            <Box m="3vh" display="flex" flexDirection='column' justifyContent="center" alignItems="center">
+                                <Box><Image h="10vh" src="https://www.freeiconspng.com/thumbs/satellite-png/satellite-png-2.png" /></Box>
+                                <Box color="grey" fontSize="md" w="10vw" textAlign='center'>INSURANCE DATA</Box>
+                                <Box color="gray" mt="2vh" fontSize="3vh"><FaArrowDownLong /></Box>
+                            </Box>
+                            <Box m="3vh" display="flex" flexDirection='column' justifyContent="center" alignItems="center">
+                                <Box><Image h="10vh" src="https://www.freeiconspng.com/thumbs/satellite-png/satellite-png-2.png" /></Box>
+                                <Box color="grey" fontSize="md" w="10vw" textAlign='center'>CUSTUMER & GEOTAG DATA</Box>
+                                <Box color="gray" mt="2vh" fontSize="3vh"><FaArrowDownLong /></Box>
+                            </Box>
+                        </Flex>
                     </Box>
-                    <Box m="5vh" display="flex" flexDirection='column' justifyContent="center" alignItems="center">
-                        <Box><Image h="10vh" src="https://www.freeiconspng.com/thumbs/satellite-png/satellite-png-2.png"/></Box>
-                        <Box color="grey" fontSize="md"  w="10vw" textAlign='center'>ECONOMIC & AFFLUENCE DATA </Box>
-                        <Box color="gray" mt="2vh" fontSize="3vh"><FaArrowDownLong/></Box>
 
+                    <Box display="flex" justifyContent="center">
+                        <Button w="60vw" colorScheme='green' fontSize="md" >SATSURE INFRASTRUCTURE SUITE</Button>
                     </Box>
-                    <Box m="5vh" display="flex" flexDirection='column' justifyContent="center" alignItems="center">
-                        <Box><Image h="10vh" src="https://www.freeiconspng.com/thumbs/satellite-png/satellite-png-2.png"/></Box>
-                        <Box color="grey" fontSize="md"  w="10vw" textAlign='center'>WEATHER DATA</Box>
-                        <Box color="gray" mt="2vh" fontSize="3vh"><FaArrowDownLong/></Box>
 
+                    <Box display="flex" justifyContent="center" mt="2vh">
+                        <Flex>
+                            <Box display="flex" flexDirection='column' justifyContent="center" alignItems="center">
+                                <Box color="gray" mt="2vh" fontSize="3vh"><FaArrowDownLong /></Box>
+                                <Box display="flex" alignItems="center" h="12vh" w="12vw" boxShadow="xl" m="3vh" p="1vh" >
+                                    <Text textAlign="center" fontSize="sm" fontWeight="500">BUILDING MASK LAND USE RISK MAP</Text>
+                                </Box>
+                            </Box>
+                            <Box display="flex" flexDirection='column' justifyContent="center" alignItems="center">
+                                <Box color="gray" mt="2vh" fontSize="3vh"><FaArrowDownLong /></Box>
+                                <Box display="flex" alignItems="center" h="12vh" w="12vw" boxShadow="xl" m="3vh" p="1vh" >
+                                    <Text textAlign="center" fontSize="sm" fontWeight="500">FLOOR RISK MANAGEMENT</Text>
+                                </Box>
+                            </Box>
+                            <Box display="flex" flexDirection='column' justifyContent="center" alignItems="center">
+                                <Box color="gray" mt="2vh" fontSize="3vh"><FaArrowDownLong /></Box>
+                                <Box display="flex" alignItems="center" h="12vh" w="12vw" boxShadow="xl" m="3vh" p="1vh" >
+                                    <Text textAlign="center" fontSize="sm" fontWeight="500">TRANSPORTATION INFRASTRUCTURE RISK</Text>
+                                </Box>
+                            </Box>
+                            <Box display="flex" flexDirection='column' justifyContent="center" alignItems="center">
+                                <Box color="gray" mt="2vh" fontSize="3vh"><FaArrowDownLong /></Box>
+                                <Box display="flex" alignItems="center" h="12vh" w="12vw" boxShadow="xl" m="3vh" p="1vh" >
+                                    <Text textAlign="center" fontSize="sm" fontWeight="500">POLICY DECISION MAKING</Text>
+                                </Box>
+                            </Box>
+                        </Flex>
                     </Box>
-                    <Box m="5vh" display="flex" flexDirection='column' justifyContent="center" alignItems="center">
-                        <Box><Image h="10vh" src="https://www.freeiconspng.com/thumbs/satellite-png/satellite-png-2.png"/></Box>
-                        <Box color="grey" fontSize="md"  w="10vw" textAlign='center'>INSURANCE DATA</Box>
-                        <Box color="gray" mt="2vh" fontSize="3vh"><FaArrowDownLong/></Box>
-
-                    </Box>
-                    <Box m="5vh" display="flex" flexDirection='column' justifyContent="center" alignItems="center">
-                        <Box><Image h="10vh" src="https://www.freeiconspng.com/thumbs/satellite-png/satellite-png-2.png"/></Box>
-                        <Box color="grey" fontSize="md" w="10vw" textAlign='center'>CUSTUMER & GEOTAG DATA</Box>
-                        <Box color="gray" mt="2vh" fontSize="3vh"><FaArrowDownLong/></Box>
-
-                    </Box>
-                    </Flex>
-                  </Box>
-
-                  <Box display="flex" justifyContent="center">
-                    <Button w="60vw"  colorScheme='green' fontSize="md" >SATSURE INFRASTRUCTURE SUITE</Button>
-                  </Box>
-
-                  <Box display="flex" justifyContent="center" mt="2vh">
-                      <Flex>
-                        <Box  display="flex" flexDirection='column' justifyContent="center" alignItems="center">
-                         <Box color="gray" mt="2vh" fontSize="3vh"><FaArrowDownLong/></Box>
-                          <Box display="flex" alignItems="center" h="12vh" w="12vw" bg="lightgray" m="3vh" p="1vh" >
-                              <Text textAlign="center" fontSize="sm" fontWeight="500">BUILDING MASK LAND USE RISK MAP</Text>
-                          </Box>
-                        </Box>
-                        <Box  display="flex" flexDirection='column' justifyContent="center" alignItems="center">
-                         <Box color="gray" mt="2vh" fontSize="3vh"><FaArrowDownLong/></Box>
-                          <Box display="flex" alignItems="center" h="12vh" w="12vw" bg="lightgray" m="3vh" p="1vh" >
-                              <Text textAlign="center" fontSize="sm" fontWeight="500">FLOOR RISK MANAGEMENT</Text>
-                          </Box>
-                        </Box>
-                        <Box  display="flex" flexDirection='column' justifyContent="center" alignItems="center">
-                         <Box color="gray" mt="2vh" fontSize="3vh"><FaArrowDownLong/></Box>
-                          <Box display="flex" alignItems="center" h="12vh" w="12vw" bg="lightgray" m="3vh" p="1vh" >
-                              <Text textAlign="center" fontSize="sm" fontWeight="500">TRANSPORTATION INFRASTRUCTURE RISK</Text>
-                          </Box>
-                        </Box>
-                        <Box  display="flex" flexDirection='column' justifyContent="center" alignItems="center">
-                         <Box color="gray" mt="2vh" fontSize="3vh"><FaArrowDownLong/></Box>
-                          <Box display="flex" alignItems="center" h="12vh" w="12vw" bg="lightgray" m="3vh" p="1vh" >
-                              <Text textAlign="center" fontSize="sm" fontWeight="500">POLICY DECISION MAKING</Text>
-                          </Box>
-                        </Box>
-                      </Flex>
-                  </Box>
-
-
                 </Box>
-
-
             </Box>
-
-
-
+          </Box>
         </Box>
     )
 }

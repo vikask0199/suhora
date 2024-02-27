@@ -50,7 +50,7 @@ const Navbar = ({ currentTheme, toggleTheme }: navBarProps) => {
     return (
         <Box h={20} position='fixed' zIndex={1000} top={0} width="100%" bg={navbarBgColor}>
             <Box as="section">
-                <Box borderBottomWidth="1px" position="relative" zIndex="tooltip">
+                <Box position="relative" zIndex="tooltip">
                     <Container h={20} maxW="100%">
                         <HStack justify="space-between" alignItems="center">
                             <Flex h={20} alignItems="center" ml="-4">
