@@ -1,11 +1,11 @@
 import { useEffect } from "react";
-import agri from "../../../assets/img/services/agri.jpg";
-import defence from "../../../assets/img/services/defense.jpg";
-import disaster from "../../../assets/img/services/disaster.jpg";
-import energy from "../../../assets/img/services/energy.jpg";
-import forest from "../../../assets/img/services/forest.jpg";
-import infra from "../../../assets/img/services/infra.jpg";
-import mining from "../../../assets/img/services/mining.jpg";
+import agri from "../../../assets/img/services/agri.png";
+import defence from "../../../assets/img/services/defense.png";
+import disaster from "../../../assets/img/services/disaster.png";
+import energy from "../../../assets/img/services/energy.png";
+import forest from "../../../assets/img/services/forest.png";
+import infra from "../../../assets/img/services/infra.png";
+import mining from "../../../assets/img/services/mining.png";
 import "./HomeHeader.css";
 
 const HomeCarousel = () => {
@@ -16,7 +16,7 @@ const HomeCarousel = () => {
     const SliderDom = carouselDom.querySelector('.carousel .list') as HTMLElement;
     const thumbnailBorderDom = document.querySelector('.carousel .thumbnail') as HTMLElement;
     const thumbnailItemsDom = thumbnailBorderDom.querySelectorAll('.item');
-    const timeDom = document.querySelector('.carousel .time') as HTMLElement;
+    // const timeDom = document.querySelector('.carousel .time') as HTMLElement;
 
     thumbnailBorderDom.appendChild(thumbnailItemsDom[0]);
 
@@ -74,7 +74,7 @@ const HomeCarousel = () => {
                    Hello please provide content for this page
                     </div>
                     <div className="buttons">
-                        <button>SEE MORE</button>
+                        <button>Learn More</button>
                         
                     </div>
                 </div>
@@ -87,7 +87,7 @@ const HomeCarousel = () => {
                     <div className="des">Hello please provide content for this page
                     </div>
                     <div className="buttons">
-                        <button>SEE MORE</button>
+                        <button>Learn More</button>
                         
                     </div>
                 </div>
@@ -101,7 +101,7 @@ const HomeCarousel = () => {
                     <div className="des">Hello please provide content for this page
                     </div>
                     <div className="buttons">
-                        <button>SEE MORE</button>
+                        <button>Learn More</button>
                         
                     </div>
                 </div>
@@ -115,7 +115,7 @@ const HomeCarousel = () => {
                     <div className="des">Hello please provide content for this page
                     </div>
                     <div className="buttons">
-                        <button>SEE MORE</button>
+                        <button>Learn More</button>
                         
                     </div>
                 </div>
@@ -129,7 +129,7 @@ const HomeCarousel = () => {
                     <div className="des">Hello please provide content for this page
                     </div>
                     <div className="buttons">
-                        <button>SEE MORE</button>
+                        <button>Learn More</button>
                         
                     </div>
                 </div>
@@ -143,7 +143,7 @@ const HomeCarousel = () => {
                     <div className="des">Hello please provide content for this page
                     </div>
                     <div className="buttons">
-                        <button>SEE MORE</button>
+                        <button>Learn More</button>
                         
                     </div>
                 </div>
@@ -157,13 +157,13 @@ const HomeCarousel = () => {
                     <div className="des">Hello please provide content for this page
                     </div>
                     <div className="buttons">
-                        <button>SEE MORE</button>
+                        <button>Learn More</button>
                     </div>
                 </div>
             </div>
         </div>
      
-        <div className="thumbnail">
+        <div className="thumbnail">     
             <div className="item">
                 <img src={defence}/>
                 <div className="content">

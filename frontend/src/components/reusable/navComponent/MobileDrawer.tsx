@@ -1,10 +1,11 @@
 import { MoonIcon, SunIcon } from '@chakra-ui/icons'
 import { Button, Drawer, DrawerBody, DrawerContent, Stack, useDisclosure } from '@chakra-ui/react'
-import { DocumentCollapseServices } from './DocumentCollapseServices'
+import { DocumentCollapseIndustries } from './DocumentCollapseIndustries'
 import { ToggleButton } from './ToggleButton'
 import { DocumentCollapseProducts } from './DocumentCollapseProducts'
 import { DocumentCollapseResources } from './DocumentCollapseResources'
 import { NavLink } from 'react-router-dom'
+import { DocumentCollapseServices } from './DocumentCollapseServices'
 
 type mobileDrawerprops = {
   toggleTheme: () => void;
@@ -28,8 +29,9 @@ export const MobileDrawer = ({ toggleTheme, currentTheme }: mobileDrawerprops) =
               <Button size="lg" variant="tertiary" justifyContent="start">
                 Home
               </Button>
-              <DocumentCollapseServices />
+              <DocumentCollapseIndustries />
               <DocumentCollapseProducts />
+              <DocumentCollapseServices />
               <DocumentCollapseResources />
               <NavLink to="/contact-us">
                 <Button size="lg" variant="tertiary" justifyContent="start">

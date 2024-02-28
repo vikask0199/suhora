@@ -12,17 +12,21 @@ const theme = extendTheme({
   },
   fonts: {
     mainHeading: {
-      size: ["2xl", "3xl", "4xl", "5xl"],
+      size: ["2xl", "3xl", "4xl"],
       weight: "bold",
     },
     subHeading: {
-      size: ["md", "lg", "xl", "2xl", "3xl"],
+      size: ["md", "lg", "xl", "2xl"],
       weight: "bold",
     },
     subHeadingSecond: {
       size: ["sm", "md", "lg"],
       weight: "semibold",
     },
+    subHeadingThird: {
+      weight: "normal",
+    },
+    body: "Century Gothic, sans-serif",
     description: "md",
     list: "sm",
   },
@@ -30,8 +34,15 @@ const theme = extendTheme({
     color: {
       primary: "#174773",
       secondry: "#1266A0",
+      third: "#1767A0"
     }
   },
+  aboutIcon: {
+    size: ["2xl", "3xl", "4xl", "5xl", "6xl"],
+    weight: "bold",
+    secondry: "#1266A0",
+  },
+
   carouselBgColor: {
     bg: "#2D3748"
   },

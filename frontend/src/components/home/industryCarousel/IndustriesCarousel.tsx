@@ -1,12 +1,12 @@
 import { Box, Flex, Text } from "@chakra-ui/react"
-import { ServiceGallery } from "./ServiceGallery"
 import theme from "../../../theme"
+import { IndustryGallery } from "./IndustryGallery"
 
 interface servicesCarouselProps {
     currentTheme: string
 }
 
-const ServiceCarousel = ({ currentTheme }: servicesCarouselProps) => {
+const IndustryCarousel = ({ currentTheme }: servicesCarouselProps) => {
     const backgroundColor = currentTheme === 'light' ? 'gray.200' : '#282b3c';
 
     return (
@@ -26,11 +26,10 @@ const ServiceCarousel = ({ currentTheme }: servicesCarouselProps) => {
                     </Text>
                     
                 </Flex>
-                
-                <ServiceGallery />
+                <IndustryGallery />
             </Flex>
         </Box>
     )
 }
 
-export default ServiceCarousel
+export default IndustryCarousel

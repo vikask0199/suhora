@@ -5,17 +5,19 @@ import Content from "../components/products/spade/Content"
 import Slidder from "../components/products/spade/Slidder"
 import { Box } from "@chakra-ui/react"
 
+type spadePageProps = {
+  currentTheme: string
+}
 
 
-
-const SpadePage = () => {
+const SpadePage = ({ currentTheme }: spadePageProps) => {
   return (
-    <Box> 
+    <Box>
       <SpadeHeader />
       <Content />
       <Spade />
-      <Slidder/>
-    
+      <Slidder />
+
     </Box>
 
   )

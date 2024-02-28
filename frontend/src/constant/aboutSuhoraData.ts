@@ -1,18 +1,19 @@
 export const stats = [
+
     {
-      value: '210+',
-      label: 'Components',
+      value: '12+',
+      label: 'Guaranteed Collections',
     },
     {
-      value: '60%',
-      label: 'Less development costs',
-    },
-    {
-      value: '25k',
-      label: 'GitHub stars',
+      value: '24/7',
+      label: 'All Weather Surveilliance',
     },
     {
       value: '25k',
-      label: 'GitHub stars',
+      label: 'Secure Tasking and Downlinking',
+    },
+    {
+      value: '<1 hr.',
+      label: 'Most Cost Effective Solutions ',
     },
   ]

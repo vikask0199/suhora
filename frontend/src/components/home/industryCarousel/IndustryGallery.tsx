@@ -16,14 +16,13 @@ import {
 import { useState } from 'react'
 import { GiCircleCage } from 'react-icons/gi'
 import { IoBaseballOutline, IoChevronBackOutline, IoChevronForwardOutline } from 'react-icons/io5'
-import { RiTyphoonLine } from "react-icons/ri"
-import { products } from "../../../constant/productCarouselData.ts"
+import { RiTyphoonLine } from 'react-icons/ri'
+import { industryCarouselData } from "../../../constant/industryCarouselData.ts"
 import theme from "../../../theme.ts"
-import { Carousel, CarouselSlide, useCarousel } from './Carousel.tsx'
+import { CarouselSlide, IndustryCarousel, useCarousel } from './IndustryCarousel.tsx'
 
 
-export const Gallery = () => {
-
+export const IndustryGallery = () => {
   const spadeIconArray = [<RiTyphoonLine />]
   const lanceIconArray = [<IoBaseballOutline />]
   const sidIconArray = [<GiCircleCage />]
@@ -36,7 +35,8 @@ export const Gallery = () => {
   })
 
   const hasPrevious = currentSlide !== 0
-  const hasNext = currentSlide < products.length - 1
+  const hasNext = currentSlide < industryCarouselData.length - 1
+
 
   return (
     <Stack spacing="4" >
@@ -49,10 +49,10 @@ export const Gallery = () => {
             },
           },
         }}>
-        <Carousel ref={ref} boxShadow='rgba(0, 0, 0, 0.35) 0px 5px 15px' >
-          {products.map((image, i) => (
+        <IndustryCarousel ref={ref} boxShadow='rgba(0, 0, 0, 0.35) 0px 5px 15px' >
+          {industryCarouselData.map((image, i) => (
             <CarouselSlide key={i}>
-              <Flex direction={{ base: "column", md: "row" }}>
+              <Flex direction={{ base: "column", md: "row-reverse" }}>
                 <Box w={{ base: "100%", md: "50%" }} padding={7}>
                   <AspectRatio ratio={aspectRatio}>
                     <Image src={image.imageUrl} />
@@ -61,8 +61,8 @@ export const Gallery = () => {
                 <Flex w={{ base: "100%", md: "50%" }} p={8} direction="column" rowGap={4} justifyContent="space-between">
                   <Box fontSize={theme.fonts.subHeading.size} fontWeight={theme.fonts.subHeading.weight} color={theme.companyTheme.color.third}>{image.name}</Box>
                   {/* <Box backgroundColor="#BEC1DD" color="#3F53E9" w="fit-content" px="8" fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>SUHORA</Box> */}
-                  <Box fontSize={theme.fonts.description}>{image.description}</Box>
-                  <UnorderedList listStyleType="hidden" fontSize={theme.fonts.list} marginLeft={0}>
+                  <Box fontSize={theme.fonts.description}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti laborum repudiandae obcaecati sapiente magnam! Officiis quae, similique minus harum quas eum, quidem vero labore magni iste.</Box>
+                  <UnorderedList listStyleType="none" fontSize={theme.fonts.list} marginLeft={0}>
                     <ListItem display="flex" mb="2" alignItems="center" marginTop={4} gap={2}>
                       <Box fontSize={theme.fonts.subHeadingSecond.size} color={theme.companyTheme.color.secondry}>
                         {
@@ -113,16 +113,14 @@ export const Gallery = () => {
                       {image.point5}
                     </ListItem>
                   </UnorderedList>
-                  <Flex justifyContent="">
-                    <Button width="fit-content" px="8" border="1px solid #1266A0" variant="outline" color="#1266A0" _hover={{ backgroundColor: theme.companyTheme.color.secondry, color: "white" }} >
-                      Learn More
-                    </Button>
-                  </Flex>
+                  <Button width="fit-content" px="8" border="1px solid #1266A0" variant="outline" color="#1266A0" _hover={{ backgroundColor: theme.companyTheme.color.secondry, color: "white" }} >
+                    Learn More
+                  </Button>
                 </Flex>
               </Flex>
             </CarouselSlide>
           ))}
-        </Carousel>
+        </IndustryCarousel>
         {hasPrevious && (
           <CarouselIconButton
             pos="absolute"
@@ -147,7 +145,7 @@ export const Gallery = () => {
           />
         )}
         <HStack position="absolute" width="full" justify="center" bottom="0" py="4">
-          {products.map((_, index) => (
+          {industryCarouselData.map((_, index) => (
             <Circle key={index} size="2" bg={currentSlide === index ? `${theme.companyTheme.color.secondry}` : `${theme.companyTheme.color.primary}`} />
           ))}
         </HStack>

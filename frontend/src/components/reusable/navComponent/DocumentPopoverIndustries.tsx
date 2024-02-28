@@ -9,22 +9,23 @@ import {
 import { PopoverIcon } from './PopoverIcon'
 import { NavLink } from 'react-router-dom'
 
-export const DocumentPopoverProduct = () => {
-
-  const routes = [
-    { name: "Spade", path: "/spadepage" },
-    { name: "Lance", path: "/" },
-    { name: "SID", path: "/" }
-  ]
-
-
+export const DocumentPopoverIndustries = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
+  const routes = [
+    { name: "Forestry", path: "/" },
+    { name: "Agriculture", path: "/agriculture" },
+    { name: "Disaster & Insurance", path: "/" },
+    { name: "Renewable Energy", path: "/" },
+    { name: "Mining", path: "/" },
+    { name: "Infrastructure", path: "/" },
+    { name: "Defense & Intelligence'", path: "/" }
+  ]
   return (
     <Popover isOpen={isOpen} onOpen={onOpen} onClose={onClose} trigger="hover" openDelay={0}>
       <PopoverTrigger>
-        <Button rightIcon={<PopoverIcon isOpen={isOpen} />}>Products</Button>
+        <Button rightIcon={<PopoverIcon isOpen={isOpen} />}>Industries</Button>
       </PopoverTrigger>
-      <PopoverContent p="2" maxW="fit-content" mr="-220" mt="3">
+      <PopoverContent p="2" maxW="fit-content" mr="-150" mt="3">
         <Stack spacing="0" alignItems="stretch">
           {routes.map((route) => (
             <NavLink key={route.path} to={route.path} style={{ textDecoration: 'none' }}>
