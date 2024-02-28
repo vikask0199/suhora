@@ -75,7 +75,6 @@ const HomeCarousel = () => {
                     </div>
                     <div className="buttons">
                         <button>Learn More</button>
-                        
                     </div>
                 </div>
             </div>
@@ -247,7 +246,7 @@ const HomeCarousel = () => {
             <button id="prev">{"<"}</button>
             <button id="next">{">"}</button>
         </div>
-      <div className="time"></div>
+      {/* <div className="time"></div> */}
     </div>
   );
 }

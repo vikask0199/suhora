@@ -22,9 +22,7 @@ interface aboutSuhoraProps {
 
 export const AboutSuhora = ({ currentTheme }: aboutSuhoraProps) => {
     const arrayIcon = [<MdOutlineSatelliteAlt />, <TiWeatherPartlySunny />, <FaRegClock />, <TbWorldDollar />]
-
     const isMobile = useBreakpointValue({ base: true, md: false })
-
     const backgroundColor = currentTheme === 'light' ? 'gray.200' : '#282b3c';
 
     return (

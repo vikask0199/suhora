@@ -46,20 +46,7 @@ const theme = extendTheme({
   carouselBgColor: {
     bg: "#2D3748"
   },
-  components: {
-    Button: {
-      variants: {
-        productButton: {
-          width: "fit-content",
-          px: "8",
-          _hover: {
-            bg: "teal.500",
-            color: "white",
-          },
-        },
-      },
-    },
-  },
+  
   config: {
     initialColorMode: "light",
     useSystemColorMode: false,
