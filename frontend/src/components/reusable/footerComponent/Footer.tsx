@@ -38,7 +38,10 @@ const Footer = ({ currentTheme }: footerThemeProps) => {
                         <Flex h={20} alignItems="center" ml="-4">
                             <Image h="100%" src={currentTheme === 'dark' ? LogoWhite : LogoDark} />
                         </Flex>
-                        <Text color="fg.muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor illum sunt natus odio doloremque reiciendis saepe consequuntur tempore explicabo aspernatur.</Text>
+                        <Text>
+                            313, Tower-B, Noida One, Sector-62, Noida, Uttar Pradesh-201309, India
+                            Tel No: 0120-3113029, 3501889
+                        </Text>
                     </Stack>
                     <SimpleGrid columns={{ base: 2, md: 4 }} gap="8" width={{ base: 'full', lg: 'auto' }}>
                         {links.map((group, idx) => (
@@ -49,7 +52,7 @@ const Footer = ({ currentTheme }: footerThemeProps) => {
                                 <Stack spacing="" shouldWrapChildren>
                                     {group.links.map((link) => (
                                         <NavLink key={link.href} to={link.href} style={{ textDecoration: 'none' }} >
-                                            <Button variant="tertiary" justifyContent="start" fontSize="sm" fontWeight="normal"  _hover={{ color: theme.companyTheme.color.secondry }}>
+                                            <Button variant="tertiary" justifyContent="start" fontSize="sm" fontWeight="normal" _hover={{ color: theme.companyTheme.color.secondry }}>
                                                 {link.label}
                                             </Button>
                                         </NavLink>
@@ -67,7 +70,7 @@ const Footer = ({ currentTheme }: footerThemeProps) => {
                     direction={{ base: 'column-reverse', md: 'row' }}
                     align="center">
                     <Text fontSize="sm" color="fg.subtle">
-                        &copy; {new Date().getFullYear()} Suhora | Space Analytics Siplified, All rights reserved.
+                        &copy; {new Date().getFullYear()} Suhora | Space Analytics Simplified, All rights reserved.
                     </Text>
                     <ButtonGroup variant="tertiary">
                         <IconButton as="a" href="#" aria-label="LinkedIn" icon={<FaLinkedin />} _hover={{ color: theme.companyTheme.color.secondry }} />

@@ -1,8 +1,8 @@
 export const links = [
     {
-      title: 'Company',
+      title: 'Industries',
       links: [
-        { label: 'Why Envelope', href: '#' },
+        { label: 'Forestry', href: '#' },
         { label: 'Our story', href: '#' },
         { label: 'Careers', href: '#' },
         { label: 'Press', href: '#' },

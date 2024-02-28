@@ -14,7 +14,7 @@ import {
 } from '@chakra-ui/react'
 
 export const ContactUs = () => (
-    <Container py={{ base: '4', md: '8' }} maxW="5xl" mt={20}>
+    <Container py={{ base: '4', md: '8' }} maxW="6xl" mt={20}>
         <Stack spacing="5">
             {/* <Stack spacing="4" direction={{ base: 'column', sm: 'row' }} justify="space-between">
                 <Box>

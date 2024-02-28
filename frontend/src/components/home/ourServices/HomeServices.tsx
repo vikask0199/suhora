@@ -107,7 +107,7 @@ const HomeServices = ({ currentTheme }: HomeServices) => {
 
     return (
         <Box backgroundColor={backgroundColor} width="100%">
-            <Container maxW="5xl" py={{ base: '4', md: '8', lg: '12' }}>
+            <Container maxW="6xl" py={{ base: '4', md: '8', lg: '12' }}>
                 <Stack spacing={{ base: '4', md: '5' }} direction="column">
                     <Flex justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
                         <Text>

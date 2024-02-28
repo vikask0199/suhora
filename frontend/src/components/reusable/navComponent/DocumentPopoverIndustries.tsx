@@ -18,7 +18,7 @@ export const DocumentPopoverIndustries = () => {
     { name: "Renewable Energy", path: "/" },
     { name: "Mining", path: "/" },
     { name: "Infrastructure", path: "/" },
-    { name: "Defense & Intelligence'", path: "/" }
+    { name: "Defence & Intelligence'", path: "/" }
   ]
   return (
     <Popover isOpen={isOpen} onOpen={onOpen} onClose={onClose} trigger="hover" openDelay={0}>

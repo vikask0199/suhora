@@ -1,9 +1,9 @@
 
-import Spade from "../components/products/spade/Spade"
-import SpadeHeader from "../components/products/spade/SpadeHeader"
-import Content from "../components/products/spade/Content"
-import Slidder from "../components/products/spade/Slidder"
-import { Box } from "@chakra-ui/react"
+import { AboutSpade } from "../components/products/spade/AboutSpade"
+import { SpadeDemo } from "../components/products/spade/SpadeDemo"
+import SpadeFeature from "../components/products/spade/SpadeFeature"
+import { SpadeHome } from "../components/products/spade/SpadeHome"
+import { SpadeIndutryWeServe } from "../components/products/spade/SpadeIndutryWeServe"
 
 type spadePageProps = {
   currentTheme: string
@@ -12,13 +12,13 @@ type spadePageProps = {
 
 const SpadePage = ({ currentTheme }: spadePageProps) => {
   return (
-    <Box>
-      <SpadeHeader />
-      <Content />
-      <Spade />
-      <Slidder />
-
-    </Box>
+    <>
+      <SpadeHome />
+      <AboutSpade  />
+      <SpadeFeature currentTheme={currentTheme}/>
+      <SpadeIndutryWeServe />
+      <SpadeDemo />
+    </>
 
   )
 }

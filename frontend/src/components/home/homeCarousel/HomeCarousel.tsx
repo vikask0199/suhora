@@ -69,7 +69,7 @@ const HomeCarousel = () => {
                 <img src={defence} />
                 <div className="content">
                      {/* <div className="author">VIKAS</div> */}
-                    <div className="title">Defense & Intelligence</div>
+                    <div className="title">Defence & Intelligence</div>
                     <div className="des">
                    Hello please provide content for this page
                     </div>
@@ -167,7 +167,7 @@ const HomeCarousel = () => {
                 <img src={defence}/>
                 <div className="content">
                     <div className="title">
-                    Defense & Intelligence
+                    Defence & Intelligence
                     </div>
                     <div className="description">
                         Description
