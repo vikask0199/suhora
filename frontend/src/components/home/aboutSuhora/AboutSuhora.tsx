@@ -1,11 +1,4 @@
-import {
-    Box,
-    Container,
-    Flex,
-    Stack,
-    StackDivider,
-    Text,
-    useBreakpointValue
+import {Box,Container,Flex,Stack,StackDivider,Text,useBreakpointValue
 } from '@chakra-ui/react'
 import { stats } from '../../../constant/aboutSuhoraData'
 import theme from "../../../theme"
