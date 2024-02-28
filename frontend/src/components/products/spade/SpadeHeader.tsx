@@ -1,5 +1,7 @@
 
 import { Box, Button, Card, CardBody, CardFooter, Flex, HStack, Heading, Image, Stack, Text } from '@chakra-ui/react'
+import image1 from '../../../assets/img/satellites-jpg.webp'
+import theme from "../../../theme"
 const SpadeHeader = () => {
     return (
        
@@ -16,7 +18,7 @@ const SpadeHeader = () => {
 
                 <Stack>
                     <CardBody>
-                        <Heading >The perfect latte
+                        <Heading fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight} color={theme.companyTheme.color.secondry} >The perfect latte
                        
                         </Heading>
                         <Heading mt="3px"> Lorem ipsum dolor sit.</Heading>
@@ -42,14 +44,16 @@ const SpadeHeader = () => {
                      
                     
                 </Stack>
-                <Flex >
-                <Image
-                    objectFit='cover'
-                    maxW={{ base: '100%', md: '400px' }}
-                    src='https://images.unsplash.com/photo-1667489022797-ab608913feeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60'
-                    alt='Caffe Latte'
-                />
-                </Flex>
+                <Flex alignItems='center' p='2em' pl='5em' >
+                        <Image
+                            objectFit='cover'
+                            maxW={{ base: '100%', md: '400px' }}
+                            height='20em'
+                            src={image1}
+                            alt='Caffe Latte'
+                        />
+                    </Flex>
+
                 
             </Card>
             </Flex>

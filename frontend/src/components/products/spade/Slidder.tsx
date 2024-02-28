@@ -1,16 +1,18 @@
 import { Box, Flex, Text } from "@chakra-ui/react"
-import { ServiceGallery } from "./ServiceGallery"
-import theme from "../../../theme"
 
-interface servicesCarouselProps {
+import theme from "../../../theme"
+import { Gallery } from "./Gallery";
+
+
+interface slidder {
     currentTheme: string
 }
 
-const ServiceCarousel = ({ currentTheme }: servicesCarouselProps) => {
-    const backgroundColor = currentTheme === 'light' ? 'gray.200' : '#282b3c';
+const Slidder = () => {
+    // const backgroundColor = currentTheme === 'light' ? 'gray.200' : '#282b3c';
 
     return (
-        <Box background={backgroundColor}>
+        <Box >
             <Flex
                 maxW="5xl"
                 mx="auto"
@@ -22,15 +24,13 @@ const ServiceCarousel = ({ currentTheme }: servicesCarouselProps) => {
                 <Flex justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
                     <Text>
                         <Text as="span">Industry We </Text>
-                        
+                        <Text as="span" color={theme.companyTheme.color.secondry}>Serve</Text>
                     </Text>
-                    
                 </Flex>
-                
-                <ServiceGallery />
+               <Gallery/>
             </Flex>
         </Box>
     )
 }
 
-export default ServiceCarousel
+export default Slidder
