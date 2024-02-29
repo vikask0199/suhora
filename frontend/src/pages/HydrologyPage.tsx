@@ -1,5 +1,9 @@
+import { AboutHydrology } from "../components/services/hydrology/AboutHydrology"
+import { HowItsWorks } from "../components/services/hydrology/HowItsWorks"
+import HydrologyFeature from "../components/services/hydrology/HydrologyFeature"
+import HydrologyHeader from "../components/services/hydrology/HydrologyHeader"
+import HydrologyUsacases from "../components/services/hydrology/HydrologyUsacases"
 
-import About from "../components/home/aboutSuhora/About"
 
 type hydrologyThemeProps = {
     currentTheme: string
@@ -9,8 +13,11 @@ type hydrologyThemeProps = {
 const HydrologyPage = ({ currentTheme }: hydrologyThemeProps) => {
     return (
         <>
-            {/* <Hydrology currentTheme={currentTheme} /> */}
-            <About currentTheme={currentTheme}  />
+            <HydrologyHeader currentTheme={currentTheme} />
+            <AboutHydrology currentTheme={currentTheme} />
+            <HydrologyFeature  />
+            <HowItsWorks currentTheme={currentTheme}/>
+            <HydrologyUsacases />
         </>
     )
 }

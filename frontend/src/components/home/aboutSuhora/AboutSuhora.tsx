@@ -47,21 +47,22 @@ export const AboutSuhora = ({ currentTheme }: aboutSuhoraProps) => {
                             Our team, a blend of seasoned experts and innovative thinkers, is committed to breaking down complex information into clear, actionable insights that drive decision-making across various sectors. Suhora Technologies stands at the intersection of innovation and utility, reshaping how industries leverage the untapped potential of space data.
                         </Text>
                     </Stack>
-                    <Stack
+                    <Flex
                         direction={{ base: 'column', md: 'row' }}
                         maxW="6xl"
                         width="full"
-                        spacing={{ base: '4', md: '4' }}
+                        justifyContent="space-between"
+                        gap={7}
                         {...(!isMobile ? { divider: <StackDivider /> } : {})}>
                         {stats.map((stat, id) => (
-                            <Flex flexDirection="column" alignItems="center" gap={4} >
+                            <Flex flexDirection="column" alignItems="center" gap={4}>
                                 <Box width="fit-content" fontSize={theme.aboutIcon.size} fontWeight={theme.aboutIcon.weight} color={theme.aboutIcon.secondry}>
                                     {arrayIcon[id]}
                                 </Box>
                                 <Stat key={id} flex="1" {...stat} />
                             </Flex>
                         ))}
-                    </Stack>
+                    </Flex>
                 </Stack>
             </Container>
         </Box>

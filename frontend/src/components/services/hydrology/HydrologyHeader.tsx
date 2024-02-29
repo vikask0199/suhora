@@ -1,8 +1,13 @@
 
 import { Box, Flex, Heading, Img, Text } from '@chakra-ui/react'
-import AgricultureImg from '../../assets/img/services/agri.png'
-import theme from '../../theme'
-const AgricultureOverlay = () => {
+import AgricultureImg from '../../../assets/img/services/agri.png'
+import theme from '../../../theme'
+
+type hydrologyHeaderProps = {
+  currentTheme: string
+}
+
+const HydrologyHeader = ({ currentTheme }: hydrologyHeaderProps) => {
 
   return (
     <>
@@ -50,4 +55,4 @@ const AgricultureOverlay = () => {
     </>
   )
 }
-export default AgricultureOverlay
+export default HydrologyHeader
