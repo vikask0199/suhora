@@ -35,8 +35,7 @@ import AgricultureContactUs from './AgricultureContactUs'
         w="full"
         h="full"
         overflow="hidden"
-        align="center"
-      >
+        align="center">
         <Box position="relative" w="full" h="full">
           <Img
             src={AgricultureImg}
