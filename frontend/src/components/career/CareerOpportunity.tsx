@@ -4,6 +4,7 @@ import {
     AccordionButton,
     AccordionItem,
     AccordionPanel,
+    AccordionIcon,
     Badge,
     Button,
     HStack,
@@ -34,14 +35,16 @@ const CareerOpportunity = () => (
                         innovation and excellence.
                     </Text>
                 </Stack>
-                <Accordion >
+                <Accordion allowMultiple >
                     {jobListings.map((listing, id) => (
                         <AccordionItem py="4">
-                            <AccordionButton gap={4} px="0">
+                            <AccordionButton gap={4} px="0" > 
+                                
                                 <Text as="h2" fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight} color={theme.companyTheme.color.secondry}>
                                     {listing.title}
-                                </Text>
-                                <Badge variant="pill" fontSize={theme.fonts.subHeadingThird.size} fontWeight={theme.fonts.subHeadingThird.weight} color={theme.companyTheme.color.secondry}>{listing.department}</Badge>
+                                </Text> 
+                                <Badge  as="span" flex='2' textAlign='left' variant="pill" fontSize={theme.fonts.subHeadingThird.size} fontWeight={theme.fonts.subHeadingThird.weight} color={theme.companyTheme.color.secondry}>{listing.department}</Badge>
+                                 <AccordionIcon mr={4} />
                             </AccordionButton>
                             <AccordionPanel px="0">
                                 <Stack spacing={{ base: '6', md: '8' }}>
@@ -61,6 +64,7 @@ const CareerOpportunity = () => (
                                     <Button bgColor= {theme.companyTheme.color.secondry} color='white' alignSelf="start">Apply Now</Button>
                                 </Stack>
                             </AccordionPanel>
+                            
                         </AccordionItem>
                     ))}
                 </Accordion>

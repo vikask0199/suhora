@@ -1,9 +1,14 @@
-import { ContactUs } from "../components/contact/ContactUs"
 
-const ContactPage = () => {
+import ContactUs from "../components/contact/ContactUs"
+
+type caontactProps = {
+    currentTheme: string,
+}
+
+const ContactPage = ({ currentTheme }: caontactProps) => {
     return (
         <>
-            <ContactUs />
+            <ContactUs currentTheme={currentTheme}/>
         </>
     )
 }
