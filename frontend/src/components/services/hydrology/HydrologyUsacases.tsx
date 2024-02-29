@@ -1,106 +1,54 @@
-import { SVGProps } from 'react';
 import {
-    Container,
     Box,
-    chakra,
-    Text,
-    SimpleGrid,
+    Container,
     Flex,
     Link,
-    useColorModeValue,
-    Stack
+    SimpleGrid,
+    Stack,
+    Text,
+    chakra,
+    useColorModeValue
 } from '@chakra-ui/react';
 
+import { FaFileCode, FaFileInvoiceDollar } from 'react-icons/fa';
 import { MdPayment } from 'react-icons/md';
-import { FaFileInvoiceDollar } from 'react-icons/fa';
-import { FaFileCode } from 'react-icons/fa';
-import theme from '../../theme';
+import theme from '../../../theme';
 
 
 interface IFeature {
     heading: string;
     content: string;
-    icon: SVGProps<SVGElement>;
 }
 
 const features: IFeature[] = [
     {
         heading: 'Payments',
         content: 'Choose from Stripe, Paddle, Braintree, or PayPal to launch your product quickly.',
-        icon: (
-            <Box fontSize={theme.fonts.mainHeading.size}>
-                <MdPayment />
-            </Box>
-        )
+
     },
     {
         heading: 'Invoicing',
         content: 'Webhooks are wired up to automatically email customers PDF receipts and invoices.',
-        icon: (
-
-            <Box fontSize={theme.fonts.mainHeading.size}>
-                <FaFileInvoiceDollar />
-            </Box>
-        )
     },
     {
         heading: 'API Included',
         content: 'Roll your own API to easily connect with other apps or services. Pull in updates.',
-        icon: (
-
-            <Box fontSize={theme.fonts.mainHeading.size}>
-                <FaFileCode />
-            </Box>
-        )
-    },
-    {
-        heading: 'API Included',
-        content: 'Roll your own API to easily connect with other apps or services. Pull in updates.',
-        icon: (
-
-            <Box fontSize={theme.fonts.mainHeading.size}>
-                <FaFileCode />
-            </Box>
-        )
-    },
-    {
-        heading: 'API Included',
-        content: 'Roll your own API to easily connect with other apps or services. Pull in updates.',
-        icon: (
-
-            <Box fontSize={theme.fonts.mainHeading.size}>
-                <FaFileCode />
-            </Box>
-        )
-    },
-    {
-        heading: 'API Included',
-        content: 'Roll your own API to easily connect with other apps or services. Pull in updates.',
-        icon: (
-
-            <Box fontSize={theme.fonts.mainHeading.size}>
-                <FaFileCode />
-            </Box>
-        )
-    },
+    }
 ];
 
-type HomeServices = {
-    currentTheme: string
-}
 
-const AgricultureCards = ({ currentTheme }: HomeServices) => {
-    const iconArray = [<MdPayment />, <FaFileInvoiceDollar />, <FaFileCode />,<MdPayment />, <FaFileInvoiceDollar />, <FaFileCode />]
-    const backgroundColor = currentTheme === 'light' ? 'gray.200' : '#282b3c';
+const HydrologyUsacases = () => {
+    const iconArray = [<MdPayment />, <FaFileInvoiceDollar />, <FaFileCode />]
+
 
     return (
-        <Box width="100%" background={backgroundColor}>
+        <Box width="100%">
             <Container maxW="6xl" py={{ base: '4', md: '8', lg: '12' }}>
                 <Stack spacing={{ base: '4', md: '5' }} direction="column">
                     <Flex justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
                         <Text>
-                            <Text as="span">What We </Text>
-                            <Text as="span" color={theme.companyTheme.color.secondry}>Serve</Text>
+                            <Text as="span" color={theme.companyTheme.color.secondry}>Hydrology </Text>
+                            <Text as="span">Usecases</Text>
                         </Text>
                     </Flex>
                     <Text fontSize={theme.fonts.subHeading.size} color={theme.companyTheme.color.third} fontWeight={theme.fonts.subHeading.weight} textAlign="center">
@@ -131,13 +79,13 @@ const AgricultureCards = ({ currentTheme }: HomeServices) => {
                                 boxShadow="lg">
                                 {iconArray[index]}
                             </Flex>
-                            <chakra.h3 fontWeight="semibold" fontSize="2xl" mt={6}>
+                            <chakra.h3 fontWeight={theme.fonts.subHeading.weight} fontSize={theme.fonts.subHeading.size} mt={6}>
                                 {feature.heading}
                             </chakra.h3>
-                            <Text fontSize="md" mt={4}>
+                            <Text my={4}>
                                 {feature.content}
                             </Text>
-                            <Link href="#" mt={4} fontSize="sm" color="blue.400">
+                            <Link href="#" fontSize={theme.fonts.subHeadingSecond.size} color={theme.companyTheme.color.secondry}>
                                 Learn more →
                             </Link>
                         </Box>
@@ -148,4 +96,4 @@ const AgricultureCards = ({ currentTheme }: HomeServices) => {
     );
 };
 
-export default AgricultureCards;
+export default HydrologyUsacases;

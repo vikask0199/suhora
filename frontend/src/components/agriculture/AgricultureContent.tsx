@@ -1,44 +1,99 @@
+
 import {
     Box,
+    Button,
     Container,
-    Heading,
+    Flex,
+    ListItem,
     Stack,
     Text,
-    ListItem,
     UnorderedList
-} from '@chakra-ui/react'
+} from '@chakra-ui/react';
 
-import theme from '../../theme'
-const AgricultureContent = () => (
-    <Box as="section" bg="bg.surface" p='5em' >
-        <Container maxW='5xl'>
-            <Stack spacing="3" textAlign="center">
-                <Heading fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight} color={theme.companyTheme.color.secondry}>
-                    Climate change hurts agriculture the most, but we don't respond to these risks well.
-                </Heading>
-            </Stack>
-            <Box p={5} fontSize={theme.fonts.description}>
-                <Text align='left' p={1}>Changing temperature and rainfall patterns are increasing the frequency of extreme weather events around the world. These include increased droughts, heavy rain, and intense flooding.</Text>
-                <Text align='left' p={1}>A United Nations report from 2016 estimates that these extreme weather events lead to economic losses of $100 billion globally. Agriculture-related businesses were 25% of these losses.¹</Text>
-                <Text align='left' p={1}>Most agriculture risk assessment requires field labor, making the process costly and time-intensive. Field research can only provide a limited view of a small geographic area. </Text>
-                <UnorderedList p={5}>
-                    <ListItem p={2}> Farm managers are unable to quickly respond to variable weather conditions, resulting in a loss of crops and livestock.</ListItem>
-                    <ListItem p={2}>Financial institutions lose more money on agricultural lending, leading to lower insurance coverage and access to credit.</ListItem>
-                    <ListItem p={2}>Governments are unable to have a broad impact through social programs around their agriculture industries.</ListItem>
-                    
-                </UnorderedList>
+import theme from '../../theme';
+import { RiTyphoonLine } from 'react-icons/ri';
 
-            </Box>
 
-            <Stack spacing="3" textAlign="center">
-                <Heading fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight} color={theme.companyTheme.color.secondry}>
-               Satellite images can give you accurate and detailed ground information.
-                </Heading>
-            </Stack>
 
-        </Container>
-    </Box>
-)
+export const AgricultureContent = () => {
+    const aspectRatio = 3 / 3
+    const spadeIconArray = [<RiTyphoonLine />]
 
-export default AgricultureContent
-
+    return (
+        <Box >
+            <Container py={{ base: '16', md: '12' }} maxW="6xl">
+                <Stack spacing={{ base: '12', md: '12' }} textAlign="center" align="center">
+                    <Stack spacing={{ base: '4', md: '5' }}>
+                        <Flex justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
+                            <Text>
+                                <Text as="span">About </Text>
+                                <Text as="span" color={theme.companyTheme.color.secondry}>Suhora</Text>
+                            </Text>
+                        </Flex>
+                        <Text color={theme.companyTheme.color.third} fontSize={theme.fonts.subHeading.size} fontWeight={theme.fonts.subHeading.weight} maxW="6xl" >
+                            Multi band high resolution image from various satellite.
+                        </Text>
+                        <Text textAlign="justify">
+                            At SUHORA, we're driven by a passion to make the universe's data accessible and actionable for those who need it most. Founded on the principle that space analytics should empower, not overwhelm, we've dedicated ourselves to demystifying satellite data for practical, everyday applications.
+                            <br />
+                            <br />
+                            Our team, a blend of seasoned experts and innovative thinkers, is committed to breaking down complex information into clear, actionable insights that drive decision-making across various sectors. Suhora Technologies stands at the intersection of innovation and utility, reshaping how industries leverage the untapped potential of space data.
+                        </Text>
+                        <Flex w="100%" direction="column" rowGap={4} justifyContent="space-between">
+                            <UnorderedList listStyleType="hidden" fontSize={theme.fonts.list} marginLeft={0}>
+                                <ListItem display="flex" mb="2" alignItems="center" marginTop={4} gap={2}>
+                                    <Box fontSize={theme.fonts.subHeadingSecond.size} color={theme.companyTheme.color.secondry}>
+                                        {
+                                            spadeIconArray[0]
+                                        }
+                                    </Box>
+                                    hello java how are you can we work together hello java how are you can we work together hello java how are you can we work together
+                                </ListItem>
+                                <ListItem display="flex" mb="2" alignItems="center" marginTop={4} gap={2}>
+                                    <Box fontSize={theme.fonts.subHeadingSecond.size} color={theme.companyTheme.color.secondry}>
+                                        {
+                                            spadeIconArray[0]
+                                        }
+                                    </Box>
+                                    hello java how are you can we work together hello java how are you can we work together hello java how are you can we work together
+                                </ListItem>
+                                <ListItem display="flex" mb="2" alignItems="center" marginTop={4} gap={2}>
+                                    <Box fontSize={theme.fonts.subHeadingSecond.size} color={theme.companyTheme.color.secondry}>
+                                        {
+                                            spadeIconArray[0]
+                                        }
+                                    </Box>
+                                    hello java how are you can we work together hello java how are you can we work together hello java how are you can we work together
+                                </ListItem>
+                                <ListItem display="flex" mb="2" alignItems="center" marginTop={4} gap={2}>
+                                    <Box fontSize={theme.fonts.subHeadingSecond.size} color={theme.companyTheme.color.secondry}>
+                                        {
+                                            spadeIconArray[0]
+                                        }
+                                    </Box>
+                                    hello java how are you can we work together hello java how are you can we work together hello java how are you can we work together
+                                </ListItem>
+                                <ListItem display="flex" mb="2" alignItems="center" marginTop={4} gap={2}>
+                                    <Box fontSize={theme.fonts.subHeadingSecond.size} color={theme.companyTheme.color.secondry}>
+                                        {
+                                            spadeIconArray[0]
+                                        }
+                                    </Box>
+                                    hello java how are you can we work together hello java how are you can we work together hello java how are you can we work together
+                                </ListItem>
+                                <ListItem display="flex" mb="2" alignItems="center" marginTop={4} gap={2}>
+                                    <Box fontSize={theme.fonts.subHeadingSecond.size} color={theme.companyTheme.color.secondry}>
+                                        {
+                                            spadeIconArray[0]
+                                        }
+                                    </Box>
+                                    hello java how are you can we work together hello java how are you can we work together hello java how are you can we work together
+                                </ListItem>
+                            </UnorderedList>
+                        </Flex>
+                    </Stack>
+                </Stack>
+            </Container>
+        </Box>
+    )
+} 

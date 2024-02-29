@@ -6,7 +6,6 @@ type CareerPage = {
 const CareerPage = ({ currentTheme }: CareerPage) => {
   return (
     <div>
-
         <Career/>
     </div>
   )

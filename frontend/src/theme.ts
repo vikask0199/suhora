@@ -26,9 +26,7 @@ const theme = extendTheme({
     subHeadingThird: {
       weight: "normal",
     },
-    body: "Century Gothic, sans-serif",
     description: "md",
-    list: "sm",
   },
   companyTheme: {
     color: {
@@ -38,7 +36,7 @@ const theme = extendTheme({
     }
   },
   aboutIcon: {
-    size: ["2xl", "3xl", "4xl", "5xl", "6xl"],
+    size: [ "3xl", "4xl", "5xl", "6xl"],
     weight: "bold",
     secondry: "#1266A0",
   },

@@ -1,60 +1,44 @@
-
-import { Box, Flex, Heading, Img, Text, Button, Stack, } from '@chakra-ui/react'
+import { Box, Button, Flex } from '@chakra-ui/react'
+import bgImage from "../../assets/img/satellites-jpg.webp"
 import theme from '../../theme'
 
-import contact from '../../assets/img/contact us.jpg'
 
 const AgricultureContactUs = () => {
     return (
-        <>
-            <Box as="section" minH="140px" position="relative" p={10} >
-                <Box py="32" position="relative" zIndex={1} >
-                    <Box maxW='5xl' mx="auto" px={{ base: '6', md: '8' }} color="white" >
-                        <Flex justifyContent='center'>
-                            <Button
-
-
-                                colorScheme="blue"
-                                backgroundColor={theme.companyTheme.color.secondry}
-
-                                w='13em'
-                                rounded="full"
-                                size="lg"
-                                fontSize={theme.fonts.subHeadingThird.size} fontWeight={theme.fonts.subHeadingThird.weight}
-                            >
-                                Contact Sales
-                            </Button>
-                        </Flex>
-
-
-                    </Box>
-                </Box>
-                <Flex
-                    id="image-wrapper"
-                    position="absolute"
-                    insetX="0"
-                    insetY="0"
-                    w="full"
-                    h="full"
-                    overflow="hidden"
-                    align="center"
-                >
-                    <Box position="relative" w="full" h="full">
-                        <Img
-                            src={contact}
-                            alt="Main Image"
-                            w="full"
-                            h="full"
-                            objectFit="cover"
-                            objectPosition="top bottom"
-                            position="absolute"
-                        />
-                        <Box position="absolute" w="full" h="full" bg="blackAlpha.600" />
-                    </Box>
+        <Box
+            as="section"
+            py="12"
+            position="relative"
+            h={{ base: '260px', md: '340px' }}
+            bgImage={bgImage}
+            bgSize="cover"
+            bgPosition="center"
+            _after={{
+                content: `""`,
+                display: 'block',
+                w: 'full',
+                h: 'full',
+                bg: 'blackAlpha.700',
+                position: 'absolute',
+                inset: 0,
+                zIndex: 0,
+            }}
+        >
+            <Box
+                maxW={{ base: 'xl', md: '5xl' }}
+                mx="auto"
+                px={{ base: '6', md: '8' }}
+                h="full"
+                zIndex={1}
+                position="relative">
+                <Flex direction={{ base: 'column', md: 'row' }} height="100%" justifyContent="center" alignItems="center">
+                    <Button width="fit-content" px="8" border="1px solid white" variant="outline" color="white" _hover={{ backgroundColor: theme.companyTheme.color.secondry, border: "1px solid #1266A0" }} >
+                        Contact Sales
+                    </Button>
                 </Flex>
             </Box>
-        </>
+        </Box>
     )
 }
-export default AgricultureContactUs
 
+export default AgricultureContactUs
