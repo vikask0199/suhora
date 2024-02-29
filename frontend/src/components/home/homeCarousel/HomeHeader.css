@@ -285,10 +285,10 @@
 
 @keyframes outFrame {
     to {
-        width: 150px;
-        height: 220px;
+        height: 160px;
+        width: 230px;
         bottom: 50px;
-        left: 50%;
+        left: 40%;
         border-radius: 20px;
     }
 }
@@ -301,7 +301,7 @@
 
 .carousel.next .arrows button,
 .carousel.prev .arrows button {
-    pointer-events: none;
+    /* pointer-events: none; */
 }
 
 .carousel.prev .list .item:nth-child(2) .content .author,

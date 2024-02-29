@@ -13,8 +13,8 @@ export const DocumentPopoverProduct = () => {
 
   const routes = [
     { name: "Spade", path: "/spadepage" },
-    { name: "Lance", path: "/" },
-    { name: "SID", path: "/" }
+    { name: "Lance", path: "/lancepage" },
+    { name: "SID", path: "/sidpage" }
   ]
 
 

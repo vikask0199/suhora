@@ -1,4 +1,5 @@
-import Hydrology from "../components/services/Hydrology"
+
+import About from "../components/home/aboutSuhora/About"
 
 type hydrologyThemeProps = {
     currentTheme: string
@@ -8,7 +9,8 @@ type hydrologyThemeProps = {
 const HydrologyPage = ({ currentTheme }: hydrologyThemeProps) => {
     return (
         <>
-            <Hydrology currentTheme={currentTheme} />
+            {/* <Hydrology currentTheme={currentTheme} /> */}
+            <About currentTheme={currentTheme}  />
         </>
     )
 }

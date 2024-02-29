@@ -1,3 +1,4 @@
+
 import { Box, Flex, Heading,  Img, Text } from '@chakra-ui/react'
 import theme from '../../theme'
 import AgricultureImg from '../../assets/img/services/agri.png'
@@ -5,6 +6,7 @@ import AgricultureContent from './AgricultureContent'
 import AgricultureCards from './AgricultureCards'
 import AgricultureContactUs from './AgricultureContactUs'
  const AgricultureOverlay = () => {
+
   return (
     <>
     <Box  as="section" minH="140px" position="relative" p={10} >

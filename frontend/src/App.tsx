@@ -8,6 +8,8 @@ import HydrologyPage from './pages/HydrologyPage';
 import SpadePage from './pages/SpadePage';
 import Agriculture from './pages/Agriculture';
 import CareerPage from './pages/CareerPage';
+import LancePage from './pages/LancePage';
+import SIDPage from './pages/SIDPage';
 
 function App() {
   // const [currentTheme, setCurrentTheme] = useState<'light' | 'dark'>('light');
@@ -37,6 +39,8 @@ function App() {
           <Route path="contact-us" element={<ContactPage />} />
           <Route path="hydrology" element={<HydrologyPage currentTheme={colorMode} />} />
           <Route path="spadepage" element={<SpadePage currentTheme={colorMode} />} />
+          <Route path="lancepage" element={<LancePage currentTheme={colorMode} />} />
+          <Route path="sidpage" element={<SIDPage currentTheme={colorMode} />} />
           <Route path="agriculture" element={<Agriculture currentTheme={colorMode} />} />
           <Route path="career" element={<CareerPage currentTheme={colorMode}  />} />
         </Route>

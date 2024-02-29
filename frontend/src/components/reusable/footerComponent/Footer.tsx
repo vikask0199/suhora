@@ -12,9 +12,11 @@ import {
     Text,
 } from '@chakra-ui/react'
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
+import { NavLink } from 'react-router-dom'
 import LogoDark from '../../../assets/img/logo/suhora_logo.png'
 import LogoWhite from '../../../assets/img/logo/suhora_white.png'
 import { links } from "../../../constant/footerData"
+import theme from '../../../theme'
 
 type footerThemeProps = {
     currentTheme: string;
@@ -23,7 +25,7 @@ type footerThemeProps = {
 const Footer = ({ currentTheme }: footerThemeProps) => {
     const backgroundColor = currentTheme === 'light' ? 'gray.200' : '#282b3c';
 
-    return(
+    return (
         <Box background={backgroundColor}>
             <Container as="footer" role="contentinfo" maxW="100%">
                 <Stack
@@ -36,19 +38,24 @@ const Footer = ({ currentTheme }: footerThemeProps) => {
                         <Flex h={20} alignItems="center" ml="-4">
                             <Image h="100%" src={currentTheme === 'dark' ? LogoWhite : LogoDark} />
                         </Flex>
-                        <Text color="fg.muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor illum sunt natus odio doloremque reiciendis saepe consequuntur tempore explicabo aspernatur.</Text>
+                        <Text>
+                            313, Tower-B, Noida One, Sector-62, Noida, Uttar Pradesh-201309, India
+                            Tel No: 0120-3113029, 3501889
+                        </Text>
                     </Stack>
                     <SimpleGrid columns={{ base: 2, md: 4 }} gap="8" width={{ base: 'full', lg: 'auto' }}>
                         {links.map((group, idx) => (
-                            <Stack key={idx} spacing="4" minW={{ lg: '40' }}>
-                                <Text fontSize="lg" ml="4" fontWeight="semibold" color="fg.subtle">
+                            <Stack key={idx} spacing="1" minW={{ lg: '40' }}>
+                                <Text fontSize="lg" ml="4" fontWeight="semibold" color={theme.companyTheme.color.secondry}>
                                     {group.title}
                                 </Text>
                                 <Stack spacing="" shouldWrapChildren>
-                                    {group.links.map((link, idx) => (
-                                        <Button key={idx} as="a" fontSize="md" variant="text" href={link.href}>
-                                            {link.label}
-                                        </Button>
+                                    {group.links.map((link) => (
+                                        <NavLink key={link.href} to={link.href} style={{ textDecoration: 'none' }} >
+                                            <Button variant="tertiary" justifyContent="start" fontSize="sm" fontWeight="normal" _hover={{ color: theme.companyTheme.color.secondry }}>
+                                                {link.label}
+                                            </Button>
+                                        </NavLink>
                                     ))}
                                 </Stack>
                             </Stack>
@@ -63,12 +70,12 @@ const Footer = ({ currentTheme }: footerThemeProps) => {
                     direction={{ base: 'column-reverse', md: 'row' }}
                     align="center">
                     <Text fontSize="sm" color="fg.subtle">
-                        &copy; {new Date().getFullYear()} Chakra UI Pro, Inc. All rights reserved.
+                        &copy; {new Date().getFullYear()} Suhora | Space Analytics Simplified, All rights reserved.
                     </Text>
                     <ButtonGroup variant="tertiary">
-                        <IconButton as="a" href="#" aria-label="LinkedIn" icon={<FaLinkedin />} />
-                        <IconButton as="a" href="#" aria-label="GitHub" icon={<FaGithub />} />
-                        <IconButton as="a" href="#" aria-label="Twitter" icon={<FaTwitter />} />
+                        <IconButton as="a" href="#" aria-label="LinkedIn" icon={<FaLinkedin />} _hover={{ color: theme.companyTheme.color.secondry }} />
+                        <IconButton as="a" href="#" aria-label="GitHub" icon={<FaGithub />} _hover={{ color: theme.companyTheme.color.secondry }} />
+                        <IconButton as="a" href="#" aria-label="Twitter" icon={<FaTwitter />} _hover={{ color: theme.companyTheme.color.secondry }} />
                     </ButtonGroup>
                 </Stack>
             </Container>

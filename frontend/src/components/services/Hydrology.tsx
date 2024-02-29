@@ -39,7 +39,7 @@ const Hydrology = ({ currentTheme }: hydrologyThemeProps) => {
 
 
             <Box backgroundColor={backgroundColor} width="100%">
-                <Container py={{ base: '4', md: '8', lg: '12' }} maxW="5xl">
+                <Container py={{ base: '4', md: '8', lg: '12' }} maxW="6xl">
                     <Stack spacing={{ base: '8', md: '10' }} align="center" mx="auto">
                         <Stack spacing={{ base: '4', md: '5' }} textAlign="center">
                             <Text fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>About Hydrology</Text>
@@ -56,7 +56,7 @@ const Hydrology = ({ currentTheme }: hydrologyThemeProps) => {
 
 
             <Box width="100%">
-                <Box maxW="5xl" mx="auto" px={{ base: '0', lg: '12' }} py={{ base: '0', lg: '12' }}>
+                <Box maxW="6xl" mx="auto" px={{ base: '0', lg: '12' }} py={{ base: '0', lg: '12' }}>
                     <Stack direction={{ base: 'column-reverse', lg: 'row' }} spacing={{ base: '0', lg: '20' }}>
                         <Box
                             width={{ lg: 'sm' }}
@@ -113,7 +113,7 @@ const Hydrology = ({ currentTheme }: hydrologyThemeProps) => {
                 py={{ base: '4', md: '8', lg: '12' }}
             >
                 <Box display="flex" justifyContent="center"
-                    maxW="5xl"
+                    maxW="6xl"
                     mx="auto"
                     px={{ base: '4', md: '8', lg: '5' }}
                     py={{ base: '4', md: '8', lg: '12' }}

@@ -114,7 +114,7 @@ export const IndustryGallery = () => {
                     </ListItem>
                   </UnorderedList>
                   <Button width="fit-content" px="8" border="1px solid #1266A0" variant="outline" color="#1266A0" _hover={{ backgroundColor: theme.companyTheme.color.secondry, color: "white" }} >
-                    Learn More
+                    Explore More
                   </Button>
                 </Flex>
               </Flex>
