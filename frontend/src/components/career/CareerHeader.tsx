@@ -1,25 +1,22 @@
-import { Box, Flex, Heading,  Img, Text } from '@chakra-ui/react'
+import {Box,Flex,Heading,Text,Img} from '@chakra-ui/react'
 import theme from '../../theme'
-import AgricultureImg from '../../assets/img/services/agri.png'
-import AgricultureContent from './AgricultureContent'
-import AgricultureCards from './AgricultureCards'
-import AgricultureContactUs from './AgricultureContactUs'
- const AgricultureOverlay = () => {
+import careerIamge from '../../assets/img/career.jpg'
+const CareerHeader = () => {
   return (
-    <>
-    <Box  as="section" minH="140px" position="relative" p={10} >
+    <div>
+     <Box  as="section" minH="140px" position="relative" p={10} >
       <Box py="32" position="relative" zIndex={1} >
         <Box maxW='5xl' mx="auto" px={{ base: '6', md: '8' }} color="white" >
           <Flex justifyContent='center' fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
             <Heading  >
-            Agriculture
+            Career At Suhora
             </Heading>
            
            
           </Flex>
           <Flex justifyContent='center'>
           <Text  mt='1em' fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+          "Embrace each new opportunity as a stepping stone toward your professional growth and fulfillment."
           
             </Text>
           </Flex>
@@ -37,7 +34,7 @@ import AgricultureContactUs from './AgricultureContactUs'
       >
         <Box position="relative" w="full" h="full">
           <Img
-            src={AgricultureImg}
+            src={careerIamge}
             alt="Main Image"
             w="full"
             h="full"
@@ -49,11 +46,9 @@ import AgricultureContactUs from './AgricultureContactUs'
         </Box>
       </Flex>
     </Box>
-    <AgricultureContent/>
-   <AgricultureCards/>
-   <AgricultureContactUs/>
-   
-   </>
+
+    </div>
   )
 }
-export default AgricultureOverlay
+
+export default CareerHeader

@@ -7,6 +7,7 @@ import HomePage from './pages/HomePage';
 import HydrologyPage from './pages/HydrologyPage';
 import SpadePage from './pages/SpadePage';
 import Agriculture from './pages/Agriculture';
+import CareerPage from './pages/CareerPage';
 
 function App() {
   // const [currentTheme, setCurrentTheme] = useState<'light' | 'dark'>('light');
@@ -37,6 +38,7 @@ function App() {
           <Route path="hydrology" element={<HydrologyPage currentTheme={colorMode} />} />
           <Route path="spadepage" element={<SpadePage currentTheme={colorMode} />} />
           <Route path="agriculture" element={<Agriculture currentTheme={colorMode} />} />
+          <Route path="career" element={<CareerPage currentTheme={colorMode}  />} />
         </Route>
       </Routes>
     </>

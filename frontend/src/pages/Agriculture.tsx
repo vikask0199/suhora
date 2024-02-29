@@ -1,3 +1,4 @@
+import AgricultureOverlay from "../components/agriculture/AgricultureOverlay"
 
 type agricultureProps = {
     currentTheme: string
@@ -6,7 +7,9 @@ type agricultureProps = {
 
 const Agriculture = ({ currentTheme }: agricultureProps) => {
     return (
-        <div>Agriculture</div>
+       <>
+        <AgricultureOverlay/>
+        </>
     )
 }
 
