@@ -37,7 +37,8 @@ const Hydrology = ({ currentTheme }: hydrologyThemeProps) => {
                 <Heading as='h1' size='xl' color="teal" top="50%" left="44.1%" position="absolute">Hydrology</Heading>
             </Box>
 
-       <Box  background={backgroundColor} 
+       <Box 
+        background={backgroundColor} 
         mx="auto"
         px={{ base: '4', md: '8', lg: '5' }}
         py={{ base: '4', md: '8', lg: '12' }}
