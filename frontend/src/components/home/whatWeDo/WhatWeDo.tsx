@@ -11,7 +11,7 @@ export const WhatWeDo = () => {
 
 
     return (
-        <Container py={{ base: '16', md: '12' }} maxW="5xl">
+        <Container py={{ base: '16', md: '12' }} maxW="6xl">
             <Stack spacing={{ base: '12', md: '14' }} alignItems="stretch">
                 <Stack spacing={{ base: '4', md: '5' }} direction="column">
                     <Flex justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
@@ -20,7 +20,7 @@ export const WhatWeDo = () => {
                             <Text as="span">We Do</Text>
                         </Text>
                     </Flex>
-                    <Text fontSize={theme.fonts.subHeading.size} fontWeight={theme.fonts.subHeading.weight} textAlign="center">
+                    <Text fontSize={theme.fonts.subHeading.size} color={theme.companyTheme.color.third} fontWeight={theme.fonts.subHeading.weight} textAlign="center">
                         Everything you need to build modern UI and great products.
                     </Text>
                 </Stack>

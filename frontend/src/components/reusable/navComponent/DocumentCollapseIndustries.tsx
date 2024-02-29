@@ -11,7 +11,7 @@ export const DocumentCollapseIndustries = () => {
       </Button>
       <Collapse in={isOpen} animateOpacity>
         <Stack spacing="1" alignItems="stretch" ps="4">
-          {['Forestry', 'Agriculture', 'Disaster & Insurance', 'Renewable Energy', 'Mining', 'Infrastructure', 'Defense & Intelligence'].map((item) => (
+          {['Forestry', 'Agriculture', 'Disaster & Insurance', 'Renewable Energy', 'Mining', 'Infrastructure', 'Defence & Intelligence'].map((item) => (
             <Button key={item} variant="tertiary" size="lg" justifyContent="start">
               {item}
             </Button>

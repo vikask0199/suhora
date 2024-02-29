@@ -50,23 +50,28 @@ const Navbar = ({ currentTheme, toggleTheme }: navBarProps) => {
 
 
     return (
-        <Box h={20} position='fixed' zIndex={1000} top={0} width="100%" bg={navbarBgColor}  boxShadow="2xl">
+        <Box h={20} position='fixed' zIndex={1000} top={0} width="100%" bg={navbarBgColor} boxShadow="2xl">
             <Box as="section">
                 <Box position="relative" zIndex="tooltip">
                     <Container h={20} maxW="100%">
                         <HStack justify="space-between" alignItems="center">
-                            <Flex h={20} alignItems="center" ml="-4">
-                                <Image h="100%" src={currentTheme === 'dark' ? LogoWhite : LogoDark} />
-                            </Flex>
+                            <NavLink to="/">
+                                <Flex h={20} alignItems="center" ml="-4">
+                                    <Image h="100%" src={currentTheme === 'dark' ? LogoWhite : LogoDark} />
+                                </Flex>
+                            </NavLink>
                             <HStack spacing="10">
                                 <HStack spacing="3">
                                     <MobileDrawer currentTheme={currentTheme} toggleTheme={toggleTheme} />
                                 </HStack>
                                 <ButtonGroup
-                                    size="sm"
                                     variant="text"
                                     display={{ base: 'none', lg: 'flex' }}>
-                                    <Button>Home</Button>
+                                    <NavLink to="/">
+                                        <Button>
+                                            Home
+                                        </Button>
+                                    </NavLink>
                                     <DocumentPopoverProduct />
                                     <DocumentPopoverIndustries />
                                     <DocumentPopoverServices />
@@ -76,7 +81,7 @@ const Navbar = ({ currentTheme, toggleTheme }: navBarProps) => {
                                     </NavLink>
                                     <Button onClick={toggleTheme}>
                                         {
-                                            currentTheme === 'dark' ? <SunIcon color="yellow" fontSize={theme.fonts.subHeadingSecond.size}/> : <MoonIcon />
+                                            currentTheme === 'dark' ? <SunIcon color="yellow" fontSize={theme.fonts.subHeadingSecond.size} /> : <MoonIcon />
                                         }
                                     </Button>
                                 </ButtonGroup>

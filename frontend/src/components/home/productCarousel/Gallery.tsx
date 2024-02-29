@@ -14,14 +14,20 @@ import {
   useColorModeValue
 } from '@chakra-ui/react'
 import { useState } from 'react'
-import { IoChevronBackOutline, IoChevronForwardOutline } from 'react-icons/io5'
+import { GiCircleCage } from 'react-icons/gi'
+import { IoBaseballOutline, IoChevronBackOutline, IoChevronForwardOutline } from 'react-icons/io5'
+import { RiTyphoonLine } from "react-icons/ri"
 import { products } from "../../../constant/productCarouselData.ts"
+import theme from "../../../theme.ts"
 import { Carousel, CarouselSlide, useCarousel } from './Carousel.tsx'
-import theme from "../../../theme.ts";
-import { StarIcon } from '@chakra-ui/icons'
 
 
 export const Gallery = () => {
+
+  const spadeIconArray = [<RiTyphoonLine />]
+  const lanceIconArray = [<IoBaseballOutline />]
+  const sidIconArray = [<GiCircleCage />]
+
   const aspectRatio = 3 / 3
   const [currentSlide, setCurrentSlide] = useState(0)
 
@@ -43,7 +49,7 @@ export const Gallery = () => {
             },
           },
         }}>
-        <Carousel ref={ref} boxShadow='xl'>
+        <Carousel ref={ref} boxShadow='rgba(0, 0, 0, 0.35) 0px 5px 15px' >
           {products.map((image, i) => (
             <CarouselSlide key={i}>
               <Flex direction={{ base: "column", md: "row" }}>
@@ -52,20 +58,66 @@ export const Gallery = () => {
                     <Image src={image.imageUrl} />
                   </AspectRatio>
                 </Box>
-                <Flex w={{ base: "100%", md: "50%" }} p={8} direction="column" rowGap={4} justifyContent="center">
-                  <Box fontSize={theme.fonts.subHeading.size} fontWeight={theme.fonts.subHeading.weight}>{image.name}</Box>
+                <Flex w={{ base: "100%", md: "50%" }} p={8} direction="column" rowGap={4} justifyContent="space-between">
+                  <Box fontSize={theme.fonts.subHeading.size} fontWeight={theme.fonts.subHeading.weight} color={theme.companyTheme.color.third}>{image.name}</Box>
                   {/* <Box backgroundColor="#BEC1DD" color="#3F53E9" w="fit-content" px="8" fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>SUHORA</Box> */}
                   <Box fontSize={theme.fonts.description}>{image.description}</Box>
-                  <UnorderedList listStyleType="none" fontSize={theme.fonts.list}>
-                    <ListItem display="flex" mb="2" alignItems="center" gap={2}><StarIcon color={theme.companyTheme.color.secondry} />{image.point1}</ListItem>
-                    <ListItem display="flex" mb="2" alignItems="center" gap={2}><StarIcon color={theme.companyTheme.color.secondry} /> {image.point2}</ListItem>
-                    <ListItem display="flex" mb="2" alignItems="center" gap={2}><StarIcon color={theme.companyTheme.color.secondry} /> {image.point3}</ListItem>
-                    <ListItem display="flex" mb="2" alignItems="center" gap={2}><StarIcon color={theme.companyTheme.color.secondry} />{image.point4}</ListItem>
-                    <ListItem display="flex" mb="2" alignItems="center" gap={2}><StarIcon color={theme.companyTheme.color.secondry} />{image.point5}</ListItem>
+                  <UnorderedList listStyleType="hidden" fontSize={theme.fonts.list} marginLeft={0}>
+                    <ListItem display="flex" mb="2" alignItems="center" marginTop={4} gap={2}>
+                      <Box fontSize={theme.fonts.subHeadingSecond.size} color={theme.companyTheme.color.secondry}>
+                        {
+                          image.id === '1' ? (spadeIconArray[0]) : (
+                            image.id === '2' ? (lanceIconArray[0]) : (sidIconArray[0])
+                          )
+                        }
+                      </Box>
+                      {image.point1}
+                    </ListItem>
+                    <ListItem display="flex" mb="2" alignItems="center" marginTop={4} gap={2}>
+                      <Box fontSize={theme.fonts.subHeadingSecond.size} color={theme.companyTheme.color.secondry}>
+                        {
+                          image.id === '1' ? (spadeIconArray[0]) : (
+                            image.id === '2' ? (lanceIconArray[0]) : (sidIconArray[0])
+                          )
+                        }
+                      </Box>
+                      {image.point2}</ListItem>
+                    <ListItem display="flex" mb="2" alignItems="center" marginTop={4} gap={2}>
+                      <Box fontSize={theme.fonts.subHeadingSecond.size} color={theme.companyTheme.color.secondry}>
+                        {
+                          image.id === '1' ? (spadeIconArray[0]) : (
+                            image.id === '2' ? (lanceIconArray[0]) : (sidIconArray[0])
+                          )
+                        }
+                      </Box>
+                      {image.point3}
+                    </ListItem>
+                    <ListItem display="flex" mb="2" alignItems="center" marginTop={4} gap={2}>
+                      <Box fontSize={theme.fonts.subHeadingSecond.size} color={theme.companyTheme.color.secondry}>
+                        {
+                          image.id === '1' ? (spadeIconArray[0]) : (
+                            image.id === '2' ? (lanceIconArray[0]) : (sidIconArray[0])
+                          )
+                        }
+                      </Box>
+                      {image.point4}
+                    </ListItem>
+                    <ListItem display="flex" mb="2" alignItems="center" marginTop={4} gap={2}>
+                      <Box fontSize={theme.fonts.subHeadingSecond.size} color={theme.companyTheme.color.secondry}>
+                        {
+                          image.id === '1' ? (spadeIconArray[0]) : (
+                            image.id === '2' ? (lanceIconArray[0]) : (sidIconArray[0])
+                          )
+                        }
+                      </Box>
+                      {image.point5}
+                    </ListItem>
                   </UnorderedList>
-                  <Button width="fit-content" px="8" backgroundColor={theme.companyTheme.color.secondry} color="white" _hover={{ backgroundColor: theme.companyTheme.color.primary }}>
-                    Learn More
-                  </Button>
+                  <Flex justifyContent="">
+                    <Button width="fit-content" px="8" border="1px solid #1266A0" variant="outline" color="#1266A0" _hover={{ backgroundColor: theme.companyTheme.color.secondry, color: "white" }} >
+                      Explore More
+                    </Button>
+                  </Flex>
                 </Flex>
               </Flex>
             </CarouselSlide>
@@ -74,7 +126,7 @@ export const Gallery = () => {
         {hasPrevious && (
           <CarouselIconButton
             pos="absolute"
-            left="3"
+            left="-5"
             top="50%"
             transform="translateY(-50%)"
             onClick={() => slider.current?.prev()}
@@ -86,7 +138,7 @@ export const Gallery = () => {
         {hasNext && (
           <CarouselIconButton
             pos="absolute"
-            right="3"
+            right="-5"
             top="50%"
             transform="translateY(-50%)"
             onClick={() => slider.current?.next()}
@@ -96,7 +148,7 @@ export const Gallery = () => {
         )}
         <HStack position="absolute" width="full" justify="center" bottom="0" py="4">
           {products.map((_, index) => (
-            <Circle key={index} size="2" bg={currentSlide === index ? 'white' : 'whiteAlpha.400'} />
+            <Circle key={index} size="2" bg={currentSlide === index ? `${theme.companyTheme.color.secondry}` : `${theme.companyTheme.color.primary}`} />
           ))}
         </HStack>
       </Box>

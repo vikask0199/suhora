@@ -1,4 +1,4 @@
-import Hydrology from "../components/New/Hydrology"
+
 import About from "../components/home/aboutSuhora/About"
 
 type hydrologyThemeProps = {

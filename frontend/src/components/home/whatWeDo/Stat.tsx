@@ -11,11 +11,11 @@ interface StatProps {
 
 export const Stat = (props: StatProps) => {
 
-  const { label, description, value, cta } = props
-  
+  const { label, description, cta } = props
+
   return (
     <Stack spacing="3" flex="1" >
-      <Flex direction="column" justifyContent="space-between" minH={130}>
+      <Flex direction="column" justifyContent="space-between" minH={140}>
         <Stack>
           <Text fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>
             {label}
@@ -23,7 +23,7 @@ export const Stat = (props: StatProps) => {
           <Text>{description}</Text>
         </Stack>
         <Button
-          size="lg"
+          fontWeight={theme.fonts.subHeadingThird.weight}
           variant="link"
           colorScheme="blue"
           rightIcon={<FiArrowRight />}
