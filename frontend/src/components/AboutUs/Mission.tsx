@@ -1,7 +1,7 @@
 import { AspectRatio, Box, Flex, Image, Text } from "@chakra-ui/react"
 import theme from "../../theme"
-import MissionImg from '../../assets/img/mission2.jpg'
-import VissionImg from '../../assets/img/vission.jpg'
+import MissionImg from '../../assets/img/our_mission (1).png'
+import VissionImg from '../../assets/img/Vision_Imagery.png'
 interface aboutSuhoraProps {
     currentTheme: string
 }
