@@ -9,14 +9,14 @@ import CareerContact from './CareerContact'
 
 const Career = () => {
   return (
-    <div>
+    <>
      <CareerHeader/>
      <CareerHeading/>
      <CareerCards/>
      {/* <CareerMission/> */}
    <CareerOpportunity/>
    <CareerContact/>
-    </div>
+    </>
   )
 }
 

@@ -6,6 +6,8 @@ import {
     Flex,
     HStack,
     Image,
+    Text,
+    background,
     useColorModeValue
 } from '@chakra-ui/react'
 import LogoDark from '../../../assets/img/logo/suhora_logo.png'
@@ -67,8 +69,8 @@ const Navbar = ({ currentTheme, toggleTheme }: navBarProps) => {
                                 <ButtonGroup
                                     variant="text"
                                     display={{ base: 'none', lg: 'flex' }}>
-                                    <NavLink to="/">
-                                        <Button>
+                                    <NavLink to="/" >
+                                        <Button as={Text} _hover={{color: "#1266A0"}}>
                                             Home
                                         </Button>
                                     </NavLink>
@@ -77,7 +79,7 @@ const Navbar = ({ currentTheme, toggleTheme }: navBarProps) => {
                                     <DocumentPopoverServices />
                                     <DocumentPopoverResources />
                                     <NavLink to="/contact-us">
-                                        <Button>Contact us</Button>
+                                        <Button as={Text} _hover={{color: "#1266A0"}}>Contact us</Button>
                                     </NavLink>
                                     <Button onClick={toggleTheme}>
                                         {

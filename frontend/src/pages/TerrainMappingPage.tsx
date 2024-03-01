@@ -11,7 +11,7 @@ type hydrologyThemeProps = {
 }
 
 
-const HydrologyPage = ({ currentTheme }: hydrologyThemeProps) => {
+const TerrainMappingPage = ({ currentTheme }: hydrologyThemeProps) => {
     return (
         <>
             <HydrologyHeader currentTheme={currentTheme} />
@@ -23,4 +23,4 @@ const HydrologyPage = ({ currentTheme }: hydrologyThemeProps) => {
     )
 }
 
-export default HydrologyPage
+export default TerrainMappingPage

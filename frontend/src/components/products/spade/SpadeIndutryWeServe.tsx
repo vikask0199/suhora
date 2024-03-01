@@ -38,13 +38,13 @@ export const SpadeIndutryWeServe = () => {
 }
 
 
-import agri from "../../../assets/img/services/agri.png";
-import defence from "../../../assets/img/services/defense.png";
-import disaster from "../../../assets/img/services/disaster.png";
-import energy from "../../../assets/img/services/energy.png";
-import forest from "../../../assets/img/services/forest.png";
-import infra from "../../../assets/img/services/infra.png";
-import mining from "../../../assets/img/services/mining.png";
+import agri from "../../../assets/img/industries/agri.png";
+import defence from "../../../assets/img/industries/defense.png";
+import disaster from "../../../assets/img/industries/disaster.png";
+import energy from "../../../assets/img/industries/energy.png";
+import forest from "../../../assets/img/industries/forest.png";
+import infra from "../../../assets/img/industries/infra.png";
+import mining from "../../../assets/img/industries/mining.png";
 
 const categories = [
     {
