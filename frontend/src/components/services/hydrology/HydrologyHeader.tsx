@@ -18,12 +18,10 @@ const HydrologyHeader = ({ currentTheme }: hydrologyHeaderProps) => {
               <Heading  >
                 Hydrology
               </Heading>
-
-
             </Flex>
             <Flex justifyContent='center'>
               <Text mt='1em' fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>
-                Mitigating flood risks for critical infrastructure worldwide, expertly.
+                Mitigating flood risks for critical infrastructure worldwide.
               </Text>
             </Flex>
           </Box>

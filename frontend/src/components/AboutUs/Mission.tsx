@@ -20,8 +20,8 @@ const Mission = ({ currentTheme }: aboutSuhoraProps) => {
                 gap="2">
                 <Flex justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
                     <Text>
-                    <Text as="span">What</Text>
-                        <Text as="span" color={theme.companyTheme.color.secondry}> we Stand For </Text>
+                    <Text as="span">What We</Text>
+                        <Text as="span" color={theme.companyTheme.color.secondry}>  Stand For </Text>
                       
                     </Text>
                 </Flex>

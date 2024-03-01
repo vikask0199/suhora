@@ -13,9 +13,9 @@ import { NavLink } from 'react-router-dom'
 export const DocumentPopoverProduct = () => {
 
   const routes = [
-    { name: "Spade", path: "/spadepage" },
-    { name: "Lance", path: "/lancepage" },
-    { name: "SID", path: "/sidpage" }
+    { name: "Spade", path: "/spade" },
+    { name: "Lance", path: "/lance" },
+    { name: "SID", path: "/sid" }
   ]
 
 

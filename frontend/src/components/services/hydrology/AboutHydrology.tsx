@@ -29,7 +29,7 @@ export const AboutHydrology = ({ currentTheme }: aboutSuhoraProps) => {
               </Text>
             </Flex>
             <Text color={theme.companyTheme.color.third} fontSize={theme.fonts.subHeading.size} fontWeight={theme.fonts.subHeading.weight} maxW="6xl" >
-              Mitigating flood risks for critical infrastructure worldwide, expertly.
+              Mitigating flood risks for critical infrastructure worldwide.
             </Text>
             <Text textAlign="justify">
               Losses associated with floods are immense, especially in cases where assets on ground are critical infrastructure. When such assets cover large areas such as gigawatt scale solar PV or wind energy the vulnerability to losses becomes more pronounced. It's essential to prepare for these risks in advance at the time of planning and implementation of such projects.
