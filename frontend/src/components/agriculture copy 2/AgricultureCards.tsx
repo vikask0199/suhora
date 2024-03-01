@@ -10,11 +10,11 @@ import {
     useColorModeValue,
     Stack
 } from '@chakra-ui/react';
-import theme from '../../theme';
+
 import { MdPayment } from 'react-icons/md';
 import { FaFileInvoiceDollar } from 'react-icons/fa';
 import { FaFileCode } from 'react-icons/fa';
-import { SunIcon } from '@chakra-ui/icons';
+import theme from '../../theme';
 
 
 interface IFeature {
@@ -22,19 +22,19 @@ interface IFeature {
     content: string;
     icon: SVGProps<SVGElement>;
 }
+
 const features: IFeature[] = [
     {
-        heading: 'Learn',
+        heading: 'Payments',
         content: 'Choose from Stripe, Paddle, Braintree, or PayPal to launch your product quickly.',
         icon: (
-
             <Box fontSize={theme.fonts.mainHeading.size}>
                 <MdPayment />
             </Box>
         )
     },
     {
-        heading: 'Collaborate',
+        heading: 'Invoicing',
         content: 'Webhooks are wired up to automatically email customers PDF receipts and invoices.',
         icon: (
 
@@ -44,7 +44,37 @@ const features: IFeature[] = [
         )
     },
     {
-        heading: 'Make an impact',
+        heading: 'API Included',
+        content: 'Roll your own API to easily connect with other apps or services. Pull in updates.',
+        icon: (
+
+            <Box fontSize={theme.fonts.mainHeading.size}>
+                <FaFileCode />
+            </Box>
+        )
+    },
+    {
+        heading: 'API Included',
+        content: 'Roll your own API to easily connect with other apps or services. Pull in updates.',
+        icon: (
+
+            <Box fontSize={theme.fonts.mainHeading.size}>
+                <FaFileCode />
+            </Box>
+        )
+    },
+    {
+        heading: 'API Included',
+        content: 'Roll your own API to easily connect with other apps or services. Pull in updates.',
+        icon: (
+
+            <Box fontSize={theme.fonts.mainHeading.size}>
+                <FaFileCode />
+            </Box>
+        )
+    },
+    {
+        heading: 'API Included',
         content: 'Roll your own API to easily connect with other apps or services. Pull in updates.',
         icon: (
 
@@ -54,16 +84,29 @@ const features: IFeature[] = [
         )
     },
 ];
+
 type HomeServices = {
     currentTheme: string
 }
-const CareerCards = () => {
-    const iconArray = [<MdPayment />, <FaFileInvoiceDollar />, <FaFileCode />  ]
-  return (
-    <>
-     <Box  width="100%">
-            <Container maxW="5xl" py={{ base: '4', md: '8', lg: '12' }}>
-                
+
+const AgricultureCards = ({ currentTheme }: HomeServices) => {
+    const iconArray = [<MdPayment />, <FaFileInvoiceDollar />, <FaFileCode />,<MdPayment />, <FaFileInvoiceDollar />, <FaFileCode />]
+    const backgroundColor = currentTheme === 'light' ? 'gray.200' : '#282b3c';
+
+    return (
+        <Box width="100%" background={backgroundColor}>
+            <Container maxW="6xl" py={{ base: '4', md: '8', lg: '12' }}>
+                <Stack spacing={{ base: '4', md: '5' }} direction="column">
+                    <Flex justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
+                        <Text>
+                            <Text as="span">What We </Text>
+                            <Text as="span" color={theme.companyTheme.color.secondry}>Serve</Text>
+                        </Text>
+                    </Flex>
+                    <Text fontSize={theme.fonts.subHeading.size} color={theme.companyTheme.color.third} fontWeight={theme.fonts.subHeading.weight} textAlign="center">
+                        Everything you need to build modern UI and great products.
+                    </Text>
+                </Stack>
                 <SimpleGrid columns={{ base: 1, sm: 2, md: 3 }} placeItems="center" spacing={10} mb={4} mt={12}>
                     {features.map((feature, index) => (
                         <Box
@@ -75,7 +118,7 @@ const CareerCards = () => {
                             pos="relative"
                         >
                             <Flex
-                                p={4}
+                                p={2}
                                 w="max-content"
                                 color="white"
                                 bgGradient="linear(to-br, #228be6, #15aabf)"
@@ -94,14 +137,15 @@ const CareerCards = () => {
                             <Text fontSize="md" mt={4}>
                                 {feature.content}
                             </Text>
-                            
+                            <Link href="#" mt={4} fontSize="sm" color="blue.400">
+                                Learn more →
+                            </Link>
                         </Box>
                     ))}
                 </SimpleGrid>
             </Container>
         </Box>
-    </>
-  )
-}
+    );
+};
 
-export default CareerCards
+export default AgricultureCards;

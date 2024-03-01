@@ -11,11 +11,10 @@ export const LanceHome = () => {
               LANCE
             </Text>
             <Text fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight} mt="4" maxW="lg">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua.
+              See beyond the horizon. Advanced SAR & Optical imagery for critical ISR missions.
             </Text>
             <Stack direction={{ base: 'column', md: 'row' }} mt="10" spacing="4">
-              <Button width="fit-content" px="8" border="1px solid white" variant="outline" color="white" _hover={{ backgroundColor: theme.companyTheme.color.secondry, border:"1px solid #1266A0" }} >
+              <Button width="fit-content" px="8" border="1px solid white" variant="outline" color="white" _hover={{ backgroundColor: theme.companyTheme.color.secondry, border: "1px solid #1266A0" }} >
                 Request Demo
               </Button>
             </Stack>

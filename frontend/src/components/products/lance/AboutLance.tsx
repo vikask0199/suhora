@@ -24,7 +24,7 @@ export const AboutLance = () => {
                             </Text>
                         </Flex>
                         <Text color={theme.companyTheme.color.third} fontSize={theme.fonts.subHeading.size} fontWeight={theme.fonts.subHeading.weight} maxW="6xl" >
-                            Multi band high resolution image from various satellite.
+                            See beyond the horizon. Advanced SAR & Optical imagery for critical ISR missions.
                         </Text>
                         <Text textAlign="justify">
                             At SUHORA, we're driven by a passion to make the universe's data accessible and actionable for those who need it most. Founded on the principle that space analytics should empower, not overwhelm, we've dedicated ourselves to demystifying satellite data for practical, everyday applications.

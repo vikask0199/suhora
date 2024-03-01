@@ -1,7 +1,9 @@
-import { Box, Flex, Heading, Text, Img } from '@chakra-ui/react'
+
+import { Box, Flex, Heading, Img, Text } from '@chakra-ui/react'
+import AgricultureImg from '../../assets/img/industries/agri.png'
 import theme from '../../theme'
-import careerIamge from '../../assets/img/career.jpg'
-const CareerHeader = () => {
+const AgricultureOverlay = () => {
+
   return (
     <>
       <Box as="section" minH="140px" position="relative" p={10} >
@@ -9,12 +11,15 @@ const CareerHeader = () => {
           <Box maxW='5xl' mx="auto" px={{ base: '6', md: '8' }} color="white" >
             <Flex justifyContent='center' fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
               <Heading  >
-                Career At Suhora
+                Agriculture
               </Heading>
+
+
             </Flex>
             <Flex justifyContent='center'>
               <Text mt='1em' fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>
-                "Embrace each new opportunity as a stepping stone toward your professional growth and fulfillment."
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+
               </Text>
             </Flex>
           </Box>
@@ -27,11 +32,10 @@ const CareerHeader = () => {
           w="full"
           h="full"
           overflow="hidden"
-          align="center"
-        >
+          align="center">
           <Box position="relative" w="full" h="full">
             <Img
-              src={careerIamge}
+              src={AgricultureImg}
               alt="Main Image"
               w="full"
               h="full"
@@ -43,9 +47,7 @@ const CareerHeader = () => {
           </Box>
         </Flex>
       </Box>
-
     </>
   )
 }
-
-export default CareerHeader
+export default AgricultureOverlay

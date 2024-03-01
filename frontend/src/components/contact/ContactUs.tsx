@@ -16,7 +16,6 @@ import {
     useColorModeValue
 } from '@chakra-ui/react';
 import { Fragment } from 'react';
-// Here we have used react-icons package for the icons
 import { BsPhone } from 'react-icons/bs';
 import { GoLocation } from 'react-icons/go';
 import { HiOutlineMail } from 'react-icons/hi';
@@ -57,8 +56,6 @@ const ContactUs = ({ currentTheme }: contactProps) => {
                             <Heading  >
                                 Contact Us
                             </Heading>
-
-
                         </Flex>
                         <Flex justifyContent='center'>
                             <Text mt='1em' fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>
