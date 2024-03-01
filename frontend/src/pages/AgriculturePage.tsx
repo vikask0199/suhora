@@ -9,7 +9,7 @@ type agricultureProps = {
 }
 
 
-const Agriculture = ({ currentTheme }: agricultureProps) => {
+const AgriculturePage = ({ currentTheme }: agricultureProps) => {
     const backgroundColor = currentTheme === 'light' ? 'gray.200' : '#282b3c';
     console.log(backgroundColor)
     return (
@@ -23,4 +23,4 @@ const Agriculture = ({ currentTheme }: agricultureProps) => {
     )
 }
 
-export default Agriculture
+export default AgriculturePage

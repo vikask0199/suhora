@@ -14,7 +14,7 @@ export const DocumentPopoverServices = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
 
   const routes = [
-    { name: 'Hydrology', path: '/hydrology' },
+    { name: 'Hydrology', path: '/product-hydrology' },
     { name: 'Terrain Mapping', path: '/product-terrainmapping' },
     { name: 'Land Deformation Monitoring', path: '/land-deformation-monitoring' }
   ];

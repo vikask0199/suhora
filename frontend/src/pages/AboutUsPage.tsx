@@ -9,17 +9,15 @@ type aboutusProps = {
     currentTheme: string
 }
 
-const AboutUs = ({ currentTheme }: aboutusProps) => {
+const AboutUsPage = ({ currentTheme }: aboutusProps) => {
     return (
         <>
             <AboutusHeader />
-          
-            <Mission  currentTheme={currentTheme}/>
-            {/* <OurTeams currentTheme={currentTheme}/> */}
-            <JoinTeam currentTheme={currentTheme}/>
-           <AboutusCards/>
+            <Mission currentTheme={currentTheme} />
+            <JoinTeam currentTheme={currentTheme} />
+            <AboutusCards />
         </>
     )
 }
 
-export default AboutUs
+export default AboutUsPage

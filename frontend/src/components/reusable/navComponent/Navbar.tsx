@@ -1,3 +1,4 @@
+import { MoonIcon, SunIcon } from '@chakra-ui/icons'
 import {
     Box,
     Button,
@@ -7,20 +8,18 @@ import {
     HStack,
     Image,
     Text,
-    background,
     useColorModeValue
 } from '@chakra-ui/react'
-import LogoDark from '../../../assets/img/logo/suhora_logo.png'
-import LogoWhite from '../../../assets/img/logo/suhora_white.png'
-import { DocumentPopoverIndustries } from './DocumentPopoverIndustries'
-import { MobileDrawer } from './MobileDrawer'
-import { MoonIcon, SunIcon } from '@chakra-ui/icons'
-import { DocumentPopoverProduct } from './DocumentPopoverProduct'
-import { DocumentPopoverResources } from './DocumentPopoverResources'
 import { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
-import { DocumentPopoverServices } from './DocumentPopoverServices'
+import LogoDark from '../../../assets/img/logo/suhora_logo.png'
+import LogoWhite from '../../../assets/img/logo/suhora_white.png'
 import theme from '../../../theme'
+import { DocumentPopoverIndustries } from './DocumentPopoverIndustries'
+import { DocumentPopoverProduct } from './DocumentPopoverProduct'
+import { DocumentPopoverResources } from './DocumentPopoverResources'
+import { DocumentPopoverServices } from './DocumentPopoverServices'
+import { MobileDrawer } from './MobileDrawer'
 
 type navBarProps = {
     toggleTheme: () => void;
@@ -28,7 +27,6 @@ type navBarProps = {
 }
 
 const Navbar = ({ currentTheme, toggleTheme }: navBarProps) => {
-
     const [scrollBgColor, setScrollBgColor] = useState(false);
 
     useEffect(() => {
@@ -52,7 +50,7 @@ const Navbar = ({ currentTheme, toggleTheme }: navBarProps) => {
 
 
     return (
-        <Box h={20} position='fixed' zIndex={1000} top={0} width="100%" bg={navbarBgColor} boxShadow="2xl">
+        <Box h={20} position='fixed' zIndex={1000} top={0} width="100%" bg={navbarBgColor} boxShadow={scrollBgColor ? "2xl" : ''} >
             <Box as="section">
                 <Box position="relative" zIndex="tooltip">
                     <Container h={20} maxW="100%">
@@ -70,7 +68,7 @@ const Navbar = ({ currentTheme, toggleTheme }: navBarProps) => {
                                     variant="text"
                                     display={{ base: 'none', lg: 'flex' }}>
                                     <NavLink to="/" >
-                                        <Button as={Text} _hover={{color: "#1266A0"}}>
+                                        <Button as={Text} _hover={{ color: "#1266A0" }}>
                                             Home
                                         </Button>
                                     </NavLink>
@@ -79,7 +77,7 @@ const Navbar = ({ currentTheme, toggleTheme }: navBarProps) => {
                                     <DocumentPopoverServices />
                                     <DocumentPopoverResources />
                                     <NavLink to="/contact-us">
-                                        <Button as={Text} _hover={{color: "#1266A0"}}>Contact us</Button>
+                                        <Button as={Text} _hover={{ color: "#1266A0" }}>Contact us</Button>
                                     </NavLink>
                                     <Button onClick={toggleTheme}>
                                         {
@@ -92,7 +90,7 @@ const Navbar = ({ currentTheme, toggleTheme }: navBarProps) => {
                     </Container>
                 </Box>
             </Box>
-        </Box>
+        </Box >
     )
 }
 

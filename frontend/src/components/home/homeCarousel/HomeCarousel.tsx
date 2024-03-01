@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { NavLink } from "react-router-dom";
 import agri from "../../../assets/img/industries/agri.png";
 import defence from "../../../assets/img/industries/defense.png";
 import disaster from "../../../assets/img/industries/disaster.png";
@@ -71,11 +72,11 @@ const HomeCarousel = () => {
                      {/* <div className="author">VIKAS</div> */}
                     <div className="title">Defence & Intelligence</div>
                     <div className="des">
-                   Hello please provide content for this page
+                    Adapts to your mission. Scales to your needs.
                     </div>
-                    <div className="buttons">
+                    <NavLink to="/defence-and-intelligence" className="buttons">
                         <button>Learn More</button>
-                    </div>
+                    </NavLink>
                 </div>
             </div>
             <div className="item">
@@ -83,12 +84,10 @@ const HomeCarousel = () => {
                 <div className="content">
                      {/* <div className="author">VIKAS</div> */}
                     <div className="title">Disaster & Insurance</div>
-                    <div className="des">Hello please provide content for this page
-                    </div>
-                    <div className="buttons">
+                    <div className="des">Data-driven insights for disaster preparedness and insurance planning.</div>
+                    <NavLink to="/disaster-and-insurence" className="buttons">
                         <button>Learn More</button>
-                        
-                    </div>
+                    </NavLink>
                 </div>
             </div>
             <div className="item">
@@ -96,13 +95,10 @@ const HomeCarousel = () => {
                 <div className="content">
                      {/* <div className="author">VIKAS</div> */}
                     <div className="title">Renewable Energy</div>
-                   
-                    <div className="des">Hello please provide content for this page
-                    </div>
-                    <div className="buttons">
+                    <div className="des">Orbit to Outlet: Satellite-Driven Solar Innovation.</div>
+                    <NavLink to="/renewable-energy-page" className="buttons">
                         <button>Learn More</button>
-                        
-                    </div>
+                    </NavLink>
                 </div>
             </div>
             <div className="item">
@@ -110,13 +106,10 @@ const HomeCarousel = () => {
                 <div className="content">
                      {/* <div className="author">VIKAS</div> */}
                     <div className="title">Mining</div>
-                   
-                    <div className="des">Hello please provide content for this page
-                    </div>
-                    <div className="buttons">
+                    <div className="des">Beyond Boundaries - Satellite-driven Mining Excellence!</div>
+                    <NavLink to="/mining" className="buttons">
                         <button>Learn More</button>
-                        
-                    </div>
+                    </NavLink>
                 </div>
             </div>
             <div className="item">
@@ -124,13 +117,10 @@ const HomeCarousel = () => {
                 <div className="content">
                      {/* <div className="author">VIKAS</div> */}
                     <div className="title">Infrastructure</div>
-                   
-                    <div className="des">Hello please provide content for this page
-                    </div>
-                    <div className="buttons">
+                    <div className="des">Sky-Built Precision: AI-Powered Construction Monitoring.</div>
+                    <NavLink to="/infrastructure" className="buttons">
                         <button>Learn More</button>
-                        
-                    </div>
+                    </NavLink>
                 </div>
             </div>
             <div className="item">
@@ -138,13 +128,10 @@ const HomeCarousel = () => {
                 <div className="content">
                      {/* <div className="author">VIKAS</div> */}
                     <div className="title">Forestry</div>
-                   
-                    <div className="des">Hello please provide content for this page
-                    </div>
-                    <div className="buttons">
+                    <div className="des">From Space to Safety: Satellite Insight for Fire-Free Forests.</div>
+                    <NavLink to="/forestry" className="buttons">
                         <button>Learn More</button>
-                        
-                    </div>
+                    </NavLink>
                 </div>
             </div>
             <div className="item">
@@ -152,12 +139,10 @@ const HomeCarousel = () => {
                 <div className="content">
                      {/* <div className="author">VIKAS</div> */}
                     <div className="title">Agriculture</div>
-                   
-                    <div className="des">Hello please provide content for this page
-                    </div>
-                    <div className="buttons">
+                    <div className="des">Satellite data-powered harvest. Optimize yield, minimize risk.</div>
+                    <NavLink to="/agriculture" className="buttons">
                         <button>Learn More</button>
-                    </div>
+                    </NavLink>
                 </div>
             </div>
         </div>
