@@ -1,4 +1,5 @@
 
+
 import AboutusCards from "../components/AboutUs/AboutusCards"
 import AboutusHeader from "../components/AboutUs/AboutusHeader"
 import JoinTeam from "../components/AboutUs/JoinTeam"
@@ -13,10 +14,10 @@ const AboutUs = ({ currentTheme }: aboutusProps) => {
         <>
             <AboutusHeader />
           
-            <Mission />
+            <Mission  currentTheme={currentTheme}/>
             {/* <OurTeams currentTheme={currentTheme}/> */}
             <JoinTeam currentTheme={currentTheme}/>
-            <AboutusCards/>
+           <AboutusCards/>
         </>
     )
 }
