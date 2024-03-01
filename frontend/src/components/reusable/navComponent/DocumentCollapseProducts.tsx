@@ -12,7 +12,7 @@ export const DocumentCollapseProducts = () => {
       <Collapse in={isOpen} animateOpacity>
         <Stack spacing="1" alignItems="stretch" ps="4">
         {['Spade', 'Lance', 'Sid'].map((item) => (
-            <Button key={item} variant="tertiary" size="lg" justifyContent="start">
+            <Button key={item} as={Text} _hover={{color: "#1266A0"}} size="lg" justifyContent="start" variant="">
               {item}
             </Button>
           ))}

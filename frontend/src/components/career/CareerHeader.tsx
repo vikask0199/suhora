@@ -3,7 +3,7 @@ import theme from '../../theme'
 import careerIamge from '../../assets/img/career.jpg'
 const CareerHeader = () => {
   return (
-    <div>
+    <>
      <Box  as="section" minH="140px" position="relative" p={10} >
       <Box py="32" position="relative" zIndex={1} >
         <Box maxW='5xl' mx="auto" px={{ base: '6', md: '8' }} color="white" >
@@ -47,7 +47,7 @@ const CareerHeader = () => {
       </Flex>
     </Box>
 
-    </div>
+    </>
   )
 }
 

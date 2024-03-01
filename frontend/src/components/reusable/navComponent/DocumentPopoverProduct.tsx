@@ -4,6 +4,7 @@ import {
   PopoverContent,
   PopoverTrigger,
   Stack,
+  Text,
   useDisclosure,
 } from '@chakra-ui/react'
 import { PopoverIcon } from './PopoverIcon'
@@ -22,13 +23,13 @@ export const DocumentPopoverProduct = () => {
   return (
     <Popover isOpen={isOpen} onOpen={onOpen} onClose={onClose} trigger="hover" openDelay={0}>
       <PopoverTrigger>
-        <Button rightIcon={<PopoverIcon isOpen={isOpen} />}>Products</Button>
+        <Button rightIcon={<PopoverIcon isOpen={isOpen} />} as={Text} _hover={{color: "#1266A0"}}>Products</Button>
       </PopoverTrigger>
       <PopoverContent p="2" maxW="fit-content" mr="-220" mt="3">
         <Stack spacing="0" alignItems="stretch">
           {routes.map((route) => (
             <NavLink key={route.path} to={route.path} style={{ textDecoration: 'none' }}>
-              <Button variant="tertiary" justifyContent="start">
+              <Button justifyContent="start" as={Text} _hover={{color: "#1266A0"}}>
                 {route.name}
               </Button>
             </NavLink>
