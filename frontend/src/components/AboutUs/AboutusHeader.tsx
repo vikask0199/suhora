@@ -4,12 +4,9 @@ import AgricultureImg from '../../assets/img/SatelliteAbout.jpg'
 
 
 
-type aboutusProps = {
-  currentTheme: string
-}
-const AboutusHeader = ({ currentTheme }: aboutusProps) => {
+const AboutusHeader = () => {
 
-  const backgroundColor = currentTheme === 'light' ? 'gray.200' : '#282b3c';
+
   return (
     <>
       <Box as="section" minH="140px" position="relative" p={10} >

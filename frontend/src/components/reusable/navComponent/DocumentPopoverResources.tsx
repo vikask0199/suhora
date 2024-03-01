@@ -13,7 +13,7 @@ import {
     return (
       <Popover isOpen={isOpen} onOpen={onOpen} onClose={onClose} trigger="hover" openDelay={0}>
         <PopoverTrigger>
-          <Button rightIcon={<PopoverIcon isOpen={isOpen} />}>Resources</Button>
+          <Button rightIcon={<PopoverIcon isOpen={isOpen} />}>Company</Button>
         </PopoverTrigger>
         <PopoverContent p="2" maxW="fit-content"  mr="-180" mt="3">
           <Stack spacing="0" alignItems="stretch">

@@ -1,4 +1,3 @@
-
 import {
     Box,
     Button,
@@ -90,14 +89,12 @@ const ContactUs = ({ currentTheme }: contactProps) => {
                     </Box>
                 </Flex>
             </Box>
-            <Container maxW="7xl" py={10} px={{ base: 5, md: 8 }}>
+            <Container maxW="6xl" py={10} px={{ base: 5, md: 8 }}>
                 <Stack spacing={10}>
-
                     <Stack
                         spacing={{ base: 6, md: 0 }}
                         direction={{ base: 'column', md: 'row' }}
-                        justifyContent="space-between"
-                    >
+                        justifyContent="space-between">
                         {contactOptions.map((option, index) => (
                             <Fragment key={index}>
                                 <Stack
@@ -105,8 +102,7 @@ const ContactUs = ({ currentTheme }: contactProps) => {
                                     direction="column"
                                     justifyContent="center"
                                     alignItems="center"
-                                    px={3}
-                                >
+                                    px={3}>
                                     <Icon as={option.icon} w={10} h={10} color={theme.companyTheme.color.secondry} />
                                     <Text fontSize="lg" fontWeight="semibold">
                                         {option.label}
@@ -115,11 +111,6 @@ const ContactUs = ({ currentTheme }: contactProps) => {
                                         {option.value}
                                     </Text>
                                 </Stack>
-                                {/* {contactOptions.length - 1 !== index && (
-                <Flex direction={{ base: 'none', md: 'flex' }}>
-                  <Divider orientation="vertical" />
-                </Flex>
-              )} */}
                             </Fragment>
                         ))}
                     </Stack>
@@ -130,8 +121,7 @@ const ContactUs = ({ currentTheme }: contactProps) => {
                         bg={useColorModeValue('white', 'gray.700')}
                         rounded="lg"
                         boxShadow="lg"
-                        p={{ base: 5, sm: 10 }}
-                    >
+                        p={{ base: 5, sm: 10 }}>
                         <VStack spacing={4} w="100%">
                             <Stack w="100%" spacing={3} direction={{ base: 'column', md: 'row' }}>
                                 <FormControl id="name">
@@ -154,13 +144,12 @@ const ContactUs = ({ currentTheme }: contactProps) => {
                         </VStack>
                         <VStack w="100%">
                             <Button width="fit-content" px="8" border="1px solid #1266A0" variant="outline" color={`${currentTheme === 'light' ? "#1266A0" : "white"}`} _hover={{ backgroundColor: theme.companyTheme.color.secondry, color: "white" }} >
-                               Request Sample data
+                                Request Sample data
                             </Button>
                         </VStack>
                     </VStack>
                 </Stack>
             </Container>
-
         </Box>
     );
 };

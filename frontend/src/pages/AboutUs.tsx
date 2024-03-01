@@ -10,11 +10,11 @@ type aboutusProps = {
 const AboutUs = ({ currentTheme }: aboutusProps) => {
     return (
         <>
-            <AboutusHeader currentTheme={currentTheme} />
+            <AboutusHeader />
             <AboutText currentTheme={currentTheme}/>
-            <Mission currentTheme={currentTheme} />
+            <Mission />
             <OurTeams currentTheme={currentTheme}/>
-            <JoinTeam />
+            <JoinTeam currentTheme={currentTheme}/>
         </>
     )
 }
