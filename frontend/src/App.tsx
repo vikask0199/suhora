@@ -11,6 +11,7 @@ import CareerPage from './pages/CareerPage';
 import LancePage from './pages/LancePage';
 import SIDPage from './pages/SIDPage';
 import AboutUs from './pages/AboutUs';
+import TeamPage from './pages/TeamPage';
 
 function App() {
   // const [currentTheme, setCurrentTheme] = useState<'light' | 'dark'>('light');
@@ -45,6 +46,7 @@ function App() {
           <Route path="agriculture" element={<Agriculture currentTheme={colorMode} />} />
           <Route path="career" element={<CareerPage currentTheme={colorMode}  />} />
           <Route path='aboutus'element={<AboutUs   currentTheme={colorMode}/>}/>
+          <Route path='team' element={<TeamPage currentTheme={colorMode}/>}/>
         </Route>
       </Routes>
     </>

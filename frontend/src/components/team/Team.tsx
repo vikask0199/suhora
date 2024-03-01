@@ -1,5 +1,5 @@
 import {
-    Box,
+    Flex, Img, Box,
     Container,
     Heading,
     HStack,
@@ -7,71 +7,67 @@ import {
     Link,
     SimpleGrid,
     Stack,
-    Text,
+    Text, Button
 } from '@chakra-ui/react'
+import theme from '../../theme'
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
-
-type ourThemeProps = {
+import AgricultureImg from '../../assets/img/team.jpeg'
+type team = {
     currentTheme: string
 }
 
-export const OurTeams = ({ currentTheme }: ourThemeProps) => {
+const Team = ({ currentTheme }: team) => {
     const backgroundColor = currentTheme === 'light' ? 'gray.200' : '#282b3c';
-
-
     return (
-        <Box py={{ base: '4', md: '8', lg: '12' }} background={backgroundColor}>
-            <Container maxW="6xl">
-                <Stack spacing={{ base: '12', md: '16' }}>
-                    <Stack spacing="3">
-                        <Text fontSize={{ base: 'sm', md: 'md' }} color="accent" fontWeight="semibold">
-                            Team
-                        </Text>
-                        <Stack spacing={{ base: '4', md: '5' }}>
-                            <Heading size={{ base: 'sm', md: 'md' }}>Meet our team</Heading>
-                            <Text fontSize={{ base: 'lg', md: 'xl' }} color="fg.muted">
-                                Chupa chups pudding marzipan cake chocolate shortbread macaroon oat cake.
-                            </Text>
-                        </Stack>
-                    </Stack>
-                    <SimpleGrid
-                        columns={{ base: 1, md: 2, lg: 3 }}
-                        columnGap="8"
-                        rowGap={{ base: '10', md: '16' }}
-                    >
-                        {members.map((member) => (
-                            <Box key={member.name}>
-                                <Stack spacing="4">
-                                    <Stack spacing={{ base: '4', md: '5' }}>
-                                        <SquareImage src={member.image} alt={member.name} />
-                                        <Stack>
-                                            <Box>
-                                                <Text fontSize="lg" fontWeight="medium">
-                                                    {member.name}
-                                                </Text>
-                                                <Text color="accent">{member.role}</Text>
-                                            </Box>
-                                            <Text color="fg.muted">{member.description}</Text>
-                                        </Stack>
-                                    </Stack>
-                                    <HStack spacing="4" color="fg.subtle">
-                                        {[FaGithub, FaLinkedin, FaTwitter].map((item, id) => (
-                                            <Link href="#" key={id}>
-                                                <Icon as={item} boxSize="5" />
-                                            </Link>
-                                        ))}
-                                    </HStack>
-                                </Stack>
-                            </Box>
-                        ))}
-                    </SimpleGrid>
-                </Stack>
-            </Container>
-        </Box>
-    )
+        <>
+            <Box as="section" minH="140px" position="relative" p={10} >
+                <Box py="32" position="relative" zIndex={1} >
+                    <Box maxW='5xl' mx="auto" px={{ base: '6', md: '8' }} color="white" >
+                        <Flex justifyContent='center' fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
+                            <Heading  >
+                                Meet Our Team
+                            </Heading>
 
+
+                        </Flex>
+                        <Flex justifyContent='center'>
+                            <Text mt='1em' fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight} textAlign='center'>
+                            We’re a dynamic group of individuals who are passionate about what we do.
+
+                            </Text>
+                        </Flex>
+                    </Box>
+                </Box>
+                <Flex
+                    id="image-wrapper"
+                    position="absolute"
+                    insetX="0"
+                    insetY="0"
+                    w="full"
+                    h="full"
+                    overflow="hidden"
+                    align="center">
+                    <Box position="relative" w="full" h="full">
+                        <Img
+                            src={AgricultureImg}
+                            alt="Main Image"
+                            w="full"
+                            h="full"
+                            objectFit="cover"
+                            objectPosition="top bottom"
+                            position="absolute"
+                        />
+                        <Box position="absolute" w="full" h="full" bg="blackAlpha.600" />
+                    </Box>
+                </Flex>
+            </Box>
+             
+           
+        </>
+    )
 }
 
+export default Team
 
 const members = [
     {
@@ -120,10 +116,7 @@ const members = [
     },
 ]
 
-
-
-
-import { ImageProps, Img } from '@chakra-ui/react'
+import { ImageProps } from '@chakra-ui/react'
 const SquareImage = (props: ImageProps) => (
     <Box pos="relative">
         <Img
@@ -145,4 +138,6 @@ const SquareImage = (props: ImageProps) => (
             rounded="lg"
         />
     </Box>
+
+
 )

@@ -26,17 +26,17 @@ import theme from '../../theme';
 const contactOptions = [
     {
         label: 'Address',
-        value: 'A108 Adam Street, NY 535022, USA',
+        value: '313, Tower-B, Noida One, Sector-62, Noida, Uttar Pradesh-201309, India',
         icon: GoLocation
     },
     {
         label: 'PHONE NUMBER',
-        value: '+1 5589 55488 55',
+        value: '+91 9999664437',
         icon: BsPhone
     },
     {
         label: 'EMAIL',
-        value: 'info@example.com',
+        value: 'hello@suhora.com',
         icon: HiOutlineMail
     }
 ];
@@ -107,7 +107,7 @@ const ContactUs = ({ currentTheme }: contactProps) => {
                                     <Text fontSize="lg" fontWeight="semibold">
                                         {option.label}
                                     </Text>
-                                    <Text fontSize="md" textAlign="center">
+                                    <Text fontSize="md" textAlign="end" >
                                         {option.value}
                                     </Text>
                                 </Stack>
