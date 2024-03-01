@@ -26,9 +26,9 @@ export const Stat = (props: StatProps) => {
           fontWeight={theme.fonts.subHeadingThird.weight}
           variant="link"
           colorScheme="blue"
-          rightIcon={<FiArrowRight />}
+         
         >
-          {cta}
+          
         </Button>
       </Flex>
     </Stack>

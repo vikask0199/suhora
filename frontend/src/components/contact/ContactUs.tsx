@@ -23,10 +23,12 @@ import { HiOutlineMail } from 'react-icons/hi';
 import AgricultureImg from '../../assets/img/Contactus2.jpg';
 import theme from '../../theme';
 
+
 const contactOptions = [
     {
         label: 'Address',
-        value: '313, Tower-B, Noida One, Sector-62, Noida, Uttar Pradesh-201309, India',
+        valuee: '313, Tower-B, Noida One, Sector-62,',
+        value:'Noida,Uttar Pradesh-201309, India',
         icon: GoLocation
     },
     {
@@ -60,12 +62,13 @@ const ContactUs = ({ currentTheme }: contactProps) => {
                         </Flex>
                         <Flex justifyContent='center'>
                             <Text mt='1em' fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            We believe in the power of communication. Reach out to us and let's build something amazing together.
 
                             </Text>
                         </Flex>
                     </Box>
                 </Box>
+                
                 <Flex
                     id="image-wrapper"
                     position="absolute"
@@ -98,7 +101,7 @@ const ContactUs = ({ currentTheme }: contactProps) => {
                         {contactOptions.map((option, index) => (
                             <Fragment key={index}>
                                 <Stack
-                                    spacing={3}
+                                    spacing={1}
                                     direction="column"
                                     justifyContent="center"
                                     alignItems="center"
@@ -107,13 +110,16 @@ const ContactUs = ({ currentTheme }: contactProps) => {
                                     <Text fontSize="lg" fontWeight="semibold">
                                         {option.label}
                                     </Text>
-                                    <Text fontSize="md" textAlign="end" >
+                                    <Text fontSize="lg" textAlign="end" >
                                         {option.value}
+                                        
                                     </Text>
+                                    <Text fontSize="lg" textAlign="end">{option.valuee}</Text>
                                 </Stack>
                             </Fragment>
                         ))}
                     </Stack>
+                    
                     <VStack
                         as="form"
                         spacing={8}
@@ -122,29 +128,35 @@ const ContactUs = ({ currentTheme }: contactProps) => {
                         rounded="lg"
                         boxShadow="lg"
                         p={{ base: 5, sm: 10 }}>
+                            <Flex justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
+                            <Text>
+                                <Text as="span">Filled </Text>
+                                <Text as="span" color={theme.companyTheme.color.secondry}>Your details</Text>
+                            </Text>
+                        </Flex>
                         <VStack spacing={4} w="100%">
                             <Stack w="100%" spacing={3} direction={{ base: 'column', md: 'row' }}>
                                 <FormControl id="name">
-                                    <FormLabel>Name</FormLabel>
-                                    <Input type="text" placeholder="Ahmad" rounded="md" />
+                                    <FormLabel></FormLabel>
+                                    <Input type="text" placeholder="Enter your name" rounded="md" />
                                 </FormControl>
                                 <FormControl id="email">
-                                    <FormLabel>Email</FormLabel>
-                                    <Input type="email" placeholder="test@test.com" rounded="md" />
+                                    <FormLabel></FormLabel>
+                                    <Input type="email" placeholder="Enter your email" rounded="md" />
                                 </FormControl>
                             </Stack>
                             <FormControl id="subject">
-                                <FormLabel>Subject</FormLabel>
-                                <Input type="text" placeholder="Are you available for freelance work?" rounded="md" />
+                                <FormLabel></FormLabel>
+                                <Input type="email" placeholder="Enter your subject" rounded="md" />
                             </FormControl>
                             <FormControl id="message">
-                                <FormLabel>Message</FormLabel>
+                                <FormLabel></FormLabel>
                                 <Textarea size="lg" placeholder="Enter your message" rounded="md" />
                             </FormControl>
                         </VStack>
                         <VStack w="100%">
                             <Button width="fit-content" px="8" border="1px solid #1266A0" variant="outline" color={`${currentTheme === 'light' ? "#1266A0" : "white"}`} _hover={{ backgroundColor: theme.companyTheme.color.secondry, color: "white" }} >
-                                Request Sample data
+                                Submit
                             </Button>
                         </VStack>
                     </VStack>

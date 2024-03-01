@@ -1,6 +1,7 @@
 import { AspectRatio, Box, Button, Flex, Image, Text, VStack } from "@chakra-ui/react"
 import theme from "../../theme"
-import earthImage from '../../assets/img/earthhh-removebg-preview.png'
+import earthImage from '../../assets/video/Rotating_earth_(huge).gif'
+
 type joinTeamProp = {
     currentTheme: string
 }
@@ -23,11 +24,11 @@ const JoinTeam = ({ currentTheme }: joinTeamProp) => {
                         <Flex flexDirection="column" justifyContent="space-between" alignItems="start" height="100%" rounded="xl" px={{ base: '4', md: '8', lg: '5' }} py={{ base: '4', md: '8', lg: '5' }}>
                             <Flex flexDirection="column" gap="4" p={8}>
                                 <Text fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight} color={theme.companyTheme.color.secondry}>
-                                    Join the team
+                                  Our Offerings
                                 </Text>
                                 <Text  fontSize={theme.fonts.subHeadingSecond.size} >
-                                    Help make a difference in improving our members’ relationship with money and join our growing team. 
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, rerum?
+                                With Suhora’s reliable partners in Earth Observation from high resolution to medium resolution we guarantee that you best satellite data suiting to your needs and at prices that are lowest in the region. Our experience in satellite imagery sales helps in get the right product at perfect price to you. Drop us an 
+                                email or small or large requirements. We love satellite data!
                                 </Text>
                                 <VStack w="100%" width="fit-content">
                             <Button width="fit-content" px="8" border='1px solid #1266A0'variant="outline" color="#1266A0" _hover={{ backgroundColor: theme.companyTheme.color.secondry, border: "1px solid #1266A0",color:'white'}} >
@@ -39,9 +40,9 @@ const JoinTeam = ({ currentTheme }: joinTeamProp) => {
                         </Flex>
                     </Box>
                     
-                    <Box w={{ base: "100%", md: "50%" }}   >
+                    <Box w={{ base: "100%", md: "50%" }}  p={20}  >
                         <AspectRatio ratio={aspectRatio}>
-                            <Image src={earthImage}  />
+                            <Image src={earthImage} />
                         </AspectRatio>
                     </Box>
                 </Flex>

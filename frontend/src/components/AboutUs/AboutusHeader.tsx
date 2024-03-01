@@ -1,6 +1,6 @@
 import { Box, Flex, Heading, Img, Text } from '@chakra-ui/react'
 import theme from '../../theme'
-import AgricultureImg from '../../assets/img/SatelliteAbout.jpg'
+import AgricultureImg from '../../assets/img/aboutussImg.jpg'
 
 
 
@@ -21,7 +21,7 @@ const AboutusHeader = () => {
             </Flex>
             <Flex justifyContent='center'>
               <Text mt='1em' fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              Transforming industries with AI-driven spatial insights for informed decision-making.
 
               </Text>
             </Flex>
