@@ -5,8 +5,8 @@ import hydrologymainimage from "../../../assets/img/services/hydrologymainimage.
 import { NavLink } from "react-router-dom"
 
 
-const HydrologyFeature = () => {
-    const aspectRatio = 4 / 3
+const TerrainFeature = () => {
+    const aspectRatio = 3 / 3
     const spadeIconArray = [<RiTyphoonLine />]
 
 
@@ -22,7 +22,7 @@ const HydrologyFeature = () => {
                 <Flex justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
                     <Text>
                         <Text as="span" color={theme.companyTheme.color.secondry}>Feature of </Text>
-                        <Text as="span">Hydrology</Text>
+                        <Text as="span">Terrain Mapping</Text>
                     </Text>
                 </Flex>
                 <Flex direction={{ base: "column", md: "row" }} boxShadow='rgba(0, 0, 0, 0.35) 0px 5px 15px' justifyContent="center" alignItems="center">
@@ -41,7 +41,7 @@ const HydrologyFeature = () => {
                                         spadeIconArray[0]
                                     }
                                 </Box>
-                                Historical Satellite images
+                                Global Coverage: Our data is accessible worldwide, regardless of location.
                             </ListItem>
                             <ListItem display="flex" mb="2" alignItems="center" marginTop={4} gap={2}>
                                 <Box fontSize={theme.fonts.subHeadingSecond.size} color={theme.companyTheme.color.secondry}>
@@ -49,7 +49,8 @@ const HydrologyFeature = () => {
                                         spadeIconArray[0]
                                     }
                                 </Box>
-                                Historical flood datasets
+                                DSM and Bare Earth Models: Choose from options like the natural terrain feature digital
+                                surface model (DSM) and the bare-earth digital terrain model (DTM).
                             </ListItem>
                             <ListItem display="flex" mb="2" alignItems="center" marginTop={4} gap={2}>
                                 <Box fontSize={theme.fonts.subHeadingSecond.size} color={theme.companyTheme.color.secondry}>
@@ -57,7 +58,7 @@ const HydrologyFeature = () => {
                                         spadeIconArray[0]
                                     }
                                 </Box>
-                                Rainfall and basin modeling
+                                Hydro Enforced: We flatten and correct water bodies and coastlines for precise measurements
                             </ListItem>
                             <ListItem display="flex" mb="2" alignItems="center" marginTop={4} gap={2}>
                                 <Box fontSize={theme.fonts.subHeadingSecond.size} color={theme.companyTheme.color.secondry}>
@@ -65,15 +66,9 @@ const HydrologyFeature = () => {
                                         spadeIconArray[0]
                                     }
                                 </Box>
-                                hello java how are you can we work together
-                            </ListItem>
-                            <ListItem display="flex" mb="2" alignItems="center" marginTop={4} gap={2}>
-                                <Box fontSize={theme.fonts.subHeadingSecond.size} color={theme.companyTheme.color.secondry}>
-                                    {
-                                        spadeIconArray[0]
-                                    }
-                                </Box>
-                                IDF curves
+                                Reliable & Cost Effective: Our data fusion services combine high-resolution data for
+                                critical areas (such as cities or flood plains) with wider coverage from medium-resolution
+                                datasets.
                             </ListItem>
 
                         </UnorderedList>
@@ -91,4 +86,4 @@ const HydrologyFeature = () => {
     )
 }
 
-export default HydrologyFeature
+export default TerrainFeature

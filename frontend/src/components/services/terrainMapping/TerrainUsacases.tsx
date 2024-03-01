@@ -10,9 +10,9 @@ import {
     useColorModeValue
 } from '@chakra-ui/react';
 
-import { GiFuelTank } from "react-icons/gi";
+import { FaDiagramProject } from "react-icons/fa6";
+import { GiFlood, GiHeavyThornyTriskelion } from "react-icons/gi";
 import { GrPlan } from "react-icons/gr";
-import { MdSolarPower } from "react-icons/md";
 import theme from '../../../theme';
 
 
@@ -23,23 +23,27 @@ interface IFeature {
 
 const features: IFeature[] = [
     {
-        heading: 'Solar Projects',
-        content: 'Choose from Stripe, Paddle, Braintree, or PayPal to launch your product quickly.',
+        heading: 'City Planning',
+        content: 'Shaping cities with precise data and innovative planning strategies.',
 
     },
     {
-        heading: ' Oil & gas',
-        content: 'Webhooks are wired up to automatically email customers PDF receipts and invoices.',
+        heading: 'Risk Mitigation',
+        content: 'Mitigating risks through advanced data analytics and strategic solutions.',
     },
     {
-        heading: 'City Planning',
-        content: 'Roll your own API to easily connect with other apps or services. Pull in updates.',
-    }
+        heading: 'Flood forecasting',
+        content: 'Empowering flood forecasting with precision data.',
+    },
+    {
+        heading: 'Project planning',
+        content: "Empower your project planning with Suhora's precise 3D elevation data.",
+    },
 ];
 
 
-const HydrologyUsacases = () => {
-    const iconArray = [<MdSolarPower />, <GiFuelTank />, <GrPlan />]
+const TerrainUsacases = () => {
+    const iconArray = [<GrPlan />, <GiHeavyThornyTriskelion />, <GiFlood />, <FaDiagramProject />]
 
 
     return (
@@ -53,10 +57,10 @@ const HydrologyUsacases = () => {
                         </Text>
                     </Flex>
                     <Text fontSize={theme.fonts.subHeading.size} color={theme.companyTheme.color.third} fontWeight={theme.fonts.subHeading.weight} textAlign="center">
-                        Mitigating flood risks for critical infrastructure worldwide, expertly.
+                    Elevating decisions with precision in 3D terrain solutions.
                     </Text>
                 </Stack>
-                <SimpleGrid columns={{ base: 1, sm: 2, md: 3 }} placeItems="center" spacing={10} mb={4} mt={12}>
+                <SimpleGrid columns={{ base: 1, sm: 2, md: 2, lg: 4 }} placeItems="center" spacing={10} mb={4} mt={12}>
                     {features.map((feature, index) => (
                         <Box
                             mb={4}
@@ -97,4 +101,4 @@ const HydrologyUsacases = () => {
     );
 };
 
-export default HydrologyUsacases;
+export default TerrainUsacases;

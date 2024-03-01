@@ -12,6 +12,7 @@ import LancePage from './pages/LancePage';
 import SIDPage from './pages/SIDPage';
 import AboutUs from './pages/AboutUs';
 import TerrainMappingPage from './pages/TerrainMappingPage';
+import LandDeformationPage from './pages/LandDeformationPage';
 
 function App() {
   // const [currentTheme, setCurrentTheme] = useState<'light' | 'dark'>('light');
@@ -48,7 +49,7 @@ function App() {
           <Route path='aboutus' element={<AboutUs currentTheme={colorMode} />} />
           <Route path='product-hydrology' element={<HydrologyPage currentTheme={colorMode}/>}></Route>
           <Route path='product-terrainmapping' element={<TerrainMappingPage currentTheme={colorMode}/>}></Route>
-          <Route path='land-deformation-monitoring' element={<TerrainMappingPage currentTheme={colorMode}/>}></Route>
+          <Route path='land-deformation-monitoring' element={<LandDeformationPage currentTheme={colorMode}/>}></Route>
         </Route>
       </Routes>
     </>

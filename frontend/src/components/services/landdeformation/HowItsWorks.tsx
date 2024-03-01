@@ -18,7 +18,7 @@ export const HowItsWorks = ({ currentTheme }: howWorks) => {
                     </Text>
                 </Flex>
                 <Text mb={{ base: '2', md: '4' }} color={theme.companyTheme.color.third} fontSize={theme.fonts.subHeading.size} fontWeight={theme.fonts.subHeading.weight} maxW="6xl" pb={{ base: '4', md: '8' }} textAlign="center">
-                    Mitigating flood risks for critical infrastructure worldwide, expertly.
+                    Mapping Earth's shifts, informing decisions with millimeter precision.
                 </Text>
                 <Stack spacing="0" direction={{ base: 'column', md: 'row' }} >
                     {steps.map((step, id) => (

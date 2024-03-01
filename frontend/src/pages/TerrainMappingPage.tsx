@@ -1,24 +1,23 @@
-import { AboutHydrology } from "../components/services/hydrology/AboutHydrology"
-import { HowItsWorks } from "../components/services/hydrology/HowItsWorks"
-import HydrologyFeature from "../components/services/hydrology/HydrologyFeature"
-import HydrologyHeader from "../components/services/hydrology/HydrologyHeader"
-import HydrologyUsacases from "../components/services/hydrology/HydrologyUsacases"
+import { AboutTerrain } from "../components/services/terrainMapping/AboutTerrain"
+import { HowItsWorks } from "../components/services/terrainMapping/HowItsWorks"
+import TerrainFeature from "../components/services/terrainMapping/TerrainFeature"
+import TerrainHeader from "../components/services/terrainMapping/TerrainHeader"
+import TerrainUsacases from "../components/services/terrainMapping/TerrainUsacases"
 
 
-
-type hydrologyThemeProps = {
+type TerrainThemeProps = {
     currentTheme: string
 }
 
 
-const TerrainMappingPage = ({ currentTheme }: hydrologyThemeProps) => {
+const TerrainMappingPage = ({ currentTheme }: TerrainThemeProps) => {
     return (
         <>
-            <HydrologyHeader currentTheme={currentTheme} />
-            <AboutHydrology currentTheme={currentTheme} />
-            <HydrologyFeature />
+            <TerrainHeader currentTheme={currentTheme} />
+            <AboutTerrain currentTheme={currentTheme} />
+            <TerrainFeature />
             <HowItsWorks currentTheme={currentTheme} />
-            <HydrologyUsacases />
+            <TerrainUsacases />
         </>
     )
 }
