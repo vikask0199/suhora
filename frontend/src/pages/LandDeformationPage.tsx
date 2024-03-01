@@ -1,24 +1,25 @@
-import { AboutHydrology } from "../components/services/hydrology/AboutHydrology"
-import { HowItsWorks } from "../components/services/hydrology/HowItsWorks"
-import HydrologyFeature from "../components/services/hydrology/HydrologyFeature"
-import HydrologyHeader from "../components/services/hydrology/HydrologyHeader"
-import HydrologyUsacases from "../components/services/hydrology/HydrologyUsacases"
+import { AboutLand } from "../components/services/landdeformation/AboutLand"
+import { HowItsWorks } from "../components/services/landdeformation/HowItsWorks"
+import LandFeature from "../components/services/landdeformation/LandFeature"
+import LandHeader from "../components/services/landdeformation/LandHeader"
+import LandUsacases from "../components/services/landdeformation/LandUsacases"
 
 
 
-type hydrologyThemeProps = {
+
+type LandThemeProps = {
     currentTheme: string
 }
 
 
-const LandDeformationPage = ({ currentTheme }: hydrologyThemeProps) => {
+const LandDeformationPage = ({ currentTheme }: LandThemeProps) => {
     return (
         <>
-            <HydrologyHeader currentTheme={currentTheme} />
-            <AboutHydrology currentTheme={currentTheme} />
-            <HydrologyFeature />
+            <LandHeader currentTheme={currentTheme} />
+            <AboutLand currentTheme={currentTheme} />
+            <LandFeature />
             <HowItsWorks currentTheme={currentTheme} />
-            <HydrologyUsacases />
+            <LandUsacases />
         </>
     )
 }

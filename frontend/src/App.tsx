@@ -12,6 +12,7 @@ import LancePage from './pages/LancePage';
 import SIDPage from './pages/SIDPage';
 import SpadePage from './pages/SpadePage';
 import TerrainMappingPage from './pages/TerrainMappingPage';
+import LandDeformationPage from './pages/LandDeformationPage';
 
 
 function App() {
@@ -50,6 +51,9 @@ function App() {
           <Route path='product-hydrology' element={<HydrologyPage currentTheme={colorMode} />}></Route>
           <Route path='product-terrainmapping' element={<TerrainMappingPage currentTheme={colorMode} />}></Route>
           <Route path='land-deformation-monitoring' element={<TerrainMappingPage currentTheme={colorMode} />}></Route>
+          <Route path='product-hydrology' element={<HydrologyPage currentTheme={colorMode}/>}></Route>
+          <Route path='product-terrainmapping' element={<TerrainMappingPage currentTheme={colorMode}/>}></Route>
+          <Route path='land-deformation-monitoring' element={<LandDeformationPage currentTheme={colorMode}/>}></Route>
         </Route>
       </Routes>
     </>

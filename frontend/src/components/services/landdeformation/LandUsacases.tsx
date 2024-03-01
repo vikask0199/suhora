@@ -23,23 +23,31 @@ interface IFeature {
 
 const features: IFeature[] = [
     {
-        heading: 'Solar Projects',
+        heading: 'Disaster',
         content: 'Choose from Stripe, Paddle, Braintree, or PayPal to launch your product quickly.',
 
     },
     {
-        heading: ' Oil & gas',
+        heading: 'Urban Planning,',
         content: 'Webhooks are wired up to automatically email customers PDF receipts and invoices.',
     },
     {
-        heading: 'City Planning',
+        heading: 'Oil & Gas',
         content: 'Roll your own API to easily connect with other apps or services. Pull in updates.',
-    }
+    },
+    {
+        heading: 'infrastructure',
+        content: 'Roll your own API to easily connect with other apps or services. Pull in updates.',
+    },
+    {
+        heading: 'Mining',
+        content: 'Roll your own API to easily connect with other apps or services. Pull in updates.',
+    },
 ];
 
 
-const HydrologyUsacases = () => {
-    const iconArray = [<MdSolarPower />, <GiFuelTank />, <GrPlan />]
+const LandUsacases = () => {
+    const iconArray = [<MdSolarPower />, <GiFuelTank />, <GrPlan />, <GiFuelTank />, <GrPlan />]
 
 
     return (
@@ -48,12 +56,12 @@ const HydrologyUsacases = () => {
                 <Stack spacing={{ base: '4', md: '5' }} direction="column">
                     <Flex justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
                         <Text>
-                            <Text as="span" color={theme.companyTheme.color.secondry}>Hydrology </Text>
+                            <Text as="span" color={theme.companyTheme.color.secondry}>Land Deformation </Text>
                             <Text as="span">Usecases</Text>
                         </Text>
                     </Flex>
                     <Text fontSize={theme.fonts.subHeading.size} color={theme.companyTheme.color.third} fontWeight={theme.fonts.subHeading.weight} textAlign="center">
-                        Mitigating flood risks for critical infrastructure worldwide, expertly.
+                    Mapping Earth's shifts, informing decisions with millimeter precision.
                     </Text>
                 </Stack>
                 <SimpleGrid columns={{ base: 1, sm: 2, md: 3 }} placeItems="center" spacing={10} mb={4} mt={12}>
@@ -97,4 +105,4 @@ const HydrologyUsacases = () => {
     );
 };
 
-export default HydrologyUsacases;
+export default LandUsacases;

@@ -14,7 +14,7 @@ interface aboutSuhoraProps {
   currentTheme: string
 }
 
-export const AboutHydrology = ({ currentTheme }: aboutSuhoraProps) => {
+export const AboutTerrain = ({ currentTheme }: aboutSuhoraProps) => {
   const backgroundColor = currentTheme === 'light' ? 'gray.200' : '#282b3c';
 
   return (
@@ -24,18 +24,22 @@ export const AboutHydrology = ({ currentTheme }: aboutSuhoraProps) => {
           <Stack spacing={{ base: '4', md: '5' }}>
             <Flex justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
               <Text>
-                <Text as="span">Hydrological </Text>
-                <Text as="span" color={theme.companyTheme.color.secondry}> Studies</Text>
+                <Text as="span">Terrain </Text>
+                <Text as="span" color={theme.companyTheme.color.secondry}> Mapping</Text>
               </Text>
             </Flex>
             <Text color={theme.companyTheme.color.third} fontSize={theme.fonts.subHeading.size} fontWeight={theme.fonts.subHeading.weight} maxW="6xl" >
-              Mitigating flood risks for critical infrastructure worldwide, expertly.
+              Elevating decisions with precision in 3D terrain solutions.
             </Text>
             <Text textAlign="justify">
-              Losses associated with floods are immense, especially in cases where assets on ground are critical infrastructure. When such assets cover large areas such as gigawatt scale solar PV or wind energy the vulnerability to losses becomes more pronounced. It's essential to prepare for these risks in advance at the time of planning and implementation of such projects.
+              Suhora's 3D layers provide a robust framework for governments and businesses, empowering
+              them to make informed decisions and discover intelligent solutions for their planning challenges.
+              Our elevation data is produced through highly precise processes to create globally available
+              digital elevation models. We innovative processing strategies
               <br />
               <br />
-              Suhora has worked with customers globally to understand and study the flood risks in a multitude of geographies. With a team of expert hydrology experts we model the risk at a site and suggest mitigation measures.
+              Suhora has been able to achieve consistently high accuracies in remote terrain without any
+              ground control points.
             </Text>
           </Stack>
         </Stack>

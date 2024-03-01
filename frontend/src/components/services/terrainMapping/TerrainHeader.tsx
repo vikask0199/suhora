@@ -7,7 +7,7 @@ type hydrologyHeaderProps = {
   currentTheme: string
 }
 
-const HydrologyHeader = ({ currentTheme }: hydrologyHeaderProps) => {
+const TerrainHeader = ({ currentTheme }: hydrologyHeaderProps) => {
 
   return (
     <>
@@ -16,14 +16,12 @@ const HydrologyHeader = ({ currentTheme }: hydrologyHeaderProps) => {
           <Box maxW='5xl' mx="auto" px={{ base: '6', md: '8' }} color="white" >
             <Flex justifyContent='center' fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
               <Heading  >
-                Hydrology
+                Terrain Mapping
               </Heading>
-
-
             </Flex>
             <Flex justifyContent='center'>
               <Text mt='1em' fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>
-                Mitigating flood risks for critical infrastructure worldwide, expertly.
+                Elevating decisions with precision in 3D terrain solutions.
               </Text>
             </Flex>
           </Box>
@@ -54,4 +52,4 @@ const HydrologyHeader = ({ currentTheme }: hydrologyHeaderProps) => {
     </>
   )
 }
-export default HydrologyHeader
+export default TerrainHeader

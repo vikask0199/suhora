@@ -5,7 +5,7 @@ import hydrologymainimage from "../../../assets/img/services/hydrologymainimage.
 import { NavLink } from "react-router-dom"
 
 
-const HydrologyFeature = () => {
+const LandFeature = () => {
     const aspectRatio = 4 / 3
     const spadeIconArray = [<RiTyphoonLine />]
 
@@ -22,7 +22,7 @@ const HydrologyFeature = () => {
                 <Flex justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
                     <Text>
                         <Text as="span" color={theme.companyTheme.color.secondry}>Feature of </Text>
-                        <Text as="span">Hydrology</Text>
+                        <Text as="span">Land Deformation</Text>
                     </Text>
                 </Flex>
                 <Flex direction={{ base: "column", md: "row" }} boxShadow='rgba(0, 0, 0, 0.35) 0px 5px 15px' justifyContent="center" alignItems="center">
@@ -41,7 +41,8 @@ const HydrologyFeature = () => {
                                         spadeIconArray[0]
                                     }
                                 </Box>
-                                Historical Satellite images
+                                Displacement Map: Displacement rate few cm between two successive acquisitions
+                                in areas unaffected by decorrelation or atmospheric noise.
                             </ListItem>
                             <ListItem display="flex" mb="2" alignItems="center" marginTop={4} gap={2}>
                                 <Box fontSize={theme.fonts.subHeadingSecond.size} color={theme.companyTheme.color.secondry}>
@@ -49,7 +50,8 @@ const HydrologyFeature = () => {
                                         spadeIconArray[0]
                                     }
                                 </Box>
-                                Historical flood datasets
+                                Rapid Motion: Displacement rate between mm/year and few cm/year unchanging
+                                Coherent radar targets over time
                             </ListItem>
                             <ListItem display="flex" mb="2" alignItems="center" marginTop={4} gap={2}>
                                 <Box fontSize={theme.fonts.subHeadingSecond.size} color={theme.companyTheme.color.secondry}>
@@ -57,25 +59,9 @@ const HydrologyFeature = () => {
                                         spadeIconArray[0]
                                     }
                                 </Box>
-                                Rainfall and basin modeling
+                                Motion Track: For displacement rate {`>`} cm/year in areas with a good and persistent
+                                radar cross section
                             </ListItem>
-                            <ListItem display="flex" mb="2" alignItems="center" marginTop={4} gap={2}>
-                                <Box fontSize={theme.fonts.subHeadingSecond.size} color={theme.companyTheme.color.secondry}>
-                                    {
-                                        spadeIconArray[0]
-                                    }
-                                </Box>
-                                hello java how are you can we work together
-                            </ListItem>
-                            <ListItem display="flex" mb="2" alignItems="center" marginTop={4} gap={2}>
-                                <Box fontSize={theme.fonts.subHeadingSecond.size} color={theme.companyTheme.color.secondry}>
-                                    {
-                                        spadeIconArray[0]
-                                    }
-                                </Box>
-                                IDF curves
-                            </ListItem>
-
                         </UnorderedList>
                         <Flex justifyContent="">
                             <NavLink to="/contact-us">
@@ -91,4 +77,4 @@ const HydrologyFeature = () => {
     )
 }
 
-export default HydrologyFeature
+export default LandFeature
