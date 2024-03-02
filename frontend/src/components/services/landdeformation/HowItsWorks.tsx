@@ -51,11 +51,11 @@ const steps = [
     },
     {
         title: 'Step 3',
-        description: 'Analysis at Suhora',
+        description: 'SAR processing and production of time-series information',
     },
     {
         title: 'Step 4',
-        description: 'Risk report mitigation measures',
+        description: 'Land movement map along with report on accuracy',
     },
 
 ]

@@ -18,14 +18,12 @@ import LogoWhite from '../../../assets/img/logo/suhora_white.png'
 import { links } from "../../../constant/footerData"
 import theme from '../../../theme'
 import { FaXTwitter } from 'react-icons/fa6'
-
+import { Link } from 'react-router-dom'
 type footerThemeProps = {
     currentTheme: string;
 }
-
 const Footer = ({ currentTheme }: footerThemeProps) => {
-    const backgroundColor = currentTheme === 'light' ? 'gray.200' : '#282b3c';
-
+    const backgroundColor = currentTheme === 'light' ? 'gray.200' : '#282B3C';
     return (
         <Box background={backgroundColor} pt={{ base: '16', md: '12' }}>
             <Container as="footer" role="contentinfo" maxW="6xl">
@@ -36,13 +34,13 @@ const Footer = ({ currentTheme }: footerThemeProps) => {
                     py={{ base: '8', md: '12' }}
                     spacing="8">
                     <Stack spacing={{ base: '2', md: '4' }} align="start" maxW={{ md: '100%', lg: '30%' }}>
-                        <Flex h={20} alignItems="center" ml="-4">
+                        <Flex h={20} alignItems="center" ml="-5">
                             <Image h="100%" src={currentTheme === 'dark' ? LogoWhite : LogoDark} />
                         </Flex>
                         <Text>
-                            313, Tower-B, Noida One, Sector-62, Noida,
+                            313, Tower-B, Noida One, Sector-62,
                             <br />
-                            Uttar Pradesh-201309, India
+                            Noida, U.P.-201309, India
                             <br />
                             0120-3113029, 3501889
                         </Text>
@@ -74,12 +72,12 @@ const Footer = ({ currentTheme }: footerThemeProps) => {
                     direction={{ base: 'column-reverse', md: 'row' }}
                     align="center">
                     <Text fontSize="sm" color="fg.subtle">
-                        &copy; {new Date().getFullYear()} Suhora | Space Analytics Simplified, All rights reserved.
+                        &copy; {new Date().getFullYear()} Suhora | Space Analytics Simplified, All rights reserved. | <Link to="/privacy-policy">Privacy Policy </Link>
                     </Text>
                     <ButtonGroup variant="tertiary">
-                        <IconButton as="a" href="#" aria-label="LinkedIn" icon={<FaLinkedin />} _hover={{ color: theme.companyTheme.color.secondry }} />
-                        <IconButton as="a" href="#" aria-label="GitHub" icon={<FaWhatsapp />} _hover={{ color: theme.companyTheme.color.secondry }} />
-                        <IconButton as="a" href="#" aria-label="Twitter" icon={<FaXTwitter />} _hover={{ color: theme.companyTheme.color.secondry }} />
+                        <IconButton as="a" href="https://www.linkedin.com/company/suhora/mycompany/" target="_blank" aria-label="LinkedIn" icon={<FaLinkedin />} _hover={{ color: theme.companyTheme.color.secondry }} />
+                        {/* <IconButton as="a" href="#" aria-label="GitHub" icon={<FaWhatsapp />} _hover={{ color: theme.companyTheme.color.secondry }} /> */}
+                        <IconButton as="a" href="https://twitter.com/suhoratech" target="_blank" aria-label="Twitter" icon={<FaXTwitter />} _hover={{ color: theme.companyTheme.color.secondry }} />
                     </ButtonGroup>
                 </Stack>
             </Container>

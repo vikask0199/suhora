@@ -1,40 +1,42 @@
 export const links = [
-    {
-      title: 'Industries',
-      links: [
-        { label: 'Forestry', href: '#' },
-        { label: 'Our story', href: '#' },
-        { label: 'Careers', href: '#' },
-        { label: 'Press', href: '#' },
-        { label: 'FAQs', href: '#' },
-      ],
-    },
-    {
-      title: 'Product',
-      links: [
-        { label: 'How it works', href: '#' },
-        { label: 'Pricing', href: '#' },
-        { label: 'Use Cases', href: '#' },
-        { label: 'Integrations', href: '#' },
-        { label: 'SAML SSO', href: '#' },
-      ],
-    },
-    {
-      title: 'Resources',
-      links: [
-        { label: 'Blog', href: '#' },
-        { label: 'Partnerships', href: '#' },
-        { label: 'Case studies', href: '#' },
-        { label: 'Media Assets', href: '#' },
-      ],
-    },
-    {
-      title: 'Legal',
-      links: [
-        { label: 'Terms of Service', href: '#' },
-        { label: 'Privacy Policy', href: '#' },
-        { label: 'Offer terms', href: '#' },
-        { label: 'License', href: '#' },
-      ],
-    },
-  ]
+  {
+    title: 'Products',
+    links: [
+      { label: 'SPADE', href: '/spade' },
+      { label: 'LANCE', href: '/lance' },
+      { label: 'SID', href: '/sid' },
+      // { label: 'Integrations', href: '#' },
+      // { label: 'SAML SSO', href: '#' },
+    ],
+  },
+  {
+    title: 'Industries',
+    links: [
+      { label: 'Defence & Intelligence', href: '/defence-and-intelligence' },
+      { label: 'Disaster & Insurance', href: '/disaster-and-insurance' },
+      { label: 'Renwable Energy', href: '/renewable-energy' },
+      { label: 'Mining', href: '/mining' },
+      { label: 'Infrastructure', href: '/infrastructure' },
+      { label: 'Agriculture', href: '/agriculture' },
+      { label: 'Forestry', href: '/forestry' },
+    ],
+  },
+  {
+    title: 'Services',
+    links: [
+      { label: 'Hyrdology', href: '/product-hyrdology' },
+      { label: 'Terrain Mapping', href: '/prodcust-terrainmapping' },
+      { label: 'Land Deformation Monitoring', href: '/land-deformation-monitoring' },
+    ],
+  },
+  {
+    title: 'Company',
+    links: [
+      { label: 'About Us', href: '/aboutus' },
+      { label: 'Blogs', href: '#' },
+      { label: 'Our Team', href: '/our-team' },
+      { label: 'Events & News', href: '#' },
+      { label: 'Careers', href: '/career' },
+    ],
+  },
+]
