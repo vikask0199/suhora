@@ -1,7 +1,7 @@
 import { AspectRatio, Box, Button, Flex, Image, ListItem, Text, UnorderedList } from "@chakra-ui/react"
 import { RiTyphoonLine } from "react-icons/ri"
 import theme from "../../../theme"
-import hydrologymainimage from "../../../assets/img/services/hydrologymainimage.jpg"
+import terrain from "../../../assets/img/services/terrain.png"
 import { NavLink } from "react-router-dom"
 
 
@@ -28,7 +28,7 @@ const TerrainFeature = () => {
                 <Flex direction={{ base: "column", md: "row" }} boxShadow='rgba(0, 0, 0, 0.35) 0px 5px 15px' justifyContent="center" alignItems="center">
                     <Box w={{ base: "100%", md: "50%" }} padding={7}>
                         <AspectRatio ratio={aspectRatio}>
-                            <Image src={hydrologymainimage} />
+                            <Image src={terrain} />
                         </AspectRatio>
                     </Box>
                     <Flex w={{ base: "100%", md: "50%" }} p={8} direction="column" rowGap={4} justifyContent="space-between">

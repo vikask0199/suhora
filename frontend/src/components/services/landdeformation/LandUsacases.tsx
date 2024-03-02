@@ -10,9 +10,9 @@ import {
     useColorModeValue
 } from '@chakra-ui/react';
 
-import { GiFuelTank } from "react-icons/gi";
-import { GrPlan } from "react-icons/gr";
-import { MdSolarPower } from "react-icons/md";
+import { FaTreeCity } from "react-icons/fa6";
+import { GiFuelTank, GiHorizonRoad, GiMining } from "react-icons/gi";
+import { MdFlood } from "react-icons/md";
 import theme from '../../../theme';
 
 
@@ -47,7 +47,7 @@ const features: IFeature[] = [
 
 
 const LandUsacases = () => {
-    const iconArray = [<MdSolarPower />, <GiFuelTank />, <GrPlan />, <GiFuelTank />, <GrPlan />]
+    const iconArray = [<MdFlood />, <FaTreeCity />, <GiFuelTank />, <GiHorizonRoad />, <GiMining />]
 
 
     return (
@@ -61,7 +61,7 @@ const LandUsacases = () => {
                         </Text>
                     </Flex>
                     <Text fontSize={theme.fonts.subHeading.size} color={theme.companyTheme.color.third} fontWeight={theme.fonts.subHeading.weight} textAlign="center">
-                    Mapping Earth's shifts, informing decisions with millimeter precision.
+                        Mapping Earth's shifts, informing decisions with millimeter precision.
                     </Text>
                 </Stack>
                 <SimpleGrid columns={{ base: 1, sm: 2, md: 3 }} placeItems="center" spacing={10} mb={4} mt={12}>

@@ -52,7 +52,7 @@ const TerrainUsacases = () => {
                 <Stack spacing={{ base: '4', md: '5' }} direction="column">
                     <Flex justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
                         <Text>
-                            <Text as="span" color={theme.companyTheme.color.secondry}>Hydrology </Text>
+                            <Text as="span" color={theme.companyTheme.color.secondry}>Terrain </Text>
                             <Text as="span">Usecases</Text>
                         </Text>
                     </Flex>
