@@ -27,10 +27,10 @@ export const AboutSpade = () => {
                             Multi band high resolution image from various satellite.
                         </Text>
                         <Text textAlign="justify">
-                            At SUHORA, we're driven by a passion to make the universe's data accessible and actionable for those who need it most. Founded on the principle that space analytics should empower, not overwhelm, we've dedicated ourselves to demystifying satellite data for practical, everyday applications.
+                            Spade revolutionizes your satellite image acquisition and analysis workflow. Plan and execute multi-sensor missions, with AI-powered suggestions guiding you for optimal efficiency. Source the perfect imagery from a comprehensive marketplace or effortlessly search and order historical data to complement your analysis. Spade ensures a secure platform with encrypted access, giving you peace of mind.
                             <br />
                             <br />
-                            Our team, a blend of seasoned experts and innovative thinkers, is committed to breaking down complex information into clear, actionable insights that drive decision-making across various sectors. Suhora Technologies stands at the intersection of innovation and utility, reshaping how industries leverage the untapped potential of space data.
+                            Unleash the power of your data with Spade's advanced AI tools. Analyze diverse satellite data formats, extracting valuable insights previously hidden within.  Organize your projects with user-specific workspaces, allowing for seamless collaboration and clear task management. Save, export, and download your findings for further analysis or sharing with colleagues. Spade empowers you to make data-driven decisions with confidence.
                         </Text>
                     </Stack>
                 </Stack>
