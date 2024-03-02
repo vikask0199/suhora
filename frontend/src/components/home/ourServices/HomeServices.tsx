@@ -1,89 +1,74 @@
-import { SVGProps } from 'react';
 import {
-    Container,
     Box,
-    chakra,
-    Text,
-    SimpleGrid,
+    Container,
     Flex,
     Link,
-    useColorModeValue,
-    Stack
+    SimpleGrid,
+    Stack,
+    Text,
+    chakra,
+    useColorModeValue
 } from '@chakra-ui/react';
-import theme from '../../../theme';
+
+import { FaFileCode, FaFileInvoiceDollar } from 'react-icons/fa';
 import { MdPayment } from 'react-icons/md';
-import { FaFileInvoiceDollar } from 'react-icons/fa';
-import { FaFileCode } from 'react-icons/fa';
+import theme from '../../../theme';
+
 
 
 interface IFeature {
     heading: string;
     content: string;
-    icon: SVGProps<SVGElement>;
 }
 
 const features: IFeature[] = [
     {
-        heading: 'Payments',
+        heading: 'Learn',
         content: 'Choose from Stripe, Paddle, Braintree, or PayPal to launch your product quickly.',
-        icon: (
-            <Box fontSize={theme.fonts.mainHeading.size}>
-                <MdPayment />
-            </Box>
-        )
+
     },
     {
-        heading: 'Invoicing',
-        content: 'Webhooks are wired up to automatically email customers PDF receipts and invoices.',
-        icon: (
-            <Box fontSize={theme.fonts.mainHeading.size}>
-                <FaFileInvoiceDollar />
-            </Box>
-        )
+        heading: 'Collaborate',
+        content: 'Choose from Stripe, Paddle, Braintree, or PayPal to launch your product quickly.',
     },
     {
-        heading: 'API Included',
-        content: 'Roll your own API to easily connect with other apps or services. Pull in updates.',
-        icon: (
-            <Box fontSize={theme.fonts.mainHeading.size}>
-                <FaFileCode />
-            </Box>
-        )
+        heading: 'Make an impact',
+        content: 'Choose from Stripe, Paddle, Braintree, or PayPal to launch your product quickly.',
     }
 ];
 
-type HomeServices = {
-    currentTheme: string
+type cardHeadingCurrentTheme = {
+    currentTheme: string;
 }
 
-const HomeServices = ({ currentTheme }: HomeServices) => {
+const HomeServices = ({ currentTheme }: cardHeadingCurrentTheme) => {
     const iconArray = [<MdPayment />, <FaFileInvoiceDollar />, <FaFileCode />]
     const backgroundColor = currentTheme === 'light' ? 'gray.200' : '#282b3c';
 
     return (
-        <Box backgroundColor={backgroundColor} width="100%">
-            <Container maxW="6xl" py={{ base: '4', md: '8', lg: '12' }}>
-                <Stack spacing={{ base: '4', md: '5' }} direction="column">
+        <Box width="100%" py={{ base: '4', md: '8', lg: '16' }} background={backgroundColor}>
+            <Container maxW="6xl" >
+                <Stack spacing={{ base: '2', md: '3' }} pb={{ base: '4', md: '8', lg: '12' }} direction="column">
                     <Flex justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
                         <Text>
-                            <Text as="span" color={theme.companyTheme.color.secondry}>Our </Text>
-                            <Text as="span">Sevices</Text>
+                            <Text as="span" color={theme.companyTheme.color.secondry}>Join </Text>
+                            <Text as="span">Us</Text>
                         </Text>
                     </Flex>
                     <Text fontSize={theme.fonts.subHeading.size} color={theme.companyTheme.color.third} fontWeight={theme.fonts.subHeading.weight} textAlign="center">
-                        Everything you need to build modern UI and great products.
+                        Building tomorrow's success, together - join our vibrant team now!
                     </Text>
                 </Stack>
                 <SimpleGrid columns={{ base: 1, sm: 2, md: 3 }} placeItems="center" spacing={10} mb={4} mt={12}>
                     {features.map((feature, index) => (
                         <Box
+                            mb={4}
                             key={index}
                             bg={useColorModeValue('gray.100', 'gray.700')}
                             p={6}
                             rounded="lg"
                             textAlign="center"
-                            pos="relative"
-                        >
+                            pos="relative">
                             <Flex
                                 p={2}
                                 w="max-content"
@@ -94,17 +79,17 @@ const HomeServices = ({ currentTheme }: HomeServices) => {
                                 pos="absolute"
                                 left={0}
                                 right={0}
-                                top="-1.5rem"
-                                boxShadow="lg">
+                                top="-2.3rem"
+                                boxShadow="lg" fontSize={theme.aboutIcon.size} fontWeight={theme.aboutIcon.weight} >
                                 {iconArray[index]}
                             </Flex>
-                            <chakra.h3 fontWeight="semibold" fontSize="2xl" mt={6}>
+                            <chakra.h3 fontWeight={theme.fonts.subHeading.weight} fontSize={theme.fonts.subHeading.size} mt={6}>
                                 {feature.heading}
                             </chakra.h3>
-                            <Text fontSize="md" mt={4}>
+                            <Text my={4}>
                                 {feature.content}
                             </Text>
-                            <Link href="#" mt={4} fontSize="sm" color="blue.400">
+                            <Link href="#" fontSize={theme.fonts.subHeadingSecond.size} color={theme.companyTheme.color.secondry}>
                                 Learn more →
                             </Link>
                         </Box>

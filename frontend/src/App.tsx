@@ -43,7 +43,7 @@ function App() {
   const { colorMode, toggleColorMode } = useColorMode()
 
   return (
-    <>
+    <> 
       <Routes>
         <Route path="/" element={<PublicOutlet toggleTheme={toggleColorMode} currentTheme={colorMode} />}>
           <Route index element={<HomePage currentTheme={colorMode} />} />
@@ -69,7 +69,7 @@ function App() {
           <Route path='land-deformation-monitoring' element={<LandDeformationPage currentTheme={colorMode} />}></Route>
           <Route path='defence-and-intelligence' element={<DefencePage />} />
           <Route path='disaster-and-insurence' element={<Disaster />} />
-          <Route path='renewable-energy-page' element={<RenewableEnergyPage />} />
+          <Route path='renewable-energy' element={<RenewableEnergyPage />} />
           <Route path='mining' element={<MiningPage />} />
           <Route path='infrastructure' element={<InfrastructurePage />} />
           <Route path='forestry' element={<ForestPage />} />

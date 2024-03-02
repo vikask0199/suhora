@@ -44,8 +44,7 @@ const AboutusHeader = () => {
               h="full"
               objectFit="cover"
               objectPosition="top bottom"
-              position="absolute"
-            />
+              position="absolute"/>
             <Box position="absolute" w="full" h="full" bg="blackAlpha.600" />
           </Box>
         </Flex>

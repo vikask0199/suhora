@@ -20,6 +20,7 @@ import { RiTyphoonLine } from 'react-icons/ri'
 import { industryCarouselData } from "../../../constant/industryCarouselData.ts"
 import theme from "../../../theme.ts"
 import { CarouselSlide, IndustryCarousel, useCarousel } from './IndustryCarousel.tsx'
+import { Link } from 'react-router-dom'
 
 
 export const IndustryGallery = () => {
@@ -61,7 +62,7 @@ export const IndustryGallery = () => {
                 <Flex w={{ base: "100%", md: "50%" }} p={8} direction="column" rowGap={4} justifyContent="space-between">
                   <Box fontSize={theme.fonts.subHeading.size} fontWeight={theme.fonts.subHeading.weight} color={theme.companyTheme.color.third}>{image.name}</Box>
                   {/* <Box backgroundColor="#BEC1DD" color="#3F53E9" w="fit-content" px="8" fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>SUHORA</Box> */}
-                  <Box fontSize={theme.fonts.description}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti laborum repudiandae obcaecati sapiente magnam! Officiis quae, similique minus harum quas eum, quidem vero labore magni iste.</Box>
+                  <Box fontSize={theme.fonts.description}>{image.description}</Box>
                   <UnorderedList listStyleType="none" fontSize={theme.fonts.list} marginLeft={0}>
                     <ListItem display="flex" mb="2" alignItems="center" marginTop={4} gap={2}>
                       <Box fontSize={theme.fonts.subHeadingSecond.size} color={theme.companyTheme.color.secondry}>
@@ -113,9 +114,11 @@ export const IndustryGallery = () => {
                       {image.point5}
                     </ListItem>
                   </UnorderedList>
-                  <Button width="fit-content" px="8" border="1px solid #1266A0" variant="outline" color="#1266A0" _hover={{ backgroundColor: theme.companyTheme.color.secondry, color: "white" }} >
-                    Explore More
-                  </Button>
+                  <Link to={image.flag}>
+                    <Button width="fit-content" px="8" border="1px solid #1266A0" variant="outline" color="#1266A0" _hover={{ backgroundColor: theme.companyTheme.color.secondry, color: "white" }} >
+                      Explore More
+                    </Button>
+                  </Link>
                 </Flex>
               </Flex>
             </CarouselSlide>

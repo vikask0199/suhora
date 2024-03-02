@@ -10,8 +10,7 @@ import {
     useColorModeValue
 } from '@chakra-ui/react';
 
-import { GiFuelTank } from "react-icons/gi";
-import { GrPlan } from "react-icons/gr";
+import { GiFuelTank, GiModernCity } from "react-icons/gi";
 import { MdSolarPower } from "react-icons/md";
 import theme from '../../../theme';
 
@@ -39,12 +38,12 @@ const features: IFeature[] = [
 
 
 const HydrologyUsacases = () => {
-    const iconArray = [<MdSolarPower />, <GiFuelTank />, <GrPlan />]
+    const iconArray = [<MdSolarPower />, <GiFuelTank />, <GiModernCity />]
 
 
     return (
-        <Box width="100%">
-            <Container maxW="6xl" py={{ base: '4', md: '8', lg: '12' }}>
+        <Box width="100%" py={{ base: '4', md: '8', lg: '16' }}>
+            <Container maxW="6xl">
                 <Stack spacing={{ base: '4', md: '5' }} direction="column">
                     <Flex justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
                         <Text>
@@ -53,10 +52,10 @@ const HydrologyUsacases = () => {
                         </Text>
                     </Flex>
                     <Text fontSize={theme.fonts.subHeading.size} color={theme.companyTheme.color.third} fontWeight={theme.fonts.subHeading.weight} textAlign="center">
-                        Mitigating flood risks for critical infrastructure worldwide, expertly.
+                        Mitigating flood risks for critical infrastructure worldwide.
                     </Text>
                 </Stack>
-                <SimpleGrid columns={{ base: 1, sm: 2, md: 3 }} placeItems="center" spacing={10} mb={4} mt={12}>
+                <SimpleGrid columns={{ base: 1, sm: 2, md: 3 }} placeItems="center" spacing={10} mb={4} mt={20}>
                     {features.map((feature, index) => (
                         <Box
                             mb={4}

@@ -1,7 +1,6 @@
-
 import { Box, Flex, Heading, Img, Text } from '@chakra-ui/react'
-import hydrologymainimage from '../../../assets/img/services/hydrologymainimage.jpg'
 import theme from '../../../theme'
+import terrain from "../../../assets/img/services/terrain.png"
 
 type hydrologyHeaderProps = {
   currentTheme: string
@@ -37,7 +36,7 @@ const TerrainHeader = ({ currentTheme }: hydrologyHeaderProps) => {
           align="center">
           <Box position="relative" w="full" h="full">
             <Img
-              src={hydrologymainimage}
+              src={terrain}
               alt="Main Image"
               w="full"
               h="full"
