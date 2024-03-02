@@ -51,8 +51,8 @@ const HomeServices = ({ currentTheme }: cardHeadingCurrentTheme) => {
                 <Stack spacing={{ base: '2', md: '3' }} pb={{ base: '4', md: '8', lg: '12' }} direction="column">
                     <Flex justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
                         <Text>
-                            <Text as="span" color={theme.companyTheme.color.secondry}>Join </Text>
-                            <Text as="span">Us</Text>
+                            <Text as="span" color={theme.companyTheme.color.secondry}>What We </Text>
+                            <Text as="span">Serve</Text>
                         </Text>
                     </Flex>
                     <Text fontSize={theme.fonts.subHeading.size} color={theme.companyTheme.color.third} fontWeight={theme.fonts.subHeading.weight} textAlign="center">

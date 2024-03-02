@@ -26,18 +26,18 @@ export const MiningContent = () => {
                     <Stack spacing={{ base: '4', md: '5' }}>
                         <Flex justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
                             <Text>
-                                <Text as="span">About </Text>
-                                <Text as="span" color={theme.companyTheme.color.secondry}>Suhora</Text>
+                                <Text as="span">Our </Text>
+                                <Text as="span" color={theme.companyTheme.color.secondry}>Offering</Text>
                             </Text>
                         </Flex>
                         <Text color={theme.companyTheme.color.third} fontSize={theme.fonts.subHeading.size} fontWeight={theme.fonts.subHeading.weight} maxW="6xl" >
-                            Multi band high resolution image from various satellite.
+                        Beyond Boundaries - Satellite-driven Mining Excellence!
                         </Text>
                         <Text textAlign="justify">
-                            At SUHORA, we're driven by a passion to make the universe's data accessible and actionable for those who need it most. Founded on the principle that space analytics should empower, not overwhelm, we've dedicated ourselves to demystifying satellite data for practical, everyday applications.
+                        Suhora stands at the forefront of the solar industry, offering unparalleled consulting and design services to clients seeking to harness the power of solar energy for their projects.
                             <br />
                             <br />
-                            Our team, a blend of seasoned experts and innovative thinkers, is committed to breaking down complex information into clear, actionable insights that drive decision-making across various sectors. Suhora Technologies stands at the intersection of innovation and utility, reshaping how industries leverage the untapped potential of space data.
+                            Through the utilization of an advanced auto-layout generation platform, Suhora empowers its customers to streamline their design processes, saving valuable time and resources across multiple iterations.
                         </Text>
                         <Flex w="100%" direction="column" rowGap={4} justifyContent="space-between">
                             <UnorderedList listStyleType="hidden" fontSize={theme.fonts.list} marginLeft={0}>
@@ -47,7 +47,7 @@ export const MiningContent = () => {
                                             spadeIconArray[0]
                                         }
                                     </Box>
-                                    hello java how are you can we work together hello java how are you can we work together hello java how are you can we work together
+                                    One of the key advantages of Suhora's auto-layout generation platform is its ability to facilitate quick and efficient design iterations.
                                 </ListItem>
                                 <ListItem display="flex" mb="2" alignItems="center" marginTop={4} gap={2}>
                                     <Box fontSize={theme.fonts.subHeadingSecond.size} color={theme.companyTheme.color.secondry}>
@@ -55,7 +55,7 @@ export const MiningContent = () => {
                                             spadeIconArray[0]
                                         }
                                     </Box>
-                                    hello java how are you can we work together hello java how are you can we work together hello java how are you can we work together
+                                    This not only accelerates the design phase but also ensures that projects are optimized for efficiency and performance from the outset.
                                 </ListItem>
                                 <ListItem display="flex" mb="2" alignItems="center" marginTop={4} gap={2}>
                                     <Box fontSize={theme.fonts.subHeadingSecond.size} color={theme.companyTheme.color.secondry}>
@@ -63,7 +63,7 @@ export const MiningContent = () => {
                                             spadeIconArray[0]
                                         }
                                     </Box>
-                                    hello java how are you can we work together hello java how are you can we work together hello java how are you can we work together
+                                    Suhora's design approach leads to more accurate calculations of project financing. 
                                 </ListItem>
                                 <ListItem display="flex" mb="2" alignItems="center" marginTop={4} gap={2}>
                                     <Box fontSize={theme.fonts.subHeadingSecond.size} color={theme.companyTheme.color.secondry}>
@@ -71,7 +71,7 @@ export const MiningContent = () => {
                                             spadeIconArray[0]
                                         }
                                     </Box>
-                                    hello java how are you can we work together hello java how are you can we work together hello java how are you can we work together
+                                    Suhora helps clients mitigate risks associated with water-related hazards and ensure the long-term resilience of their projects.
                                 </ListItem>
                                 <ListItem display="flex" mb="2" alignItems="center" marginTop={4} gap={2}>
                                     <Box fontSize={theme.fonts.subHeadingSecond.size} color={theme.companyTheme.color.secondry}>
@@ -79,16 +79,9 @@ export const MiningContent = () => {
                                             spadeIconArray[0]
                                         }
                                     </Box>
-                                    hello java how are you can we work together hello java how are you can we work together hello java how are you can we work together
+                                    Suhora empowers clients to unlock the full potential of solar energy while ensuring the reliability, resilience, and sustainability of their projects.
                                 </ListItem>
-                                <ListItem display="flex" mb="2" alignItems="center" marginTop={4} gap={2}>
-                                    <Box fontSize={theme.fonts.subHeadingSecond.size} color={theme.companyTheme.color.secondry}>
-                                        {
-                                            spadeIconArray[0]
-                                        }
-                                    </Box>
-                                    hello java how are you can we work together hello java how are you can we work together hello java how are you can we work together
-                                </ListItem>
+                                
                             </UnorderedList>
                         </Flex>
                     </Stack>

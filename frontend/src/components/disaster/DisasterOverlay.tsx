@@ -1,6 +1,6 @@
 
 import { Box, Flex, Heading, Img, Text } from '@chakra-ui/react'
-import AgricultureImg from '../../assets/img/industries/agri.png'
+import AgricultureImg from '../../assets/img/industries/disaster.png'
 import theme from '../../theme'
 const DisasterOverlay = () => {
 
@@ -11,14 +11,14 @@ const DisasterOverlay = () => {
           <Box maxW='5xl' mx="auto" px={{ base: '6', md: '8' }} color="white" >
             <Flex justifyContent='center' fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
               <Heading  >
-                Agriculture
+               Disaster and Insurance
               </Heading>
 
 
             </Flex>
             <Flex justifyContent='center'>
               <Text mt='1em' fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                Data-driven insights for disaster preparedness and insurance planning.
 
               </Text>
             </Flex>

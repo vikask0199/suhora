@@ -26,28 +26,29 @@ export const InfrastructureContent = () => {
                     <Stack spacing={{ base: '4', md: '5' }}>
                         <Flex justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
                             <Text>
-                                <Text as="span">About </Text>
-                                <Text as="span" color={theme.companyTheme.color.secondry}>Suhora</Text>
+                                <Text as="span">Our </Text>
+                                <Text as="span" color={theme.companyTheme.color.secondry}>Offering</Text>
                             </Text>
                         </Flex>
                         <Text color={theme.companyTheme.color.third} fontSize={theme.fonts.subHeading.size} fontWeight={theme.fonts.subHeading.weight} maxW="6xl" >
-                            Multi band high resolution image from various satellite.
+                        Sky-Built Precision: AI-Powered Construction Monitoring.
                         </Text>
                         <Text textAlign="justify">
-                            At SUHORA, we're driven by a passion to make the universe's data accessible and actionable for those who need it most. Founded on the principle that space analytics should empower, not overwhelm, we've dedicated ourselves to demystifying satellite data for practical, everyday applications.
+                        Suhora, with its specialized expertise, is poised to develop an all-encompassing command center that serves as the nerve center of a city, overseeing and managing crucial aspects such as the environment, infrastructure, devices, city assets, departmental systems, and more.
                             <br />
                             <br />
-                            Our team, a blend of seasoned experts and innovative thinkers, is committed to breaking down complex information into clear, actionable insights that drive decision-making across various sectors. Suhora Technologies stands at the intersection of innovation and utility, reshaping how industries leverage the untapped potential of space data.
+                            Urbanization in countries like India brings with it a myriad of challenges, including increased strain on existing infrastructure, heightened demand for essential services, and greater environmental impact.
                         </Text>
                         <Flex w="100%" direction="column" rowGap={4} justifyContent="space-between">
                             <UnorderedList listStyleType="hidden" fontSize={theme.fonts.list} marginLeft={0}>
+                                
                                 <ListItem display="flex" mb="2" alignItems="center" marginTop={4} gap={2}>
                                     <Box fontSize={theme.fonts.subHeadingSecond.size} color={theme.companyTheme.color.secondry}>
                                         {
                                             spadeIconArray[0]
                                         }
                                     </Box>
-                                    hello java how are you can we work together hello java how are you can we work together hello java how are you can we work together
+                                    At the heart of Suhora's command center lies its capability to monitor and manage the urban environment comprehensively.
                                 </ListItem>
                                 <ListItem display="flex" mb="2" alignItems="center" marginTop={4} gap={2}>
                                     <Box fontSize={theme.fonts.subHeadingSecond.size} color={theme.companyTheme.color.secondry}>
@@ -55,7 +56,7 @@ export const InfrastructureContent = () => {
                                             spadeIconArray[0]
                                         }
                                     </Box>
-                                    hello java how are you can we work together hello java how are you can we work together hello java how are you can we work together
+                                    This real-time monitoring enables proactive measures to mitigate pollution, safeguard public health, and ensure environmental sustainability.
                                 </ListItem>
                                 <ListItem display="flex" mb="2" alignItems="center" marginTop={4} gap={2}>
                                     <Box fontSize={theme.fonts.subHeadingSecond.size} color={theme.companyTheme.color.secondry}>
@@ -63,31 +64,16 @@ export const InfrastructureContent = () => {
                                             spadeIconArray[0]
                                         }
                                     </Box>
-                                    hello java how are you can we work together hello java how are you can we work together hello java how are you can we work together
+                                    This proactive approach to infrastructure management is essential for ensuring the reliability and resilience of urban systems.
                                 </ListItem>
+                                
                                 <ListItem display="flex" mb="2" alignItems="center" marginTop={4} gap={2}>
                                     <Box fontSize={theme.fonts.subHeadingSecond.size} color={theme.companyTheme.color.secondry}>
                                         {
                                             spadeIconArray[0]
                                         }
                                     </Box>
-                                    hello java how are you can we work together hello java how are you can we work together hello java how are you can we work together
-                                </ListItem>
-                                <ListItem display="flex" mb="2" alignItems="center" marginTop={4} gap={2}>
-                                    <Box fontSize={theme.fonts.subHeadingSecond.size} color={theme.companyTheme.color.secondry}>
-                                        {
-                                            spadeIconArray[0]
-                                        }
-                                    </Box>
-                                    hello java how are you can we work together hello java how are you can we work together hello java how are you can we work together
-                                </ListItem>
-                                <ListItem display="flex" mb="2" alignItems="center" marginTop={4} gap={2}>
-                                    <Box fontSize={theme.fonts.subHeadingSecond.size} color={theme.companyTheme.color.secondry}>
-                                        {
-                                            spadeIconArray[0]
-                                        }
-                                    </Box>
-                                    hello java how are you can we work together hello java how are you can we work together hello java how are you can we work together
+                                    This ensures that relevant stakeholders have access to timely and accurate information, facilitating coordinated responses to emergencies and events.
                                 </ListItem>
                             </UnorderedList>
                         </Flex>

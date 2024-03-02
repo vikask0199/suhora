@@ -31,7 +31,7 @@ export const industryCarouselData = [
     currency: 'USD',
     price: 199,
     salePrice: 179.99,
-    flag: '/disaster-and-insurence',
+    flag: '/disaster-and-insurance',
     imageUrl:
       disaster,
     rating: 4,

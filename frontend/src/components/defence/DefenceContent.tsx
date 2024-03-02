@@ -26,18 +26,18 @@ export const DefenceContent = () => {
                     <Stack spacing={{ base: '4', md: '5' }}>
                         <Flex justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
                             <Text>
-                                <Text as="span">About </Text>
-                                <Text as="span" color={theme.companyTheme.color.secondry}>Suhora</Text>
+                                <Text as="span">Our </Text>
+                                <Text as="span" color={theme.companyTheme.color.secondry}>Offering</Text>
                             </Text>
                         </Flex>
                         <Text color={theme.companyTheme.color.third} fontSize={theme.fonts.subHeading.size} fontWeight={theme.fonts.subHeading.weight} maxW="6xl" >
-                            Multi band high resolution image from various satellite.
+                               Adapts to your mission. Scales to your needs.
                         </Text>
                         <Text textAlign="justify">
-                            At SUHORA, we're driven by a passion to make the universe's data accessible and actionable for those who need it most. Founded on the principle that space analytics should empower, not overwhelm, we've dedicated ourselves to demystifying satellite data for practical, everyday applications.
+                        Suhora plays a vital role in bolstering national defense and homeland security through its provision of advanced monitoring and analytics solutions. At the core of Suhora's offerings is the encrypted EarthData platform, a cutting-edge system designed to meet the rigorous demands of defense and security operations.
                             <br />
                             <br />
-                            Our team, a blend of seasoned experts and innovative thinkers, is committed to breaking down complex information into clear, actionable insights that drive decision-making across various sectors. Suhora Technologies stands at the intersection of innovation and utility, reshaping how industries leverage the untapped potential of space data.
+                            The EarthData platform serves as a centralized hub for storing, accessing, and analyzing critical geospatial information essential for national defense and homeland security. 
                         </Text>
                         <Flex w="100%" direction="column" rowGap={4} justifyContent="space-between">
                             <UnorderedList listStyleType="hidden" fontSize={theme.fonts.list} marginLeft={0}>

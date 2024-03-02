@@ -1,6 +1,6 @@
 
 import { Box, Flex, Heading, Img, Text } from '@chakra-ui/react'
-import AgricultureImg from '../../assets/img/industries/agri.png'
+import AgricultureImg from '../../assets/img/industries/forestOverlay.jpg'
 import theme from '../../theme'
 const ForestryOverlay = () => {
 
@@ -11,15 +11,14 @@ const ForestryOverlay = () => {
           <Box maxW='5xl' mx="auto" px={{ base: '6', md: '8' }} color="white" >
             <Flex justifyContent='center' fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
               <Heading  >
-                Agriculture
+              Forestry
               </Heading>
 
 
             </Flex>
             <Flex justifyContent='center'>
               <Text mt='1em' fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-
+                From Space to Safety: Satellite Insight for Fire-Free Forests.
               </Text>
             </Flex>
           </Box>

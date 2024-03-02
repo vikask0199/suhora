@@ -66,7 +66,7 @@ function App() {
           {/* Industries */}
           <Route path="agriculture" element={<AgriculturePage currentTheme={colorMode} />} />
           <Route path='defence-and-intelligence' element={<DefencePage currentTheme={colorMode}/>} />
-          <Route path='disaster-and-insurence' element={<Disaster currentTheme={colorMode}/>} />
+          <Route path='disaster-and-insurance' element={<Disaster currentTheme={colorMode}/>} />
           <Route path='renewable-energy' element={<RenewableEnergyPage currentTheme={colorMode}/>} />
           <Route path='mining' element={<MiningPage currentTheme={colorMode}/>} />
           <Route path='infrastructure' element={<InfrastructurePage currentTheme={colorMode}/>} />

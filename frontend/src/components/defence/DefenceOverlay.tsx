@@ -1,6 +1,6 @@
 
 import { Box, Flex, Heading, Img, Text } from '@chakra-ui/react'
-import AgricultureImg from '../../assets/img/industries/agri.png'
+import AgricultureImg from '../../assets/img/industries/defense.png'
 import theme from '../../theme'
 const DefenceOverlay = () => {
 
@@ -11,12 +11,12 @@ const DefenceOverlay = () => {
           <Box maxW='5xl' mx="auto" px={{ base: '6', md: '8' }} color="white" >
             <Flex justifyContent='center' fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
               <Heading  >
-                Agriculture
+                Defence and Intelligence
               </Heading>
             </Flex>
             <Flex justifyContent='center'>
               <Text mt='1em' fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                Adapts to your mission. Scales to your needs.
               </Text>
             </Flex>
           </Box>

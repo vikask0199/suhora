@@ -1,6 +1,6 @@
 
 import { Box, Flex, Heading, Img, Text } from '@chakra-ui/react'
-import AgricultureImg from '../../assets/img/industries/agri.png'
+import AgricultureImg from '../../assets/img/industries/Agriii.jpg'
 import theme from '../../theme'
 const AgricultureOverlay = () => {
 
@@ -18,7 +18,8 @@ const AgricultureOverlay = () => {
             </Flex>
             <Flex justifyContent='center'>
               <Text mt='1em' fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                
+            Satellite data-powered harvest. Optimize yield, minimize risk.
 
               </Text>
             </Flex>
