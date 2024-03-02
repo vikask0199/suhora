@@ -96,7 +96,7 @@ const HomeCarousel = () => {
                      {/* <div className="author">VIKAS</div> */}
                     <div className="title">Renewable Energy</div>
                     <div className="des">Orbit to Outlet: Satellite-Driven Solar Innovation.</div>
-                    <NavLink to="/renewable-energy-page" className="buttons">
+                    <NavLink to="/renewable-energy" className="buttons">
                         <button>Learn More</button>
                     </NavLink>
                 </div>

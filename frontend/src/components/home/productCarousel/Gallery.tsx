@@ -20,6 +20,7 @@ import { RiTyphoonLine } from "react-icons/ri"
 import { products } from "../../../constant/productCarouselData.ts"
 import theme from "../../../theme.ts"
 import { Carousel, CarouselSlide, useCarousel } from './Carousel.tsx'
+import { Link } from 'react-router-dom'
 
 
 export const Gallery = () => {
@@ -114,9 +115,11 @@ export const Gallery = () => {
                     </ListItem>
                   </UnorderedList>
                   <Flex justifyContent="">
-                    <Button width="fit-content" px="8" border="1px solid #1266A0" variant="outline" color="#1266A0" _hover={{ backgroundColor: theme.companyTheme.color.secondry, color: "white" }} >
-                      Explore More
-                    </Button>
+                    <Link to={image.buttonRedirect}>
+                      <Button width="fit-content" px="8" border="1px solid #1266A0" variant="outline" color="#1266A0" _hover={{ backgroundColor: theme.companyTheme.color.secondry, color: "white" }} >
+                        Explore More
+                      </Button>
+                    </Link>
                   </Flex>
                 </Flex>
               </Flex>
