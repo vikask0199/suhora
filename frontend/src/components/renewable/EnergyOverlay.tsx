@@ -2,7 +2,7 @@
 import { Box, Flex, Heading, Img, Text } from '@chakra-ui/react'
 import AgricultureImg from '../../assets/img/industries/agri.png'
 import theme from '../../theme'
-const AgricultureOverlay = () => {
+const EnergyOverlay = () => {
 
   return (
     <>
@@ -50,4 +50,4 @@ const AgricultureOverlay = () => {
     </>
   )
 }
-export default AgricultureOverlay
+export default EnergyOverlay

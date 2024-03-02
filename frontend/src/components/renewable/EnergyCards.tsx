@@ -89,7 +89,7 @@ type HomeServices = {
     currentTheme: string
 }
 
-const AgricultureCards = ({ currentTheme }: HomeServices) => {
+const EnergyCards = ({ currentTheme }: HomeServices) => {
     const iconArray = [<MdPayment />, <FaFileInvoiceDollar />, <FaFileCode />,<MdPayment />, <FaFileInvoiceDollar />, <FaFileCode />]
     const backgroundColor = currentTheme === 'light' ? 'gray.200' : '#282b3c';
 
@@ -148,4 +148,4 @@ const AgricultureCards = ({ currentTheme }: HomeServices) => {
     );
 };
 
-export default AgricultureCards;
+export default EnergyCards;

@@ -1,7 +1,25 @@
+import ForestryCards from "../components/forestry/ForestryCards";
+import ForestryContactUs from "../components/forestry/ForestryContactUs";
+import { ForestryContent } from "../components/forestry/ForestryContent";
+import ForestryOverlay from "../components/forestry/ForestryOverlay";
+import { ForestryProduct } from "../components/forestry/ForestryProduct";
 
-const ForestPage = () => {
+type ForestryProps = {
+    currentTheme: string
+}
+
+
+const ForestPage = ({ currentTheme }: ForestryProps) => {
+    const backgroundColor = currentTheme === 'light' ? 'gray.200' : '#282b3c';
+    console.log(backgroundColor)
     return (
-        <div>ForestPage</div>
+        <>
+            <ForestryOverlay />
+            <ForestryContent />
+            <ForestryCards currentTheme={currentTheme} />
+            <ForestryProduct />
+            <ForestryContactUs />
+        </>
     )
 }
 

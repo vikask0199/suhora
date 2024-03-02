@@ -3,7 +3,7 @@ import bgImage from "../../assets/img/satellites-jpg.webp"
 import theme from '../../theme'
 
 
-const AgricultureContactUs = () => {
+const MiningContactUs = () => {
     return (
         <Box
             as="section"
@@ -41,4 +41,4 @@ const AgricultureContactUs = () => {
     )
 }
 
-export default AgricultureContactUs
+export default MiningContactUs

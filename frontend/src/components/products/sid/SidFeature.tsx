@@ -1,6 +1,7 @@
 import { AspectRatio, Box, Button, Flex, Image, ListItem, Text, UnorderedList } from "@chakra-ui/react"
-import theme from "../../../theme"
 import { RiTyphoonLine } from "react-icons/ri"
+import theme from "../../../theme"
+import { Link } from "react-router-dom"
 
 type spadeFeatureProps = {
     currentTheme: string
@@ -43,7 +44,7 @@ const SidFeature = ({ currentTheme }: spadeFeatureProps) => {
                                         spadeIconArray[0]
                                     }
                                 </Box>
-                                hello java how are you can we work together
+                                SID utilizes real-time satellite data for disaster management and insurance.
                             </ListItem>
                             <ListItem display="flex" mb="2" alignItems="center" marginTop={4} gap={2}>
                                 <Box fontSize={theme.fonts.subHeadingSecond.size} color={theme.companyTheme.color.secondry}>
@@ -51,7 +52,7 @@ const SidFeature = ({ currentTheme }: spadeFeatureProps) => {
                                         spadeIconArray[0]
                                     }
                                 </Box>
-                                hello java how are you can we work together
+                                Disaster Dashboard aids emergency response with real-time disaster data.
                             </ListItem>
                             <ListItem display="flex" mb="2" alignItems="center" marginTop={4} gap={2}>
                                 <Box fontSize={theme.fonts.subHeadingSecond.size} color={theme.companyTheme.color.secondry}>
@@ -59,7 +60,7 @@ const SidFeature = ({ currentTheme }: spadeFeatureProps) => {
                                         spadeIconArray[0]
                                     }
                                 </Box>
-                                hello java how are you can we work together
+                                Insurance Dashboard transforms risk assessment and claims processing.
                             </ListItem>
                             <ListItem display="flex" mb="2" alignItems="center" marginTop={4} gap={2}>
                                 <Box fontSize={theme.fonts.subHeadingSecond.size} color={theme.companyTheme.color.secondry}>
@@ -67,7 +68,7 @@ const SidFeature = ({ currentTheme }: spadeFeatureProps) => {
                                         spadeIconArray[0]
                                     }
                                 </Box>
-                                hello java how are you can we work together
+                                SID benefits insurance and banking sectors with dynamic environmental insights.
                             </ListItem>
                             <ListItem display="flex" mb="2" alignItems="center" marginTop={4} gap={2}>
                                 <Box fontSize={theme.fonts.subHeadingSecond.size} color={theme.companyTheme.color.secondry}>
@@ -75,22 +76,15 @@ const SidFeature = ({ currentTheme }: spadeFeatureProps) => {
                                         spadeIconArray[0]
                                     }
                                 </Box>
-                                hello java how are you can we work together
+                                Technology-driven SID promotes a safer, resilient global community.
                             </ListItem>
-                            <ListItem display="flex" mb="2" alignItems="center" marginTop={4} gap={2}>
-                                <Box fontSize={theme.fonts.subHeadingSecond.size} color={theme.companyTheme.color.secondry}>
-                                    {
-                                        spadeIconArray[0]
-                                    }
-                                </Box>
-                                hello java how are you can we work together
-                            </ListItem>
-
                         </UnorderedList>
                         <Flex justifyContent="">
-                            <Button width="fit-content" px="8" border="1px solid #1266A0" variant="outline" color="#1266A0" _hover={{ backgroundColor: theme.companyTheme.color.secondry, color: "white" }} >
-                                Explore More
-                            </Button>
+                            <Link to="/contact-us">
+                                <Button width="fit-content" px="8" border="1px solid #1266A0" variant="outline" color="#1266A0" _hover={{ backgroundColor: theme.companyTheme.color.secondry, color: "white" }} >
+                                     Request Demo
+                                </Button>
+                            </Link>
                         </Flex>
                     </Flex>
                 </Flex>

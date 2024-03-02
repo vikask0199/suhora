@@ -39,7 +39,6 @@ function App() {
   //   setCurrentTheme(newTheme);
   //   localStorage.setItem('theme', newTheme);
   // };
-
   const { colorMode, toggleColorMode } = useColorMode()
 
   return (
@@ -66,13 +65,12 @@ function App() {
 
           {/* Industries */}
           <Route path="agriculture" element={<AgriculturePage currentTheme={colorMode} />} />
-          <Route path='land-deformation-monitoring' element={<LandDeformationPage currentTheme={colorMode} />}></Route>
-          <Route path='defence-and-intelligence' element={<DefencePage />} />
-          <Route path='disaster-and-insurence' element={<Disaster />} />
-          <Route path='renewable-energy' element={<RenewableEnergyPage />} />
-          <Route path='mining' element={<MiningPage />} />
-          <Route path='infrastructure' element={<InfrastructurePage />} />
-          <Route path='forestry' element={<ForestPage />} />
+          <Route path='defence-and-intelligence' element={<DefencePage currentTheme={colorMode}/>} />
+          <Route path='disaster-and-insurence' element={<Disaster currentTheme={colorMode}/>} />
+          <Route path='renewable-energy' element={<RenewableEnergyPage currentTheme={colorMode}/>} />
+          <Route path='mining' element={<MiningPage currentTheme={colorMode}/>} />
+          <Route path='infrastructure' element={<InfrastructurePage currentTheme={colorMode}/>} />
+          <Route path='forestry' element={<ForestPage currentTheme={colorMode}/>} />
         </Route>
       </Routes>
     </>

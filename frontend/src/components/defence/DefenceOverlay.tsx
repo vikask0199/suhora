@@ -2,7 +2,7 @@
 import { Box, Flex, Heading, Img, Text } from '@chakra-ui/react'
 import AgricultureImg from '../../assets/img/industries/agri.png'
 import theme from '../../theme'
-const AgricultureOverlay = () => {
+const DefenceOverlay = () => {
 
   return (
     <>
@@ -13,13 +13,10 @@ const AgricultureOverlay = () => {
               <Heading  >
                 Agriculture
               </Heading>
-
-
             </Flex>
             <Flex justifyContent='center'>
               <Text mt='1em' fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-
               </Text>
             </Flex>
           </Box>
@@ -50,4 +47,4 @@ const AgricultureOverlay = () => {
     </>
   )
 }
-export default AgricultureOverlay
+export default DefenceOverlay

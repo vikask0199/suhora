@@ -1,8 +1,7 @@
 
 import { Box, Flex,  Img,  Button } from '@chakra-ui/react'
 import theme from '../../theme'
-
-import contact from '../../assets/img/contact us.jpg'
+import contact from '../../assets/img/contact-us.jpg'
 
 const CareerContact = () => {
     return (
@@ -12,8 +11,6 @@ const CareerContact = () => {
                     <Box maxW='5xl' mx="auto" px={{ base: '6', md: '8' }} color="white" >
                         <Flex justifyContent='center'>
                             <Button
-
-
                                 colorScheme="blue"
                                 backgroundColor={theme.companyTheme.color.secondry}
 
@@ -25,8 +22,6 @@ const CareerContact = () => {
                                 Contact us
                             </Button>
                         </Flex>
-
-
                     </Box>
                 </Box>
                 <Flex

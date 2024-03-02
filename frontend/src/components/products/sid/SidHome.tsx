@@ -1,5 +1,6 @@
 import { Box, Button, Flex, Img, Stack, Text } from '@chakra-ui/react'
 import theme from '../../../theme'
+import { Link } from 'react-router-dom'
 
 export const SidHome = () => {
   return (
@@ -11,12 +12,14 @@ export const SidHome = () => {
               SID
             </Text>
             <Text fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight} mt="4" maxW="lg">
-              Navigate the unexpected with confidence.
+              SID harnesses satellite data for disaster management and insurance, shaping a safer, prepared world through technology.
             </Text>
             <Stack direction={{ base: 'column', md: 'row' }} mt="10" spacing="4">
-              <Button width="fit-content" px="8" border="1px solid white" variant="outline" color="white" _hover={{ backgroundColor: theme.companyTheme.color.secondry, border: "1px solid #1266A0" }} >
-                Request Demo
-              </Button>
+              <Link to="/contact-us">
+                <Button width="fit-content" px="8" border="1px solid white" variant="outline" color="white" _hover={{ backgroundColor: theme.companyTheme.color.secondry, border: "1px solid #1266A0" }} >
+                  Request Demo
+                </Button>
+              </Link>
             </Stack>
           </Box>
         </Box>

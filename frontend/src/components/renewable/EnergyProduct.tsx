@@ -8,7 +8,7 @@ import {
 
 
 
-export const AgricultureProduct = () => {
+export const EnergyProduct = () => {
     // const backgroundColor = currentTheme === 'light' ? 'gray.200' : '#282b3c';
 
     return (

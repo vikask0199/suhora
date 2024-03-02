@@ -19,7 +19,7 @@ import { Fragment } from 'react';
 import { BsPhone } from 'react-icons/bs';
 import { GoLocation } from 'react-icons/go';
 import { HiOutlineMail } from 'react-icons/hi';
-import AgricultureImg from '../../assets/img/Contactus2.jpg';
+import contact2 from '../../assets/img/contact/Contactus2.jpg';
 import theme from '../../theme';
 
 
@@ -77,7 +77,7 @@ const ContactUs = ({ currentTheme }: contactProps) => {
                     align="center">
                     <Box position="relative" w="full" h="full">
                         <Img
-                            src={AgricultureImg}
+                            src={contact2}
                             alt="Main Image"
                             w="full"
                             h="full"

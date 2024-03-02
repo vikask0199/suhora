@@ -1,5 +1,6 @@
 import { Box, Button, Flex, Img, Stack, Text } from '@chakra-ui/react'
 import theme from '../../../theme'
+import { Link } from 'react-router-dom'
 
 export const LanceHome = () => {
   return (
@@ -11,12 +12,14 @@ export const LanceHome = () => {
               LANCE
             </Text>
             <Text fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight} mt="4" maxW="lg">
-              See beyond the horizon. Advanced SAR & Optical imagery for critical ISR missions.
+            Powering defense with human-AI synergy for unparalleled situational awareness and strategic readiness in a rapidly evolving world.
             </Text>
             <Stack direction={{ base: 'column', md: 'row' }} mt="10" spacing="4">
-              <Button width="fit-content" px="8" border="1px solid white" variant="outline" color="white" _hover={{ backgroundColor: theme.companyTheme.color.secondry, border: "1px solid #1266A0" }} >
-                Request Demo
-              </Button>
+              <Link to="/contact-us">
+                <Button width="fit-content" px="8" border="1px solid white" variant="outline" color="white" _hover={{ backgroundColor: theme.companyTheme.color.secondry, border: "1px solid #1266A0" }} >
+                  Request Demo
+                </Button>
+              </Link>
             </Stack>
           </Box>
         </Box>

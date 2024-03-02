@@ -27,8 +27,8 @@ const Footer = ({ currentTheme }: footerThemeProps) => {
     const backgroundColor = currentTheme === 'light' ? 'gray.200' : '#282b3c';
 
     return (
-        <Box background={backgroundColor}>
-            <Container as="footer" role="contentinfo" maxW="100%">
+        <Box background={backgroundColor} pt={{ base: '16', md: '12' }}>
+            <Container as="footer" role="contentinfo" maxW="6xl">
                 <Stack
                     justify="space-between"
                     align="start"

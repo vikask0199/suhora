@@ -1,5 +1,6 @@
 import { Box, Button, Flex, Img, Stack, Text } from '@chakra-ui/react'
 import theme from '../../../theme'
+import { Link } from 'react-router-dom'
 
 export const SpadeHome = () => {
   return (
@@ -11,13 +12,14 @@ export const SpadeHome = () => {
               SPADE
             </Text>
             <Text fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight} mt="4" maxW="lg">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua.
+              A seamless SaaS platform delivering comprehensive access to multi-sensor satellite data for a spectrum of commercial applications.
             </Text>
             <Stack direction={{ base: 'column', md: 'row' }} mt="10" spacing="4">
-              <Button width="fit-content" px="8" border="1px solid white" variant="outline" color="white" _hover={{ backgroundColor: theme.companyTheme.color.secondry, border:"1px solid #1266A0" }} >
-                Request Demo
-              </Button>
+              <Link to="/contact-us">
+                <Button width="fit-content" px="8" border="1px solid white" variant="outline" color="white" _hover={{ backgroundColor: theme.companyTheme.color.secondry, border: "1px solid #1266A0" }} >
+                  Request Demo
+                </Button>
+              </Link>
             </Stack>
           </Box>
         </Box>

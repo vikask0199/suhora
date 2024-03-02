@@ -27,10 +27,13 @@ export const AboutLance = () => {
                             See beyond the horizon. Advanced SAR & Optical imagery for critical ISR missions.
                         </Text>
                         <Text textAlign="justify">
-                            At SUHORA, we're driven by a passion to make the universe's data accessible and actionable for those who need it most. Founded on the principle that space analytics should empower, not overwhelm, we've dedicated ourselves to demystifying satellite data for practical, everyday applications.
+                            In the rapidly evolving defense sector, LANCE emerges as a groundbreaking fusion of human expertise and artificial intelligence, reshaping strategic operations. This advanced ISR platform offers real-time insights, allowing defense and intelligence agencies to transition from reactive to proactive strategies, ensuring critical targets are never missed.
                             <br />
                             <br />
-                            Our team, a blend of seasoned experts and innovative thinkers, is committed to breaking down complex information into clear, actionable insights that drive decision-making across various sectors. Suhora Technologies stands at the intersection of innovation and utility, reshaping how industries leverage the untapped potential of space data.
+                            Equipped with high-definition sensors and smart algorithms, LANCE cuts through complex data, providing actionable intelligence for both maritime and land surveillance. It enhances operational effectiveness, offering a 360-degree view of any scenario, making it an essential tool for national security.
+                            <br />
+                            <br />
+                            Designed for versatility, LANCE integrates AI's analytical power with strategic foresight, delivering unparalleled situational awareness. This synergy between technology and human judgment not only sets a new benchmark in defense readiness but also ensures a more secure, strategically prepared world.
                         </Text>
                     </Stack>
                 </Stack>

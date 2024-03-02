@@ -15,7 +15,7 @@ import { RiTyphoonLine } from 'react-icons/ri';
 
 
 
-export const AgricultureContent = () => {
+export const InfrastructureContent = () => {
     const aspectRatio = 3 / 3
     const spadeIconArray = [<RiTyphoonLine />]
 

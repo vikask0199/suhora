@@ -13,14 +13,15 @@ import { NavLink } from 'react-router-dom'
 export const DocumentPopoverIndustries = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const routes = [
-    { name: "Forestry", path: "/" },
+    { name: "Forestry", path: "/forestry" },
     { name: "Agriculture", path: "/agriculture" },
-    { name: "Disaster & Insurance", path: "/" },
-    { name: "Renewable Energy", path: "/" },
-    { name: "Mining", path: "/" },
-    { name: "Infrastructure", path: "/" },
-    { name: "Defence & Intelligence'", path: "/" }
+    { name: "Disaster & Insurance", path: "/disaster-and-insurence" },
+    { name: "Renewable Energy", path: "/renewable-energy" },
+    { name: "Mining", path: "/mining" },
+    { name: "Infrastructure", path: "/infrastructure" },
+    { name: "Defence & Intelligence'", path: "/defence-and-intelligence" }
   ]
+
   return (
     <Popover isOpen={isOpen} onOpen={onOpen} onClose={onClose} trigger="hover" openDelay={0}>
       <PopoverTrigger>
