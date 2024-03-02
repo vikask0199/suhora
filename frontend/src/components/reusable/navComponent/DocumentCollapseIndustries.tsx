@@ -8,7 +8,7 @@ export const DocumentCollapseIndustries = () => {
   const routes = [
     { name: "Forestry", path: "/forestry" },
     { name: "Agriculture", path: "/agriculture" },
-    { name: "Disaster & Insurance", path: "/disaster-and-insurence" },
+    { name: "Disaster & Insurance", path: "/disaster-and-insurance" },
     { name: "Renewable Energy", path: "/renewable-energy" },
     { name: "Mining", path: "/mining" },
     { name: "Infrastructure", path: "/infrastructure" },
