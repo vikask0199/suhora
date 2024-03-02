@@ -1,7 +1,7 @@
 import {
-    Button,
+   
     Container,
-    Heading,
+   
     HStack,
     Icon,
     Img,
@@ -115,6 +115,9 @@ const members = [
       name: 'Tanmoy Adhikary',
       item: 'https://www.linkedin.com/in/tanmoy-adhikary-8132002/'
     },
+  
+ 
+  
     {
       role: 'Advisor',
       image:
@@ -129,4 +132,9 @@ const members = [
       name: 'Navneet Kaushik',
       item: 'https://www.linkedin.com/in/cdr-navneet-kaushik-veteran-98964b82/'
     },
-  ]
+   
+  
+ 
+
+    ]
+  
