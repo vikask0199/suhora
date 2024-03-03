@@ -13,7 +13,7 @@ type TerrainThemeProps = {
 const TerrainMappingPage = ({ currentTheme }: TerrainThemeProps) => {
     return (
         <>
-            <TerrainHeader currentTheme={currentTheme} />
+            <TerrainHeader  />
             <AboutTerrain currentTheme={currentTheme} />
             <TerrainFeature />
             <HowItsWorks currentTheme={currentTheme} />

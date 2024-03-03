@@ -1,5 +1,5 @@
 import { Button, Flex, Stack, Text } from '@chakra-ui/react'
-import { FiArrowRight } from 'react-icons/fi'
+// import { FiArrowRight } from 'react-icons/fi'
 import theme from '../../theme'
 
 interface StatProps {
@@ -11,7 +11,7 @@ interface StatProps {
 
 export const Stat = (props: StatProps) => {
 
-  const { label, description, cta } = props
+  const { label, description } = props
 
   return (
     <Stack spacing="3" flex="1" >

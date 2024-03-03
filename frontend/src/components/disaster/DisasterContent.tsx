@@ -1,23 +1,23 @@
 
 import {
     Box,
-    Button,
+    // Button,
     Container,
     Flex,
-    ListItem,
+    // ListItem,
     Stack,
     Text,
-    UnorderedList
+    // UnorderedList
 } from '@chakra-ui/react';
 
 import theme from '../../theme';
-import { RiTyphoonLine } from 'react-icons/ri';
+// import { RiTyphoonLine } from 'react-icons/ri';
 
 
 
 export const DisasterContent = () => {
-    const aspectRatio = 3 / 3
-    const spadeIconArray = [<RiTyphoonLine />]
+    // const aspectRatio = 3 / 3
+    // const spadeIconArray = [<RiTyphoonLine />]
 
     return (
         <Box >
@@ -45,7 +45,7 @@ export const DisasterContent = () => {
                             <br />
                             Our team, a blend of seasoned experts and innovative thinkers, is committed to breaking down complex information into clear, actionable insights that drive decision-making across various sectors. Suhora Technologies stands at the intersection of innovation and utility, reshaping how industries leverage the untapped potential of space data. */}
                         </Text>
-                        <Flex w="100%" direction="column" rowGap={4} justifyContent="space-between">
+                        {/* <Flex w="100%" direction="column" rowGap={4} justifyContent="space-between">
                             <UnorderedList listStyleType="hidden" fontSize={theme.fonts.list} marginLeft={0}>
                                 <ListItem display="flex" mb="2" alignItems="center" marginTop={4} gap={2}>
                                     <Box fontSize={theme.fonts.subHeadingSecond.size} color={theme.companyTheme.color.secondry}>
@@ -96,7 +96,7 @@ export const DisasterContent = () => {
                                     hello java how are you can we work together hello java how are you can we work together hello java how are you can we work together
                                 </ListItem>
                             </UnorderedList>
-                        </Flex>
+                        </Flex> */}
                     </Stack>
                 </Stack>
             </Container>

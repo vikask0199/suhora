@@ -1,23 +1,23 @@
 
 import {
     Box,
-    Button,
+    // Button,
     Container,
     Flex,
-    ListItem,
+    // ListItem,
     Stack,
     Text,
-    UnorderedList
+    // UnorderedList
 } from '@chakra-ui/react';
 
 import theme from '../../theme';
-import { RiTyphoonLine } from 'react-icons/ri';
+// import { RiTyphoonLine } from 'react-icons/ri';
 
 
 
 export const AgricultureContent = () => {
-    const aspectRatio = 3 / 3
-    const spadeIconArray = [<RiTyphoonLine />]
+    // const aspectRatio = 3 / 3
+    // const spadeIconArray = [<RiTyphoonLine />]
 
     return (
         <Box >

@@ -1,23 +1,23 @@
 
 import {
     Box,
-    Button,
+    // Button,
     Container,
     Flex,
-    ListItem,
+    // ListItem,
     Stack,
     Text,
-    UnorderedList
+    // UnorderedList
 } from '@chakra-ui/react';
 
 import theme from '../../theme';
-import { RiTyphoonLine } from 'react-icons/ri';
+// import { RiTyphoonLine } from 'react-icons/ri';
 
 
 
 export const DefenceContent = () => {
-    const aspectRatio = 3 / 3
-    const spadeIconArray = [<RiTyphoonLine />]
+    // const aspectRatio = 3 / 3
+    // const spadeIconArray = [<RiTyphoonLine />]
 
     return (
         <Box >
@@ -41,7 +41,7 @@ export const DefenceContent = () => {
                             <br />
                             The EarthData platform serves as a centralized hub for storing, accessing, and analyzing critical geospatial information essential for national defense and homeland security.  */}
                         </Text>
-                        <Flex w="100%" direction="column" rowGap={4} justifyContent="space-between">
+                        {/* <Flex w="100%" direction="column" rowGap={4} justifyContent="space-between">
                             <UnorderedList listStyleType="hidden" fontSize={theme.fonts.list} marginLeft={0}>
                                 <ListItem display="flex" mb="2" alignItems="center" marginTop={4} gap={2}>
                                     <Box fontSize={theme.fonts.subHeadingSecond.size} color={theme.companyTheme.color.secondry}>
@@ -92,7 +92,7 @@ export const DefenceContent = () => {
                                     hello java how are you can we work together hello java how are you can we work together hello java how are you can we work together
                                 </ListItem>
                             </UnorderedList>
-                        </Flex>
+                        </Flex> */}
                     </Stack>
                 </Stack>
             </Container>

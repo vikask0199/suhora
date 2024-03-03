@@ -11,7 +11,7 @@ import {
     Stack,
     Text,
 } from '@chakra-ui/react'
-import { FaLinkedin, FaTwitter, FaWhatsapp } from 'react-icons/fa'
+import { FaLinkedin, FaWhatsapp } from 'react-icons/fa'
 import { NavLink } from 'react-router-dom'
 import LogoDark from '../../../assets/img/logo/suhora_logo.png'
 import LogoWhite from '../../../assets/img/logo/suhora_white.png'
@@ -76,7 +76,7 @@ const Footer = ({ currentTheme }: footerThemeProps) => {
                     </Text>
                     <ButtonGroup variant="tertiary">
                         <IconButton as="a" href="https://www.linkedin.com/company/suhora/mycompany/" target="_blank" aria-label="LinkedIn" icon={<FaLinkedin />} _hover={{ color: theme.companyTheme.color.secondry }} />
-                        {/* <IconButton as="a" href="#" aria-label="GitHub" icon={<FaWhatsapp />} _hover={{ color: theme.companyTheme.color.secondry }} /> */}
+                        <IconButton as="a" href="watsapp://send?phone=+91-9999664437" target="_blank" aria-label="GitHub" icon={<FaWhatsapp />} _hover={{ color: theme.companyTheme.color.secondry }} />
                         <IconButton as="a" href="https://twitter.com/suhoratech" target="_blank" aria-label="Twitter" icon={<FaXTwitter />} _hover={{ color: theme.companyTheme.color.secondry }} />
                     </ButtonGroup>
                 </Stack>

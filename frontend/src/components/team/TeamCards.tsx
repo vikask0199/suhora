@@ -20,10 +20,10 @@ import {
   import tanmoy from '../../assets/img/tanmoy (1).jpg'
   import surojit from '../../assets/img/Surojit-Bose (3).jpg'
   import Navneet from '../../assets/img/NavneetKaushik.jpg'
-  type spadeFeatureProps = {
-    currentTheme: string
-  }
-  const TeamCards = ({ currentTheme }: spadeFeatureProps) => {
+  // type spadeFeatureProps = {
+  //   currentTheme: string
+  // }
+  const TeamCards = () => {
     const aspectRatio = 3/ 3
     // const backgroundColor = currentTheme === 'light' ? 'gray.200' : '#282b3c';
     return (

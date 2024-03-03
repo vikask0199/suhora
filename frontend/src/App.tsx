@@ -56,7 +56,7 @@ function App() {
           {/* company */}
           <Route path="career" element={<CareerPage currentTheme={colorMode} />} />
           <Route path='aboutus' element={<AboutUs currentTheme={colorMode} />} />
-          <Route path='our-team' element={<TeamPage currentTheme={colorMode} />} />
+          <Route path='our-team' element={<TeamPage  />} />
 
           {/* services */}
           <Route path='product-hydrology' element={<HydrologyPage currentTheme={colorMode} />}></Route>

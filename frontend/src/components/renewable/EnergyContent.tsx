@@ -1,23 +1,23 @@
 
 import {
     Box,
-    Button,
+    // Button,
     Container,
     Flex,
-    ListItem,
+    // ListItem,
     Stack,
     Text,
-    UnorderedList
+    // UnorderedList
 } from '@chakra-ui/react';
 
 import theme from '../../theme';
-import { RiTyphoonLine } from 'react-icons/ri';
+// import { RiTyphoonLine } from 'react-icons/ri';
 
 
 
 export const EnergyContent = () => {
-    const aspectRatio = 3 / 3
-    const spadeIconArray = [<RiTyphoonLine />]
+    // const aspectRatio = 3 / 3
+    // const spadeIconArray = [<RiTyphoonLine />]
 
     return (
         <Box >
@@ -42,7 +42,7 @@ Our objective is to reduce the overall risk of large utility scale ground mount 
                             <br />
                             Through the utilization of an advanced auto-layout generation platform, Suhora empowers its customers to streamline their design processes, saving valuable time and resources across multiple iterations. */}
                         </Text>
-                        <Flex w="100%" direction="column" rowGap={4} justifyContent="space-between">
+                        {/* <Flex w="100%" direction="column" rowGap={4} justifyContent="space-between">
                             <UnorderedList listStyleType="hidden" fontSize={theme.fonts.list} marginLeft={0}>
                                 <ListItem display="flex" mb="2" alignItems="center" marginTop={4} gap={2}>
                                     <Box fontSize={theme.fonts.subHeadingSecond.size} color={theme.companyTheme.color.secondry}>
@@ -86,7 +86,7 @@ Our objective is to reduce the overall risk of large utility scale ground mount 
                                 </ListItem>
                                
                             </UnorderedList>
-                        </Flex>
+                        </Flex> */}
                     </Stack>
                 </Stack>
             </Container>

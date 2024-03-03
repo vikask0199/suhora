@@ -14,7 +14,7 @@ type hydrologyThemeProps = {
 const HydrologyPage = ({ currentTheme }: hydrologyThemeProps) => {
     return (
         <>
-            <HydrologyHeader currentTheme={currentTheme} />
+            <HydrologyHeader  />
             <AboutHydrology currentTheme={currentTheme} />
             <HydrologyFeature />
             <HowItsWorks currentTheme={currentTheme} />

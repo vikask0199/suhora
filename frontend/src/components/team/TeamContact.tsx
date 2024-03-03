@@ -1,10 +1,10 @@
 import { Box, Button, Flex, Heading,  Img, Stack, Text } from '@chakra-ui/react'
 import theme from '../../theme'
-interface aboutSuhoraProps {
-    currentTheme: string
-}
-const TeamContact = ({ currentTheme }: aboutSuhoraProps) => {
-    const backgroundColor = currentTheme === 'light' ? 'gray.200' : '#282b3c';
+// interface aboutSuhoraProps {
+//     currentTheme: string
+// }
+const TeamContact = () => {
+    // const backgroundColor = currentTheme === 'light' ? 'gray.200' : '#282b3c';
   return (
     <Box bg="gray.800" as="section" minH="140px" position="relative">
       <Box py="32" position="relative" zIndex={1}>

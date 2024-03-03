@@ -1,7 +1,7 @@
 
 import {
     Box,
-    Button,
+    // Button,
     Container,
     Flex,
     ListItem,
@@ -16,7 +16,7 @@ import { RiTyphoonLine } from 'react-icons/ri';
 
 
 export const ForestryContent = () => {
-    const aspectRatio = 3 / 3
+    // const aspectRatio = 3 / 3
     const spadeIconArray = [<RiTyphoonLine />]
 
     return (

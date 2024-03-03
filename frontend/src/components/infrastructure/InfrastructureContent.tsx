@@ -1,23 +1,23 @@
 
 import {
     Box,
-    Button,
+    // Button,
     Container,
     Flex,
-    ListItem,
+    // ListItem,
     Stack,
     Text,
-    UnorderedList
+    // UnorderedList
 } from '@chakra-ui/react';
 
 import theme from '../../theme';
-import { RiTyphoonLine } from 'react-icons/ri';
+// import { RiTyphoonLine } from 'react-icons/ri';
 
 
 
 export const InfrastructureContent = () => {
-    const aspectRatio = 3 / 3
-    const spadeIconArray = [<RiTyphoonLine />]
+    // const aspectRatio = 3 / 3
+    // const spadeIconArray = [<RiTyphoonLine />]
 
     return (
         <Box >
@@ -44,7 +44,7 @@ export const InfrastructureContent = () => {
                             <br />
                             Urbanization in countries like India brings with it a myriad of challenges, including increased strain on existing infrastructure, heightened demand for essential services, and greater environmental impact. */}
                         </Text>
-                        <Flex w="100%" direction="column" rowGap={4} justifyContent="space-between">
+                        {/* <Flex w="100%" direction="column" rowGap={4} justifyContent="space-between">
                             <UnorderedList listStyleType="hidden" fontSize={theme.fonts.list} marginLeft={0}>
 
                                 <ListItem display="flex" mb="2" alignItems="center" marginTop={4} gap={2}>
@@ -81,7 +81,7 @@ export const InfrastructureContent = () => {
                                     This ensures that relevant stakeholders have access to timely and accurate information, facilitating coordinated responses to emergencies and events.
                                 </ListItem>
                             </UnorderedList>
-                        </Flex>
+                        </Flex> */}
                     </Stack>
                 </Stack>
             </Container>

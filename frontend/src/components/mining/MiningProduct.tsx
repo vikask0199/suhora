@@ -41,8 +41,8 @@ export const MiningProduct = () => {
 }
 
 
-import agri from "../../assets/img/industries/agri.png";
-import disaster from "../../assets/img/industries/disaster.png";
+// import agri from "../../assets/img/industries/agri.png";
+// import disaster from "../../assets/img/industries/disaster.png";
 import forest from "../../assets/img/industries/forest.png";
 
 const categories = [
