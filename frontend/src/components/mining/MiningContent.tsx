@@ -31,13 +31,16 @@ export const MiningContent = () => {
                             </Text>
                         </Flex>
                         <Text color={theme.companyTheme.color.third} fontSize={theme.fonts.subHeading.size} fontWeight={theme.fonts.subHeading.weight} maxW="6xl" >
-                        Beyond Boundaries - Satellite-driven Mining Excellence!
+                            Beyond Boundaries - Satellite-driven Mining Excellence!
                         </Text>
                         <Text textAlign="justify">
-                        Suhora stands at the forefront of the solar industry, offering unparalleled consulting and design services to clients seeking to harness the power of solar energy for their projects.
+                            Suhora harnessed advanced satellite technology with Machine Learning capabilities
+                            allowing mining companies to identify promising mineral deposits, monitor and manage mining activities like Site selection, Infrastructure monitoring and planning, Resource estimation, Environmental Impact, Safety and risk management with unprecedented precision.
+
+                            {/* Suhora stands at the forefront of the solar industry, offering unparalleled consulting and design services to clients seeking to harness the power of solar energy for their projects.
                             <br />
                             <br />
-                            Through the utilization of an advanced auto-layout generation platform, Suhora empowers its customers to streamline their design processes, saving valuable time and resources across multiple iterations.
+                            Through the utilization of an advanced auto-layout generation platform, Suhora empowers its customers to streamline their design processes, saving valuable time and resources across multiple iterations. */}
                         </Text>
                         <Flex w="100%" direction="column" rowGap={4} justifyContent="space-between">
                             <UnorderedList listStyleType="hidden" fontSize={theme.fonts.list} marginLeft={0}>
@@ -63,7 +66,7 @@ export const MiningContent = () => {
                                             spadeIconArray[0]
                                         }
                                     </Box>
-                                    Suhora's design approach leads to more accurate calculations of project financing. 
+                                    Suhora's design approach leads to more accurate calculations of project financing.
                                 </ListItem>
                                 <ListItem display="flex" mb="2" alignItems="center" marginTop={4} gap={2}>
                                     <Box fontSize={theme.fonts.subHeadingSecond.size} color={theme.companyTheme.color.secondry}>
@@ -81,7 +84,7 @@ export const MiningContent = () => {
                                     </Box>
                                     Suhora empowers clients to unlock the full potential of solar energy while ensuring the reliability, resilience, and sustainability of their projects.
                                 </ListItem>
-                                
+
                             </UnorderedList>
                         </Flex>
                     </Stack>

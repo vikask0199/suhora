@@ -21,8 +21,8 @@ export const InfrastructureProduct = () => {
                 <Stack spacing={{ base: '6', md: '8', lg: '12' }}>
                     <Flex justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
                         <Text>
-                            <Text as="span">Industry We </Text>
-                            <Text as="span" color={theme.companyTheme.color.secondry}>Supports </Text>
+                            <Text as="span">Suhora </Text>
+                            <Text as="span" color={theme.companyTheme.color.secondry}>Product </Text>
                         </Text>
                     </Flex>
 
@@ -41,8 +41,8 @@ export const InfrastructureProduct = () => {
 }
 
 
-import agri from "../../assets/img/industries/agri.png";
-import disaster from "../../assets/img/industries/disaster.png";
+// import agri from "../../assets/img/industries/agri.png";
+// import disaster from "../../assets/img/industries/disaster.png";
 import forest from "../../assets/img/industries/forest.png";
 
 const categories = [
@@ -50,20 +50,20 @@ const categories = [
         name: 'Spade',
         imageUrl:
             forest,
-        url: '/spadepage',
+        url: '#/spade',
     },
-    {
-        name: 'Lance',
-        imageUrl:
-            agri,
-        url: '/lancepage',
-    },
-    {
-        name: 'Sid',
-        imageUrl:
-            disaster,
-        url: 'sidpage',
-    },
+    // {
+    //     name: 'Lance',
+    //     imageUrl:
+    //         agri,
+    //     url: '/lancepage',
+    // },
+    // {
+    //     name: 'Sid',
+    //     imageUrl:
+    //         disaster,
+    //     url: 'sidpage',
+    // },
 ]
 
 export type ElementType<T extends ReadonlyArray<unknown>> = T extends ReadonlyArray<
@@ -101,7 +101,7 @@ const CategoryCard = (props: Props) => {
 
     return (
         <Box position="relative" key={category.name} borderRadius="lg" overflow="hidden" {...rootProps} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-            <Link>
+            <Link href={category.url} >
                 <AspectRatio ratio={1 / 1}>
                     <Image src={category.imageUrl} alt={category.name} fallback={<Skeleton />} />
                 </AspectRatio>

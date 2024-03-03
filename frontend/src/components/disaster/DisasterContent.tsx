@@ -26,18 +26,24 @@ export const DisasterContent = () => {
                     <Stack spacing={{ base: '4', md: '5' }}>
                         <Flex justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
                             <Text>
-                                <Text as="span">About </Text>
-                                <Text as="span" color={theme.companyTheme.color.secondry}>Suhora</Text>
+                                <Text as="span">Suhora </Text>
+                                <Text as="span" color={theme.companyTheme.color.secondry}>Disaster & Insurance </Text>
+                                <Text as="span">Solution </Text>
                             </Text>
                         </Flex>
                         <Text color={theme.companyTheme.color.third} fontSize={theme.fonts.subHeading.size} fontWeight={theme.fonts.subHeading.weight} maxW="6xl" >
                             Multi band high resolution image from various satellite.
                         </Text>
                         <Text textAlign="justify">
-                            At SUHORA, we're driven by a passion to make the universe's data accessible and actionable for those who need it most. Founded on the principle that space analytics should empower, not overwhelm, we've dedicated ourselves to demystifying satellite data for practical, everyday applications.
+                            We revolutionize disaster management and insurance processes through the strategic use of near real-time satellite data. This innovative platform is designed to empower communities and industries with advanced analytical tools, enhancing preparedness and resilience against natural catastrophes.
                             <br />
                             <br />
-                            Our team, a blend of seasoned experts and innovative thinkers, is committed to breaking down complex information into clear, actionable insights that drive decision-making across various sectors. Suhora Technologies stands at the intersection of innovation and utility, reshaping how industries leverage the untapped potential of space data.
+                            Our innovative platform SID harnesses satellite technology to provide continuous observation of Earth's surface, delivering crucial data on environmental changes and potential disaster zones.
+
+                            {/* At SUHORA, we're driven by a passion to make the universe's data accessible and actionable for those who need it most. Founded on the principle that space analytics should empower, not overwhelm, we've dedicated ourselves to demystifying satellite data for practical, everyday applications.
+                            <br />
+                            <br />
+                            Our team, a blend of seasoned experts and innovative thinkers, is committed to breaking down complex information into clear, actionable insights that drive decision-making across various sectors. Suhora Technologies stands at the intersection of innovation and utility, reshaping how industries leverage the untapped potential of space data. */}
                         </Text>
                         <Flex w="100%" direction="column" rowGap={4} justifyContent="space-between">
                             <UnorderedList listStyleType="hidden" fontSize={theme.fonts.list} marginLeft={0}>

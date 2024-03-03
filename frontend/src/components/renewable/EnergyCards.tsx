@@ -25,7 +25,7 @@ interface IFeature {
 
 const features: IFeature[] = [
     {
-        heading: 'Payments',
+        heading: 'Site Assessment & Selection',
         content: 'Choose from Stripe, Paddle, Braintree, or PayPal to launch your product quickly.',
         icon: (
             <Box fontSize={theme.fonts.mainHeading.size}>
@@ -34,7 +34,7 @@ const features: IFeature[] = [
         )
     },
     {
-        heading: 'Invoicing',
+        heading: 'Environmental Impact Analysis ',
         content: 'Webhooks are wired up to automatically email customers PDF receipts and invoices.',
         icon: (
 
@@ -44,7 +44,7 @@ const features: IFeature[] = [
         )
     },
     {
-        heading: 'API Included',
+        heading: 'Infrastructure Monitoring',
         content: 'Roll your own API to easily connect with other apps or services. Pull in updates.',
         icon: (
 
@@ -54,7 +54,7 @@ const features: IFeature[] = [
         )
     },
     {
-        heading: 'API Included',
+        heading: 'Resource Optimization ',
         content: 'Roll your own API to easily connect with other apps or services. Pull in updates.',
         icon: (
 
@@ -64,7 +64,7 @@ const features: IFeature[] = [
         )
     },
     {
-        heading: 'API Included',
+        heading: ' Project Development Support',
         content: 'Roll your own API to easily connect with other apps or services. Pull in updates.',
         icon: (
 
@@ -73,16 +73,16 @@ const features: IFeature[] = [
             </Box>
         )
     },
-    {
-        heading: 'API Included',
-        content: 'Roll your own API to easily connect with other apps or services. Pull in updates.',
-        icon: (
+    // {
+    //     heading: 'API Included',
+    //     content: 'Roll your own API to easily connect with other apps or services. Pull in updates.',
+    //     icon: (
 
-            <Box fontSize={theme.fonts.mainHeading.size}>
-                <FaFileCode />
-            </Box>
-        )
-    },
+    //         <Box fontSize={theme.fonts.mainHeading.size}>
+    //             <FaFileCode />
+    //         </Box>
+    //     )
+    // },
 ];
 
 type HomeServices = {
@@ -100,7 +100,7 @@ const EnergyCards = ({ currentTheme }: HomeServices) => {
                     <Flex justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
                         <Text>
                             <Text as="span">What We </Text>
-                            <Text as="span" color={theme.companyTheme.color.secondry}>Serve</Text>
+                            <Text as="span" color={theme.companyTheme.color.secondry}>Offer</Text>
                         </Text>
                     </Flex>
                     <Text fontSize={theme.fonts.subHeading.size} color={theme.companyTheme.color.third} fontWeight={theme.fonts.subHeading.weight} textAlign="center">

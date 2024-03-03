@@ -21,8 +21,8 @@ export const EnergyProduct = () => {
                 <Stack spacing={{ base: '6', md: '8', lg: '12' }}>
                     <Flex justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
                         <Text>
-                            <Text as="span">Industry We </Text>
-                            <Text as="span" color={theme.companyTheme.color.secondry}>Supports </Text>
+                            <Text as="span">Suhora</Text>
+                            <Text as="span" color={theme.companyTheme.color.secondry}> Product </Text>
                         </Text>
                     </Flex>
 

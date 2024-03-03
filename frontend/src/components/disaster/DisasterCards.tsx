@@ -25,8 +25,8 @@ interface IFeature {
 
 const features: IFeature[] = [
     {
-        heading: 'Payments',
-        content: 'Choose from Stripe, Paddle, Braintree, or PayPal to launch your product quickly.',
+        heading: 'Comprehensive Disaster Monitoring',
+        content: 'Our platform leverages multispectral satellite imagery and ground data to monitor and predict disaster events, providing a full-scale overview for proactive management.',
         icon: (
             <Box fontSize={theme.fonts.mainHeading.size}>
                 <MdPayment />
@@ -34,8 +34,8 @@ const features: IFeature[] = [
         )
     },
     {
-        heading: 'Invoicing',
-        content: 'Webhooks are wired up to automatically email customers PDF receipts and invoices.',
+        heading: 'Risk Assessment & Management',
+        content: 'We utilize predictive analytics to assess disaster risks accurately, aiding insurers and stakeholders in developing effective management strategies.',
         icon: (
 
             <Box fontSize={theme.fonts.mainHeading.size}>
@@ -44,8 +44,8 @@ const features: IFeature[] = [
         )
     },
     {
-        heading: 'API Included',
-        content: 'Roll your own API to easily connect with other apps or services. Pull in updates.',
+        heading: 'Post-Disaster Analysis and Claims Processing',
+        content: 'Suhora’s rapid analysis tools evaluate disaster impacts precisely, streamlining the insurance claims process for swift recovery support.',
         icon: (
 
             <Box fontSize={theme.fonts.mainHeading.size}>
@@ -54,8 +54,8 @@ const features: IFeature[] = [
         )
     },
     {
-        heading: 'API Included',
-        content: 'Roll your own API to easily connect with other apps or services. Pull in updates.',
+        heading: 'B2B API Integration for Seamless Data Access',
+        content: 'Our robust API framework facilitates seamless integration with business platforms, enabling access to real-time disaster data and analytics.',
         icon: (
 
             <Box fontSize={theme.fonts.mainHeading.size}>
@@ -64,8 +64,8 @@ const features: IFeature[] = [
         )
     },
     {
-        heading: 'API Included',
-        content: 'Roll your own API to easily connect with other apps or services. Pull in updates.',
+        heading: 'Tailored Insurance Solutions',
+        content: 'We offer custom insurance solutions powered by satellite intelligence, providing insurers with the data needed for policy customization and risk mitigation.',
         icon: (
 
             <Box fontSize={theme.fonts.mainHeading.size}>
@@ -73,16 +73,16 @@ const features: IFeature[] = [
             </Box>
         )
     },
-    {
-        heading: 'API Included',
-        content: 'Roll your own API to easily connect with other apps or services. Pull in updates.',
-        icon: (
+    // {
+    //     heading: 'API Included',
+    //     content: 'Roll your own API to easily connect with other apps or services. Pull in updates.',
+    //     icon: (
 
-            <Box fontSize={theme.fonts.mainHeading.size}>
-                <FaFileCode />
-            </Box>
-        )
-    },
+    //         <Box fontSize={theme.fonts.mainHeading.size}>
+    //             <FaFileCode />
+    //         </Box>
+    //     )
+    // },
 ];
 
 type HomeServices = {
@@ -100,7 +100,7 @@ const DisasterCards = ({ currentTheme }: HomeServices) => {
                     <Flex justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
                         <Text>
                             <Text as="span">What We </Text>
-                            <Text as="span" color={theme.companyTheme.color.secondry}>Serve</Text>
+                            <Text as="span" color={theme.companyTheme.color.secondry}>Offer</Text>
                         </Text>
                     </Flex>
                     <Text fontSize={theme.fonts.subHeading.size} color={theme.companyTheme.color.third} fontWeight={theme.fonts.subHeading.weight} textAlign="center">
