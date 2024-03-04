@@ -9,7 +9,8 @@ export const DocumentCollapseResources = () => {
         { name: "Blogs", path: "/" },
         { name: "Our Team", path: "/our-team" },
         { name: "Events & News", path: "/" },
-        { name: "Careers", path: "/career" }
+        { name: "Careers", path: "/career" },
+        { name: "Gallery", path: "/gallery" }
       ]
 
     return (

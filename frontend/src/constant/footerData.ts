@@ -37,6 +37,7 @@ export const links = [
       { label: 'Our Team', href: '/our-team' },
       { label: 'Events & News', href: '#' },
       { label: 'Careers', href: '/career' },
+      { label: 'Gallery', href: '/gallery' },
     ],
   },
 ]
