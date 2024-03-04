@@ -63,7 +63,7 @@ function App() {
           <Route path='product-terrainmapping' element={<TerrainMappingPage currentTheme={colorMode} />}></Route>
           <Route path='land-deformation-monitoring' element={<LandDeformationPage currentTheme={colorMode} />}></Route>
 
-          {/* Industries */}
+          {/* Industries */} 
           <Route path="agriculture" element={<AgriculturePage currentTheme={colorMode} />} />
           <Route path='defence-and-intelligence' element={<DefencePage currentTheme={colorMode}/>} />
           <Route path='disaster-and-insurance' element={<Disaster currentTheme={colorMode}/>} />
