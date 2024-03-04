@@ -6,7 +6,7 @@ import {
     Stack
 } from '@chakra-ui/react';
 
-
+import spade from "../../assets/img/products/spade.png";
 
 export const DisasterProduct = () => {
     // const backgroundColor = currentTheme === 'light' ? 'gray.200' : '#282b3c';
@@ -22,16 +22,18 @@ export const DisasterProduct = () => {
                     <Flex justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
                         <Text>
                             <Text as="span">Suhora </Text>
-                            <Text as="span" color={theme.companyTheme.color.secondry}>Product </Text>
+                            <Text as="span" color={theme.companyTheme.color.secondry}>Products </Text>
                         </Text>
                     </Flex>
 
-
-                    <SimpleGrid columns={{ base: 2, md: 3, lg: 3 }} gap={{ base: '4', md: '6', lg: '8' }}>
+                   
+                    <Flex justifyContent="center">
+                    <SimpleGrid columns={{ base: 1, md: 2, lg: 2 }} gap={{ base: '4', md: '6', lg: '8' }}>
                         {categories.map((category) => (
                             <CategoryCard key={category.name} category={category} />
                         ))}
                     </SimpleGrid>
+                    </Flex>
 
                 </Stack>
             </Box>
@@ -43,14 +45,14 @@ export const DisasterProduct = () => {
 
 // import agri from "../../assets/img/industries/agri.png";
 import disaster from "../../assets/img/industries/disaster.png";
-import forest from "../../assets/img/industries/forest.png";
+
 
 const categories = [
     {
         name: 'Spade',
         imageUrl:
-            forest,
-        url: '#/spade',
+            spade,
+            url: "/spade",
     },
     // {
     //     name: 'Lance',
@@ -100,7 +102,7 @@ const CategoryCard = (props: Props) => {
     };
 
     return (
-        <Box position="relative" key={category.name} borderRadius="lg" overflow="hidden" {...rootProps} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+        <Box position="relative" key={category.name} borderRadius="lg" h='60' w='60' overflow="hidden" {...rootProps} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
             <Link href={category.url}>
                 <AspectRatio ratio={1 / 1}>
                     <Image src={category.imageUrl} alt={category.name} fallback={<Skeleton />} />

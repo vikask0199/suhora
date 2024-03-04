@@ -20,8 +20,9 @@ export const ForestryContent = () => {
                     <Stack spacing={{ base: '4', md: '5' }}>
                         <Flex justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
                             <Text>
-                                <Text as="span">Our </Text>
-                                <Text as="span" color={theme.companyTheme.color.secondry}>Offering</Text>
+                               
+                                <Text as="span" color={theme.companyTheme.color.secondry}>Forestry </Text>
+                                <Text as="span">Solution</Text>
                             </Text>
                         </Flex>
                         <Text color={theme.companyTheme.color.third} fontSize={theme.fonts.subHeading.size} fontWeight={theme.fonts.subHeading.weight} maxW="6xl" >

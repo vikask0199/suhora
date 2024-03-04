@@ -7,6 +7,7 @@ import {
 } from '@chakra-ui/react';
 
 
+import spade from "../../assets/img/products/spade.png";
 
 export const MiningProduct = () => {
     // const backgroundColor = currentTheme === 'light' ? 'gray.200' : '#282b3c';
@@ -26,12 +27,13 @@ export const MiningProduct = () => {
                         </Text>
                     </Flex>
 
-
-                    <SimpleGrid columns={{ base: 2, md: 3, lg: 3 }} gap={{ base: '4', md: '6', lg: '8' }}>
+                       <Flex justifyContent='center'>
+                    <SimpleGrid columns={{ base: 1, md: 1, lg: 1 }} gap={{ base: '4', md: '6', lg: '8' }}>
                         {categories.map((category) => (
                             <CategoryCard key={category.name} category={category} />
                         ))}
                     </SimpleGrid>
+                    </Flex>
 
                 </Stack>
             </Box>
@@ -43,13 +45,13 @@ export const MiningProduct = () => {
 
 // import agri from "../../assets/img/industries/agri.png";
 // import disaster from "../../assets/img/industries/disaster.png";
-import forest from "../../assets/img/industries/forest.png";
+// import forest from "../../assets/img/industries/forest.png";
 
 const categories = [
     {
         name: 'Spade',
         imageUrl:
-            forest,
+        spade,
         url: '#/spade',
     },
     // {
@@ -100,7 +102,7 @@ const CategoryCard = (props: Props) => {
     };
 
     return (
-        <Box position="relative" key={category.name} borderRadius="lg" overflow="hidden" {...rootProps} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+        <Box position="relative" key={category.name} borderRadius="lg" h='60' w='60' overflow="hidden" {...rootProps} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
             <Link>
                 <AspectRatio ratio={1 / 1}>
                     <Image src={category.imageUrl} alt={category.name} fallback={<Skeleton />} />

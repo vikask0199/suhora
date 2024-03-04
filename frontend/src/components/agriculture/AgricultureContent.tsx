@@ -20,8 +20,8 @@ export const AgricultureContent = () => {
                     <Stack spacing={{ base: '4', md: '5' }}>
                         <Flex justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
                             <Text>
-                                <Text as="span">Suhora </Text>
-                                <Text as="span" color={theme.companyTheme.color.secondry}>Agricukture</Text>
+                    
+                                <Text as="span" color={theme.companyTheme.color.secondry}>Agriculture </Text>
                                 <Text as="span">Solution </Text>
                             </Text>
                         </Flex>

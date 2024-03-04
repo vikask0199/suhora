@@ -23,7 +23,7 @@ export const DefenceProduct = () => {
                     <Flex justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
                         <Text>
                             <Text as="span">Suhora </Text>
-                            <Text as="span" color={theme.companyTheme.color.secondry}>Product </Text>
+                            <Text as="span" color={theme.companyTheme.color.secondry}>Products </Text>
                         </Text>
                     </Flex>
 

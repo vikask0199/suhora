@@ -8,6 +8,11 @@ import {
     chakra,
     useColorModeValue
 } from '@chakra-ui/react';
+import b2b from '../../assets/img/industries/disaster-b2b.png'
+import disaster from '../../assets/img/industries/Disaster-Monitoring.png'
+import DisasterProcessing from '../../assets/img/industries/Disaster-processing.png'
+import RiskManagement from '../../assets/img/industries/Risk-management.png'
+import TailoredInsurance from '../../assets/img/industries/Tailored-insurance.png'
 
 import theme from '../../theme';
 
@@ -50,6 +55,7 @@ type HomeServices = {
 }
 
 const DisasterCards = ({ currentTheme }: HomeServices) => {
+    const iconArray = [disaster, RiskManagement, DisasterProcessing, b2b, TailoredInsurance ]
     // const iconArray = [servilliance, integrated, dataSecurity, tailored, terrains, maritime]
     const backgroundColor = currentTheme === 'light' ? 'gray.200' : '#282b3c';
 
@@ -90,7 +96,7 @@ const DisasterCards = ({ currentTheme }: HomeServices) => {
                                 top="-2.2rem"
                             // boxShadow="xl"
                             >
-                                {/* <img src={`${iconArray[index]}`} alt="" height="70" width="70" /> */}
+                                <img src={`${iconArray[index]}`} alt="" height="70" width="70" />
                             </Flex>
                             <chakra.h3 fontWeight="semibold" fontSize="2xl" mt={6}>
                                 {feature.heading}

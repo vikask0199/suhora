@@ -6,7 +6,7 @@ import {
     Stack
 } from '@chakra-ui/react';
 
-
+import spade from "../../assets/img/products/spade.png";
 
 export const EnergyProduct = () => {
     // const backgroundColor = currentTheme === 'light' ? 'gray.200' : '#282b3c';
@@ -22,7 +22,7 @@ export const EnergyProduct = () => {
                     <Flex justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
                         <Text>
                             <Text as="span">Suhora</Text>
-                            <Text as="span" color={theme.companyTheme.color.secondry}> Product </Text>
+                            <Text as="span" color={theme.companyTheme.color.secondry}> Products </Text>
                         </Text>
                     </Flex>
 
@@ -43,13 +43,13 @@ export const EnergyProduct = () => {
 
 import agri from "../../assets/img/industries/agri.png";
 import disaster from "../../assets/img/industries/disaster.png";
-import forest from "../../assets/img/industries/forest.png";
+// import forest from "../../assets/img/industries/forest.png";
 
 const categories = [
     {
         name: 'Spade',
         imageUrl:
-            forest,
+            spade,
         url: '/spadepage',
     },
     {

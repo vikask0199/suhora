@@ -10,7 +10,7 @@ import {
     // UnorderedList
 } from '@chakra-ui/react';
 
-import { RiTyphoonLine } from 'react-icons/ri';
+// import { RiTyphoonLine } from 'react-icons/ri';
 import theme from '../../theme';
 // import { RiTyphoonLine } from 'react-icons/ri';
 
@@ -19,7 +19,7 @@ import theme from '../../theme';
 
 export const DisasterContent = () => {
 
-    const spadeIconArray = [<RiTyphoonLine />]
+    // const spadeIconArray = [<RiTyphoonLine />]
     // const aspectRatio = 3 / 3
     // const spadeIconArray = [<RiTyphoonLine />]
 
@@ -30,7 +30,7 @@ export const DisasterContent = () => {
                     <Stack spacing={{ base: '4', md: '5' }}>
                         <Flex justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
                             <Text>
-                                <Text as="span">Suhora </Text>
+                                {/* <Text as="span">Suhora </Text> */}
                                 <Text as="span" color={theme.companyTheme.color.secondry}>Disaster & Insurance </Text>
                                 <Text as="span">Solution </Text>
                             </Text>
