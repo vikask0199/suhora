@@ -11,14 +11,13 @@ import {
     Stack,
     Text,
 } from '@chakra-ui/react'
-import { FaLinkedin, FaTwitter, FaWhatsapp } from 'react-icons/fa'
-import { NavLink } from 'react-router-dom'
+import { FaLinkedin, FaWhatsapp } from 'react-icons/fa'
+import { FaXTwitter } from 'react-icons/fa6'
+import { Link, NavLink } from 'react-router-dom'
 import LogoDark from '../../../assets/img/logo/suhora_logo.png'
 import LogoWhite from '../../../assets/img/logo/suhora_white.png'
 import { links } from "../../../constant/footerData"
 import theme from '../../../theme'
-import { FaXTwitter } from 'react-icons/fa6'
-import { Link } from 'react-router-dom'
 type footerThemeProps = {
     currentTheme: string;
 }
@@ -76,7 +75,7 @@ const Footer = ({ currentTheme }: footerThemeProps) => {
                     </Text>
                     <ButtonGroup variant="tertiary">
                         <IconButton as="a" href="https://www.linkedin.com/company/suhora/mycompany/" target="_blank" aria-label="LinkedIn" icon={<FaLinkedin />} _hover={{ color: theme.companyTheme.color.secondry }} />
-                        {/* <IconButton as="a" href="#" aria-label="GitHub" icon={<FaWhatsapp />} _hover={{ color: theme.companyTheme.color.secondry }} /> */}
+                        <IconButton as="a" href="#" aria-label='whatsapp' icon={<FaWhatsapp />} _hover={{ color: theme.companyTheme.color.secondry }} />
                         <IconButton as="a" href="https://twitter.com/suhoratech" target="_blank" aria-label="Twitter" icon={<FaXTwitter />} _hover={{ color: theme.companyTheme.color.secondry }} />
                     </ButtonGroup>
                 </Stack>

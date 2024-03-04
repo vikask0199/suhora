@@ -1,7 +1,6 @@
 
 import {
     Box,
-    Button,
     Container,
     Flex,
     ListItem,
@@ -10,13 +9,12 @@ import {
     UnorderedList
 } from '@chakra-ui/react';
 
-import theme from '../../theme';
 import { RiTyphoonLine } from 'react-icons/ri';
+import theme from '../../theme';
 
 
 
 export const DefenceContent = () => {
-    const aspectRatio = 3 / 3
     const spadeIconArray = [<RiTyphoonLine />]
 
     return (
@@ -31,13 +29,13 @@ export const DefenceContent = () => {
                             </Text>
                         </Flex>
                         <Text color={theme.companyTheme.color.third} fontSize={theme.fonts.subHeading.size} fontWeight={theme.fonts.subHeading.weight} maxW="6xl" >
-                               Adapts to your mission. Scales to your needs.
+                            Adapts to your mission. Scales to your needs.
                         </Text>
                         <Text textAlign="justify">
-                        Suhora plays a vital role in bolstering national defense and homeland security through its provision of advanced monitoring and analytics solutions. At the core of Suhora's offerings is the encrypted EarthData platform, a cutting-edge system designed to meet the rigorous demands of defense and security operations.
+                            Suhora plays a vital role in bolstering national defense and homeland security through its provision of advanced monitoring and analytics solutions. At the core of Suhora's offerings is the encrypted EarthData platform, a cutting-edge system designed to meet the rigorous demands of defense and security operations.
                             <br />
                             <br />
-                            The EarthData platform serves as a centralized hub for storing, accessing, and analyzing critical geospatial information essential for national defense and homeland security. 
+                            The EarthData platform serves as a centralized hub for storing, accessing, and analyzing critical geospatial information essential for national defense and homeland security.
                         </Text>
                         <Flex w="100%" direction="column" rowGap={4} justifyContent="space-between">
                             <UnorderedList listStyleType="hidden" fontSize={theme.fonts.list} marginLeft={0}>

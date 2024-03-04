@@ -1,7 +1,6 @@
 
 import {
     Box,
-    Button,
     Container,
     Flex,
     ListItem,
@@ -10,13 +9,13 @@ import {
     UnorderedList
 } from '@chakra-ui/react';
 
-import theme from '../../theme';
 import { RiTyphoonLine } from 'react-icons/ri';
+import theme from '../../theme';
 
 
 
 export const DisasterContent = () => {
-    const aspectRatio = 3 / 3
+
     const spadeIconArray = [<RiTyphoonLine />]
 
     return (

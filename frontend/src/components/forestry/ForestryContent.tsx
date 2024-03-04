@@ -1,7 +1,6 @@
 
 import {
     Box,
-    Button,
     Container,
     Flex,
     ListItem,
@@ -10,13 +9,13 @@ import {
     UnorderedList
 } from '@chakra-ui/react';
 
-import theme from '../../theme';
 import { RiTyphoonLine } from 'react-icons/ri';
+import theme from '../../theme';
 
 
 
 export const ForestryContent = () => {
-    const aspectRatio = 3 / 3
+
     const spadeIconArray = [<RiTyphoonLine />]
 
     return (
@@ -31,17 +30,17 @@ export const ForestryContent = () => {
                             </Text>
                         </Flex>
                         <Text color={theme.companyTheme.color.third} fontSize={theme.fonts.subHeading.size} fontWeight={theme.fonts.subHeading.weight} maxW="6xl" >
-                        From Space to Safety: Satellite Insight for Fire-Free Forests.
+                            From Space to Safety: Satellite Insight for Fire-Free Forests.
                         </Text>
                         <Text textAlign="justify">
-                        One of the key players in this endeavor is Suhora, which collaborates with reliable partners to employ cutting-edge technologies for the monitoring and conservation of forests worldwide.
+                            One of the key players in this endeavor is Suhora, which collaborates with reliable partners to employ cutting-edge technologies for the monitoring and conservation of forests worldwide.
                             <br />
                             <br />
                             Through strategic alliances and innovative approaches, Suhora has the capability to monitor large swaths of forested areas, enabling real-time assessment of their health, detecting encroachment, and identifying instances of deforestation.
                         </Text>
                         <Flex w="100%" direction="column" rowGap={4} justifyContent="space-between">
                             <UnorderedList listStyleType="hidden" fontSize={theme.fonts.list} marginLeft={0}>
-                                
+
                                 <ListItem display="flex" mb="2" alignItems="center" marginTop={4} gap={2}>
                                     <Box fontSize={theme.fonts.subHeadingSecond.size} color={theme.companyTheme.color.secondry}>
                                         {
@@ -58,8 +57,8 @@ export const ForestryContent = () => {
                                     </Box>
                                     Suhora can identify areas at high risk of deforestation or degradation, enabling targeted interventions to prevent further loss of forest cover.
                                 </ListItem>
-                               
-                                
+
+
                                 <ListItem display="flex" mb="2" alignItems="center" marginTop={4} gap={2}>
                                     <Box fontSize={theme.fonts.subHeadingSecond.size} color={theme.companyTheme.color.secondry}>
                                         {
