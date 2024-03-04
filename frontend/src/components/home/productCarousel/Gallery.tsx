@@ -23,6 +23,7 @@ import { Carousel, CarouselSlide, useCarousel } from './Carousel.tsx'
 import { Link } from 'react-router-dom'
 
 
+
 export const Gallery = () => {
 
   const spadeIconArray = [<RiTyphoonLine />]
