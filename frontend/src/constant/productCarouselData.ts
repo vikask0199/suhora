@@ -1,4 +1,6 @@
-
+import spademain from "../assets/img/products/spademain.png"
+import sidmain from "../assets/img/products/sidmain.png"
+import lancemain from "../assets/img/products/lancemain.png"
 
 export const products = [
   {
@@ -8,7 +10,7 @@ export const products = [
     buttonRedirect: "/spade",
     flag: 'new',
     imageUrl:
-      'https://images.unsplash.com/photo-1602024242516-fbc9d4fda4b6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80',
+      spademain,
     rating: 4,
     ratingCount: 1,
     description:
@@ -26,7 +28,7 @@ export const products = [
     buttonRedirect: "/lance",
     flag: 'on-sale',
     imageUrl:
-      'https://images.unsplash.com/photo-1509941943102-10c232535736?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80',
+      lancemain,
     rating: 4,
     ratingCount: 12,
     description:
@@ -43,7 +45,7 @@ export const products = [
     currency: 'USD',
     buttonRedirect: "/sid",
     imageUrl:
-      'https://images.unsplash.com/photo-1564594985645-4427056e22e2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80',
+      sidmain,
     rating: 4,
     ratingCount: 12,
     description:
