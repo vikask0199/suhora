@@ -1,88 +1,48 @@
-import { SVGProps } from 'react';
 import {
-    Container,
     Box,
-    chakra,
-    Text,
-    SimpleGrid,
+    Container,
     Flex,
-    Link,
-    useColorModeValue,
-    Stack
+    SimpleGrid,
+    Stack,
+    Text,
+    chakra,
+    useColorModeValue
 } from '@chakra-ui/react';
 
-import { MdPayment } from 'react-icons/md';
-import { FaFileInvoiceDollar } from 'react-icons/fa';
-import { FaFileCode } from 'react-icons/fa';
 import theme from '../../theme';
 
 
 interface IFeature {
     heading: string;
     content: string;
-    icon: SVGProps<SVGElement>;
 }
 
 const features: IFeature[] = [
     {
         heading: 'Comprehensive Disaster Monitoring',
         content: 'Our platform leverages multispectral satellite imagery and ground data to monitor and predict disaster events, providing a full-scale overview for proactive management.',
-        icon: (
-            <Box fontSize={theme.fonts.mainHeading.size}>
-                <MdPayment />
-            </Box>
-        )
     },
     {
         heading: 'Risk Assessment & Management',
         content: 'We utilize predictive analytics to assess disaster risks accurately, aiding insurers and stakeholders in developing effective management strategies.',
-        icon: (
 
-            <Box fontSize={theme.fonts.mainHeading.size}>
-                <FaFileInvoiceDollar />
-            </Box>
-        )
     },
     {
         heading: 'Post-Disaster Analysis and Claims Processing',
         content: 'Suhora’s rapid analysis tools evaluate disaster impacts precisely, streamlining the insurance claims process for swift recovery support.',
-        icon: (
 
-            <Box fontSize={theme.fonts.mainHeading.size}>
-                <FaFileCode />
-            </Box>
-        )
     },
     {
         heading: 'B2B API Integration for Seamless Data Access',
         content: 'Our robust API framework facilitates seamless integration with business platforms, enabling access to real-time disaster data and analytics.',
-        icon: (
 
-            <Box fontSize={theme.fonts.mainHeading.size}>
-                <FaFileCode />
-            </Box>
-        )
     },
     {
         heading: 'Tailored Insurance Solutions',
         content: 'We offer custom insurance solutions powered by satellite intelligence, providing insurers with the data needed for policy customization and risk mitigation.',
-        icon: (
 
-            <Box fontSize={theme.fonts.mainHeading.size}>
-                <FaFileCode />
-            </Box>
-        )
     },
-    // {
-    //     heading: 'API Included',
-    //     content: 'Roll your own API to easily connect with other apps or services. Pull in updates.',
-    //     icon: (
 
-    //         <Box fontSize={theme.fonts.mainHeading.size}>
-    //             <FaFileCode />
-    //         </Box>
-    //     )
-    // },
 ];
 
 type HomeServices = {
@@ -90,7 +50,7 @@ type HomeServices = {
 }
 
 const DisasterCards = ({ currentTheme }: HomeServices) => {
-    const iconArray = [<MdPayment />, <FaFileInvoiceDollar />, <FaFileCode />,<MdPayment />, <FaFileInvoiceDollar />, <FaFileCode />]
+    // const iconArray = [servilliance, integrated, dataSecurity, tailored, terrains, maritime]
     const backgroundColor = currentTheme === 'light' ? 'gray.200' : '#282b3c';
 
     return (
@@ -118,18 +78,19 @@ const DisasterCards = ({ currentTheme }: HomeServices) => {
                             pos="relative"
                         >
                             <Flex
-                                p={2}
+                                p={1}
                                 w="max-content"
                                 color="white"
-                                bgGradient="linear(to-br, #228be6, #15aabf)"
-                                rounded="md"
+                                // bgGradient="linear(to-br, #228be6, #15aabf)"
+                                rounded="lg"
                                 marginInline="auto"
                                 pos="absolute"
                                 left={0}
                                 right={0}
-                                top="-1.5rem"
-                                boxShadow="lg">
-                                {iconArray[index]}
+                                top="-2.2rem"
+                            // boxShadow="xl"
+                            >
+                                {/* <img src={`${iconArray[index]}`} alt="" height="70" width="70" /> */}
                             </Flex>
                             <chakra.h3 fontWeight="semibold" fontSize="2xl" mt={6}>
                                 {feature.heading}
@@ -137,9 +98,9 @@ const DisasterCards = ({ currentTheme }: HomeServices) => {
                             <Text fontSize="md" mt={4}>
                                 {feature.content}
                             </Text>
-                            <Link href="#" mt={4} fontSize="sm" color="blue.400">
+                            {/* <Link href="#" mt={4} fontSize="sm" color="blue.400">
                                 Learn more →
-                            </Link>
+                            </Link> */}
                         </Box>
                     ))}
                 </SimpleGrid>

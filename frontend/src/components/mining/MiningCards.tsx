@@ -54,7 +54,7 @@ const features: IFeature[] = [
         )
     },
     {
-        heading: 'nfrastructure Monitoring & Planning',
+        heading: 'Infrastructure Monitoring & Planning',
         content: '',
         icon: (
 

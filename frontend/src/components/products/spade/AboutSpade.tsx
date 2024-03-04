@@ -27,10 +27,7 @@ export const AboutSpade = () => {
                             Multi band high resolution image from various satellite.
                         </Text>
                         <Text textAlign="justify">
-                            At SUHORA, we're driven by a passion to make the universe's data accessible and actionable for those who need it most. Founded on the principle that space analytics should empower, not overwhelm, we've dedicated ourselves to demystifying satellite data for practical, everyday applications.
-                            <br />
-                            <br />
-                            Our team, a blend of seasoned experts and innovative thinkers, is committed to breaking down complex information into clear, actionable insights that drive decision-making across various sectors. Suhora Technologies stands at the intersection of innovation and utility, reshaping how industries leverage the untapped potential of space data.
+                            Experience the next level of data insight and analytics with our As-a-Service platform and API, delivering unparalleled convenience and efficiency. Seamlessly integrate our multi-mission planning and tasking features with our powerful visualization platform, empowering you to tackle diverse challenges with ease. With guaranteed collection, fastest tasking, and secure downlink capabilities, rest assured that your data is handled with utmost precision and confidentiality. <br /> <br /> Our 24/7 all-weather surveillance, utilizing both optical and SAR constellation technologies, ensures comprehensive coverage and actionable insights regardless of conditions. And with our commitment to being the most cost-effective solution in the market, you can achieve your goals without breaking the bank. Choose reliability, choose efficiency, choose cost-effectiveness—choose us.
                         </Text>
                     </Stack>
                 </Stack>

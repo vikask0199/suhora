@@ -1,10 +1,11 @@
 import {
     Box,
     Flex,
-    Link,
     SimpleGrid,
     Stack
 } from '@chakra-ui/react';
+import spade from "../../assets/img/products/spade.png";
+import { Link } from "react-router-dom"
 
 
 
@@ -12,7 +13,7 @@ export const DefenceProduct = () => {
     // const backgroundColor = currentTheme === 'light' ? 'gray.200' : '#282b3c';
 
     return (
-        <Box  >
+        <Box >
             <Box
                 maxW="6xl"
                 mx="auto"
@@ -26,13 +27,13 @@ export const DefenceProduct = () => {
                         </Text>
                     </Flex>
 
-
-                    <SimpleGrid columns={{ base: 2, md: 3, lg: 3 }} gap={{ base: '4', md: '6', lg: '8' }}>
-                        {categories.map((category) => (
-                            <CategoryCard key={category.name} category={category} />
-                        ))}
-                    </SimpleGrid>
-
+                    <Flex justifyContent="center">
+                        <SimpleGrid columns={{ base: 1, md: 2, lg: 2 }} gap={{ base: '4', md: '6', lg: '8' }}>
+                            {categories.map((category) => (
+                                <CategoryCard key={category.name} category={category} />
+                            ))}
+                        </SimpleGrid>
+                    </Flex>
                 </Stack>
             </Box>
         </Box>
@@ -42,15 +43,13 @@ export const DefenceProduct = () => {
 
 
 import agri from "../../assets/img/industries/agri.png";
-// import disaster from "../../assets/img/industries/disaster.png";
-import forest from "../../assets/img/industries/forest.png";
 
 const categories = [
     {
         name: 'Spade',
         imageUrl:
-            forest,
-        url: '#/spade',
+            spade,
+        url: "/spade",
     },
     {
         name: 'Lance',
@@ -58,12 +57,7 @@ const categories = [
             agri,
         url: '#/lance',
     },
-    // {
-    //     name: 'Sid',
-    //     imageUrl:
-    //         disaster,
-    //     url: '#/sid',
-    // },
+
 ]
 
 export type ElementType<T extends ReadonlyArray<unknown>> = T extends ReadonlyArray<
@@ -100,9 +94,9 @@ const CategoryCard = (props: Props) => {
     };
 
     return (
-        <Box position="relative" key={category.name} borderRadius="lg" overflow="hidden" {...rootProps} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-            <Link href={category.url}>
-                <AspectRatio ratio={1 / 1}>
+        <Box position="relative" key={category.name} h="60" w="60" borderRadius="lg" overflow="hidden" {...rootProps} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+            <Link to={category.url}>
+                <AspectRatio ratio={1}>
                     <Image src={category.imageUrl} alt={category.name} fallback={<Skeleton />} />
                 </AspectRatio>
                 <Box

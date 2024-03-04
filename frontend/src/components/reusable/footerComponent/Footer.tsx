@@ -36,7 +36,7 @@ const Footer = ({ currentTheme }: footerThemeProps) => {
                     direction={{ base: 'column', lg: 'row' }}
                     py={{ base: '8', md: '12' }}
                     spacing="8">
-                    <Stack spacing={{ base: '2', md: '4' }} align="start" maxW={{ md: '100%', lg: '30%' }}>
+                    <Stack spacing={{ base: '2', md: '' }} align="start" maxW={{ md: '100%', lg: '30%' }}>
                         <Flex h={20} alignItems="center" ml="-5">
                             <Image h="100%" src={currentTheme === 'dark' ? LogoWhite : LogoDark} />
                         </Flex>
