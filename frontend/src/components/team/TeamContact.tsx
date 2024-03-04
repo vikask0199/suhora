@@ -1,10 +1,11 @@
-import { Box, Button, Flex, Heading,  Img, Stack, Text } from '@chakra-ui/react'
+import { Box, Button, Flex, Heading, Img, Stack, Text } from '@chakra-ui/react'
 import theme from '../../theme'
-interface aboutSuhoraProps {
-    currentTheme: string
-}
-const TeamContact = ({ currentTheme }: aboutSuhoraProps) => {
-    const backgroundColor = currentTheme === 'light' ? 'gray.200' : '#282b3c';
+// interface aboutSuhoraProps {
+//     currentTheme: string
+// }
+const TeamContact = () => {
+  // const backgroundColor = currentTheme === 'light' ? 'gray.200' : '#282b3c';
+
   return (
     <Box bg="gray.800" as="section" minH="140px" position="relative">
       <Box py="32" position="relative" zIndex={1}>
@@ -14,13 +15,13 @@ const TeamContact = ({ currentTheme }: aboutSuhoraProps) => {
               Join our team
             </Heading>
             <Text fontSize={theme.fonts.subHeadingSecond.size.weight} mt="4" maxW="lg" >
-            Join our team and be part of a journey where your talents meet opportunities, and together, we create something extraordinary.
-              
+              Join our team and be part of a journey where your talents meet opportunities, and together, we create something extraordinary.
+
             </Text>
             <Stack direction={{ base: 'column', md: 'row' }} mt="10" spacing="4">
-            <Button width="fit-content" px="8" border="1px solid white" variant="outline" color="white" _hover={{ backgroundColor: theme.companyTheme.color.secondry, border: "1px solid #1266A0" }} >
-                     Join us
-                    </Button>
+              <Button width="fit-content" px="8" border="1px solid white" variant="outline" color="white" _hover={{ backgroundColor: theme.companyTheme.color.secondry, border: "1px solid #1266A0" }} >
+                Join us
+              </Button>
             </Stack>
           </Box>
         </Box>

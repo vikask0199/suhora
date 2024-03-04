@@ -15,7 +15,7 @@ type LandThemeProps = {
 const LandDeformationPage = ({ currentTheme }: LandThemeProps) => {
     return (
         <>
-            <LandHeader currentTheme={currentTheme} />
+            <LandHeader  />
             <AboutLand currentTheme={currentTheme} />
             <LandFeature />
             <HowItsWorks currentTheme={currentTheme} />

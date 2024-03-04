@@ -1,5 +1,6 @@
 
 import { AboutSpade } from "../components/products/spade/AboutSpade"
+import { HowItsWorksSpade } from "../components/products/spade/HowItsWorksSpade"
 import { SpadeDemo } from "../components/products/spade/SpadeDemo"
 import SpadeFeature from "../components/products/spade/SpadeFeature"
 import { SpadeHome } from "../components/products/spade/SpadeHome"
@@ -16,7 +17,8 @@ const SpadePage = ({ currentTheme }: spadePageProps) => {
       <SpadeHome />
       <AboutSpade  />
       <SpadeFeature currentTheme={currentTheme}/>
-      <SpadeIndutryWeServe />
+      <HowItsWorksSpade  />
+      <SpadeIndutryWeServe currentTheme={currentTheme}/>
       <SpadeDemo />
     </>
 

@@ -2,11 +2,11 @@ import { Box, Flex, Heading, Img, Text } from '@chakra-ui/react'
 import theme from '../../../theme'
 import terrain from "../../../assets/img/services/terrain.png"
 
-type hydrologyHeaderProps = {
-  currentTheme: string
-}
+// type hydrologyHeaderProps = {
+//   currentTheme: string
+// }
 
-const TerrainHeader = ({ currentTheme }: hydrologyHeaderProps) => {
+const TerrainHeader = () => {
 
   return (
     <>

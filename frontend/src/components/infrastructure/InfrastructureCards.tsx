@@ -25,8 +25,8 @@ interface IFeature {
 
 const features: IFeature[] = [
     {
-        heading: 'Payments',
-        content: 'Choose from Stripe, Paddle, Braintree, or PayPal to launch your product quickly.',
+        heading: 'Site Selection and Planning',
+        content: 'Our Satellite imagery aids site selection for infrastructure, assessing terrain, resources, and environmental factors, enhancing informed decision-making in planning.',
         icon: (
             <Box fontSize={theme.fonts.mainHeading.size}>
                 <MdPayment />
@@ -34,8 +34,8 @@ const features: IFeature[] = [
         )
     },
     {
-        heading: 'Invoicing',
-        content: 'Webhooks are wired up to automatically email customers PDF receipts and invoices.',
+        heading: 'Monitoring Construction Progress',
+        content: 'Suhora’s multi resolution satellite imagery tracks construction progress, ensures timelines adherence, optimizes resource management, and addresses issues promptly for efficient project monitoring.',
         icon: (
 
             <Box fontSize={theme.fonts.mainHeading.size}>
@@ -44,8 +44,8 @@ const features: IFeature[] = [
         )
     },
     {
-        heading: 'API Included',
-        content: 'Roll your own API to easily connect with other apps or services. Pull in updates.',
+        heading: 'Environmental Impact Assessment',
+        content: 'We provide analysis and changes in land cover, vegetation and water bodies over time through our platform SPADE, environmental planners can evaluate the potential ecological consequences and implement mitigation measures accordingly',
         icon: (
 
             <Box fontSize={theme.fonts.mainHeading.size}>
@@ -54,8 +54,8 @@ const features: IFeature[] = [
         )
     },
     {
-        heading: 'API Included',
-        content: 'Roll your own API to easily connect with other apps or services. Pull in updates.',
+        heading: 'Infrastructure Asset Management',
+        content: 'Satellite imagery aids in the ongoing maintenance and management of infrastructure assets. By regularly capturing high-resolution images of infrastructure assets such as roads, bridges, and buildings, stakeholders can assess their condition, identify maintenance needs, and prioritize repair activities.',
         icon: (
 
             <Box fontSize={theme.fonts.mainHeading.size}>
@@ -64,8 +64,8 @@ const features: IFeature[] = [
         )
     },
     {
-        heading: 'API Included',
-        content: 'Roll your own API to easily connect with other apps or services. Pull in updates.',
+        heading: 'Remote Monitoring and Inspection',
+        content: 'Our multi temporal satellite imagery enables remote monitoring and inspection of infrastructure assets located in remote or inaccessible areas. This reduces the need for physical site visits, minimizes safety risks for personnel, and ensures continuous monitoring of critical infrastructure.',
         icon: (
 
             <Box fontSize={theme.fonts.mainHeading.size}>
@@ -73,16 +73,16 @@ const features: IFeature[] = [
             </Box>
         )
     },
-    {
-        heading: 'API Included',
-        content: 'Roll your own API to easily connect with other apps or services. Pull in updates.',
-        icon: (
+    // {
+    //     heading: 'API Included',
+    //     content: 'Roll your own API to easily connect with other apps or services. Pull in updates.',
+    //     icon: (
 
-            <Box fontSize={theme.fonts.mainHeading.size}>
-                <FaFileCode />
-            </Box>
-        )
-    },
+    //         <Box fontSize={theme.fonts.mainHeading.size}>
+    //             <FaFileCode />
+    //         </Box>
+    //     )
+    // },
 ];
 
 type HomeServices = {
@@ -100,7 +100,7 @@ const InfrastructureCards = ({ currentTheme }: HomeServices) => {
                     <Flex justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
                         <Text>
                             <Text as="span">What We </Text>
-                            <Text as="span" color={theme.companyTheme.color.secondry}>Serve</Text>
+                            <Text as="span" color={theme.companyTheme.color.secondry}>Offer</Text>
                         </Text>
                     </Flex>
                     <Text fontSize={theme.fonts.subHeading.size} color={theme.companyTheme.color.third} fontWeight={theme.fonts.subHeading.weight} textAlign="center">

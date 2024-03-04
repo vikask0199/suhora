@@ -3,11 +3,11 @@ import { Box, Flex, Heading, Img, Text } from '@chakra-ui/react'
 import hydrologymainimage from '../../../assets/img/services/hydrologymainimage.jpg'
 import theme from '../../../theme'
 
-type hydrologyHeaderProps = {
-  currentTheme: string
-}
+// type hydrologyHeaderProps = {
+//   currentTheme: string
+// }
 
-const HydrologyHeader = ({ currentTheme }: hydrologyHeaderProps) => {
+const HydrologyHeader = () => {
 
   return (
     <>

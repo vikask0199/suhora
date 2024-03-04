@@ -11,12 +11,12 @@ const DefenceOverlay = () => {
           <Box maxW='5xl' mx="auto" px={{ base: '6', md: '8' }} color="white" >
             <Flex justifyContent='center' fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
               <Heading  >
-                Defence and Intelligence
+                Defence & Intelligence
               </Heading>
             </Flex>
             <Flex justifyContent='center'>
               <Text mt='1em' fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>
-                Adapts to your mission. Scales to your needs.
+              Empowering defense and intelligence with cutting-edge technology and unwavering security
               </Text>
             </Flex>
           </Box>

@@ -29,7 +29,7 @@ export const Gallery = () => {
   const lanceIconArray = [<IoBaseballOutline />]
   const sidIconArray = [<GiCircleCage />]
 
-  const aspectRatio = 3 / 3
+  const aspectRatio = 16/9
   const [currentSlide, setCurrentSlide] = useState(0)
 
   const [ref, slider] = useCarousel({
@@ -56,7 +56,7 @@ export const Gallery = () => {
               <Flex direction={{ base: "column", md: "row" }}>
                 <Box w={{ base: "100%", md: "50%" }} padding={7}>
                   <AspectRatio ratio={aspectRatio}>
-                    <Image src={image.imageUrl} />
+                    <Image src={image.imageUrl} objectFit="fill"/>
                   </AspectRatio>
                 </Box>
                 <Flex w={{ base: "100%", md: "50%" }} p={8} direction="column" rowGap={4} justifyContent="space-between">

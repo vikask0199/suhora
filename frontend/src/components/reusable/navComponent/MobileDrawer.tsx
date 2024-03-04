@@ -14,6 +14,8 @@ type mobileDrawerprops = {
 
 export const MobileDrawer = ({ toggleTheme, currentTheme }: mobileDrawerprops) => {
   const { isOpen, onToggle, onClose } = useDisclosure()
+
+
   return (
     <>
       <ToggleButton
@@ -26,7 +28,7 @@ export const MobileDrawer = ({ toggleTheme, currentTheme }: mobileDrawerprops) =
         <DrawerContent marginTop={20}>
           <DrawerBody p="4">
             <Stack spacing="1">
-              <Button size="lg" _hover={{color: "#1266A0"}} variant="" as={Text} justifyContent="start">
+              <Button size="lg" _hover={{ color: "#1266A0" }} variant="" as={Text} justifyContent="start">
                 Home
               </Button>
               <DocumentCollapseIndustries />
@@ -34,7 +36,7 @@ export const MobileDrawer = ({ toggleTheme, currentTheme }: mobileDrawerprops) =
               <DocumentCollapseServices />
               <DocumentCollapseResources />
               <NavLink to="/contact-us">
-                <Button size="lg" _hover={{color: "#1266A0"}} as={Text} variant="" justifyContent="start">
+                <Button size="lg" _hover={{ color: "#1266A0" }} as={Text} variant="" justifyContent="start">
                   Contact us
                 </Button>
               </NavLink>

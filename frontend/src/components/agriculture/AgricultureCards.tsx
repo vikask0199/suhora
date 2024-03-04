@@ -25,8 +25,8 @@ interface IFeature {
 
 const features: IFeature[] = [
     {
-        heading: 'Payments',
-        content: 'Choose from Stripe, Paddle, Braintree, or PayPal to launch your product quickly.',
+        heading: 'Satellite Imagery (Optical)',
+        content: 'We are capable of delivering daily satellite imagery of your AOI.',
         icon: (
             <Box fontSize={theme.fonts.mainHeading.size}>
                 <MdPayment />
@@ -34,8 +34,8 @@ const features: IFeature[] = [
         )
     },
     {
-        heading: 'Invoicing',
-        content: 'Webhooks are wired up to automatically email customers PDF receipts and invoices.',
+        heading: 'L Band SAR Imagery',
+        content: 'Suhora offers any weather L band SAR satellite imagery.',
         icon: (
 
             <Box fontSize={theme.fonts.mainHeading.size}>
@@ -44,8 +44,8 @@ const features: IFeature[] = [
         )
     },
     {
-        heading: 'API Included',
-        content: 'Roll your own API to easily connect with other apps or services. Pull in updates.',
+        heading: 'NDVI',
+        content: 'Our platform SPADE generates on the fly NDVI & delivers to the customer on their purchased optical data.',
         icon: (
 
             <Box fontSize={theme.fonts.mainHeading.size}>
@@ -54,8 +54,8 @@ const features: IFeature[] = [
         )
     },
     {
-        heading: 'API Included',
-        content: 'Roll your own API to easily connect with other apps or services. Pull in updates.',
+        heading: 'Acreage Estimation',
+        content: 'We provide very accurate acreage estimates of any corps in India.',
         icon: (
 
             <Box fontSize={theme.fonts.mainHeading.size}>
@@ -64,8 +64,8 @@ const features: IFeature[] = [
         )
     },
     {
-        heading: 'API Included',
-        content: 'Roll your own API to easily connect with other apps or services. Pull in updates.',
+        heading: 'Crop Health',
+        content: 'To ensure the maximum yield for crops periodic crop health monitoring is very important we offer week, fortnight and monthly crop health reports through our platform SPADE.',
         icon: (
 
             <Box fontSize={theme.fonts.mainHeading.size}>
@@ -73,16 +73,7 @@ const features: IFeature[] = [
             </Box>
         )
     },
-    {
-        heading: 'API Included',
-        content: 'Roll your own API to easily connect with other apps or services. Pull in updates.',
-        icon: (
 
-            <Box fontSize={theme.fonts.mainHeading.size}>
-                <FaFileCode />
-            </Box>
-        )
-    },
 ];
 
 type HomeServices = {
@@ -100,7 +91,7 @@ const AgricultureCards = ({ currentTheme }: HomeServices) => {
                     <Flex justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
                         <Text>
                             <Text as="span">What We </Text>
-                            <Text as="span" color={theme.companyTheme.color.secondry}>Serve</Text>
+                            <Text as="span" color={theme.companyTheme.color.secondry}>Offer</Text>
                         </Text>
                     </Flex>
                     <Text fontSize={theme.fonts.subHeading.size} color={theme.companyTheme.color.third} fontWeight={theme.fonts.subHeading.weight} textAlign="center">

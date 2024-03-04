@@ -35,8 +35,8 @@ const SidFeature = ({ currentTheme }: spadeFeatureProps) => {
                         </AspectRatio>
                     </Box>
                     <Flex w={{ base: "100%", md: "50%" }} p={8} direction="column" rowGap={4} justifyContent="space-between">
-                        <Box fontSize={theme.fonts.subHeading.size} fontWeight={theme.fonts.subHeading.weight} color={theme.companyTheme.color.third}>Two lines</Box>
-                        <Box fontSize={theme.fonts.description}>Descriptoion</Box>
+                        <Box fontSize={theme.fonts.subHeading.size} fontWeight={theme.fonts.subHeading.weight} color={theme.companyTheme.color.third}>SID</Box>
+                        <Box fontSize={theme.fonts.description}>SID harnesses satellite data for disaster management and insurance, shaping a safer, prepared world through technology.</Box>
                         <UnorderedList listStyleType="hidden" fontSize={theme.fonts.list} marginLeft={0}>
                             <ListItem display="flex" mb="2" alignItems="center" marginTop={4} gap={2}>
                                 <Box fontSize={theme.fonts.subHeadingSecond.size} color={theme.companyTheme.color.secondry}>

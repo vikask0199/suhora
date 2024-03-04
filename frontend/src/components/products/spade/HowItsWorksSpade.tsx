@@ -1,19 +1,16 @@
 import { Box, Container, Flex, Stack } from '@chakra-ui/react'
 
-type howWorks = {
-    currentTheme: string
-}
 
 
-export const HowItsWorks = ({ currentTheme }: howWorks) => {
+export const HowItsWorksSpade = () => {
     const [currentStep] = useStep({ maxStep: steps.length, initialStep: 2 })
-    const backgroundColor = currentTheme === 'light' ? 'gray.200' : '#282b3c';
+  
     return (
-        <Box py={{ base: '4', md: '8', lg: '16' }} backgroundColor={backgroundColor}>
+        <Box py={{ base: '4', md: '8', lg: '16' }} >
             <Container maxW="6xl">
                 <Flex mb={{ base: '2', md: '4' }} justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight} >
                     <Text>
-                        <Text as="span">How It </Text>
+                        <Text as="span">How Spade </Text>
                         <Text as="span" color={theme.companyTheme.color.secondry}>Works</Text>
                     </Text>
                 </Flex>
@@ -42,20 +39,24 @@ export const HowItsWorks = ({ currentTheme }: howWorks) => {
 
 const steps = [
     {
-        title: 'Project area',
-        description: 'Selection',
+        title: 'Search',
+        description: 'Search your location by place name Lat,Long.',
     },
     {
-        title: 'Define your',
-        description: 'Requirments',
+        title: 'Draw',
+        description: 'Draw AOI/POI by clicking on the map.',
     },
     {
-        title: 'SAR processing and production of',
-        description: 'Time-series information',
+        title: 'Select',
+        description: 'Select parameters like data, sensor, collection parameters.',
     },
     {
-        title: 'Land movement map along with ',
-        description: 'Report on accuracy',
+        title: 'Order',
+        description: 'Pick best scenes from archives or auto-select for new collection request.',
+    },
+    {
+        title: 'Insights',
+        description: 'Experience the next level of data insight and analytics.',
     },
 
 ]
@@ -100,10 +101,10 @@ const Step = (props: StepProps) => {
                 pb={isMobile && !isLastStep ? '8' : '0'}
                 align={{ base: 'start', md: 'center' }}
             >
-                <Text color="fg.emphasized" fontWeight="medium">
+                <Text color="fg.emphasized" fontWeight={theme.fonts.subHeading.weight}>
                     {title}
                 </Text>
-                <Text color="fg.muted">{description}</Text>
+                <Text textAlign="center">{description}</Text>
             </Stack>
         </Stack>
     )

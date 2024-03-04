@@ -1,10 +1,11 @@
 import {
     Box,
     Flex,
-    Link,
     SimpleGrid,
     Stack
 } from '@chakra-ui/react';
+import spade from "../../assets/img/products/spade.png";
+import { Link } from "react-router-dom"
 
 
 
@@ -12,7 +13,7 @@ export const DefenceProduct = () => {
     // const backgroundColor = currentTheme === 'light' ? 'gray.200' : '#282b3c';
 
     return (
-        <Box  >
+        <Box >
             <Box
                 maxW="6xl"
                 mx="auto"
@@ -21,18 +22,18 @@ export const DefenceProduct = () => {
                 <Stack spacing={{ base: '6', md: '8', lg: '12' }}>
                     <Flex justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
                         <Text>
-                            <Text as="span">Industry We </Text>
-                            <Text as="span" color={theme.companyTheme.color.secondry}>Supports </Text>
+                            <Text as="span">Suhora </Text>
+                            <Text as="span" color={theme.companyTheme.color.secondry}>Product </Text>
                         </Text>
                     </Flex>
 
-
-                    <SimpleGrid columns={{ base: 2, md: 3, lg: 3 }} gap={{ base: '4', md: '6', lg: '8' }}>
-                        {categories.map((category) => (
-                            <CategoryCard key={category.name} category={category} />
-                        ))}
-                    </SimpleGrid>
-
+                    <Flex justifyContent="center">
+                        <SimpleGrid columns={{ base: 1, md: 2, lg: 2 }} gap={{ base: '4', md: '6', lg: '8' }}>
+                            {categories.map((category) => (
+                                <CategoryCard key={category.name} category={category} />
+                            ))}
+                        </SimpleGrid>
+                    </Flex>
                 </Stack>
             </Box>
         </Box>
@@ -42,28 +43,21 @@ export const DefenceProduct = () => {
 
 
 import agri from "../../assets/img/industries/agri.png";
-import disaster from "../../assets/img/industries/disaster.png";
-import forest from "../../assets/img/industries/forest.png";
 
 const categories = [
     {
         name: 'Spade',
         imageUrl:
-            forest,
-        url: '/spadepage',
+            spade,
+        url: "/spade",
     },
     {
         name: 'Lance',
         imageUrl:
             agri,
-        url: '/lancepage',
+        url: '#/lance',
     },
-    {
-        name: 'Sid',
-        imageUrl:
-            disaster,
-        url: 'sidpage',
-    },
+
 ]
 
 export type ElementType<T extends ReadonlyArray<unknown>> = T extends ReadonlyArray<
@@ -100,9 +94,9 @@ const CategoryCard = (props: Props) => {
     };
 
     return (
-        <Box position="relative" key={category.name} borderRadius="lg" overflow="hidden" {...rootProps} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-            <Link>
-                <AspectRatio ratio={1 / 1}>
+        <Box position="relative" key={category.name} h="60" w="60" borderRadius="lg" overflow="hidden" {...rootProps} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+            <Link to={category.url}>
+                <AspectRatio ratio={1}>
                     <Image src={category.imageUrl} alt={category.name} fallback={<Skeleton />} />
                 </AspectRatio>
                 <Box

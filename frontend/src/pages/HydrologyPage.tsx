@@ -1,4 +1,3 @@
-import { AboutHydrology } from "../components/services/hydrology/AboutHydrology"
 import { HowItsWorks } from "../components/services/hydrology/HowItsWorks"
 import HydrologyFeature from "../components/services/hydrology/HydrologyFeature"
 import HydrologyHeader from "../components/services/hydrology/HydrologyHeader"
@@ -14,8 +13,7 @@ type hydrologyThemeProps = {
 const HydrologyPage = ({ currentTheme }: hydrologyThemeProps) => {
     return (
         <>
-            <HydrologyHeader currentTheme={currentTheme} />
-            <AboutHydrology currentTheme={currentTheme} />
+            <HydrologyHeader />
             <HydrologyFeature />
             <HowItsWorks currentTheme={currentTheme} />
             <HydrologyUsacases />

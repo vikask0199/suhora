@@ -25,8 +25,8 @@ interface IFeature {
 
 const features: IFeature[] = [
     {
-        heading: 'Payments',
-        content: 'Choose from Stripe, Paddle, Braintree, or PayPal to launch your product quickly.',
+        heading: 'Site Selection',
+        content: 'Our custom designed automated algorithm analyzing terrain, geology, and environmental factors to optimize resource extraction and minimize ecological impact.',
         icon: (
             <Box fontSize={theme.fonts.mainHeading.size}>
                 <MdPayment />
@@ -34,8 +34,8 @@ const features: IFeature[] = [
         )
     },
     {
-        heading: 'Invoicing',
-        content: 'Webhooks are wired up to automatically email customers PDF receipts and invoices.',
+        heading: 'High Resolution Satellite Imagery',
+        content: 'We offer very high resolution satellite imagery for regular monitoring of mining sites.',
         icon: (
 
             <Box fontSize={theme.fonts.mainHeading.size}>
@@ -44,8 +44,8 @@ const features: IFeature[] = [
         )
     },
     {
-        heading: 'API Included',
-        content: 'Roll your own API to easily connect with other apps or services. Pull in updates.',
+        heading: 'High Resolution Digital 3D Map',
+        content: '',
         icon: (
 
             <Box fontSize={theme.fonts.mainHeading.size}>
@@ -54,8 +54,8 @@ const features: IFeature[] = [
         )
     },
     {
-        heading: 'API Included',
-        content: 'Roll your own API to easily connect with other apps or services. Pull in updates.',
+        heading: 'Infrastructure Monitoring & Planning',
+        content: '',
         icon: (
 
             <Box fontSize={theme.fonts.mainHeading.size}>
@@ -64,8 +64,8 @@ const features: IFeature[] = [
         )
     },
     {
-        heading: 'API Included',
-        content: 'Roll your own API to easily connect with other apps or services. Pull in updates.',
+        heading: 'Accurate Volumetric Analysis',
+        content: '',
         icon: (
 
             <Box fontSize={theme.fonts.mainHeading.size}>
@@ -73,16 +73,16 @@ const features: IFeature[] = [
             </Box>
         )
     },
-    {
-        heading: 'API Included',
-        content: 'Roll your own API to easily connect with other apps or services. Pull in updates.',
-        icon: (
+    // {
+    //     heading: 'API Included',
+    //     content: 'Roll your own API to easily connect with other apps or services. Pull in updates.',
+    //     icon: (
 
-            <Box fontSize={theme.fonts.mainHeading.size}>
-                <FaFileCode />
-            </Box>
-        )
-    },
+    //         <Box fontSize={theme.fonts.mainHeading.size}>
+    //             <FaFileCode />
+    //         </Box>
+    //     )
+    // },
 ];
 
 type HomeServices = {
@@ -100,7 +100,7 @@ const MiningCards = ({ currentTheme }: HomeServices) => {
                     <Flex justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
                         <Text>
                             <Text as="span">What We </Text>
-                            <Text as="span" color={theme.companyTheme.color.secondry}>Serve</Text>
+                            <Text as="span" color={theme.companyTheme.color.secondry}>offer</Text>
                         </Text>
                     </Flex>
                     <Text fontSize={theme.fonts.subHeading.size} color={theme.companyTheme.color.third} fontWeight={theme.fonts.subHeading.weight} textAlign="center">

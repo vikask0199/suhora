@@ -1,18 +1,21 @@
 import {
     Box,
     Flex,
-    Link,
     SimpleGrid,
     Stack
-} from '@chakra-ui/react'
+} from '@chakra-ui/react';
+
+type spadeCurrentTheme = {
+    currentTheme: string
+}
 
 
+export const SpadeIndutryWeServe = ({ currentTheme }: spadeCurrentTheme) => {
+    const backgroundColor = currentTheme === 'light' ? 'gray.200' : '#282b3c';
 
-export const SpadeIndutryWeServe = () => {
-    // const backgroundColor = currentTheme === 'light' ? 'gray.200' : '#282b3c';
 
     return (
-        <Box>
+        <Box backgroundColor={backgroundColor}>
             <Box
                 maxW="6xl"
                 mx="auto"
@@ -48,46 +51,46 @@ import mining from "../../../assets/img/industries/mining.png";
 
 const categories = [
     {
-        name: 'Forestry',
+        name: 'Defence & Intelligence',
         imageUrl:
-            forest,
-        url: '#',
-    },
-    {
-        name: 'Agriculture',
-        imageUrl:
-            agri,
-        url: '#',
+            defence,
+        url: '/defence-and-intelligence',
     },
     {
         name: 'Disaster & Insurance',
         imageUrl:
             disaster,
-        url: '#',
-    },
-    {
-        name: 'Renewable Energy',
-        imageUrl:
-            energy,
-        url: '#',
-    },
-    {
-        name: 'Mining',
-        imageUrl:
-            mining,
-        url: '#',
+        url: '/disaster-and-insurance',
     },
     {
         name: 'Infrastructure',
         imageUrl:
             infra,
-        url: '#',
+        url: '/infrastructure',
     },
     {
-        name: 'Defence & Intelligence',
+        name: 'Renewable Energy',
         imageUrl:
-            defence,
-        url: '#',
+            energy,
+        url: '/renewable-energy',
+    },
+    {
+        name: 'Forestry',
+        imageUrl:
+            forest,
+        url: '/forestry',
+    },
+    {
+        name: 'Agriculture',
+        imageUrl:
+            agri,
+        url: '/agriculture',
+    },
+    {
+        name: 'Mining',
+        imageUrl:
+            mining,
+        url: '/mining',
     },
 
 ]
@@ -104,9 +107,10 @@ export type Category = ElementType<typeof categories>
 
 
 
-import { AspectRatio, BoxProps, Image, Skeleton, Text } from '@chakra-ui/react'
-import theme from '../../../theme'
-import { useState } from 'react'
+import { AspectRatio, BoxProps, Image, Skeleton, Text } from '@chakra-ui/react';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import theme from '../../../theme';
 
 interface Props {
     category: Category
@@ -127,7 +131,7 @@ const CategoryCard = (props: Props) => {
 
     return (
         <Box position="relative" key={category.name} borderRadius="lg" overflow="hidden" {...rootProps} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-            <Link>
+            <Link to={category.url}>
                 <AspectRatio ratio={1 / 1}>
                     <Image src={category.imageUrl} alt={category.name} fallback={<Skeleton />} />
                 </AspectRatio>

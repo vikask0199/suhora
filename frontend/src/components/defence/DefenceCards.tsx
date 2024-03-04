@@ -1,87 +1,57 @@
-import { SVGProps } from 'react';
 import {
-    Container,
     Box,
-    chakra,
-    Text,
-    SimpleGrid,
+    Container,
     Flex,
-    Link,
-    useColorModeValue,
-    Stack
+    SimpleGrid,
+    Stack,
+    Text,
+    chakra,
+    useColorModeValue
 } from '@chakra-ui/react';
 
-import { MdPayment } from 'react-icons/md';
-import { FaFileInvoiceDollar } from 'react-icons/fa';
-import { FaFileCode } from 'react-icons/fa';
+import dataSecurity from "../../assets/img/industries/DataSecurity.png";
+import integrated from "../../assets/img/industries/IntegratedGlobalView.png";
+import maritime from "../../assets/img/industries/MaritimeDomainAwareness.png";
+import servilliance from "../../assets/img/industries/Surveillance_Intelligence.png";
+import tailored from "../../assets/img/industries/Tailored.png";
+import terrains from "../../assets/img/industries/terrains.webp";
 import theme from '../../theme';
 
 
 interface IFeature {
     heading: string;
     content: string;
-    icon: SVGProps<SVGElement>;
 }
 
 const features: IFeature[] = [
     {
-        heading: 'Payments',
-        content: 'Choose from Stripe, Paddle, Braintree, or PayPal to launch your product quickly.',
-        icon: (
-            <Box fontSize={theme.fonts.mainHeading.size}>
-                <MdPayment />
-            </Box>
-        )
+        heading: 'Surveillance & Intelligence',
+        content: 'We leverage state-of-the-art imagery, EO, and SIGINT for superior surveillance and swift defense insights, covering both maritime and terrestrial domains.',
+
     },
     {
-        heading: 'Invoicing',
-        content: 'Webhooks are wired up to automatically email customers PDF receipts and invoices.',
-        icon: (
-
-            <Box fontSize={theme.fonts.mainHeading.size}>
-                <FaFileInvoiceDollar />
-            </Box>
-        )
+        heading: 'Integrated Global View',
+        content: 'Suhora’s powerful fusion Engine of optical, SAR, thermal, AIS, and RF data to deliver a unified perspective on worldwide activities.',
     },
     {
-        heading: 'API Included',
-        content: 'Roll your own API to easily connect with other apps or services. Pull in updates.',
-        icon: (
+        heading: 'Data Security',
+        content: 'We commit the highest level of intelligence protection with our robust encryption protocols for all communications.',
 
-            <Box fontSize={theme.fonts.mainHeading.size}>
-                <FaFileCode />
-            </Box>
-        )
     },
     {
-        heading: 'API Included',
-        content: 'Roll your own API to easily connect with other apps or services. Pull in updates.',
-        icon: (
+        heading: 'Tailored Intelligence Solutions',
+        content: 'Advanced and futuristic analytical tools, integrating diverse data streams and heterogeneous gathered information for precise defense and intelligence applications combat.',
 
-            <Box fontSize={theme.fonts.mainHeading.size}>
-                <FaFileCode />
-            </Box>
-        )
     },
     {
-        heading: 'API Included',
-        content: 'Roll your own API to easily connect with other apps or services. Pull in updates.',
-        icon: (
+        heading: 'Terrain Situational Awareness',
+        content: 'Our Advanced ISR capabilities offer precise monitoring, analysis of diverse terrains via high-res satellite imagery, AI augmentation, empowering strategic planning and security.',
 
-            <Box fontSize={theme.fonts.mainHeading.size}>
-                <FaFileCode />
-            </Box>
-        )
     },
     {
-        heading: 'API Included',
-        content: 'Roll your own API to easily connect with other apps or services. Pull in updates.',
-        icon: (
+        heading: 'Maritime Domain Awareness',
+        content: 'Maritime surveillance solutions provide real-time tracking, threat detection, and security enhancement, meeting evolving operational demands through continuous innovation.',
 
-            <Box fontSize={theme.fonts.mainHeading.size}>
-                <FaFileCode />
-            </Box>
-        )
     },
 ];
 
@@ -90,7 +60,7 @@ type HomeServices = {
 }
 
 const DefenceCards = ({ currentTheme }: HomeServices) => {
-    const iconArray = [<MdPayment />, <FaFileInvoiceDollar />, <FaFileCode />,<MdPayment />, <FaFileInvoiceDollar />, <FaFileCode />]
+    const iconArray = [servilliance, integrated, dataSecurity, tailored, terrains, maritime]
     const backgroundColor = currentTheme === 'light' ? 'gray.200' : '#282b3c';
 
     return (
@@ -100,12 +70,12 @@ const DefenceCards = ({ currentTheme }: HomeServices) => {
                     <Flex justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
                         <Text>
                             <Text as="span">What We </Text>
-                            <Text as="span" color={theme.companyTheme.color.secondry}>Serve</Text>
+                            <Text as="span" color={theme.companyTheme.color.secondry}>Offer</Text>
                         </Text>
                     </Flex>
-                    <Text fontSize={theme.fonts.subHeading.size} color={theme.companyTheme.color.third} fontWeight={theme.fonts.subHeading.weight} textAlign="center">
+                    {/* <Text fontSize={theme.fonts.subHeading.size} color={theme.companyTheme.color.third} fontWeight={theme.fonts.subHeading.weight} textAlign="center">
                         Everything you need to build modern UI and great products.
-                    </Text>
+                    </Text> */}
                 </Stack>
                 <SimpleGrid columns={{ base: 1, sm: 2, md: 3 }} placeItems="center" spacing={10} mb={4} mt={12}>
                     {features.map((feature, index) => (
@@ -115,31 +85,31 @@ const DefenceCards = ({ currentTheme }: HomeServices) => {
                             p={6}
                             rounded="lg"
                             textAlign="center"
-                            pos="relative"
-                        >
+                            pos="relative">
                             <Flex
-                                p={2}
+                                p={1}
                                 w="max-content"
                                 color="white"
-                                bgGradient="linear(to-br, #228be6, #15aabf)"
-                                rounded="md"
+                                // bgGradient="linear(to-br, #228be6, #15aabf)"
+                                rounded="lg"
                                 marginInline="auto"
                                 pos="absolute"
                                 left={0}
                                 right={0}
-                                top="-1.5rem"
-                                boxShadow="lg">
-                                {iconArray[index]}
+                                top="-2.2rem"
+                            // boxShadow="xl"
+                            >
+                                <img src={`${iconArray[index]}`} alt="" height="70" width="70" />
                             </Flex>
-                            <chakra.h3 fontWeight="semibold" fontSize="2xl" mt={6}>
+                            <chakra.h3 fontWeight="semibold" fontSize="xl" mt={3}>
                                 {feature.heading}
                             </chakra.h3>
                             <Text fontSize="md" mt={4}>
                                 {feature.content}
                             </Text>
-                            <Link href="#" mt={4} fontSize="sm" color="blue.400">
+                            {/* <Link href="#" mt={6} fontSize="sm" color="blue.400">
                                 Learn more →
-                            </Link>
+                            </Link> */}
                         </Box>
                     ))}
                 </SimpleGrid>
