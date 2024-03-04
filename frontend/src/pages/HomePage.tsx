@@ -21,7 +21,7 @@ const HomePage = ({ currentTheme }: homePageProps) => {
       <ProductCarousel />
       <IndustryCarousel currentTheme={currentTheme}/>
       <WhatWeDo />
-      <HomeServices currentTheme={currentTheme}/>
+      {/* <HomeServices currentTheme={currentTheme}/> */}
       <OurPartners currentTheme={currentTheme}/>
     </>
   )

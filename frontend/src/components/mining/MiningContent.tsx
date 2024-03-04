@@ -1,22 +1,22 @@
-
 import {
     Box,
+    // Button,
     Container,
     Flex,
-    ListItem,
+    // ListItem,
     Stack,
     Text,
-    UnorderedList
+    // UnorderedList
 } from '@chakra-ui/react';
 
-import { RiTyphoonLine } from 'react-icons/ri';
 import theme from '../../theme';
+// import { RiTyphoonLine } from 'react-icons/ri';
 
 
 
 export const MiningContent = () => {
-
-    const spadeIconArray = [<RiTyphoonLine />]
+    // const aspectRatio = 3 / 3
+    // const spadeIconArray = [<RiTyphoonLine />]
 
     return (
         <Box >
@@ -33,12 +33,15 @@ export const MiningContent = () => {
                             Beyond Boundaries - Satellite-driven Mining Excellence!
                         </Text>
                         <Text textAlign="justify">
-                            Suhora stands at the forefront of the solar industry, offering unparalleled consulting and design services to clients seeking to harness the power of solar energy for their projects.
+                            Suhora harnessed advanced satellite technology with Machine Learning capabilities
+                            allowing mining companies to identify promising mineral deposits, monitor and manage mining activities like Site selection, Infrastructure monitoring and planning, Resource estimation, Environmental Impact, Safety and risk management with unprecedented precision.
+
+                            {/* Suhora stands at the forefront of the solar industry, offering unparalleled consulting and design services to clients seeking to harness the power of solar energy for their projects.
                             <br />
                             <br />
-                            Through the utilization of an advanced auto-layout generation platform, Suhora empowers its customers to streamline their design processes, saving valuable time and resources across multiple iterations.
+                            Through the utilization of an advanced auto-layout generation platform, Suhora empowers its customers to streamline their design processes, saving valuable time and resources across multiple iterations. */}
                         </Text>
-                        <Flex w="100%" direction="column" rowGap={4} justifyContent="space-between">
+                        {/* <Flex w="100%" direction="column" rowGap={4} justifyContent="space-between">
                             <UnorderedList listStyleType="hidden" fontSize={theme.fonts.list} marginLeft={0}>
                                 <ListItem display="flex" mb="2" alignItems="center" marginTop={4} gap={2}>
                                     <Box fontSize={theme.fonts.subHeadingSecond.size} color={theme.companyTheme.color.secondry}>
@@ -82,10 +85,21 @@ export const MiningContent = () => {
                                 </ListItem>
 
                             </UnorderedList>
-                        </Flex>
+                        </Flex> */}
                     </Stack>
                 </Stack>
             </Container>
         </Box>
     )
 } 
+
+
+
+
+
+
+
+
+
+
+

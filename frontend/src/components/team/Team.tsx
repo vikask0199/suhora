@@ -7,9 +7,6 @@ import {
 } from '@chakra-ui/react'
 import AgricultureImg from '../../assets/img/team.jpeg'
 import theme from '../../theme'
-// type team = {
-//     currentTheme: string
-// }
 
 const Team = () => {
 

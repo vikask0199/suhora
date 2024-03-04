@@ -11,8 +11,9 @@ const TeamPage = () => {
       {/* <Team currentTheme={currentTheme} />
       <TeamCards currentTheme={currentTheme} />
       <TeamContact currentTheme={currentTheme} /> */}
+
       <Team  />
-      <TeamCards  />
+      <TeamCards />
       <TeamContact  />
     </>
   )

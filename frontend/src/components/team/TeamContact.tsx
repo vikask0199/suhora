@@ -5,6 +5,7 @@ import theme from '../../theme'
 // }
 const TeamContact = () => {
   // const backgroundColor = currentTheme === 'light' ? 'gray.200' : '#282b3c';
+
   return (
     <Box bg="gray.800" as="section" minH="140px" position="relative">
       <Box py="32" position="relative" zIndex={1}>

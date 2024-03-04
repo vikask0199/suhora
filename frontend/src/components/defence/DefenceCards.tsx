@@ -25,8 +25,8 @@ interface IFeature {
 
 const features: IFeature[] = [
     {
-        heading: 'Payments',
-        content: 'Choose from Stripe, Paddle, Braintree, or PayPal to launch your product quickly.',
+        heading: 'Surveillance & Intelligence',
+        content: 'We leverage state-of-the-art imagery, EO, and SIGINT for superior surveillance and swift defense insights, covering both maritime and terrestrial domains.',
         icon: (
             <Box fontSize={theme.fonts.mainHeading.size}>
                 <MdPayment />
@@ -34,8 +34,8 @@ const features: IFeature[] = [
         )
     },
     {
-        heading: 'Invoicing',
-        content: 'Webhooks are wired up to automatically email customers PDF receipts and invoices.',
+        heading: 'Integrated Global View',
+        content: 'Suhora’s powerful fusion Engine of optical, SAR, thermal, AIS, and RF data to deliver a unified perspective on worldwide activities.',
         icon: (
 
             <Box fontSize={theme.fonts.mainHeading.size}>
@@ -44,8 +44,8 @@ const features: IFeature[] = [
         )
     },
     {
-        heading: 'API Included',
-        content: 'Roll your own API to easily connect with other apps or services. Pull in updates.',
+        heading: 'Data Security',
+        content: 'We commit the highest level of intelligence protection with our robust encryption protocols for all communications.',
         icon: (
 
             <Box fontSize={theme.fonts.mainHeading.size}>
@@ -54,8 +54,8 @@ const features: IFeature[] = [
         )
     },
     {
-        heading: 'API Included',
-        content: 'Roll your own API to easily connect with other apps or services. Pull in updates.',
+        heading: 'Tailored Intelligence Solutions',
+        content: 'Experience analytical tools, integrating diverse data streams for precise defense and intelligence applications.',
         icon: (
 
             <Box fontSize={theme.fonts.mainHeading.size}>
@@ -64,8 +64,8 @@ const features: IFeature[] = [
         )
     },
     {
-        heading: 'API Included',
-        content: 'Roll your own API to easily connect with other apps or services. Pull in updates.',
+        heading: 'Terrain Situational Awareness',
+        content: 'Our Advanced ISR capabilities offer precise monitoring, analysis of diverse terrains via high-res satellite imagery, AI augmentation, empowering strategic planning and security.',
         icon: (
 
             <Box fontSize={theme.fonts.mainHeading.size}>
@@ -74,8 +74,8 @@ const features: IFeature[] = [
         )
     },
     {
-        heading: 'API Included',
-        content: 'Roll your own API to easily connect with other apps or services. Pull in updates.',
+        heading: 'Maritime Domain Awareness',
+        content: 'Innovative maritime surveillance solutions provide real-time vessel tracking, threat detection, and security enhancement, meeting evolving operational demands through continuous innovation.',
         icon: (
 
             <Box fontSize={theme.fonts.mainHeading.size}>
@@ -100,12 +100,12 @@ const DefenceCards = ({ currentTheme }: HomeServices) => {
                     <Flex justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
                         <Text>
                             <Text as="span">What We </Text>
-                            <Text as="span" color={theme.companyTheme.color.secondry}>Serve</Text>
+                            <Text as="span" color={theme.companyTheme.color.secondry}>Offer</Text>
                         </Text>
                     </Flex>
-                    <Text fontSize={theme.fonts.subHeading.size} color={theme.companyTheme.color.third} fontWeight={theme.fonts.subHeading.weight} textAlign="center">
+                    {/* <Text fontSize={theme.fonts.subHeading.size} color={theme.companyTheme.color.third} fontWeight={theme.fonts.subHeading.weight} textAlign="center">
                         Everything you need to build modern UI and great products.
-                    </Text>
+                    </Text> */}
                 </Stack>
                 <SimpleGrid columns={{ base: 1, sm: 2, md: 3 }} placeItems="center" spacing={10} mb={4} mt={12}>
                     {features.map((feature, index) => (
@@ -118,11 +118,11 @@ const DefenceCards = ({ currentTheme }: HomeServices) => {
                             pos="relative"
                         >
                             <Flex
-                                p={2}
+                                p={4}
                                 w="max-content"
                                 color="white"
                                 bgGradient="linear(to-br, #228be6, #15aabf)"
-                                rounded="md"
+                                rounded="lg"
                                 marginInline="auto"
                                 pos="absolute"
                                 left={0}
@@ -131,13 +131,13 @@ const DefenceCards = ({ currentTheme }: HomeServices) => {
                                 boxShadow="lg">
                                 {iconArray[index]}
                             </Flex>
-                            <chakra.h3 fontWeight="semibold" fontSize="2xl" mt={6}>
+                            <chakra.h3 fontWeight="semibold" fontSize="xl" mt={3}>
                                 {feature.heading}
                             </chakra.h3>
                             <Text fontSize="md" mt={4}>
                                 {feature.content}
                             </Text>
-                            <Link href="#" mt={4} fontSize="sm" color="blue.400">
+                            <Link href="#" mt={6} fontSize="sm" color="blue.400">
                                 Learn more →
                             </Link>
                         </Box>

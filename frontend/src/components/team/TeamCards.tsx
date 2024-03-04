@@ -21,6 +21,7 @@ import theme from '../../theme'
 // type spadeFeatureProps = {
 //   currentTheme: string
 // }
+
 const TeamCards = () => {
   const aspectRatio = 3 / 3
   // const backgroundColor = currentTheme === 'light' ? 'gray.200' : '#282b3c';

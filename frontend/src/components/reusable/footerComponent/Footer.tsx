@@ -18,13 +18,17 @@ import LogoDark from '../../../assets/img/logo/suhora_logo.png'
 import LogoWhite from '../../../assets/img/logo/suhora_white.png'
 import { links } from "../../../constant/footerData"
 import theme from '../../../theme'
+import { FaLocationDot } from "react-icons/fa6";
+import { FaPhoneAlt } from "react-icons/fa";
+
+
 type footerThemeProps = {
     currentTheme: string;
 }
 const Footer = ({ currentTheme }: footerThemeProps) => {
     const backgroundColor = currentTheme === 'light' ? 'gray.200' : '#282B3C';
     return (
-        <Box background={backgroundColor} pt={{ base: '16', md: '12' }}>
+        <Box background={backgroundColor} pt={{ base: '16', md: '12' }} >
             <Container as="footer" role="contentinfo" maxW="6xl">
                 <Stack
                     justify="space-between"
@@ -36,13 +40,31 @@ const Footer = ({ currentTheme }: footerThemeProps) => {
                         <Flex h={20} alignItems="center" ml="-5">
                             <Image h="100%" src={currentTheme === 'dark' ? LogoWhite : LogoDark} />
                         </Flex>
-                        <Text>
-                            313, Tower-B, Noida One, Sector-62,
-                            <br />
-                            Noida, U.P.-201309, India
-                            <br />
-                            0120-3113029, 3501889
-                        </Text>
+                        <Flex direction="column" gap="3">
+                            <Flex gap="3">
+                                <Text fontSize={theme.fonts.subHeading.size} p="1">
+                                    <FaLocationDot />
+                                </Text>
+                                <Flex >
+                                    313, Tower-B, Noida One,
+                                    <br />
+                                    Sector-62,
+                                    Noida,
+                                    U.P.-201309, India
+                                    <br />
+                                </Flex>
+                            </Flex>
+                            <Flex gap="3">
+                                <Text fontSize={theme.fonts.subHeading.size} p="1">
+                                    <FaPhoneAlt />
+                                </Text>
+                                <Flex >
+                                    0120-3113029, 3501889
+                                    <br />
+                                    +91-9999664473
+                                </Flex>
+                            </Flex>
+                        </Flex>
                     </Stack>
                     <SimpleGrid columns={{ base: 2, md: 4 }} gap="8" width={{ base: 'full', lg: 'auto' }}>
                         {links.map((group, idx) => (
@@ -75,7 +97,7 @@ const Footer = ({ currentTheme }: footerThemeProps) => {
                     </Text>
                     <ButtonGroup variant="tertiary">
                         <IconButton as="a" href="https://www.linkedin.com/company/suhora/mycompany/" target="_blank" aria-label="LinkedIn" icon={<FaLinkedin />} _hover={{ color: theme.companyTheme.color.secondry }} />
-                        <IconButton as="a" href="#" aria-label='whatsapp' icon={<FaWhatsapp />} _hover={{ color: theme.companyTheme.color.secondry }} />
+                        <IconButton as="a" href="https://wa.me/+919999664437" target="_blank" aria-label="GitHub" icon={<FaWhatsapp />} _hover={{ color: theme.companyTheme.color.secondry }} />
                         <IconButton as="a" href="https://twitter.com/suhoratech" target="_blank" aria-label="Twitter" icon={<FaXTwitter />} _hover={{ color: theme.companyTheme.color.secondry }} />
                     </ButtonGroup>
                 </Stack>

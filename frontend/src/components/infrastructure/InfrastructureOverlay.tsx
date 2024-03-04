@@ -18,8 +18,8 @@ const InfrastructureOverlay = () => {
             </Flex>
             <Flex justifyContent='center'>
               <Text mt='1em' fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>
-               Sky-Built Precision: AI-Powered Construction Monitoring.
-
+               {/* Sky-Built Precision: AI-Powered Construction Monitoring. */}
+               Modernize Infrastructure using Satellite Insights Enhanced by AI & Automation
               </Text>
             </Flex>
           </Box>

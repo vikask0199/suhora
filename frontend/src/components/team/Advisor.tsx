@@ -1,4 +1,5 @@
 import {
+<<<<<<< HEAD
     Box,
     Flex,
     Heading,
@@ -15,6 +16,24 @@ const Team = () => {
 
     // const backgroundColor = currentTheme === 'light' ? 'gray.200' : '#282b3c';
 
+=======
+    Flex, Img, Box,
+    // Container,
+    Heading,
+
+    Text
+} from '@chakra-ui/react'
+import theme from '../../theme'
+// import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
+import AgricultureImg from '../../assets/img/team.jpeg'
+// type team = {
+//     currentTheme: string
+// }
+
+const Team = () => {
+    
+    // const backgroundColor = currentTheme === 'light' ? 'gray.200' : '#282b3c';
+>>>>>>> 70bb852464a4778417778b5ebcb984e3ca733605
     return (
         <>
             <Box as="section" minH="140px" position="relative" p={10} >

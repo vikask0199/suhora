@@ -64,7 +64,7 @@ export const OurPartners = ({ currentTheme }: ourPartnersProps) => {
                     </Text>
                 </Flex>
                 <Text fontSize={theme.fonts.subHeading.size} color={theme.companyTheme.color.third} fontWeight={theme.fonts.subHeading.weight} textAlign="center">
-                    Everything you need to build modern UI and great products.
+                    {/* Everything you need to build modern UI and great products. */}
                 </Text>
             </Stack>
             <Box className="slider-container" maxW="6xl">
