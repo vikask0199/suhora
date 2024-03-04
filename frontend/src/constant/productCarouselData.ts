@@ -1,6 +1,7 @@
-import spademain from "../assets/img/products/spademain.png"
-import sidmain from "../assets/img/products/sidmain.png"
-import lancemain from "../assets/img/products/lancemain.png"
+// import spademain from "../assets/img/products/spademain.png"
+import spademain from '../assets/img/products/spade_monitor.webp'
+import sidmain from "../assets/img/products/sidmain_monitor.webp"
+import lancemain from "../assets/img/products/lancemain_monitor.webp"
 
 export const products = [
   {

@@ -2,13 +2,13 @@ import { AspectRatio, Box, Button, Flex, Image, ListItem, Text, UnorderedList } 
 import theme from "../../../theme"
 import { RiTyphoonLine } from "react-icons/ri"
 import { Link } from "react-router-dom"
-
+import spademain from '../../../assets/img/products/spade_monitor.webp'
 type spadeFeatureProps = {
     currentTheme: string
 }
 
 const SpadeFeature = ({ currentTheme }: spadeFeatureProps) => {
-    const aspectRatio = 3 / 3
+    const aspectRatio = 3 / 2.5
     const spadeIconArray = [<RiTyphoonLine />]
 
     const backgroundColor = currentTheme === 'light' ? 'gray.200' : '#282b3c';
@@ -31,7 +31,7 @@ const SpadeFeature = ({ currentTheme }: spadeFeatureProps) => {
                 <Flex direction={{ base: "column", md: "row" }} boxShadow='rgba(0, 0, 0, 0.35) 0px 5px 15px'>
                     <Box w={{ base: "100%", md: "50%" }} padding={7}>
                         <AspectRatio ratio={aspectRatio}>
-                            <Image src="https://images.unsplash.com/photo-1602024242516-fbc9d4fda4b6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" />
+                            <Image src={spademain}/>
                         </AspectRatio>
                     </Box>
                     <Flex w={{ base: "100%", md: "50%" }} p={8} direction="column" rowGap={4} justifyContent="space-between">

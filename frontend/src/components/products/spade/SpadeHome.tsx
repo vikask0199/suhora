@@ -1,8 +1,10 @@
-import { Box, Button, Flex, Img, Stack, Text } from '@chakra-ui/react'
+import { AspectRatio, Box, Button, Flex, Img, Stack, Text } from '@chakra-ui/react'
 import theme from '../../../theme'
 import { Link } from 'react-router-dom'
-import spademain from '../../../assets/img/products/spademain.png'
+// import spademain from '../../../assets/img/products/spademain.png'
+import spademain from '../../../assets/img/products/spade_header.webp'
 export const SpadeHome = () => {
+  const aspectRatio = 16/5
   return (
     <Box bg="gray.800" as="section" minH="140px" position="relative">
       <Box py="32" position="relative" zIndex={1}>
@@ -35,6 +37,7 @@ export const SpadeHome = () => {
         align="center"
       >
         <Box position="relative" w="full" h="full">
+        <AspectRatio ratio={aspectRatio}>
           <Img 
             src={spademain}
             alt="Main Image"
@@ -45,6 +48,7 @@ export const SpadeHome = () => {
             position="absolute"
             
           />
+          </AspectRatio>
           <Box position="absolute" w="full" h="full" bg="blackAlpha.600" />
         </Box>
       </Flex>

@@ -1,5 +1,6 @@
-import { AspectRatio, Box, Flex, Image, Modal, ModalContent, ModalOverlay, Spinner, useDisclosure } from "@chakra-ui/react";
+import { AspectRatio, Box, Flex, Image, Modal, ModalContent, ModalOverlay, Spinner, Stack, Text, useDisclosure } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
+import theme from "../../theme";
 
 function Galleries() {
 
@@ -35,7 +36,21 @@ function Galleries() {
     const [imageName, setImageName] = useState("")
 
     return (
-        <Flex minH="80vh" px={{ base: '4', md: '8', lg: '5' }} py={{ base: '16', md: '20', lg: '24' }} justifyContent="center">
+
+        <Flex  direction="column" align="center" gap={10} px={{ base: '4', md: '8', lg: '5' }} py={{ base: '4', md: '8', lg: '12' }} justifyContent="center">
+              <Stack >
+          <Stack >
+            <Flex justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight} >
+              <Text>
+                <Text as="span" color={theme.companyTheme.color.secondry} >Our </Text>
+                <Text as="span">Gallery </Text>
+              </Text>
+            </Flex>
+            {/* <Text textAlign="center" maxW="6xl" color={theme.companyTheme.color.third} fontSize={theme.fonts.subHeading.size} fontWeight={theme.fonts.subHeading.weight}>
+              Multi-band high-resolution images from various satellites.
+            </Text> */}
+          </Stack>
+        </Stack>
             <Box maxW="6xl" h="100%" w="100%">
                 <Flex gap="5" wrap="wrap" justifyContent="center" >
                     {

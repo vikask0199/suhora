@@ -2,7 +2,7 @@
 import { Flex, Spinner, useColorMode } from '@chakra-ui/react';
 import { Suspense, lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import Galleries from './components/gallery/Galleries';
+// import Galleries from './components/gallery/Galleries';
 import PublicOutlet from './outlet/PublicOutlet';
 import AboutUs from './pages/AboutUsPage';
 import AgriculturePage from './pages/AgriculturePage';
@@ -21,6 +21,7 @@ import SIDPage from './pages/SIDPage';
 import SpadePage from './pages/SpadePage';
 import TeamPage from './pages/TeamPage';
 import TerrainMappingPage from './pages/TerrainMappingPage';
+import GalleryPage from './pages/GalleryPage';
 // import HomePage from './pages/HomePage';
 const HomePage = lazy(() => import('./pages/HomePage'))
 
@@ -61,7 +62,7 @@ function App() {
           <Route path="/" element={<PublicOutlet toggleTheme={toggleColorMode} currentTheme={colorMode} />}>
             <Route index element={<HomePage currentTheme={colorMode} />} />
             <Route path="contact-us" element={<ContactPage currentTheme={colorMode} />} />
-            <Route path="gallery" element={<Galleries />} />
+            <Route path="gallery" element={<GalleryPage />} />
 
             {/* product */}
             <Route path="spade" element={<SpadePage currentTheme={colorMode} />} />
