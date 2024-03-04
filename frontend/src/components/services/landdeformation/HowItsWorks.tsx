@@ -42,8 +42,8 @@ export const HowItsWorks = ({ currentTheme }: howWorks) => {
 
 const steps = [
     {
-        title: 'Project area',
-        description: 'Selection',
+        title: 'Select project',
+        description: 'area',
     },
     {
         title: 'Define your',

@@ -96,12 +96,12 @@ const DefenceCards = ({ currentTheme }: HomeServices) => {
                                 pos="absolute"
                                 left={0}
                                 right={0}
-                                top="-2.2rem"
+                                top="-2.5rem"
                             // boxShadow="xl"
                             >
                                 <img src={`${iconArray[index]}`} alt="" height="70" width="70" />
                             </Flex>
-                            <chakra.h3 fontWeight="semibold" fontSize="xl" mt={3}>
+                            <chakra.h3 fontWeight="semibold" fontSize={theme.fonts.subHeadingSecond.size} mt={5}>
                                 {feature.heading}
                             </chakra.h3>
                             <Text fontSize="md" mt={4}>

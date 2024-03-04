@@ -54,7 +54,7 @@ export const Gallery = () => {
         <Carousel ref={ref} boxShadow='rgba(0, 0, 0, 0.35) 0px 5px 15px' >
           {products.map((image, i) => (
             <CarouselSlide key={i}>
-              <Flex direction={{ base: "column", md: "row" }}>
+              <Flex direction={{ base: "column", md: "row" }} alignItems="center">
                 <Box w={{ base: "100%", md: "50%" }} padding={7}>
                   <AspectRatio ratio={aspectRatio}>
                     <Image src={image.imageUrl} objectFit="fill"/>

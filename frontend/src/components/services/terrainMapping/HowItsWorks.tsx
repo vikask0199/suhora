@@ -42,20 +42,20 @@ export const HowItsWorks = ({ currentTheme }: howWorks) => {
 
 const steps = [
     {
-        title: 'Step 1',
-        description: 'Project area',
+        title: 'Select project',
+        description: 'area',
     },
     {
-        title: 'Step 2',
-        description: 'Define requirments',
+        title: 'Define Your',
+        description: 'requirments',
     },
     {
-        title: 'Step 3',
-        description: 'Production',
+        title: 'Production',
+        description: '',
     },
     {
-        title: 'Step 4',
-        description: 'Seamless and precise terrain data',
+        title: 'Seamless and',
+        description: 'precise terrain data',
     },
 
 ]

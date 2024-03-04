@@ -1,7 +1,7 @@
 import { Box, Button, Flex, Img, Stack, Text } from '@chakra-ui/react'
 import theme from '../../../theme'
 import { Link } from 'react-router-dom'
-
+import spademain from '../../../assets/img/products/spademain.png'
 export const SpadeHome = () => {
   return (
     <Box bg="gray.800" as="section" minH="140px" position="relative">
@@ -35,14 +35,15 @@ export const SpadeHome = () => {
         align="center"
       >
         <Box position="relative" w="full" h="full">
-          <Img
-            src="https://images.unsplash.com/photo-1590650153855-d9e808231d41?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=2250&q=80"
+          <Img 
+            src={spademain}
             alt="Main Image"
             w="full"
             h="full"
             objectFit="cover"
             objectPosition="top bottom"
             position="absolute"
+            
           />
           <Box position="absolute" w="full" h="full" bg="blackAlpha.600" />
         </Box>

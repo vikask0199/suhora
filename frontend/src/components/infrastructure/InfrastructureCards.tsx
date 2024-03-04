@@ -6,7 +6,7 @@ import {
     Text,
     SimpleGrid,
     Flex,
-    Link,
+    // Link,
     useColorModeValue,
     Stack
 } from '@chakra-ui/react';
@@ -137,9 +137,9 @@ const InfrastructureCards = ({ currentTheme }: HomeServices) => {
                             <Text fontSize="md" mt={4}>
                                 {feature.content}
                             </Text>
-                            <Link href="#" mt={4} fontSize="sm" color="blue.400">
+                            {/* <Link href="#" mt={4} fontSize="sm" color="blue.400">
                                 Learn more →
-                            </Link>
+                            </Link> */}
                         </Box>
                     ))}
                 </SimpleGrid>

@@ -13,8 +13,8 @@ export const HowItsWorks = ({ currentTheme }: howWorks) => {
             <Container maxW="6xl">
                 <Flex mb={{ base: '2', md: '4' }} justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight} >
                     <Text>
-                        <Text as="span">How It </Text>
-                        <Text as="span" color={theme.companyTheme.color.secondry}>Works</Text>
+                        <Text as="span">Hydrology </Text>
+                        <Text as="span" color={theme.companyTheme.color.secondry}>Workflow</Text>
                     </Text>
                 </Flex>
                 <Text mb={{ base: '2', md: '4' }} color={theme.companyTheme.color.third} fontSize={theme.fonts.subHeading.size} fontWeight={theme.fonts.subHeading.weight} maxW="6xl" pb={{ base: '4', md: '8' }} textAlign="center">
@@ -42,20 +42,20 @@ export const HowItsWorks = ({ currentTheme }: howWorks) => {
 
 const steps = [
     {
-        title: 'Step 1',
-        description: 'Project area',
+        title: 'Select project',
+        description: 'area',
     },
     {
-        title: 'Step 2',
-        description: 'Define requirments',
+        title: 'Define your',
+        description: 'requirments',
     },
     {
-        title: 'Step 3',
-        description: 'Analysis at Suhora',
+        title: 'Analysis by',
+        description: 'Suhora',
     },
     {
-        title: 'Step 4',
-        description: 'Risk report mitigation measures',
+        title: 'Risk report',
+        description: 'mitigation measures',
     },
 
 ]
