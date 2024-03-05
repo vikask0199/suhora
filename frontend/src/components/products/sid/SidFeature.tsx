@@ -3,11 +3,9 @@ import { RiTyphoonLine } from "react-icons/ri"
 import theme from "../../../theme"
 import { Link } from "react-router-dom"
 import sidmain from "../../../assets/img/products/sid_monitor_final.webp"
-type spadeFeatureProps = {
-    currentTheme: string
-}
 
-const SidFeature = ({ currentTheme }: spadeFeatureProps) => {
+
+const SidFeature = () => {
     const aspectRatio = 3 / 2.5
     const spadeIconArray = [<RiTyphoonLine />]
 

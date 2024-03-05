@@ -71,20 +71,19 @@ const ContactUs = ({ currentTheme }: contactProps) => {
             subject: subject
         };
 
-        const response = axios.post('test.suhora.com/send', postData)
+        axios.post('https://test.suhora.com/send', postData)
             .then((response) => {
+                console.log(response);
                 setName(""),
-                setEmail(""),
-                SetPhone(""),
-                setMessage(""),
-                setSubject("")
+                    setEmail(""),
+                    SetPhone(""),
+                    setMessage(""),
+                    setSubject("")
                 window.alert("Our support team will get back to you.")
             })
-            .catch((error) => {
+            .catch(() => {
                 window.alert("Please try after some times")
             });
-
-        console.log(response)
     };
 
     return (

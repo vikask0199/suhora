@@ -16,7 +16,7 @@ const SpadePage = ({ currentTheme }: spadePageProps) => {
     <>
       <SpadeHome />
       <AboutSpade  currentTheme={currentTheme}/>
-      <SpadeFeature currentTheme={currentTheme}/>
+      <SpadeFeature />
       <HowItsWorksSpade currentTheme={currentTheme} />
       <SpadeIndutryWeServe />
       <SpadeDemo />

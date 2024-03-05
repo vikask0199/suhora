@@ -1,49 +1,48 @@
-import { SVGProps } from 'react';
 import {
-    Container,
     Box,
-    chakra,
-    Text,
-    SimpleGrid,
+    Container,
     Flex,
+    SimpleGrid,
+    Stack,
+    Text,
+    chakra,
     // Link,
-    useColorModeValue,
-    Stack
+    useColorModeValue
 } from '@chakra-ui/react';
 
+import forestry_forest_fire from '../../assets/img/industries/Forest_Fire.webp';
+import forestry_forest_health from '../../assets/img/industries/Forest_Health_Monitoring.webp';
+import forestry_deforestation from '../../assets/img/industries/Forestry_Deforestation_Monitoring.webp';
+import forestry_forest_productivity from '../../assets/img/industries/forest_productivity_monitoring.webp';
+import forestry_tree_species from '../../assets/img/industries/forestry_Tree_Species_Identification.webp';
 import theme from '../../theme';
-import forestry_deforestation from '../../assets/img/industries/Forestry_Deforestation_Monitoring.webp'
-import forestry_forest_fire from '../../assets/img/industries/Forest_Fire.webp'
-import forestry_forest_productivity from '../../assets/img/industries/forest_productivity_monitoring.webp'
-import forestry_forest_health from '../../assets/img/industries/Forest_Health_Monitoring.webp'
-import forestry_tree_species from '../../assets/img/industries/forestry_Tree_Species_Identification.webp'
 
 interface IFeature {
     heading: string;
     content: string;
-    
+
 }
 
 const features: IFeature[] = [
     {
         heading: 'Deforestation Monitoring',
         content: 'Choose from Stripe, Paddle, Braintree, or PayPal to launch your product quickly.',
-     
+
     },
     {
         heading: 'Forest Fire Monitoring',
         content: 'Webhooks are wired up to automatically email customers PDF receipts and invoices.',
-  
+
     },
     {
         heading: 'Forest Productivity Monitoring',
         content: 'Roll your own API to easily connect with other apps or services. Pull in updates.',
- 
+
     },
     {
         heading: 'Forest Health Monitoring',
         content: 'Roll your own API to easily connect with other apps or services. Pull in updates.',
-  
+
     },
     {
         heading: 'Tree Species Indentification',
@@ -85,21 +84,21 @@ const ForestryCards = ({ currentTheme }: HomeServices) => {
                             textAlign="center"
                             pos="relative"
                         >
-                        <Flex
-                        p={1}
-                        w="max-content"
-                        color="white"
-                        // bgGradient="linear(to-br, #228be6, #15aabf)"
-                        rounded="lg"
-                        marginInline="auto"
-                        pos="absolute"
-                        left={0}
-                        right={0}
-                        top="-2.5rem"
-                    // boxShadow="xl"
-                    >
-                    <img src={`${iconArray[index]}`} alt="" height="70" width="70" />
-                    </Flex>
+                            <Flex
+                                p={1}
+                                w="max-content"
+                                color="white"
+                                // bgGradient="linear(to-br, #228be6, #15aabf)"
+                                rounded="lg"
+                                marginInline="auto"
+                                pos="absolute"
+                                left={0}
+                                right={0}
+                                top="-2.5rem"
+                            // boxShadow="xl"
+                            >
+                                <img src={`${iconArray[index]}`} alt="" height="70" width="70" />
+                            </Flex>
                             <chakra.h3 fontWeight="semibold" fontSize={theme.fonts.subHeadingSecond.size} mt={6}>
                                 {feature.heading}
                             </chakra.h3>

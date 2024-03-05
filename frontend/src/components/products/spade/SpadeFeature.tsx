@@ -1,17 +1,14 @@
 import { AspectRatio, Box, Button, Flex, Image, ListItem, Text, UnorderedList } from "@chakra-ui/react"
-import theme from "../../../theme"
 import { RiTyphoonLine } from "react-icons/ri"
 import { Link } from "react-router-dom"
 import spademain from '../../../assets/img/products/spade_monitor_final.webp'
-type spadeFeatureProps = {
-    currentTheme: string
-}
+import theme from "../../../theme"
 
-const SpadeFeature = ({ currentTheme }: spadeFeatureProps) => {
+const SpadeFeature = () => {
     const aspectRatio = 3 / 2.5
     const spadeIconArray = [<RiTyphoonLine />]
 
-    const backgroundColor = currentTheme === 'light' ? 'gray.200' : '#282b3c';
+    // const backgroundColor = currentTheme === 'light' ? 'gray.200' : '#282b3c';
 
     return (
         <Box >
@@ -31,7 +28,7 @@ const SpadeFeature = ({ currentTheme }: spadeFeatureProps) => {
                 <Flex direction={{ base: "column", md: "row" }} boxShadow='rgba(0, 0, 0, 0.35) 0px 5px 15px'>
                     <Box w={{ base: "100%", md: "50%" }} padding={7}>
                         <AspectRatio ratio={aspectRatio}>
-                            <Image src={spademain}/>
+                            <Image src={spademain} />
                         </AspectRatio>
                     </Box>
                     <Flex w={{ base: "100%", md: "50%" }} p={8} direction="column" rowGap={4} justifyContent="space-between">

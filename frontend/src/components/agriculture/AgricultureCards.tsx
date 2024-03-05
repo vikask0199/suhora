@@ -1,30 +1,26 @@
-import { SVGProps } from 'react';
 import {
-    Container,
     Box,
-    chakra,
-    Text,
-    SimpleGrid,
+    Container,
     Flex,
+    SimpleGrid,
+    Stack,
+    Text,
+    chakra,
     // Link,
-    useColorModeValue,
-    Stack
+    useColorModeValue
 } from '@chakra-ui/react';
 
-import { MdPayment } from 'react-icons/md';
-import { FaFileInvoiceDollar } from 'react-icons/fa';
-import { FaFileCode } from 'react-icons/fa';
+import agri_satellite from '../../assets/img/industries/Agri_Satellite_Imagery.webp';
+import agri_acreage from '../../assets/img/industries/agri_Acreage_Estimation.webp';
+import agri_crop from '../../assets/img/industries/agri_Crop_Health.webp';
+import agri_lband from '../../assets/img/industries/agri_LBand_SAR.webp';
+import agri_ndvi from '../../assets/img/industries/agri_NDVI.webp';
 import theme from '../../theme';
-import agri_satellite from '../../assets/img/industries/Agri_Satellite_Imagery.webp'
-import agri_lband from '../../assets/img/industries/agri_LBand_SAR.webp'
-import agri_ndvi from '../../assets/img/industries/agri_NDVI.webp'
-import agri_acreage from '../../assets/img/industries/agri_Acreage_Estimation.webp'
-import agri_crop from '../../assets/img/industries/agri_Crop_Health.webp'
 
 interface IFeature {
     heading: string;
     content: string;
-   
+
 }
 
 const features: IFeature[] = [
@@ -44,7 +40,7 @@ const features: IFeature[] = [
         heading: 'NDVI',
         // content: 'Our platform SPADE generates on the fly NDVI & delivers to the customer on their purchased optical data.',
         content: "Leverage our SPADE platform to generate NDVI on demand, seamlessly integrated purchased optical data.",
-  
+
     },
     {
         heading: 'Acreage Estimation',
@@ -55,7 +51,7 @@ const features: IFeature[] = [
     {
         heading: 'Crop Health',
         // content: 'To ensure the maximum yield for crops periodic crop health monitoring is very important we offer week, fortnight and monthly crop health reports through our platform SPADE.',
-        content : "Enhance crop productivity with regular health monitoring reports available weekly, fortnightly, and monthly via SPADE.",
+        content: "Enhance crop productivity with regular health monitoring reports available weekly, fortnightly, and monthly via SPADE.",
 
     },
 
@@ -80,7 +76,7 @@ const AgricultureCards = ({ currentTheme }: HomeServices) => {
                         </Text>
                     </Flex>
                     <Text fontSize={theme.fonts.subHeading.size} color={theme.companyTheme.color.third} fontWeight={theme.fonts.subHeading.weight} textAlign="center">
-                    Harvest Optimization Powered by Satellite Data: Maximize Yield, Minimize Risk.
+                        Harvest Optimization Powered by Satellite Data: Maximize Yield, Minimize Risk.
                     </Text>
                 </Stack>
                 <SimpleGrid columns={{ base: 1, sm: 2, md: 3 }} placeItems="center" spacing={10} mb={4} mt={12}>
@@ -93,7 +89,7 @@ const AgricultureCards = ({ currentTheme }: HomeServices) => {
                             textAlign="center"
                             pos="relative"
                         >
-                              <Flex
+                            <Flex
                                 p={1}
                                 w="max-content"
                                 color="white"

@@ -13,7 +13,7 @@ const SIDPage = ({ currentTheme }: currentThemeProps) => {
         <>
             <SidHome />
             <AboutSid currentTheme={currentTheme}/>
-            <SidFeature currentTheme={currentTheme} />
+            <SidFeature />
             <SidIndutryWeServe currentTheme={currentTheme}/>
             <SidDemo />
         </>

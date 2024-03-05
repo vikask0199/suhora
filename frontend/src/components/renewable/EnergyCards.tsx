@@ -1,57 +1,53 @@
-import { SVGProps } from 'react';
 import {
-    Container,
     Box,
-    chakra,
-    Text,
-    SimpleGrid,
+    Container,
     Flex,
+    SimpleGrid,
+    Stack,
+    Text,
+    chakra,
     // Link,
-    useColorModeValue,
-    Stack
+    useColorModeValue
 } from '@chakra-ui/react';
 
-import { MdPayment } from 'react-icons/md';
-import { FaFileInvoiceDollar } from 'react-icons/fa';
-import { FaFileCode } from 'react-icons/fa';
+import renew_environment from '../../assets/img/industries/renew_Environmental_Impact_Analysis.png';
+import renew_infra from '../../assets/img/industries/renew_Infrastructure_Monitoring.webp';
+import renew_project from '../../assets/img/industries/renew_Project_Development_Support.webp';
+import renew_resource from '../../assets/img/industries/renew_Resource_Optimization.webp';
+import renew_site_assessment from '../../assets/img/industries/renew_Site_Assessment_Selection.webp';
 import theme from '../../theme';
-import renew_site_assessment from '../../assets/img/industries/renew_Site_Assessment_Selection.webp'
-import renew_environment from '../../assets/img/industries/renew_Environmental_Impact_Analysis.png'
-import renew_infra from '../../assets/img/industries/renew_Infrastructure_Monitoring.webp'
-import renew_resource from '../../assets/img/industries/renew_Resource_Optimization.webp'
-import renew_project from '../../assets/img/industries/renew_Project_Development_Support.webp'
 
 interface IFeature {
     heading: string;
     content: string;
-   
+
 }
 
 const features: IFeature[] = [
     {
         heading: 'Site Assessment & Selection',
         content: 'Optimize site selection with our comprehensive assessment tools.',
-    
+
     },
     {
         heading: 'Environmental Impact Analysis ',
         content: 'Automatically analyze environmental impacts with our integrated analytics.',
- 
+
     },
     {
         heading: 'Infrastructure Monitoring',
         content: 'Seamlessly monitor infrastructure with our custom integrated solutions',
-   
+
     },
     {
         heading: 'Resource Optimization ',
         content: 'Enhance resource utilization with our efficient API solutions.',
- 
+
     },
     {
         heading: 'Project Development Support',
         content: 'Access comprehensive support for project development via our API.',
- 
+
     },
     // {
     //     heading: 'API Included',
@@ -84,7 +80,7 @@ const EnergyCards = ({ currentTheme }: HomeServices) => {
                         </Text>
                     </Flex>
                     <Text fontSize={theme.fonts.subHeading.size} color={theme.companyTheme.color.third} fontWeight={theme.fonts.subHeading.weight} textAlign="center">
-                   Satellite Driven Solar Innovation
+                        Satellite Driven Solar Innovation
                     </Text>
                 </Stack>
                 <SimpleGrid columns={{ base: 1, sm: 2, md: 3 }} placeItems="center" spacing={10} mb={4} mt={12}>
@@ -97,7 +93,7 @@ const EnergyCards = ({ currentTheme }: HomeServices) => {
                             textAlign="center"
                             pos="relative"
                         >
-                                <Flex
+                            <Flex
                                 p={1}
                                 w="max-content"
                                 color="white"

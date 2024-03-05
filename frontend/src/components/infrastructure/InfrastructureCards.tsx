@@ -1,42 +1,41 @@
-import { SVGProps } from 'react';
 import {
-    Container,
     Box,
-    chakra,
-    Text,
-    SimpleGrid,
+    Container,
     Flex,
+    SimpleGrid,
+    Stack,
+    Text,
+    chakra,
     // Link,
-    useColorModeValue,
-    Stack
+    useColorModeValue
 } from '@chakra-ui/react';
 
 // import { MdPayment } from 'react-icons/md';
 // import { FaFileInvoiceDollar } from 'react-icons/fa';
 // import { FaFileCode } from 'react-icons/fa';
+import infra_env from '../../assets/img/industries/infra_environmental_impactAssessment.webp';
+import infra_asset from '../../assets/img/industries/infra_infrastructure_assetManagement.webp';
+import infra_monitoring from '../../assets/img/industries/infra_monitoring_constructionProgress.webp';
+import infra_remote from '../../assets/img/industries/infra_remote_monitoringandInspection.webp';
+import infra_site from '../../assets/img/industries/infra_site_selection.webp';
 import theme from '../../theme';
-import infra_site from '../../assets/img/industries/infra_site_selection.webp'
-import infra_monitoring from '../../assets/img/industries/infra_monitoring_constructionProgress.webp'
-import infra_env from '../../assets/img/industries/infra_environmental_impactAssessment.webp'
-import infra_asset from '../../assets/img/industries/infra_infrastructure_assetManagement.webp'
-import infra_remote from '../../assets/img/industries/infra_remote_monitoringandInspection.webp'
 
 interface IFeature {
     heading: string;
     content: string;
-    
+
 }
 
 const features: IFeature[] = [
     {
         heading: 'Site Selection and Planning',
         content: 'Our satellite imagery aids informed decision-making in infrastructure site selection by assessing terrain, resources, and environmental factors.',
- 
+
     },
     {
         heading: 'Monitoring Construction Progress',
         content: 'Track construction progress with multi-resolution satellite imagery, ensuring adherence to timelines and efficient resource management.',
- 
+
     },
     {
         heading: 'Environmental Impact Assessment',
@@ -84,7 +83,7 @@ const InfrastructureCards = ({ currentTheme }: HomeServices) => {
                         </Text>
                     </Flex>
                     <Text fontSize={theme.fonts.subHeading.size} color={theme.companyTheme.color.third} fontWeight={theme.fonts.subHeading.weight} textAlign="center">
-                    Elevating Infrastructure Monitoring with AI-Powered Insights
+                        Elevating Infrastructure Monitoring with AI-Powered Insights
                     </Text>
                 </Stack>
                 <SimpleGrid columns={{ base: 1, sm: 2, md: 3 }} placeItems="center" spacing={10} mb={4} mt={12}>
@@ -97,7 +96,7 @@ const InfrastructureCards = ({ currentTheme }: HomeServices) => {
                             textAlign="center"
                             pos="relative"
                         >
-                             <Flex
+                            <Flex
                                 p={1}
                                 w="max-content"
                                 color="white"
