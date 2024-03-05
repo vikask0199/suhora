@@ -28,7 +28,7 @@ export const ForestryProduct = () => {
                     </Flex>
 
                     <Flex justifyContent='center'>
-                    <SimpleGrid columns={{ base: 2, md: 3, lg: 3 }} gap={{ base: '4', md: '6', lg: '8' }}>
+                    <SimpleGrid columns={{ base: 1, md: 1, lg: 1 }} gap={{ base: '4', md: '6', lg: '8' }}>
                         {categories.map((category) => (
                             <CategoryCard key={category.name} category={category} />
                         ))}
@@ -43,8 +43,8 @@ export const ForestryProduct = () => {
 }
 
 
-import agri from "../../assets/img/industries/agri.png";
-import disaster from "../../assets/img/industries/disaster.png";
+// import agri from "../../assets/img/industries/agri.png";
+// import disaster from "../../assets/img/industries/disaster.png";
 // import forest from "../../assets/img/industries/forest.png";
 
 const categories = [
@@ -54,18 +54,18 @@ const categories = [
             spade,
         url: '/spadepage',
     },
-    {
-        name: 'Lance',
-        imageUrl:
-            agri,
-        url: '/lancepage',
-    },
-    {
-        name: 'Sid',
-        imageUrl:
-            disaster,
-        url: 'sidpage',
-    },
+    // {
+    //     name: 'Lance',
+    //     imageUrl:
+    //         agri,
+    //     url: '/lancepage',
+    // },
+    // {
+    //     name: 'Sid',
+    //     imageUrl:
+    //         disaster,
+    //     url: 'sidpage',
+    // },
 ]
 
 export type ElementType<T extends ReadonlyArray<unknown>> = T extends ReadonlyArray<

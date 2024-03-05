@@ -1,28 +1,28 @@
 export const stats = [
     {
       label: 'Sattelite Data',
-      description: 'One of the fastest growing headless UI libraries in the world',
+      description: 'Harnessing valuable insights from space',
       value: '1.3M',
       cta: 'Learn more',
       link: '/gallery' ,
     },
     {
       label: 'Tailored Services',
-      description: 'Appreciated by developers for its simplicity and flexibility and data',
+      description: 'Custom solutions for unique needs',
       value: '30.3K',
       cta: 'Learn more',
       link: '#  ' ,
     },
     {
       label: 'Fastest Processing',
-      description: 'A team of talented and passionate developers ready to help',
+      description: 'Rapid access to critical information',
       value: '8',
       cta: 'Learn more',
       link: '#  ' ,
     },
     {
       label: 'Near Real Time Insights',
-      description: 'Join our friendly and helpful developer community on Discord',
+      description: 'Stay ahead with timely decisions',
       value: '8.3K',
       cta: 'Learn more',
       link: '#  ' ,

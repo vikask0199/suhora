@@ -20,7 +20,7 @@ import { FaTimeline } from "react-icons/fa6";
                         <Text>
                             
                             <Text as="span">Our </Text>
-                            <Text as="span" color={theme.companyTheme.color.secondry}>Technologies </Text>
+                            <Text as="span" color={theme.companyTheme.color.secondry}>Capabilities </Text>
                         </Text>
                     </Flex>
                     <Text fontSize={theme.fonts.subHeading.size} color={theme.companyTheme.color.third} fontWeight={theme.fonts.subHeading.weight} textAlign="center">
@@ -46,25 +46,25 @@ export default AboutusCards
 export const stats = [
     {
       label: 'Sattelite Data',
-      description: 'One of the fastest growing headless UI libraries in the world',
+      description: 'We harness the power of satellite data to gather valuable information and insights from space, enabling informed decision-making',
       value: '',
      cta: '',
     },
     {
       label: 'Tailored Services',
-      description: 'Appreciated by developers for its simplicity and flexibility and data',
+      description: 'Our tailored services cater to the unique needs of each client, ensuring that they receive customized solutions that meet their specific requirements',
       value: '',
       cta: '',
     },
     {
       label: 'Fastest Processing',
-      description: "A team of talented and passionate developers ready to help",
+      description: "With our state-of-the-art technology and skilled team, we offer the fastest processing times, allowing our clients to access critical information promptly",
       value: '',
       cta: '',
     },
     {
         label: 'Near Real Time Insights',
-        description: "Join our friendly and helpful developer community on Discord",
+        description: "Leveraging advanced analytics techniques, we deliver near real-time insights, enabling our clients to stay ahead of the curve and make timely decisions",
         value: '',
         cta: '',
       },

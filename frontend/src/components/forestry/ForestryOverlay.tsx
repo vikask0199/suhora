@@ -1,6 +1,6 @@
 
 import { Box, Flex, Heading, Img, Text } from '@chakra-ui/react'
-import AgricultureImg from '../../assets/img/industries/forestOverlay.jpg'
+import AgricultureImg from '../../assets/img/industries/forestOverlay.webp'
 import theme from '../../theme'
 const ForestryOverlay = () => {
 

@@ -21,7 +21,8 @@ export const WhatWeDo = () => {
                         </Text>
                     </Flex>
                     <Text fontSize={theme.fonts.subHeading.size} color={theme.companyTheme.color.third} fontWeight={theme.fonts.subHeading.weight} textAlign="center">
-                        Everything you need to build modern UI and great products.
+                        {/* Everything you need to build modern UI and great products. */}
+                        Unlocking Space Data for Practical Insights
                     </Text>
                 </Stack>
                 <Stack spacing="8" direction={{ base: 'column', md: 'row' }} >

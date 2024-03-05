@@ -40,7 +40,7 @@ export const SidIndutryWeServe = () => {
 }
 
 
-import disaster from "../../../assets/img/industries/disaster.png";
+import disaster from "../../../assets/img/industries/disaster.webp";
 
 const categories = [
     // {

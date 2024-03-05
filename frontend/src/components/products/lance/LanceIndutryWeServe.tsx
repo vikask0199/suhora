@@ -41,7 +41,7 @@ export const LanceIndutryWeServe = () => {
 
 
 
-import defence from "../../../assets/img/industries/defense.png";
+import defence from "../../../assets/img/industries/defense.webp";
 // import disaster from "../../../assets/img/industries/disaster.png";
 // import energy from "../../../assets/img/industries/energy.png";
 // import forest from "../../../assets/img/industries/forest.png";
