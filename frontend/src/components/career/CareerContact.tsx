@@ -1,7 +1,7 @@
 
 import { Box, Flex,  Img,  Button } from '@chakra-ui/react'
 import theme from '../../theme'
-import contact from '../../assets/img/contact-us.jpg'
+import contact from '../../assets/img/contact-us.webp'
 import { Link } from 'react-router-dom'
 
 const CareerContact = () => {

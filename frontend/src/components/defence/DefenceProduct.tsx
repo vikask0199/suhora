@@ -42,7 +42,7 @@ export const DefenceProduct = () => {
 }
 
 
-import agri from "../../assets/img/industries/agri.png";
+// import agri from "../../assets/img/industries/agri.webp";
 
 const categories = [
     {
@@ -54,7 +54,7 @@ const categories = [
     {
         name: 'Lance',
         imageUrl:
-            agri,
+            "",
         url: '#/lance',
     },
 

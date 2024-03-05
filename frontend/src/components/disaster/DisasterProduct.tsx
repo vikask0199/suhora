@@ -44,7 +44,7 @@ export const DisasterProduct = () => {
 
 
 // import agri from "../../assets/img/industries/agri.png";
-import disaster from "../../assets/img/industries/disaster.png";
+// import disaster from "../../assets/img/industries/disaster.webp";
 
 
 const categories = [
@@ -54,17 +54,11 @@ const categories = [
             spade,
             url: "/spade",
     },
-    // {
-    //     name: 'Lance',
-    //     imageUrl:
-    //         agri,
-    //     url: '/lancepage',
-    // },
     {
         name: 'Sid',
         imageUrl:
-            disaster,
-        url: '#/sid',
+            "",
+        url: '/sid',
     },
 ]
 
