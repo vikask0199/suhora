@@ -16,7 +16,7 @@ import servilliance from "../../../assets/img/industries/Hydrology_Icon.webp";
 
 import theme from '../../../theme';
 import { Link } from 'react-router-dom';
-import { BsBox2 } from 'react-icons/bs';
+// import { BsBox2 } from 'react-icons/bs';
 
 
 interface IFeature {
