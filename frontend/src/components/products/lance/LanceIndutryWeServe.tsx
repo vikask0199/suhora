@@ -6,13 +6,15 @@ import {
     Stack
 } from '@chakra-ui/react'
 
+type lanceCurentTheme = {
+    currentTheme: string
+}
 
-
-export const LanceIndutryWeServe = () => {
-    // const backgroundColor = currentTheme === 'light' ? 'gray.200' : '#282b3c';
+export const LanceIndutryWeServe = ({ currentTheme }: lanceCurentTheme) => {
+    const backgroundColor = currentTheme === 'light' ? 'gray.200' : '#282b3c';
 
     return (
-        <Box>
+        <Box background={backgroundColor}>
             <Box
                 maxW="6xl"
                 mx="auto"

@@ -11,10 +11,8 @@ const SidFeature = ({ currentTheme }: spadeFeatureProps) => {
     const aspectRatio = 3 / 2.5
     const spadeIconArray = [<RiTyphoonLine />]
 
-    const backgroundColor = currentTheme === 'light' ? 'gray.200' : '#282b3c';
-
     return (
-        <Box background={backgroundColor}>
+        <Box >
             <Flex
                 maxW="6xl"
                 mx="auto"

@@ -6,13 +6,15 @@ import {
     Stack
 } from '@chakra-ui/react';
 
+type sidCurrentTheme = {
+    currentTheme: string
+}
 
-
-export const SidIndutryWeServe = () => {
-    // const backgroundColor = currentTheme === 'light' ? 'gray.200' : '#282b3c';
+export const SidIndutryWeServe = ({ currentTheme }: sidCurrentTheme) => {
+    const backgroundColor = currentTheme === 'light' ? 'gray.200' : '#282b3c';
 
     return (
-        <Box>
+        <Box background={backgroundColor}>
             <Box
                 maxW="6xl"
                 mx="auto"

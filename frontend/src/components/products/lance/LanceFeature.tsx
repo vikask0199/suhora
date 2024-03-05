@@ -3,18 +3,16 @@ import theme from "../../../theme"
 import { RiTyphoonLine } from "react-icons/ri"
 import { Link } from "react-router-dom"
 import lancemain from "../../../assets/img/products/lancemain_monitor.webp"
-type lanceFeatureProps = {
-    currentTheme: string
-}
 
-const LanceFeature = ({ currentTheme }: lanceFeatureProps) => {
+
+const LanceFeature = () => {
     const aspectRatio = 3 / 2.5
     const spadeIconArray = [<RiTyphoonLine />]
 
-    const backgroundColor = currentTheme === 'light' ? 'gray.200' : '#282b3c';
+    // const backgroundColor = currentTheme === 'light' ? 'gray.200' : '#282b3c';
 
     return (
-        <Box background={backgroundColor}>
+        <Box>
             <Flex
                 maxW="6xl"
                 mx="auto"

@@ -15,10 +15,10 @@ const SpadePage = ({ currentTheme }: spadePageProps) => {
   return (
     <>
       <SpadeHome />
-      <AboutSpade  />
+      <AboutSpade  currentTheme={currentTheme}/>
       <SpadeFeature currentTheme={currentTheme}/>
-      <HowItsWorksSpade  />
-      <SpadeIndutryWeServe currentTheme={currentTheme}/>
+      <HowItsWorksSpade currentTheme={currentTheme} />
+      <SpadeIndutryWeServe />
       <SpadeDemo />
     </>
 

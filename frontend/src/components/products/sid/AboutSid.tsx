@@ -7,13 +7,16 @@ import {
 } from '@chakra-ui/react';
 import theme from "../../../theme";
 
+type aboutSidCurrentTheme = {
+    currentTheme: string;
+}
 
 
-export const AboutSid = () => {
-    // const backgroundColor = currentTheme === 'light' ? 'gray.200' : '#282b3c';
+export const AboutSid = ({ currentTheme }: aboutSidCurrentTheme) => {
+    const backgroundColor = currentTheme === 'light' ? 'gray.200' : '#282b3c';
 
     return (
-        <Box>
+        <Box background={backgroundColor}>
             <Container py={{ base: '16', md: '12' }} maxW="6xl">
                 <Stack spacing={{ base: '12', md: '12' }} textAlign="center" align="center">
                     <Stack spacing={{ base: '4', md: '5' }}>

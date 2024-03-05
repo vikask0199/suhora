@@ -12,9 +12,9 @@ const SIDPage = ({ currentTheme }: currentThemeProps) => {
     return (
         <>
             <SidHome />
-            <AboutSid />
+            <AboutSid currentTheme={currentTheme}/>
             <SidFeature currentTheme={currentTheme} />
-            <SidIndutryWeServe />
+            <SidIndutryWeServe currentTheme={currentTheme}/>
             <SidDemo />
         </>
     )
