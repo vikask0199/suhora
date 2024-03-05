@@ -30,7 +30,7 @@ export const Gallery = () => {
   const lanceIconArray = [<IoBaseballOutline />]
   const sidIconArray = [<GiCircleCage />]
 
-  const aspectRatio = 3/2.4
+  const aspectRatio = 3/3
   const [currentSlide, setCurrentSlide] = useState(0)
 
   const [ref, slider] = useCarousel({

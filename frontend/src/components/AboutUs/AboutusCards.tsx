@@ -7,6 +7,7 @@ import { FaSatellite } from "react-icons/fa";
 import { MdOutlineDesignServices } from "react-icons/md";
 import { SiFastify } from "react-icons/si";
 import { FaTimeline } from "react-icons/fa6";
+
  const AboutusCards = () => {
 
     const arrayIcon = [< FaSatellite /> , <MdOutlineDesignServices /> ,<SiFastify/>, <FaTimeline/> ]
@@ -34,6 +35,7 @@ import { FaTimeline } from "react-icons/fa6";
                                 {arrayIcon[id]}
                             </Box>
                             <Stat key={stat.label} {...stat} />
+                           
                         </Flex>
                     ))}
                 </Stack>
@@ -48,25 +50,29 @@ export const stats = [
       label: 'Sattelite Data',
       description: 'We harness the power of satellite data to gather valuable information and insights from space, enabling informed decision-making',
       value: '',
-     cta: '',
+     cta: 'Learn More',
+     link: '/gallery'
     },
     {
       label: 'Tailored Services',
       description: 'Our tailored services cater to the unique needs of each client, ensuring that they receive customized solutions that meet their specific requirements',
       value: '',
-      cta: '',
+      cta: 'Learn More',
+      link: '/services'
     },
     {
       label: 'Fastest Processing',
       description: "With our state-of-the-art technology and skilled team, we offer the fastest processing times, allowing our clients to access critical information promptly",
       value: '',
-      cta: '',
+      cta: 'Learn More',
+      link: '/spade'
     },
     {
         label: 'Near Real Time Insights',
         description: "Leveraging advanced analytics techniques, we deliver near real-time insights, enabling our clients to stay ahead of the curve and make timely decisions",
         value: '',
-        cta: '',
+        cta: 'Learn More',
+        link: "/spade"
       },
    
   ]

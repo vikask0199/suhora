@@ -6,7 +6,6 @@ import {
     Stack,
     Text,
     chakra,
-    Link,
     useColorModeValue
 } from '@chakra-ui/react';
 
@@ -16,6 +15,8 @@ import integrated from "../../../assets/img/industries/Terrain_Mapping_Icon.webp
 import servilliance from "../../../assets/img/industries/Hydrology_Icon.webp";
 
 import theme from '../../../theme';
+import { Link } from 'react-router-dom';
+import { BsBox2 } from 'react-icons/bs';
 
 
 interface IFeature {
@@ -99,10 +100,11 @@ const ServicesCards = () => {
                             <Text fontSize="md" mt={4}>
                                 {feature.content}
                             </Text>
-                            
-                            <Link href={feature.link} mt={6} fontSize="sm" color="blue.400">
+                            <Box  marginTop={4} color={theme.companyTheme.color.secondry}>
+                            <Link to={feature.link} >
                                 Learn more →
                             </Link>
+                            </Box>
                            
                         </Box>
                     ))}

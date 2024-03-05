@@ -1,16 +1,18 @@
 import { Button, Flex, Stack, Text } from '@chakra-ui/react'
 import theme from '../../theme'
-
+import { Link } from 'react-router-dom';
+import { FiArrowRight } from 'react-icons/fi';
 interface StatProps {
   label: string
   description: string
   value: string
   cta: string
+  link: string
 }
 
 export const Stat = (props: StatProps) => {
 
-  const { label, description } = props
+  const { label, description, link,cta } = props
 
   return (
     <Stack spacing="3" flex="1" >
@@ -21,14 +23,17 @@ export const Stat = (props: StatProps) => {
           </Text>
           <Text>{description}</Text>
         </Stack>
+        <Link to={link}>
         <Button
           fontWeight={theme.fonts.subHeadingThird.weight}
           variant="link"
+          
           colorScheme="blue"
-
+          rightIcon={<FiArrowRight />}
         >
-
+          {cta}
         </Button>
+        </Link>
       </Flex>
     </Stack>
   )

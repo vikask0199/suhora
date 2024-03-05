@@ -1,5 +1,6 @@
 import { Box, Button, Flex, Heading, Img, Stack, Text } from '@chakra-ui/react'
 import theme from '../../theme'
+import { Link } from 'react-router-dom'
 // interface aboutSuhoraProps {
 //     currentTheme: string
 // }
@@ -19,9 +20,11 @@ const TeamContact = () => {
 
             </Text>
             <Stack direction={{ base: 'column', md: 'row' }} mt="10" spacing="4">
+              <Link to="/career" >
               <Button width="fit-content" px="8" border="1px solid white" variant="outline" color="white" _hover={{ backgroundColor: theme.companyTheme.color.secondry, border: "1px solid #1266A0" }} >
                 Join us
               </Button>
+              </Link>
             </Stack>
           </Box>
         </Box>

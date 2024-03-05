@@ -6,7 +6,7 @@ import sidmain from "../../../assets/img/products/sid_monitor_final.webp"
 
 
 const SidFeature = () => {
-    const aspectRatio = 3 / 2.5
+    const aspectRatio = 3 / 3
     const spadeIconArray = [<RiTyphoonLine />]
 
     return (

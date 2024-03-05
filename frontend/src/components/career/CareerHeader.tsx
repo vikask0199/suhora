@@ -9,7 +9,7 @@ const CareerHeader = () => {
           <Box maxW='5xl' mx="auto" px={{ base: '6', md: '8' }} color="white" >
             <Flex justifyContent='center' fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
               <Heading  >
-                Career At Suhora
+                Career @ Suhora
               </Heading>
             </Flex>
             <Flex justifyContent='center'>
