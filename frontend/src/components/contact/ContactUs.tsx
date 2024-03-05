@@ -15,13 +15,14 @@ import {
     VStack,
     useColorModeValue
 } from '@chakra-ui/react';
-import { Fragment } from 'react';
+import { Fragment, useState } from 'react';
 import { BsPhone } from 'react-icons/bs';
 import { GoLocation } from 'react-icons/go';
 import { HiOutlineMail } from 'react-icons/hi';
 import contact2 from '../../assets/img/contact/Contactus2.jpg';
 import theme from '../../theme';
 import { Link } from 'react-router-dom';
+import axios from "axios"
 
 
 const contactOptions = [
@@ -42,7 +43,7 @@ const contactOptions = [
         label: 'EMAIL',
         value: 'hello@suhora.com',
         icon: HiOutlineMail,
-        link : "mailto:hello@suhora.com"
+        link: "mailto:hello@suhora.com"
     }
 ];
 
@@ -54,6 +55,38 @@ type contactProps = {
 
 
 const ContactUs = ({ currentTheme }: contactProps) => {
+    const [name, setName] = useState("")
+    const [email, setEmail] = useState("")
+    const [phone, SetPhone] = useState("")
+    const [message, setMessage] = useState("")
+    const [subject, setSubject] = useState("")
+
+
+    const handleClick = () => {
+        const postData = {
+            namd: name,
+            email: email,
+            phone: phone,
+            message: message,
+            subject: subject
+        };
+
+        const response = axios.post('test.suhora.com/send', postData)
+            .then((response) => {
+                setName(""),
+                setEmail(""),
+                SetPhone(""),
+                setMessage(""),
+                setSubject("")
+                window.alert("Our support team will get back to you.")
+            })
+            .catch((error) => {
+                window.alert("Please try after some times")
+            });
+
+        console.log(response)
+    };
+
     return (
         <Box >
             <Box as="section" minH="140px" position="relative" p={10} >
@@ -67,7 +100,6 @@ const ContactUs = ({ currentTheme }: contactProps) => {
                         <Flex justifyContent='center'>
                             <Text mt='1em' fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>
                                 We believe in the power of communication. Reach out to us and let's build something amazing together.
-
                             </Text>
                         </Flex>
                     </Box>
@@ -144,24 +176,30 @@ const ContactUs = ({ currentTheme }: contactProps) => {
                             <Stack w="100%" spacing={3} direction={{ base: 'column', md: 'row' }}>
                                 <FormControl id="name">
                                     <FormLabel></FormLabel>
-                                    <Input type="text" placeholder="Enter your name" rounded="md" />
+                                    <Input type="text" onChange={(e) => setName(e.target.value)} placeholder="Enter your name" rounded="md" />
                                 </FormControl>
                                 <FormControl id="email">
                                     <FormLabel></FormLabel>
-                                    <Input type="email" placeholder="Enter your email" rounded="md" />
+                                    <Input type="email" onChange={(e) => setEmail(e.target.value)} placeholder="Enter your email" rounded="md" />
                                 </FormControl>
                             </Stack>
-                            <FormControl id="subject">
-                                <FormLabel></FormLabel>
-                                <Input type="email" placeholder="Enter your subject" rounded="md" />
-                            </FormControl>
+                            <Stack w="100%" spacing={3} direction={{ base: 'column', md: 'row' }}>
+                                <FormControl id="phone">
+                                    <FormLabel></FormLabel>
+                                    <Input type="text" onChange={(e) => SetPhone(e.target.value)} placeholder="Enter phone number" rounded="md" />
+                                </FormControl>
+                                <FormControl id="sub">
+                                    <FormLabel></FormLabel>
+                                    <Input type="text" onChange={(e) => setSubject(e.target.value)} placeholder="Enter your subject" rounded="md" />
+                                </FormControl>
+                            </Stack>
                             <FormControl id="message">
                                 <FormLabel></FormLabel>
-                                <Textarea size="lg" placeholder="Enter your message" rounded="md" />
+                                <Textarea size="lg" placeholder="Enter your message" onChange={(e) => setMessage(e.target.value)} rounded="md" />
                             </FormControl>
                         </VStack>
-                        <VStack w="100%">
-                            <Button width="fit-content" px="8" border="1px solid #1266A0" variant="outline" color={`${currentTheme === 'light' ? "#1266A0" : "white"}`} _hover={{ backgroundColor: theme.companyTheme.color.secondry, color: "white" }} >
+                        <VStack w="100%" >
+                            <Button onClick={handleClick} width="fit-content" px="8" border="1px solid #1266A0" variant="outline" color={`${currentTheme === 'light' ? "#1266A0" : "white"}`} _hover={{ backgroundColor: theme.companyTheme.color.secondry, color: "white" }} >
                                 Submit
                             </Button>
                         </VStack>
