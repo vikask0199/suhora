@@ -13,9 +13,9 @@ const LancePage = ({ currentTheme }: lancePageProps) => {
     return (
         <>
             <LanceHome />
-            <AboutLance />
-            <LanceFeature currentTheme={currentTheme} />
-            <LanceIndutryWeServe />
+            <AboutLance currentTheme={currentTheme}/>
+            <LanceFeature />
+            <LanceIndutryWeServe  currentTheme={currentTheme}/>
             <LanceDemo />
         </>
     )

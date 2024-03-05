@@ -1,12 +1,16 @@
 import { Box, Container, Flex, Stack } from '@chakra-ui/react'
 
+type howSpadeWorks = {
+    currentTheme: string
+}
 
 
-export const HowItsWorksSpade = () => {
+export const HowItsWorksSpade = ({ currentTheme }: howSpadeWorks) => {
     const [currentStep] = useStep({ maxStep: steps.length, initialStep: 2 })
-  
+    const backgroundColor = currentTheme === 'light' ? 'gray.200' : '#282b3c';
+
     return (
-        <Box py={{ base: '4', md: '8', lg: '16' }} >
+        <Box py={{ base: '4', md: '8', lg: '16' }} background={backgroundColor}>
             <Container maxW="6xl">
                 <Flex mb={{ base: '2', md: '4' }} justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight} >
                     <Text>

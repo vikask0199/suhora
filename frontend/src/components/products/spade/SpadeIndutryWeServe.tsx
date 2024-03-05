@@ -5,17 +5,14 @@ import {
     Stack
 } from '@chakra-ui/react';
 
-type spadeCurrentTheme = {
-    currentTheme: string
-}
 
 
-export const SpadeIndutryWeServe = ({ currentTheme }: spadeCurrentTheme) => {
-    const backgroundColor = currentTheme === 'light' ? 'gray.200' : '#282b3c';
+
+export const SpadeIndutryWeServe = () => {
 
 
     return (
-        <Box backgroundColor={backgroundColor}>
+        <Box >
             <Box
                 maxW="6xl"
                 mx="auto"

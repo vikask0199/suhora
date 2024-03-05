@@ -5,8 +5,8 @@ import theme from "../../theme";
 function Galleries() {
 
     const [images, setImages] = useState<{ name: string; url: string }[]>([]);
-    const [thermalImages, setThermalImages] = useState<{ name: string; url: string }[]>([]);
     const [sarImages, setSarImages] = useState<{ name: string; url: string }[]>([]);
+    const [thermalImages, setThermalImages] = useState<{ name: string; url: string }[]>([]);
     const [opticalImages, setOpticalImages] = useState<{ name: string; url: string }[]>([]);
     const [selectedTab, setSelectedTab] = useState<string>('All Images');
 
@@ -26,12 +26,11 @@ function Galleries() {
     }, []);
 
     const handleTabSelect = (tabName: string) => {
-        console.log(tabName)
         setSelectedTab(tabName);
-        filterImages(tabName);
+        filterImages();
     };
 
-    const filterImages = (tabName: string) => {
+    const filterImages = () => {
         const filteredSarImages = images.filter(image => image.name.toLowerCase().includes('sar'));
         const filteredThermalImages = images.filter(image => image.name.toLowerCase().includes('thermal'));
         const filteredOpticalImages = images.filter(image => image.name.toLowerCase().includes('optical'));
@@ -52,10 +51,8 @@ function Galleries() {
     const [imageUrl, setImageUrl] = useState("")
     const [imageName, setImageName] = useState("")
 
-    console.log(selectedTab)
-
     return (
-        <Flex direction="column" align="center" px={{ base: '4', md: '8', lg: '5' }} py={{ base: '4', md: '8', lg: '12' }} justifyContent="center">
+        <Flex direction="column" align="center" px={{ base: '4', md: '8', lg: '5' }} py={{ base: '4', md: '8', lg: '12' }} pb={20} justifyContent="center">
             <Stack >
                 <Stack >
                     <Flex justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight} >
@@ -69,20 +66,20 @@ function Galleries() {
             </Stack>
 
             <Tabs >
-                <Flex width="6xl" justifyContent="center" mt="5">
+                <Flex justifyContent="center" mt="5">
                     <Tab onClick={() => handleTabSelect('All Images')} color={`${selectedTab === "All Images" ? `${theme.companyTheme.color.secondry}` : ''}`} fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>All Images</Tab>
                     <Tab onClick={() => handleTabSelect('SAR')} color={`${selectedTab === "SAR" ? `${theme.companyTheme.color.secondry}` : ''}`} fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>SAR</Tab>
                     <Tab onClick={() => handleTabSelect('Thermal')} color={`${selectedTab === "Thermal" ? `${theme.companyTheme.color.secondry}` : ''}`} fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>Thermal</Tab>
                     <Tab onClick={() => handleTabSelect('Optical')} color={`${selectedTab === "Optical" ? `${theme.companyTheme.color.secondry}` : ''}`} fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>Optical</Tab>
                 </Flex>
-                <TabPanels maxW="6xl" mt="5">
+                <TabPanels maxW="6xl" h="auto" mt="5">
                     <TabPanel>
-                        <Flex gap="5" wrap="wrap" justifyContent="center" >
+                        <Flex gap="5" flexWrap="wrap" justifyContent="center" rowGap="20">
                             {
                                 images.length > 0 ? (
                                     images.map((image, index) => {
                                         return (
-                                            <Box key={index} h="60" w="60" >
+                                            <Box key={index} boxSize='xs' position="relative" _hover={{ transform: 'scale(1.1)', transition: 'transform 0.3s ease' }}>
                                                 <AspectRatio ratio={3 / 3}>
                                                     <Image
                                                         rounded="xl"
@@ -98,6 +95,22 @@ function Galleries() {
                                                         }}
                                                     />
                                                 </AspectRatio>
+                                                <Flex justifyContent="center" flexDirection="column" alignItems="center" textAlign="center" width="90%" rounded="lg" background="white" position="absolute" boxShadow="xl" height="20" bottom="-10" left="4">
+                                                    <Flex gap="1">
+                                                        <Text>
+                                                            {image.name.split("_")[0]}
+                                                        </Text>
+                                                        <Text>
+                                                            ({image.name.split("_")[1]})
+                                                        </Text>
+                                                        <Text>
+                                                            {image.name.split("_")[2]}
+                                                        </Text>
+                                                    </Flex>
+                                                    <Text fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>
+                                                        {image.name.split("_")[3]}
+                                                    </Text>
+                                                </Flex>
                                             </Box>
                                         )
                                     })
@@ -118,12 +131,12 @@ function Galleries() {
 
 
                     <TabPanel>
-                        <Flex gap="5" wrap="wrap" justifyContent="center" >
+                        <Flex gap="5" wrap="wrap" justifyContent="center" rowGap="20">
                             {
                                 sarImages.length > 0 ? (
                                     sarImages.map((image, index) => {
                                         return (
-                                            <Box key={index} h="60" w="60" >
+                                            <Box key={index} boxSize='xs' position="relative" _hover={{ transform: 'scale(1.1)', transition: 'transform 0.3s ease' }}>
                                                 <AspectRatio ratio={3 / 3}>
                                                     <Image
                                                         rounded="xl"
@@ -139,6 +152,22 @@ function Galleries() {
                                                         }}
                                                     />
                                                 </AspectRatio>
+                                                <Flex justifyContent="center" flexDirection="column" alignItems="center" textAlign="center" width="90%" rounded="lg" background="white" position="absolute" boxShadow="xl" height="20" bottom="-10" left="4">
+                                                    <Flex gap="1">
+                                                        <Text>
+                                                            {image.name.split("_")[0]}
+                                                        </Text>
+                                                        <Text>
+                                                            ({image.name.split("_")[1]})
+                                                        </Text>
+                                                        <Text>
+                                                            {image.name.split("_")[2]}
+                                                        </Text>
+                                                    </Flex>
+                                                    <Text fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>
+                                                        {image.name.split("_")[3]}
+                                                    </Text>
+                                                </Flex>
                                             </Box>
                                         )
                                     })
@@ -159,12 +188,12 @@ function Galleries() {
 
                     {/* thermal */}
                     <TabPanel>
-                        <Flex gap="5" wrap="wrap" justifyContent="center" >
+                        <Flex gap="5" wrap="wrap" justifyContent="center" rowGap="20">
                             {
                                 thermalImages.length > 0 ? (
                                     thermalImages.map((image, index) => {
                                         return (
-                                            <Box key={index} h="60" w="60" >
+                                            <Box key={index} boxSize='xs' position="relative" _hover={{ transform: 'scale(1.1)', transition: 'transform 0.3s ease' }}>
                                                 <AspectRatio ratio={3 / 3}>
                                                     <Image
                                                         rounded="xl"
@@ -180,6 +209,22 @@ function Galleries() {
                                                         }}
                                                     />
                                                 </AspectRatio>
+                                                <Flex justifyContent="center" flexDirection="column" alignItems="center" textAlign="center" width="90%" rounded="lg" background="white" position="absolute" boxShadow="xl" height="20" bottom="-10" left="4">
+                                                    <Flex gap="1">
+                                                        <Text>
+                                                            {image.name.split("_")[0]}
+                                                        </Text>
+                                                        <Text>
+                                                            ({image.name.split("_")[1]})
+                                                        </Text>
+                                                        <Text>
+                                                            {image.name.split("_")[2]}
+                                                        </Text>
+                                                    </Flex>
+                                                    <Text fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>
+                                                        {image.name.split("_")[3]}
+                                                    </Text>
+                                                </Flex>
                                             </Box>
                                         )
                                     })
@@ -200,12 +245,12 @@ function Galleries() {
 
                     {/* optical */}
                     <TabPanel>
-                        <Flex gap="5" wrap="wrap" justifyContent="center" >
+                        <Flex gap="5" rowGap="20" wrap="wrap" justifyContent="center" >
                             {
                                 opticalImages.length > 0 ? (
                                     opticalImages.map((image, index) => {
                                         return (
-                                            <Box key={index} h="60" w="60" >
+                                            <Box key={index} boxSize='xs' position="relative" _hover={{ transform: 'scale(1.1)', transition: 'transform 0.3s ease' }}>
                                                 <AspectRatio ratio={3 / 3}>
                                                     <Image
                                                         rounded="xl"
@@ -221,6 +266,22 @@ function Galleries() {
                                                         }}
                                                     />
                                                 </AspectRatio>
+                                                <Flex justifyContent="center" flexDirection="column" alignItems="center" textAlign="center" width="90%" rounded="lg" background="white" position="absolute" boxShadow="xl" height="20" bottom="-10" left="4">
+                                                    <Flex gap="1">
+                                                        <Text>
+                                                            {image.name.split("_")[0]}
+                                                        </Text>
+                                                        <Text>
+                                                            ({image.name.split("_")[1]})
+                                                        </Text>
+                                                        <Text>
+                                                            {image.name.split("_")[2]}
+                                                        </Text>
+                                                    </Flex>
+                                                    <Text fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>
+                                                        {image.name.split("_")[3]}
+                                                    </Text>
+                                                </Flex>
                                             </Box>
                                         )
                                     })
@@ -242,43 +303,6 @@ function Galleries() {
             </Tabs>
 
             <Box maxW="6xl" h="100%" w="100%">
-                {/* <Flex gap="5" wrap="wrap" justifyContent="center" >
-                    {
-                        images.length > 0 ? (
-                            images.map((image, index) => {
-                                return (
-                                    <Box key={index} h="60" w="60" >
-                                        <AspectRatio ratio={3 / 3}>
-                                            <Image
-                                                rounded="xl"
-                                                boxShadow="xl"
-                                                key={index}
-                                                src={image.url}
-                                                alt={image.name}
-                                                onClick={() => {
-                                                    setOverlay(<OverlayOne />)
-                                                    onOpen()
-                                                    setImageUrl(image.url)
-                                                    setImageName(image.name)
-                                                }}
-                                            />
-                                        </AspectRatio>
-                                    </Box>
-                                )
-                            })
-                        ) : (
-                            <Flex alignItems="center" justifyContent="center" h="50vh" w="100%">
-                                <Spinner
-                                    thickness='4px'
-                                    speed='0.65s'
-                                    emptyColor='gray.200'
-                                    color='blue.500'
-                                    size='xl'
-                                />
-                            </Flex>
-                        )
-                    }
-                </Flex> */}
                 <Modal isCentered isOpen={isOpen} size="4xl" onClose={onClose}>
                     {overlay}
                     <ModalContent>
