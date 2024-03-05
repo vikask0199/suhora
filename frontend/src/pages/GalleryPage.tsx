@@ -1,6 +1,6 @@
 import Galleries from "../components/gallery/Galleries"
 import GalleryHeader from "../components/gallery/GalleryHeader"
-import SampleFilterGallery from "../components/gallery/SampleFilterGallery"
+
 
 
 const GalleryPage = () => {
@@ -8,7 +8,6 @@ const GalleryPage = () => {
     <>
       <GalleryHeader />
       <Galleries />
-      <SampleFilterGallery />
     </>
   )
 }
