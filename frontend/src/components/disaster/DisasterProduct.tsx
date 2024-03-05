@@ -7,6 +7,7 @@ import {
 } from '@chakra-ui/react';
 
 import spade from "../../assets/img/products/spade.png";
+import sid from '../../assets/img/products/sid_page.webp';
 
 export const DisasterProduct = () => {
     // const backgroundColor = currentTheme === 'light' ? 'gray.200' : '#282b3c';
@@ -57,7 +58,7 @@ const categories = [
     {
         name: 'Sid',
         imageUrl:
-            "",
+            sid,
         url: '/sid',
     },
 ]

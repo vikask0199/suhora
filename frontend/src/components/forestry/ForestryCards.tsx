@@ -11,78 +11,46 @@ import {
     Stack
 } from '@chakra-ui/react';
 
-import { MdPayment } from 'react-icons/md';
-import { FaFileInvoiceDollar } from 'react-icons/fa';
-import { FaFileCode } from 'react-icons/fa';
 import theme from '../../theme';
-
+import forestry_deforestation from '../../assets/img/industries/Forestry_Deforestation_Monitoring.webp'
+import forestry_forest_fire from '../../assets/img/industries/Forest_Fire.webp'
+import forestry_forest_productivity from '../../assets/img/industries/forest_productivity_monitoring.webp'
+import forestry_forest_health from '../../assets/img/industries/Forest_Health_Monitoring.webp'
+import forestry_tree_species from '../../assets/img/industries/forestry_Tree_Species_Identification.webp'
 
 interface IFeature {
     heading: string;
     content: string;
-    icon: SVGProps<SVGElement>;
+    
 }
 
 const features: IFeature[] = [
     {
-        heading: 'Payments',
+        heading: 'Deforestation Monitoring',
         content: 'Choose from Stripe, Paddle, Braintree, or PayPal to launch your product quickly.',
-        icon: (
-            <Box fontSize={theme.fonts.mainHeading.size}>
-                <MdPayment />
-            </Box>
-        )
+     
     },
     {
-        heading: 'Invoicing',
+        heading: 'Forest Fire Monitoring',
         content: 'Webhooks are wired up to automatically email customers PDF receipts and invoices.',
-        icon: (
-
-            <Box fontSize={theme.fonts.mainHeading.size}>
-                <FaFileInvoiceDollar />
-            </Box>
-        )
+  
     },
     {
-        heading: 'API Included',
+        heading: 'Forest Productivity Monitoring',
         content: 'Roll your own API to easily connect with other apps or services. Pull in updates.',
-        icon: (
-
-            <Box fontSize={theme.fonts.mainHeading.size}>
-                <FaFileCode />
-            </Box>
-        )
+ 
     },
     {
-        heading: 'API Included',
+        heading: 'Forest Health Monitoring',
         content: 'Roll your own API to easily connect with other apps or services. Pull in updates.',
-        icon: (
-
-            <Box fontSize={theme.fonts.mainHeading.size}>
-                <FaFileCode />
-            </Box>
-        )
+  
     },
     {
-        heading: 'API Included',
+        heading: 'Tree Species Indentification',
         content: 'Roll your own API to easily connect with other apps or services. Pull in updates.',
-        icon: (
 
-            <Box fontSize={theme.fonts.mainHeading.size}>
-                <FaFileCode />
-            </Box>
-        )
     },
-    {
-        heading: 'API Included',
-        content: 'Roll your own API to easily connect with other apps or services. Pull in updates.',
-        icon: (
 
-            <Box fontSize={theme.fonts.mainHeading.size}>
-                <FaFileCode />
-            </Box>
-        )
-    },
 ];
 
 type HomeServices = {
@@ -90,7 +58,7 @@ type HomeServices = {
 }
 
 const ForestryCards = ({ currentTheme }: HomeServices) => {
-    const iconArray = [<MdPayment />, <FaFileInvoiceDollar />, <FaFileCode />,<MdPayment />, <FaFileInvoiceDollar />, <FaFileCode />]
+    const iconArray = [forestry_deforestation, forestry_forest_fire, forestry_forest_productivity, forestry_forest_health, forestry_tree_species];
     const backgroundColor = currentTheme === 'light' ? 'gray.200' : '#282b3c';
 
     return (
@@ -117,21 +85,22 @@ const ForestryCards = ({ currentTheme }: HomeServices) => {
                             textAlign="center"
                             pos="relative"
                         >
-                            <Flex
-                                p={2}
-                                w="max-content"
-                                color="white"
-                                bgGradient="linear(to-br, #228be6, #15aabf)"
-                                rounded="md"
-                                marginInline="auto"
-                                pos="absolute"
-                                left={0}
-                                right={0}
-                                top="-1.5rem"
-                                boxShadow="lg">
-                                {iconArray[index]}
-                            </Flex>
-                            <chakra.h3 fontWeight="semibold" fontSize="2xl" mt={6}>
+                        <Flex
+                        p={1}
+                        w="max-content"
+                        color="white"
+                        // bgGradient="linear(to-br, #228be6, #15aabf)"
+                        rounded="lg"
+                        marginInline="auto"
+                        pos="absolute"
+                        left={0}
+                        right={0}
+                        top="-2.5rem"
+                    // boxShadow="xl"
+                    >
+                    <img src={`${iconArray[index]}`} alt="" height="70" width="70" />
+                    </Flex>
+                            <chakra.h3 fontWeight="semibold" fontSize={theme.fonts.subHeadingSecond.size} mt={6}>
                                 {feature.heading}
                             </chakra.h3>
                             <Text fontSize="md" mt={4}>

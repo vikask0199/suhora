@@ -73,9 +73,9 @@ const DefenceCards = ({ currentTheme }: HomeServices) => {
                             <Text as="span" color={theme.companyTheme.color.secondry}>Offer</Text>
                         </Text>
                     </Flex>
-                    {/* <Text fontSize={theme.fonts.subHeading.size} color={theme.companyTheme.color.third} fontWeight={theme.fonts.subHeading.weight} textAlign="center">
-                        Everything you need to build modern UI and great products.
-                    </Text> */}
+                    <Text fontSize={theme.fonts.subHeading.size} color={theme.companyTheme.color.third} fontWeight={theme.fonts.subHeading.weight} textAlign="center">
+                    Adaptive. Scalable. Secure.
+                    </Text>
                 </Stack>
                 <SimpleGrid columns={{ base: 1, sm: 2, md: 3 }} placeItems="center" spacing={10} mb={4} mt={12}>
                     {features.map((feature, index) => (

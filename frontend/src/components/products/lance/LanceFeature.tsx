@@ -2,7 +2,7 @@ import { AspectRatio, Box, Button, Flex, Image, ListItem, Text, UnorderedList } 
 import theme from "../../../theme"
 import { RiTyphoonLine } from "react-icons/ri"
 import { Link } from "react-router-dom"
-import lancemain from "../../../assets/img/products/lancemain_monitor.webp"
+import lancemain from "../../../assets/img/products/lance_monitor_final.webp"
 type lanceFeatureProps = {
     currentTheme: string
 }

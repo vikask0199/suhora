@@ -1,4 +1,4 @@
-import { SVGProps } from 'react';
+// import { SVGProps } from 'react';
 import {
     Container,
     Box,
@@ -11,16 +11,20 @@ import {
     Stack
 } from '@chakra-ui/react';
 
-import { MdPayment } from 'react-icons/md';
-import { FaFileInvoiceDollar } from 'react-icons/fa';
-import { FaFileCode } from 'react-icons/fa';
+// import { MdPayment } from 'react-icons/md';
+// import { FaFileInvoiceDollar } from 'react-icons/fa';
+// import { FaFileCode } from 'react-icons/fa';
 import theme from '../../theme';
-
+import mining_site from '../../assets/img/industries/mining_Site_Selection_for_the_Mining_Industry.webp'
+import mining_monitoring from '../../assets/img/industries/mining_Infrastructure_MonitoringPlanning.webp'
+import mining_env from '../../assets/img/industries/mining_HighResolutionDigital3DMap.webp'
+import mining_asset from '../../assets/img/industries/mining_Infrastructure_MonitoringPlanning.webp'
+import mining_remote from '../../assets/img/industries/mining_Accurate_Volumetric_Analysis.webp'
 
 interface IFeature {
     heading: string;
     content: string;
-    icon: SVGProps<SVGElement>;
+
 }
 
 const features: IFeature[] = [
@@ -28,52 +32,26 @@ const features: IFeature[] = [
         heading: 'Site Selection',
         // content: 'Our custom designed automated algorithm analyzing terrain, geology, and environmental factors to optimize resource extraction and minimize ecological impact.',
         content: 'Optimize resource extraction and minimize ecological impact with our automated algorithm.',
-        icon: (
-            <Box fontSize={theme.fonts.mainHeading.size}>
-                <MdPayment />
-            </Box>
-        )
+     
     },
     {
         heading: 'High Resolution Satellite Imagery',
         // content: 'We offer very high resolution satellite imagery for regular monitoring of mining sites.',
-        content: "Access very high-resolution satellite imagery for regular monitoring of mining sites.",
-        icon: (
-
-            <Box fontSize={theme.fonts.mainHeading.size}>
-                <FaFileInvoiceDollar />
-            </Box>
-        )
+        content: "Access very high-resolution satellite imagery for regular monitoring of mining sites.", 
     },
     {
         heading: 'High Resolution Digital 3D Map',
         content: 'Discover detailed digital 3D maps to enhance infrastructure monitoring and planning efforts.',
-        icon: (
-
-            <Box fontSize={theme.fonts.mainHeading.size}>
-                <FaFileCode />
-            </Box>
-        )
     },
     {
-        heading: 'Infrastructure Monitoring & Planning',
+        heading: 'Monitoring & Planning',
         content: 'Enhance your monitoring and planning processes with our infrastructure-focused solutions.',
-        icon: (
 
-            <Box fontSize={theme.fonts.mainHeading.size}>
-                <FaFileCode />
-            </Box>
-        )
     },
     {
         heading: 'Accurate Volumetric Analysis',
         content: 'Achieve unparalleled precision in your analysis with our advanced volumetric analysis tools.',
-        icon: (
-
-            <Box fontSize={theme.fonts.mainHeading.size}>
-                <FaFileCode />
-            </Box>
-        )
+ 
     },
     // {
     //     heading: 'API Included',
@@ -92,7 +70,7 @@ type HomeServices = {
 }
 
 const MiningCards = ({ currentTheme }: HomeServices) => {
-    const iconArray = [<MdPayment />, <FaFileInvoiceDollar />, <FaFileCode />,<MdPayment />, <FaFileInvoiceDollar />, <FaFileCode />]
+    const iconArray = [mining_site, mining_monitoring, mining_env, mining_asset, mining_remote];
     const backgroundColor = currentTheme === 'light' ? 'gray.200' : '#282b3c';
 
     return (
@@ -106,7 +84,7 @@ const MiningCards = ({ currentTheme }: HomeServices) => {
                         </Text>
                     </Flex>
                     <Text fontSize={theme.fonts.subHeading.size} color={theme.companyTheme.color.third} fontWeight={theme.fonts.subHeading.weight} textAlign="center">
-                        Everything you need to build modern UI and great products.
+                    Unleashing Mining Excellence with Satellite Technology!
                     </Text>
                 </Stack>
                 <SimpleGrid columns={{ base: 1, sm: 2, md: 3 }} placeItems="center" spacing={10} mb={4} mt={12}>
@@ -119,19 +97,20 @@ const MiningCards = ({ currentTheme }: HomeServices) => {
                             textAlign="center"
                             pos="relative"
                         >
-                            <Flex
-                                p={2}
+                             <Flex
+                                p={1}
                                 w="max-content"
                                 color="white"
-                                bgGradient="linear(to-br, #228be6, #15aabf)"
-                                rounded="md"
+                                // bgGradient="linear(to-br, #228be6, #15aabf)"
+                                rounded="lg"
                                 marginInline="auto"
                                 pos="absolute"
                                 left={0}
                                 right={0}
-                                top="-1.5rem"
-                                boxShadow="lg">
-                                {iconArray[index]}
+                                top="-2.5rem"
+                            // boxShadow="xl"
+                            >
+                                <img src={`${iconArray[index]}`} alt="" height="70" width="70" />
                             </Flex>
                             <chakra.h3 fontWeight="semibold" fontSize={theme.fonts.subHeadingSecond.size} mt={6}>
                                 {feature.heading}

@@ -1,7 +1,7 @@
 // import spademain from "../assets/img/products/spademain.png"
-import spademain from '../assets/img/products/spade_monitor_alt_1.webp'
-import sidmain from "../assets/img/products/sidmain_monitor_alt.webp"
-import lancemain from "../assets/img/products/lance_monitor_alt.webp"
+import spademain from '../assets/img/products/spade_monitor_final.webp'
+import sidmain from "../assets/img/products/sid_monitor_final.webp"
+import lancemain from "../assets/img/products/lance_monitor_final.webp"
 
 export const products = [
   {

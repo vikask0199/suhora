@@ -49,7 +49,7 @@ const CareerOpportunity = () => (
                             <AccordionPanel px="0">
                                 <Stack spacing={{ base: '6', md: '8' }}>
                                     <Stack spacing={{ base: '4', md: '5' }}>
-                                        <Text fontSize={theme.fonts.description}>{listing.description}</Text>
+                                        <Text fontSize={theme.fonts.description} textAlign='justify'>{listing.description}</Text>
                                         <HStack spacing={{ base: '5', md: '6' }}>
                                             <HStack color={theme.companyTheme.color.secondry}>
                                                 <Icon as={MdLocationOn} boxSize="5" />
@@ -85,7 +85,7 @@ const jobListings = [
         title: 'Software Engineer',
         department: 'Engineering',
         description:
-            'Innovative software engineer proficient in development tools. Strong problem-solving skills, collaborative mindset, and ability to thrive in fast-paced environments. Experience with relevant technologies/platforms preferred.',
+            "We're looking for a talented Web Developer with 1-2 years of experience and expertise in Geo-Spatial technology and Chakra UI to join our team. Dive into exciting projects, enhance your skills, and explore growth opportunities in a dynamic environment. Requirements: Bachelor's degree in Computer Science or related field, proficiency in web development technologies (HTML, CSS, JavaScript), experience with Geo-Spatial technology (e.g., Mapbox, Google Maps API), strong understanding of Chakra UI, and familiarity with React.js",
         location: 'Sec-62, Noida, India',
         type: 'Full-Time',
     },
@@ -94,7 +94,7 @@ const jobListings = [
         title: 'Account Executive',
         department: 'Accounts',
         description:
-            'Dynamically driven Account Executive with exceptional communication and negotiation skills. Proven track record in achieving sales targets, fostering client relationships, and driving revenue growth. Previous experience in industry/sector advantageous.',
+            "We're seeking an experienced Accountant with 1-2 years of relevant experience to join our team. Dive into challenging projects, refine your skills, and explore growth opportunities in a dynamic environment. Requirements: Bachelor's degree in Accounting or related field, proficiency in accounting software (e.g., Tally), strong analytical skills, attention to detail, and ability to work independently.",
         location: 'Sec-62, Noida, India',
         type: 'Full-Time',
     },
@@ -102,8 +102,7 @@ const jobListings = [
         uid: 'job003',
         title: 'UI/UX Designer',
         department: 'Designer',
-        description:
-            'Talented UI/UX Designer blending creativity with user-centric design principles. Proficient in Adobe Creative Suite, Sketch, and prototyping tools. Passionate about crafting seamless digital experiences that delight and engage users.',
+        description:"We're looking for a skilled UI/UX Designer with 1-2 years of experience to join our team. Collaborate on real-world projects, refine your skills, and explore growth opportunities in a dynamic environment. Requirements: Bachelor's degree in Graphic Design or related field, proficiency in Figma (preferred), strong understanding of UI/UX principles, experience with Sketch, ProtoPie, Wireframe.cc, and video editing tools is a plus.",
         location: 'Sec-62, Noida, India',
         type: 'Full-Time',
     },

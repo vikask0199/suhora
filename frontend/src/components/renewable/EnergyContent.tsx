@@ -25,18 +25,18 @@ export const EnergyContent = () => {
                     <Stack spacing={{ base: '4', md: '5' }}>
                         <Flex justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
                             <Text>
-                              
+
                                 <Text as="span" color={theme.companyTheme.color.secondry}>Renewable Energy </Text>
                                 <Text as="span">Solution </Text>
                             </Text>
                         </Flex>
                         <Text color={theme.companyTheme.color.third} fontSize={theme.fonts.subHeading.size} fontWeight={theme.fonts.subHeading.weight} maxW="6xl" >
-                            Multi band high resolution image from various satellite.
+                            Satellite and AI Driven Solar Solutions
                         </Text>
                         <Text textAlign="justify">
-                        Suhora provides consulting and design services to the Solar PV industry. Our advanced autonomous AI tools can do the granular level of Hydrological Assessment, advanced level of Ground Grading Analysis, Site Suitability Analysis and Historical Scenario Study. 
-Our objective is to reduce the overall risk of large utility scale ground mount solar plants.That will be very helpful for quick designing without any subjective bias helps in better calculation of financing of a project. Our exclusive offering will ensure the time and cost saving with improved quality.
-                        {/* Suhora stands at the forefront of the solar industry, offering unparalleled consulting and design services to clients seeking to harness the power of solar energy for their projects. */}
+                            Suhora provides consulting and design services to the Solar PV industry. Our advanced autonomous AI tools can do the granular level of Hydrological Assessment, advanced level of Ground Grading Analysis, Site Suitability Analysis and Historical Scenario Study.
+                            Our objective is to reduce the overall risk of large utility scale ground mount solar plants.That will be very helpful for quick designing without any subjective bias helps in better calculation of financing of a project. Our exclusive offering will ensure the time and cost saving with improved quality.
+                            {/* Suhora stands at the forefront of the solar industry, offering unparalleled consulting and design services to clients seeking to harness the power of solar energy for their projects. */}
                             {/* <br />
                             <br />
                             Through the utilization of an advanced auto-layout generation platform, Suhora empowers its customers to streamline their design processes, saving valuable time and resources across multiple iterations. */}

@@ -22,6 +22,7 @@ import SpadePage from './pages/SpadePage';
 import TeamPage from './pages/TeamPage';
 import TerrainMappingPage from './pages/TerrainMappingPage';
 import GalleryPage from './pages/GalleryPage';
+import ServicePage from './pages/ServicesMain';
 // import HomePage from './pages/HomePage';
 const HomePage = lazy(() => import('./pages/HomePage'))
 
@@ -75,6 +76,7 @@ function App() {
             <Route path='our-team' element={<TeamPage />} />
 
             {/* services */}
+            <Route path='services' element={<ServicePage />}></Route>
             <Route path='product-hydrology' element={<HydrologyPage currentTheme={colorMode} />}></Route>
             <Route path='product-terrainmapping' element={<TerrainMappingPage currentTheme={colorMode} />}></Route>
             <Route path='land-deformation-monitoring' element={<LandDeformationPage currentTheme={colorMode} />}></Route>

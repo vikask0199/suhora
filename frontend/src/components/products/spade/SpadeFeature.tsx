@@ -2,7 +2,7 @@ import { AspectRatio, Box, Button, Flex, Image, ListItem, Text, UnorderedList } 
 import theme from "../../../theme"
 import { RiTyphoonLine } from "react-icons/ri"
 import { Link } from "react-router-dom"
-import spademain from '../../../assets/img/products/spade_monitor.webp'
+import spademain from '../../../assets/img/products/spade_monitor_final.webp'
 type spadeFeatureProps = {
     currentTheme: string
 }

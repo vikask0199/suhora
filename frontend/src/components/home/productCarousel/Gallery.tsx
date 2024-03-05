@@ -30,7 +30,7 @@ export const Gallery = () => {
   const lanceIconArray = [<IoBaseballOutline />]
   const sidIconArray = [<GiCircleCage />]
 
-  const aspectRatio = 3/2.1
+  const aspectRatio = 3/2.4
   const [currentSlide, setCurrentSlide] = useState(0)
 
   const [ref, slider] = useCarousel({
@@ -55,9 +55,9 @@ export const Gallery = () => {
           {products.map((image, i) => (
             <CarouselSlide key={i}>
               <Flex direction={{ base: "column", md: "row" }} alignItems="center">
-                <Box w={{ base: "100%", md: "50%" }} padding={7}>
+                <Box w={{ base: "100%", md: "50%" }} padding={7} >
                   <AspectRatio ratio={aspectRatio}>
-                    <Image src={image.imageUrl} objectFit="fill"/>
+                    <Image src={image.imageUrl} />
                   </AspectRatio>
                 </Box>
                 <Flex w={{ base: "100%", md: "50%" }} p={8} direction="column" rowGap={4} justifyContent="space-between">

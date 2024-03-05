@@ -8,7 +8,7 @@ import {
   useDisclosure,
 } from '@chakra-ui/react'
 import { PopoverIcon } from './PopoverIcon'
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 export const DocumentPopoverServices = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
@@ -22,7 +22,9 @@ export const DocumentPopoverServices = () => {
   return (
     <Popover isOpen={isOpen} onOpen={onOpen} onClose={onClose} trigger="hover" openDelay={0}>
       <PopoverTrigger>
+        <Link to = "/services" style={{ textDecoration: 'none' }}>
         <Button rightIcon={<PopoverIcon isOpen={isOpen} />} as={Text} _hover={{color: "#1266A0"}}>Services</Button>
+        </Link>
       </PopoverTrigger>
       <PopoverContent p="2" maxW="fit-content" mr="-180" mt="3">
         <Stack spacing="0" alignItems="stretch">

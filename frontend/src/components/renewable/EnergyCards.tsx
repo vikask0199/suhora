@@ -15,63 +15,43 @@ import { MdPayment } from 'react-icons/md';
 import { FaFileInvoiceDollar } from 'react-icons/fa';
 import { FaFileCode } from 'react-icons/fa';
 import theme from '../../theme';
-
+import renew_site_assessment from '../../assets/img/industries/renew_Site_Assessment_Selection.webp'
+import renew_environment from '../../assets/img/industries/renew_Environmental_Impact_Analysis.png'
+import renew_infra from '../../assets/img/industries/renew_Infrastructure_Monitoring.webp'
+import renew_resource from '../../assets/img/industries/renew_Resource_Optimization.webp'
+import renew_project from '../../assets/img/industries/renew_Project_Development_Support.webp'
 
 interface IFeature {
     heading: string;
     content: string;
-    icon: SVGProps<SVGElement>;
+   
 }
 
 const features: IFeature[] = [
     {
         heading: 'Site Assessment & Selection',
-        content: 'Choose from Stripe, Paddle, Braintree, or PayPal to launch your product quickly.',
-        icon: (
-            <Box fontSize={theme.fonts.mainHeading.size}>
-                <MdPayment />
-            </Box>
-        )
+        content: 'Optimize site selection with our comprehensive assessment tools.',
+    
     },
     {
         heading: 'Environmental Impact Analysis ',
-        content: 'Webhooks are wired up to automatically email customers PDF receipts and invoices.',
-        icon: (
-
-            <Box fontSize={theme.fonts.mainHeading.size}>
-                <FaFileInvoiceDollar />
-            </Box>
-        )
+        content: 'Automatically analyze environmental impacts with our integrated analytics.',
+ 
     },
     {
         heading: 'Infrastructure Monitoring',
-        content: 'Roll your own API to easily connect with other apps or services. Pull in updates.',
-        icon: (
-
-            <Box fontSize={theme.fonts.mainHeading.size}>
-                <FaFileCode />
-            </Box>
-        )
+        content: 'Seamlessly monitor infrastructure with our custom integrated solutions',
+   
     },
     {
         heading: 'Resource Optimization ',
-        content: 'Roll your own API to easily connect with other apps or services. Pull in updates.',
-        icon: (
-
-            <Box fontSize={theme.fonts.mainHeading.size}>
-                <FaFileCode />
-            </Box>
-        )
+        content: 'Enhance resource utilization with our efficient API solutions.',
+ 
     },
     {
-        heading: ' Project Development Support',
-        content: 'Roll your own API to easily connect with other apps or services. Pull in updates.',
-        icon: (
-
-            <Box fontSize={theme.fonts.mainHeading.size}>
-                <FaFileCode />
-            </Box>
-        )
+        heading: 'Project Development Support',
+        content: 'Access comprehensive support for project development via our API.',
+ 
     },
     // {
     //     heading: 'API Included',
@@ -90,7 +70,7 @@ type HomeServices = {
 }
 
 const EnergyCards = ({ currentTheme }: HomeServices) => {
-    const iconArray = [<MdPayment />, <FaFileInvoiceDollar />, <FaFileCode />,<MdPayment />, <FaFileInvoiceDollar />, <FaFileCode />]
+    const iconArray = [renew_site_assessment, renew_environment, renew_infra, renew_resource, renew_project];
     const backgroundColor = currentTheme === 'light' ? 'gray.200' : '#282b3c';
 
     return (
@@ -104,7 +84,7 @@ const EnergyCards = ({ currentTheme }: HomeServices) => {
                         </Text>
                     </Flex>
                     <Text fontSize={theme.fonts.subHeading.size} color={theme.companyTheme.color.third} fontWeight={theme.fonts.subHeading.weight} textAlign="center">
-                        Everything you need to build modern UI and great products.
+                   Satellite Driven Solar Innovation
                     </Text>
                 </Stack>
                 <SimpleGrid columns={{ base: 1, sm: 2, md: 3 }} placeItems="center" spacing={10} mb={4} mt={12}>
@@ -117,19 +97,20 @@ const EnergyCards = ({ currentTheme }: HomeServices) => {
                             textAlign="center"
                             pos="relative"
                         >
-                            <Flex
-                                p={2}
+                                <Flex
+                                p={1}
                                 w="max-content"
                                 color="white"
-                                bgGradient="linear(to-br, #228be6, #15aabf)"
-                                rounded="md"
+                                // bgGradient="linear(to-br, #228be6, #15aabf)"
+                                rounded="lg"
                                 marginInline="auto"
                                 pos="absolute"
                                 left={0}
                                 right={0}
-                                top="-1.5rem"
-                                boxShadow="lg">
-                                {iconArray[index]}
+                                top="-2.5rem"
+                            // boxShadow="xl"
+                            >
+                                <img src={`${iconArray[index]}`} alt="" height="70" width="70" />
                             </Flex>
                             <chakra.h3 fontWeight="semibold" fontSize={theme.fonts.subHeadingSecond.size} mt={6}>
                                 {feature.heading}

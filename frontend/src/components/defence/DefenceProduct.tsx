@@ -5,6 +5,7 @@ import {
     Stack
 } from '@chakra-ui/react';
 import spade from "../../assets/img/products/spade.png";
+import lance from '../../assets/img/products/lance_page.webp';
 import { Link } from "react-router-dom"
 
 
@@ -54,7 +55,7 @@ const categories = [
     {
         name: 'Lance',
         imageUrl:
-            "",
+            lance,
         url: '#/lance',
     },
 

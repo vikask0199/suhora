@@ -2,7 +2,7 @@ import { AspectRatio, Box, Button, Flex, Image, ListItem, Text, UnorderedList } 
 import { RiTyphoonLine } from "react-icons/ri"
 import theme from "../../../theme"
 import { Link } from "react-router-dom"
-import sidmain from "../../../assets/img/products/sidmain_monitor.webp"
+import sidmain from "../../../assets/img/products/sid_monitor_final.webp"
 type spadeFeatureProps = {
     currentTheme: string
 }
