@@ -2,7 +2,7 @@ import {
   Box,
   Container,
   Flex,
-  Link,
+  
   SimpleGrid,
   Stack,
   Text,
@@ -23,16 +23,16 @@ interface IFeature {
 const features: IFeature[] = [
   {
     heading: 'Learn',
-    content: 'Choose from Stripe, Paddle, Braintree, or PayPal to launch your product quickly.',
+    content: 'Expand your skills and knowledge with us. We offer ongoing learning opportunities to help you grow professionally.',
 
   },
   {
     heading: 'Collaborate',
-    content: 'Choose from Stripe, Paddle, Braintree, or PayPal to launch your product quickly.',
+    content: 'Work together in a supportive environment where your ideas matter. Join forces with talented individuals to create innovative solutions..',
   },
   {
     heading: 'Make an impact',
-    content: 'Choose from Stripe, Paddle, Braintree, or PayPal to launch your product quickly.',
+    content: 'Be part of something meaningful. Make a difference by contributing to projects that matter. ',
   }
 ];
 
@@ -88,9 +88,9 @@ const CareerHeading = ({ currentTheme }: cardHeadingCurrentTheme) => {
               <Text my={4}>
                 {feature.content}
               </Text>
-              <Link href="#" fontSize={theme.fonts.subHeadingSecond.size} color={theme.companyTheme.color.secondry}>
+              {/* <Link href="#" fontSize={theme.fonts.subHeadingSecond.size} color={theme.companyTheme.color.secondry}>
                 Learn more →
-              </Link>
+              </Link> */}
             </Box>
           ))}
         </SimpleGrid>

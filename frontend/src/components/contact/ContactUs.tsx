@@ -21,13 +21,14 @@ import { GoLocation } from 'react-icons/go';
 import { HiOutlineMail } from 'react-icons/hi';
 import contact2 from '../../assets/img/contact/Contactus2.jpg';
 import theme from '../../theme';
+import { Link } from 'react-router-dom';
 
 
 const contactOptions = [
     {
         label: 'Address',
         valuee: '313, Tower-B, Noida One, Sector-62,',
-        value:'Noida,Uttar Pradesh-201309, India',
+        value: 'Noida,Uttar Pradesh-201309, India',
         icon: GoLocation
     },
     {
@@ -59,13 +60,13 @@ const ContactUs = ({ currentTheme }: contactProps) => {
                         </Flex>
                         <Flex justifyContent='center'>
                             <Text mt='1em' fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>
-                            We believe in the power of communication. Reach out to us and let's build something amazing together.
+                                We believe in the power of communication. Reach out to us and let's build something amazing together.
 
                             </Text>
                         </Flex>
                     </Box>
                 </Box>
-                
+
                 <Flex
                     id="image-wrapper"
                     position="absolute"
@@ -107,16 +108,18 @@ const ContactUs = ({ currentTheme }: contactProps) => {
                                     <Text fontSize="lg" fontWeight="semibold">
                                         {option.label}
                                     </Text>
-                                    <Text fontSize="lg" textAlign="end" >
-                                        {option.value}
-                                        
-                                    </Text>
+                                    <Link to="mailto:hello@suhora.com">
+                                        <Text fontSize="lg" textAlign="end" >
+                                            {option.value}
+
+                                        </Text>
+                                    </Link>
                                     <Text fontSize="lg" textAlign="end">{option.valuee}</Text>
                                 </Stack>
                             </Fragment>
                         ))}
                     </Stack>
-                    
+
                     <VStack
                         as="form"
                         spacing={8}
@@ -125,7 +128,7 @@ const ContactUs = ({ currentTheme }: contactProps) => {
                         rounded="lg"
                         boxShadow="lg"
                         p={{ base: 5, sm: 10 }}>
-                            <Flex justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
+                        <Flex justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
                             <Text>
                                 <Text as="span">Filled </Text>
                                 <Text as="span" color={theme.companyTheme.color.secondry}>Your details</Text>

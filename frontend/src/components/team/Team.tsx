@@ -5,7 +5,7 @@ import {
     Img,
     Text
 } from '@chakra-ui/react'
-import AgricultureImg from '../../assets/img/team.jpeg'
+import AgricultureImg from '../../assets/img/team.webp'
 import theme from '../../theme'
 
 const Team = () => {

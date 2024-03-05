@@ -13,11 +13,11 @@ import {
 } from '@chakra-ui/react'
 import {  FaLinkedin } from 'react-icons/fa'
 import theme from '../../theme'
-import Rupesh from '../../assets/img/rupesh (1).jpg'
-import krishnanu from '../../assets/img/Krishanu_old-BzskEh_a (1).jpg'
+import Rupesh from '../../assets/img/rupesh.jpg'
+import krishnanu from '../../assets/img/Krishanu.jpg'
 import Amit from '../../assets/img/Amit.jpg'
-import tanmoy from '../../assets/img/tanmoy (1).jpg'
-import surojit from '../../assets/img/Surojit-Bose (3).jpg'
+import tanmoy from '../../assets/img/Tanmoy.webp'
+import surojit from '../../assets/img/Surojit-Bose.jpg'
 import Navneet from '../../assets/img/NavneetKaushik.jpg'
 
 const TeamCards = () => {

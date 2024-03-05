@@ -1,7 +1,7 @@
 import { AspectRatio, Box, Button, Flex, Image, ListItem, Text, UnorderedList } from "@chakra-ui/react"
 import { RiTyphoonLine } from "react-icons/ri"
 import theme from "../../../theme"
-import terrain from "../../../assets/img/services/terrain.png"
+import terrain from "../../../assets/img/services/terrain.webp"
 import { NavLink } from "react-router-dom"
 
 

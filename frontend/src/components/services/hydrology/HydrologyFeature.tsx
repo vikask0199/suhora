@@ -1,7 +1,7 @@
 import { AspectRatio, Box, Button, Flex, Image, ListItem, Text, UnorderedList } from "@chakra-ui/react"
 import { RiTyphoonLine } from "react-icons/ri"
 import theme from "../../../theme"
-import hydrologymainimage from "../../../assets/img/services/hydrologymainimage.jpg"
+import hydrologymainimage from "../../../assets/img/services/hydrologymainimage.webp"
 import { NavLink } from "react-router-dom"
 
 

@@ -1,6 +1,6 @@
 
 import { Box, Flex, Heading, Img, Text } from '@chakra-ui/react'
-import landdeformation from "../../../assets/img/services/landdeformation.png"
+import landdeformation from "../../../assets/img/services/landdeformation.webp"
 import theme from '../../../theme'
 
 // type hydrologyHeaderProps = {

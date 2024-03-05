@@ -1,6 +1,6 @@
 
 import { Box, Flex, Heading, Img, Text } from '@chakra-ui/react'
-import hydrologymainimage from '../../../assets/img/services/hydrologymainimage.jpg'
+import hydrologymainimage from '../../../assets/img/services/hydrologymainimage.webp'
 import theme from '../../../theme'
 
 // type hydrologyHeaderProps = {

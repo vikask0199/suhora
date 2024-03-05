@@ -1,6 +1,6 @@
 import { Box, Flex, Heading, Img, Text } from '@chakra-ui/react'
 import theme from '../../theme'
-import AgricultureImg from '../../assets/img/aboutussImg.jpg'
+import AgricultureImg from '../../assets/img/aboutussImg.webp'
 
 
 
