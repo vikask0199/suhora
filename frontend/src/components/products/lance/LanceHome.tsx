@@ -16,8 +16,8 @@ export const LanceHome = () => {
   return (
     <Box as="section" minH="140px" h="auto" position="relative">
       <Box py="24" position="relative" zIndex={1}>
-        <Flex justifyContent="space-between" position="relative" flexDirection={{ base: "column", md: "row" }} overflow="hidden">
-          <AnimatedBox width={{ base: "100%", md: "40%" }} px={{ base: '6', md: '8' }} initial={{ opacity: 0, x: -10 }}
+        <Flex justifyContent="space-between" position="relative" flexDirection={{ base: "column", md: "row" }}>
+          <AnimatedBox width={{ base: "90%", md: "40%" }} px={{ base: '6', md: '8' }} initial={{ opacity: 0, x: -10 }}
             animate={{ opacity: 1, x: 10 }}
             transition={{ ease: "linear", duration: 1, delay: 0.2 }}>
             <Box >
@@ -36,7 +36,7 @@ export const LanceHome = () => {
               </Stack>
             </Box>
           </AnimatedBox>
-          <Box width={{ base: "100%", md: "40%" }} position="relative" display={{ base: "none", md: "block" }}>
+          <Box width={{ base: "100%", md: "40%" }} marginTop="90px" position="relative" display={{ base: "none", md: "block" }}>
             <MotionBox
               initial={{ scale: 0, x: "-50%", y: "-50%" }}
               animate={{ scale: 1.1, x: "-50%", y: "-50%" }}
