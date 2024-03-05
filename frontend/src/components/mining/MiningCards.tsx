@@ -26,7 +26,8 @@ interface IFeature {
 const features: IFeature[] = [
     {
         heading: 'Site Selection',
-        content: 'Our custom designed automated algorithm analyzing terrain, geology, and environmental factors to optimize resource extraction and minimize ecological impact.',
+        // content: 'Our custom designed automated algorithm analyzing terrain, geology, and environmental factors to optimize resource extraction and minimize ecological impact.',
+        content: 'Optimize resource extraction and minimize ecological impact with our automated algorithm.',
         icon: (
             <Box fontSize={theme.fonts.mainHeading.size}>
                 <MdPayment />
@@ -35,7 +36,8 @@ const features: IFeature[] = [
     },
     {
         heading: 'High Resolution Satellite Imagery',
-        content: 'We offer very high resolution satellite imagery for regular monitoring of mining sites.',
+        // content: 'We offer very high resolution satellite imagery for regular monitoring of mining sites.',
+        content: "Access very high-resolution satellite imagery for regular monitoring of mining sites.",
         icon: (
 
             <Box fontSize={theme.fonts.mainHeading.size}>
@@ -45,7 +47,7 @@ const features: IFeature[] = [
     },
     {
         heading: 'High Resolution Digital 3D Map',
-        content: '',
+        content: 'Discover detailed digital 3D maps to enhance infrastructure monitoring and planning efforts.',
         icon: (
 
             <Box fontSize={theme.fonts.mainHeading.size}>
@@ -55,7 +57,7 @@ const features: IFeature[] = [
     },
     {
         heading: 'Infrastructure Monitoring & Planning',
-        content: '',
+        content: 'Enhance your monitoring and planning processes with our infrastructure-focused solutions.',
         icon: (
 
             <Box fontSize={theme.fonts.mainHeading.size}>
@@ -65,7 +67,7 @@ const features: IFeature[] = [
     },
     {
         heading: 'Accurate Volumetric Analysis',
-        content: '',
+        content: 'Achieve unparalleled precision in your analysis with our advanced volumetric analysis tools.',
         icon: (
 
             <Box fontSize={theme.fonts.mainHeading.size}>
@@ -131,7 +133,7 @@ const MiningCards = ({ currentTheme }: HomeServices) => {
                                 boxShadow="lg">
                                 {iconArray[index]}
                             </Flex>
-                            <chakra.h3 fontWeight="semibold" fontSize="2xl" mt={6}>
+                            <chakra.h3 fontWeight="semibold" fontSize={theme.fonts.subHeadingSecond.size} mt={6}>
                                 {feature.heading}
                             </chakra.h3>
                             <Text fontSize="md" mt={4}>

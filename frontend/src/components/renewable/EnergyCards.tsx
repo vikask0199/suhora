@@ -131,7 +131,7 @@ const EnergyCards = ({ currentTheme }: HomeServices) => {
                                 boxShadow="lg">
                                 {iconArray[index]}
                             </Flex>
-                            <chakra.h3 fontWeight="semibold" fontSize="2xl" mt={6}>
+                            <chakra.h3 fontWeight="semibold" fontSize={theme.fonts.subHeadingSecond.size} mt={6}>
                                 {feature.heading}
                             </chakra.h3>
                             <Text fontSize="md" mt={4}>

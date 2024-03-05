@@ -1,6 +1,7 @@
 import { AspectRatio, Box, Button, Flex, Image, Text, VStack } from "@chakra-ui/react"
 import theme from "../../theme"
 import earthImage from '../../assets/video/Rotating_earth_(huge).gif'
+import { Link } from "react-router-dom"
 
 type joinTeamProp = {
     currentTheme: string
@@ -31,9 +32,11 @@ const JoinTeam = ({ currentTheme }: joinTeamProp) => {
                                 email or small or large requirements. We love satellite data!
                                 </Text>
                                 <VStack w="100%" width="fit-content">
+                                    <Link to="/contact-us">
                             <Button width="fit-content" px="8" border='1px solid #1266A0'variant="outline" color="#1266A0" _hover={{ backgroundColor: theme.companyTheme.color.secondry, border: "1px solid #1266A0",color:'white'}} >
-                     Explore Our Products
+                     Get in Touch
                     </Button>
+                    </Link>
                             </VStack>
                             </Flex>
                            

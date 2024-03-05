@@ -2,7 +2,7 @@ import {
     Box,
     Container,
     Flex,
-    Link,
+    // Link,
     SimpleGrid,
     Stack,
     Text,
@@ -23,16 +23,18 @@ interface IFeature {
 const features: IFeature[] = [
     {
         heading: 'Solar Projects',
-        content: 'Choose from Stripe, Paddle, Braintree, or PayPal to launch your product quickly.',
-
+        // content: 'Choose from Stripe, Paddle, Braintree, or PayPal to launch your product quickly.',
+        content: "Leveraging satellite insights to expedite the launch of solar projects.",
     },
     {
         heading: ' Oil & gas',
-        content: 'Webhooks are wired up to automatically email customers PDF receipts and invoices.',
+        // content: 'Webhooks are wired up to automatically email customers PDF receipts and invoices.',
+        content: "Streamlining operational processes with satellite-derived data integration.",
     },
     {
         heading: 'City Planning',
-        content: 'Roll your own API to easily connect with other apps or services. Pull in updates.',
+        // content: 'Roll your own API to easily connect with other apps or services. Pull in updates.',
+        content: "Satellite data integration enhances city planning for better decision-making.",
     }
 ];
 
@@ -85,9 +87,9 @@ const HydrologyUsacases = () => {
                             <Text my={4}>
                                 {feature.content}
                             </Text>
-                            <Link href="#" fontSize={theme.fonts.subHeadingSecond.size} color={theme.companyTheme.color.secondry}>
+                            {/* <Link href="#" fontSize={theme.fonts.subHeadingSecond.size} color={theme.companyTheme.color.secondry}>
                                 Learn more →
-                            </Link>
+                            </Link> */}
                         </Box>
                     ))}
                 </SimpleGrid>

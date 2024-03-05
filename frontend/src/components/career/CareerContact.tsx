@@ -2,6 +2,7 @@
 import { Box, Flex,  Img,  Button } from '@chakra-ui/react'
 import theme from '../../theme'
 import contact from '../../assets/img/contact-us.jpg'
+import { Link } from 'react-router-dom'
 
 const CareerContact = () => {
     return (
@@ -10,6 +11,7 @@ const CareerContact = () => {
                 <Box py="32" position="relative" zIndex={1} >
                     <Box maxW='5xl' mx="auto" px={{ base: '6', md: '8' }} color="white" >
                         <Flex justifyContent='center'>
+                            <Link to='/contact-us' >
                             <Button
                                 colorScheme="blue"
                                 backgroundColor={theme.companyTheme.color.secondry}
@@ -21,6 +23,7 @@ const CareerContact = () => {
                             >
                                 Contact us
                             </Button>
+                            </Link>
                         </Flex>
                     </Box>
                 </Box>

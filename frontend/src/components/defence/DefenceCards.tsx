@@ -9,11 +9,11 @@ import {
     useColorModeValue
 } from '@chakra-ui/react';
 
-import dataSecurity from "../../assets/img/industries/DataSecurity.png";
-import integrated from "../../assets/img/industries/IntegratedGlobalView.png";
-import maritime from "../../assets/img/industries/MaritimeDomainAwareness.png";
-import servilliance from "../../assets/img/industries/Surveillance_Intelligence.png";
-import tailored from "../../assets/img/industries/Tailored.png";
+import dataSecurity from "../../assets/img/industries/DataSecurity.webp";
+import integrated from "../../assets/img/industries/IntegratedGlobalView.webp";
+import maritime from "../../assets/img/industries/MaritimeDomainAwareness.webp";
+import servilliance from "../../assets/img/industries/Surveillance_Intelligence.webp";
+import tailored from "../../assets/img/industries/Tailored.webp";
 import terrains from "../../assets/img/industries/terrains.webp";
 import theme from '../../theme';
 

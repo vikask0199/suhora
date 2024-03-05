@@ -2,7 +2,7 @@ import {
     Box,
     Container,
     Flex,
-    Link,
+    // Link,
     SimpleGrid,
     Stack,
     Text,
@@ -94,9 +94,9 @@ const LandUsacases = () => {
                             <Text my={4}>
                                 {feature.content}
                             </Text>
-                            <Link href="#" fontSize={theme.fonts.subHeadingSecond.size} color={theme.companyTheme.color.secondry}>
+                            {/* <Link href="#" fontSize={theme.fonts.subHeadingSecond.size} color={theme.companyTheme.color.secondry}>
                                 Learn more →
-                            </Link>
+                            </Link> */}
                         </Box>
                     ))}
                 </SimpleGrid>

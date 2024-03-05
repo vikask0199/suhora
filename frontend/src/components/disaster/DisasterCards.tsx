@@ -8,11 +8,11 @@ import {
     chakra,
     useColorModeValue
 } from '@chakra-ui/react';
-import b2b from '../../assets/img/industries/disaster-b2b.png'
-import disaster from '../../assets/img/industries/Disaster-Monitoring.png'
-import DisasterProcessing from '../../assets/img/industries/Disaster-processing.png'
-import RiskManagement from '../../assets/img/industries/Risk-management.png'
-import TailoredInsurance from '../../assets/img/industries/Tailored-insurance.png'
+import b2b from '../../assets/img/industries/disaster-b2b.webp'
+import disaster from '../../assets/img/industries/Disaster-Monitoring.webp'
+import DisasterProcessing from '../../assets/img/industries/Disaster-processing.webp'
+import RiskManagement from '../../assets/img/industries/Risk-management.webp'
+import TailoredInsurance from '../../assets/img/industries/Tailored-insurance.webp'
 
 import theme from '../../theme';
 
@@ -29,12 +29,12 @@ const features: IFeature[] = [
     },
     {
         heading: 'Risk Assessment & Management',
-        content: 'We utilize predictive analytics to assess disaster risks accurately, aiding insurers and stakeholders in developing effective management strategies.',
-
+        // content: 'We utilize predictive analytics to assess disaster risks accurately, aiding insurers and stakeholders in developing effective management strategies.',
+        content: "Leverage predictive analytics for accurate disaster risk assessment, assisting insurers and stakeholders in formulating effective management strategies.",
     },
     {
         heading: 'Post-Disaster Analysis and Claims Processing',
-        content: 'Suhora’s rapid analysis tools evaluate disaster impacts precisely, streamlining the insurance claims process for swift recovery support.',
+        content: "Suhora's rapid analysis tools evaluate disaster impacts precisely, streamlining the insurance claims process for swift recovery support.",
 
     },
     {

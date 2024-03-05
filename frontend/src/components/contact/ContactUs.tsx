@@ -27,25 +27,31 @@ import { Link } from 'react-router-dom';
 const contactOptions = [
     {
         label: 'Address',
-        valuee: '313, Tower-B, Noida One, Sector-62,',
-        value: 'Noida,Uttar Pradesh-201309, India',
-        icon: GoLocation
+        valuee: 'Noida, Uttar Pradesh, India, 201309',
+        value: '313, Tower-B, Noida One, Sector-62,',
+        icon: GoLocation,
+        link: "https://maps.app.goo.gl/w2MfioZfebut4tgD9"
     },
     {
         label: 'PHONE NUMBER',
         value: '+91 9999664437',
-        icon: BsPhone
+        icon: BsPhone,
+        link: 'https://wa.me/+919999664437'
     },
     {
         label: 'EMAIL',
         value: 'hello@suhora.com',
-        icon: HiOutlineMail
+        icon: HiOutlineMail,
+        link : "mailto:hello@suhora.com"
     }
 ];
 
 type contactProps = {
     currentTheme: string
 }
+
+
+
 
 const ContactUs = ({ currentTheme }: contactProps) => {
     return (
@@ -108,7 +114,7 @@ const ContactUs = ({ currentTheme }: contactProps) => {
                                     <Text fontSize="lg" fontWeight="semibold">
                                         {option.label}
                                     </Text>
-                                    <Link to="mailto:hello@suhora.com">
+                                    <Link to={option.link} target="_blank">
                                         <Text fontSize="lg" textAlign="end" >
                                             {option.value}
 
