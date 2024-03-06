@@ -30,11 +30,11 @@ const TeamCards = () => {
 
 
   return (
-    <Container maxW="6xl">
-      <Stack spacing={{ base: '12', md: '16' }} >
+    <Container maxW="6xl" py={{ base: '16', md: '12' }} >
+      <Stack>
         <Stack>
           <Stack spacing={{ base: '4', md: '5' }}>
-            <Flex justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight} pt={10}>
+            <Flex justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
               <Text>
                 <Text as="span" color={theme.companyTheme.color.secondry} >Leadership </Text>
                 <Text as="span">Team </Text>
@@ -46,51 +46,51 @@ const TeamCards = () => {
           </Stack>
         </Stack>
 
-        <Stack spacing={{ base: '12', md: '16' }}>
+        <Stack >
           {/* <Stack
             spacing={{ base: '8', md: '10' }}
             direction={{ base: 'column', lg: 'row' }}
             justify="space-between">
             <Heading size={{ base: 'sm', md: 'md' }}>Meet our team</Heading>
           </Stack> */}
-          <Flex flexDirection="column">
+          <Flex flexDirection="column" gap="16">
             {members.map((member, index) => (
-              <Flex key={index} flexDirection="column" border="2px">
+              <Flex key={index} flexDirection="column" gap="10">
                 <Stack
                   spacing={{ base: '8', md: '10' }}
                   direction={{ base: 'column', lg: 'row' }}
-                  justify="space-between">
-                  <Heading size={{ base: 'sm', md: 'md' }}>{arrayHeading[index]}</Heading>
+                  justifyContent="center">
+                  <Text fontSize={theme.fonts.subHeading.size} fontWeight={theme.fonts.subHeading.weight} color={theme.companyTheme.color.secondry}>{arrayHeading[index]}</Text>
                 </Stack>
-                {
-                  member.map((item, index) => (
-                    <SimpleGrid
-                      columns={{ base: 1, md: 2, lg: 3 }}
-                      columnGap="8"
-                      rowGap={{ base: '10', lg: '16' }}>
+                <SimpleGrid
+                  columns={{ base: 1, md: 2, lg: 3 }}
+                  columnGap="8"
+                  rowGap={{ base: '10', lg: '16' }}>
+                  {
+                    member.map((item, index) => (
                       <Stack key={item.name} spacing="4">
                         <Stack spacing="5">
                           <AspectRatio ratio={3 / 3}>
-                            <Img src={item.image} alt={item.name} h="72" objectFit="cover" />
+                            <Img src={item.image} alt={item.name} objectFit="cover" />
                           </AspectRatio>
                           <Stack spacing="1">
                             <Text fontWeight="medium" fontSize={{ base: 'lg', md: 'xl' }}>
                               {item.name}
                             </Text>
-                            <Text color="accent" fontSize={{ base: 'md', md: 'lg' }}>
+                            <Text fontSize={{ base: 'md', md: 'lg' }}>
                               {item.role}
                             </Text>
                           </Stack>
                         </Stack>
-                        <HStack spacing="4" color="fg.subtle">
-                          <Link href={item.item} target='_blank'>
+                        <HStack spacing="4">
+                          <Link href={item.item} target='_blank' fontSize={theme.fonts.subHeading.size} fontWeight={theme.fonts.subHeading.weight} color={theme.companyTheme.color.secondry}>
                             {arraIcon[0]}
                           </Link>
                         </HStack>
                       </Stack>
-                    </SimpleGrid>
-                  ))
-                }
+                    ))
+                  }
+                </SimpleGrid>
               </Flex>
             ))}
           </Flex>
