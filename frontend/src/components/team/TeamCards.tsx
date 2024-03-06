@@ -3,16 +3,14 @@ import {
   Container,
   Flex,
   HStack,
-  Icon,
+
   Img,
   Link,
   SimpleGrid,
   Stack,
   Text,
   AspectRatio,
-  Heading,
-  Button,
-  Box
+
 } from '@chakra-ui/react'
 import { FaLinkedin } from 'react-icons/fa'
 import theme from '../../theme'
@@ -68,7 +66,7 @@ const TeamCards = () => {
                   rowGap={{ base: '10', lg: '16' }}>
                   {
                     member.map((item, index) => (
-                      <Stack key={item.name} spacing="4">
+                      <Stack key={index} spacing="4">
                         <Stack spacing="5">
                           <AspectRatio ratio={3 / 3}>
                             <Img src={item.image} alt={item.name} objectFit="cover" />

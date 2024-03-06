@@ -3,16 +3,16 @@ import {
     // Button,
     Container,
     Flex,
-    ListItem,
+
     Stack,
     Text,
-    UnorderedList
+
 } from '@chakra-ui/react';
 import theme from '../../theme';
 import { RiTyphoonLine } from 'react-icons/ri';
 export const ForestryContent = () => {
     // const aspectRatio = 3 / 3
-    const spadeIconArray = [<RiTyphoonLine />]
+
     return (
         <Box >
             <Container py={{ base: '16', md: '12' }} maxW="6xl">
