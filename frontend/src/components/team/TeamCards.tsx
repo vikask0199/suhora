@@ -1,7 +1,7 @@
 import {
-   
+
   Container,
- Flex,
+  Flex,
   HStack,
   Icon,
   Img,
@@ -9,9 +9,12 @@ import {
   SimpleGrid,
   Stack,
   Text,
-  AspectRatio
+  AspectRatio,
+  Heading,
+  Button,
+  Box
 } from '@chakra-ui/react'
-import {  FaLinkedin } from 'react-icons/fa'
+import { FaLinkedin } from 'react-icons/fa'
 import theme from '../../theme'
 import Rupesh from '../../assets/img/rupesh.jpg'
 import krishnanu from '../../assets/img/Krishanu.jpg'
@@ -21,8 +24,13 @@ import surojit from '../../assets/img/Surojit-Bose.jpg'
 import Navneet from '../../assets/img/NavneetKaushik.jpg'
 
 const TeamCards = () => {
+  const arrayHeading = ["", "Board Of Directors", "Advisors"]
+  const arraIcon = [<FaLinkedin />]
+
+
+
   return (
-    <Container maxW="6xl" p={2}>
+    <Container maxW="6xl">
       <Stack spacing={{ base: '12', md: '16' }} >
         <Stack>
           <Stack spacing={{ base: '4', md: '5' }}>
@@ -37,55 +45,56 @@ const TeamCards = () => {
             </Text> */}
           </Stack>
         </Stack>
-        <SimpleGrid
-          columns={1} // Set to 1 column for a row form
-          rowGap={{ base: '20', lg: '20' }} 
-        >
-          {members.map((group, groupIndex) => (
-            <Stack key={groupIndex} spacing="4">
-              <Stack spacing="1">
-                <Text
-                  textAlign="center"
-                  fontWeight={theme.fonts.subHeading.weight}
-                  // mb="2"
-                  color={theme.companyTheme.color.third}
-                  fontSize={theme.fonts.subHeading.size} 
-                  
-                >
-                  {group[0].heading}
-                </Text>
-              </Stack>
-              <Stack direction="row" spacing="10" width="100"> {/* Set width to 100% to take full width */}
-                {group.map((member) => (
-                  <Stack key={member.name} spacing="5" flex="3"> {/* Set flex to 1 for equal distribution */}
-                    <AspectRatio ratio={3/ 3}>
-                      <Img
-                        src={member.image}
-                        alt={member.name}
-                        objectFit="cover"
-                      />
-                    </AspectRatio>
-                    <Stack spacing="1">
-                      <Text fontWeight="medium" fontSize={{ base: 'lg', md: 'xl' }}>
-                        {member.name}
-                      </Text>
-                      <Text color="accent" fontSize={{ base: 'md', md: 'lg' }}>
-                        {member.role}
-                      </Text>
-                    </Stack>
-                    <HStack spacing="4"  color={theme.companyTheme.color.third}>
-                      {[FaLinkedin].map((item, id) => (
-                        <Link href={member.item}  target="_blank" key={id}>
-                          <Icon as={item} boxSize="5" />
-                        </Link>
-                      ))}
-                    </HStack>
-                  </Stack>
-                ))}
-              </Stack>
-            </Stack>
-          ))}
-        </SimpleGrid>
+
+        <Stack spacing={{ base: '12', md: '16' }}>
+          {/* <Stack
+            spacing={{ base: '8', md: '10' }}
+            direction={{ base: 'column', lg: 'row' }}
+            justify="space-between">
+            <Heading size={{ base: 'sm', md: 'md' }}>Meet our team</Heading>
+          </Stack> */}
+          <Flex flexDirection="column">
+            {members.map((member, index) => (
+              <Flex key={index} flexDirection="column" border="2px">
+                <Stack
+                  spacing={{ base: '8', md: '10' }}
+                  direction={{ base: 'column', lg: 'row' }}
+                  justify="space-between">
+                  <Heading size={{ base: 'sm', md: 'md' }}>{arrayHeading[index]}</Heading>
+                </Stack>
+                {
+                  member.map((item, index) => (
+                    <SimpleGrid
+                      columns={{ base: 1, md: 2, lg: 3 }}
+                      columnGap="8"
+                      rowGap={{ base: '10', lg: '16' }}>
+                      <Stack key={item.name} spacing="4">
+                        <Stack spacing="5">
+                          <AspectRatio ratio={3 / 3}>
+                            <Img src={item.image} alt={item.name} h="72" objectFit="cover" />
+                          </AspectRatio>
+                          <Stack spacing="1">
+                            <Text fontWeight="medium" fontSize={{ base: 'lg', md: 'xl' }}>
+                              {item.name}
+                            </Text>
+                            <Text color="accent" fontSize={{ base: 'md', md: 'lg' }}>
+                              {item.role}
+                            </Text>
+                          </Stack>
+                        </Stack>
+                        <HStack spacing="4" color="fg.subtle">
+                          <Link href={item.item} target='_blank'>
+                            {arraIcon[0]}
+                          </Link>
+                        </HStack>
+                      </Stack>
+                    </SimpleGrid>
+                  ))
+                }
+              </Flex>
+            ))}
+          </Flex>
+        </Stack>
       </Stack>
     </Container>
   );
@@ -93,7 +102,7 @@ const TeamCards = () => {
 
 export default TeamCards;
 
-const members= [
+const members = [
   [
     {
       role: 'CEO and Co-Founder',
@@ -116,7 +125,7 @@ const members= [
       name: 'Amit Kumar',
       heading: '',
     },
-   
+
   ],
   [
     {
@@ -170,6 +179,6 @@ const members= [
       item: 'https://www.linkedin.com/in/tanmoy-adhikary-8132002/',
       heading: 'Advisors',
     },
-   
+
   ],
 ];
