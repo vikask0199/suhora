@@ -13,6 +13,8 @@ import satellogicdark from "../../../assets/img/partners/satellogicdark.png"
 import satvudark from "../../../assets/img/partners/satvudark.png"
 import vengdark from "../../../assets/img/partners/vengdark.png"
 import theme from "../../../theme";
+import { motion } from "framer-motion";
+import { textVarient } from "../../../animation";
 
 type ourPartnersProps = {
     currentTheme: string;
@@ -54,14 +56,17 @@ export const OurPartners = ({ currentTheme }: ourPartnersProps) => {
         ]
     };
 
+    const AnimateText = motion(Text)
+
+
     return (
         <Flex width="100%" pb={{ base: '16', md: '12' }} pt={{ base: '20', md: '16' }} justifyContent="center" alignItems="center" overflow="hidden" flexDirection="column" gap={12}>
             <Stack spacing={{ base: '4', md: '5' }} direction="column">
                 <Flex justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
-                    <Text>
+                    <AnimateText variants={textVarient} whileInView="show" initial="hidden">
                         <Text as="span">Our Amazing </Text>
                         <Text as="span" color={theme.companyTheme.color.secondry}>Partners</Text>
-                    </Text>
+                    </AnimateText>
                 </Flex>
                 <Text fontSize={theme.fonts.subHeading.size} color={theme.companyTheme.color.third} fontWeight={theme.fonts.subHeading.weight} textAlign="center">
                     {/* Everything you need to build modern UI and great products. */}
