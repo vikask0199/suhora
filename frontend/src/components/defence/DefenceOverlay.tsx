@@ -16,7 +16,7 @@ const DefenceOverlay = () => {
             </Flex>
             <Flex justifyContent='center'>
               <Text mt='1em' fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>
-              Empowering defense and intelligence with cutting-edge technology and unwavering security
+              Empowering defense and intelligence with cutting-edge technology
               </Text>
             </Flex>
           </Box>

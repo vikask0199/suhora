@@ -26,7 +26,7 @@ export const InfrastructureContent = () => {
                             </Text>
                         </Flex>
                         <Text color={theme.companyTheme.color.third} fontSize={theme.fonts.subHeading.size} fontWeight={theme.fonts.subHeading.weight} maxW="6xl" >
-                            Sky-Built Precision: AI-Powered Construction Monitoring.
+                            Sky Built Precision AI Powered Automation
                         </Text>
                         <Text textAlign="justify">
                             Suhora harnessing the vast repository of satellite data, ranging from high-resolution electro optical imagery to SAR (Synthetic Aperture Radar) coupling satellite data with enhanced AI and automation offers unprecedented insights for condition, performance, and dynamics of critical infrastructure assets.

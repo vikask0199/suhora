@@ -26,27 +26,27 @@ interface IFeature {
 const features: IFeature[] = [
     {
         heading: 'Deforestation Monitoring',
-        content: 'Choose from Stripe, Paddle, Braintree, or PayPal to launch your product quickly.',
+        content: 'Suhora employs advanced technologies to track and analyze deforestation activities in real-time, enabling timely interventions to mitigate further forest loss.',
 
     },
     {
         heading: 'Forest Fire Monitoring',
-        content: 'Webhooks are wired up to automatically email customers PDF receipts and invoices.',
+        content: 'Utilizing remote sensing and AI, Suhora detects and monitors forest fires, providing early warning systems and facilitating rapid response efforts to minimize damage.',
 
     },
     {
         heading: 'Forest Productivity Monitoring',
-        content: 'Roll your own API to easily connect with other apps or services. Pull in updates.',
+        content: 'Suhora assesses the productivity of forests through remote sensing data, offering insights into forest growth rates, carbon footprinting, and overall ecosystem health.',
 
     },
     {
         heading: 'Forest Health Monitoring',
-        content: 'Roll your own API to easily connect with other apps or services. Pull in updates.',
+        content: 'Suhora conducts ongoing analysis to assess forest health, identifying threats like diseases, invasive species, and environmental stressors for ecosystem stability.',
 
     },
     {
         heading: 'Tree Species Indentification',
-        content: 'Roll your own API to easily connect with other apps or services. Pull in updates.',
+        content: 'Using advanced image analysis techniques, cataloging of tree species within forested areas, facilitating biodiversity assessments and conservation planning initiatives.',
 
     },
 
@@ -71,7 +71,7 @@ const ForestryCards = ({ currentTheme }: HomeServices) => {
                         </Text>
                     </Flex>
                     <Text fontSize={theme.fonts.subHeading.size} color={theme.companyTheme.color.third} fontWeight={theme.fonts.subHeading.weight} textAlign="center">
-                        Everything you need to build modern UI and great products.
+                    Driving Conservation Efforts Through Cutting-Edge Forest Monitoring
                     </Text>
                 </Stack>
                 <SimpleGrid columns={{ base: 1, sm: 2, md: 3 }} placeItems="center" spacing={10} mb={4} mt={12}>
@@ -102,7 +102,7 @@ const ForestryCards = ({ currentTheme }: HomeServices) => {
                             <chakra.h3 fontWeight="semibold" fontSize={theme.fonts.subHeadingSecond.size} mt={6}>
                                 {feature.heading}
                             </chakra.h3>
-                            <Text fontSize="md" mt={4}>
+                            <Text fontSize="md" mt={4} textAlign="justify">
                                 {feature.content}
                             </Text>
                             {/* <Link href="#" mt={4} fontSize="sm" color="blue.400">

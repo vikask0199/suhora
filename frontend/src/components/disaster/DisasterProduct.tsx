@@ -50,13 +50,13 @@ export const DisasterProduct = () => {
 
 const categories = [
     {
-        name: 'Spade',
+        name: 'SPADE',
         imageUrl:
             spade,
             url: "/spade",
     },
     {
-        name: 'Sid',
+        name: 'SID',
         imageUrl:
             sid,
         url: '/sid',

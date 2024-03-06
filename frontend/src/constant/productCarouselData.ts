@@ -16,11 +16,11 @@ export const products = [
     ratingCount: 1,
     description:
       'A seamless SaaS platform delivering comprehensive access to multi-sensor satellite data for a spectrum of commercial applications.',
-    point1: 'Data Insight & Analytics As-a-Service through Platform & API',
-    point2: 'Multi Mission Planning & Tasking & Visualization Platform',
-    point3: 'Guaranteed collection, Fastest tasking, Secure downlink',
-    point4: '24/7 all weather Surveillance using Optical and SAR Constellation',
-    point5: 'Most Cost-Effective Solution available in Market',
+    point1: 'Data, Insight & Analytics As-a-Service through platform & API',
+    point2: 'Multi mission planning, tasking & visualization platform',
+    point3: 'Guaranteed collection, fastest tasking, secure downlink',
+    point4: '24/7 all weather surveillance using optical, SAR constellation',
+    point5: 'Most cost-effective solution available in market',
   },
   {
     id: '2',

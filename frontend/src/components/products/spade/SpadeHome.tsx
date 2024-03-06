@@ -24,8 +24,8 @@ export const SpadeHome = () => {
               <Text fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
                 SPADE
               </Text>
-              <Text fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight} mt="4" maxW="lg">
-                A seamless SaaS platform delivering comprehensive access to multi-sensor satellite data for a spectrum of commercial applications.
+              <Text fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight} mt="4" maxW="xl">
+                SaaS platform delivering comprehensive access to multi-sensor satellite data for a spectrum of commercial applications.
               </Text>
               <Stack direction={{ base: 'column', md: 'row' }} mt="10" spacing="4">
                 <Link to="/contact-us">
@@ -36,10 +36,10 @@ export const SpadeHome = () => {
               </Stack>
             </Box>
           </AnimatedBox>
-          <Box width={{ base: "100%", md: "40%" }} marginTop="90px" position="relative" display={{ base: "none", md: "block" }}>
+          <Box width={{ base: "100%", md: "35%" }} marginTop="90px" position="relative" display={{ base: "none", md: "block" }}>
             <MotionBox
-              initial={{ scale: 0, x: "-50%", y: "-50%" }}
-              animate={{ scale: 1.1, x: "-50%", y: "-50%" }}
+              initial={{ scale: 0, x: "-110%", y: "-50%" }}
+              animate={{ scale: 1.1, x: "-110%", y: "-50%" }}
               transition={{ delay: 1, duration: 2, stiffness: 100, ease: "easeInOut", }}
               position="absolute"
               top={"50%"}
@@ -57,7 +57,7 @@ export const SpadeHome = () => {
                   >
                     <img src={sidmain} alt="" />
                   </MotionBox>
-                  <MotionBox
+                  {/* <MotionBox
                     initial={{ scale: 0, x: "-50%", y: "-50%" }}
                     animate={{ scale: 2.0, x: "-50%", y: "-50%" }}
                     transition={{ delay: 6, duration: 2, stiffness: 100, ease: "easeInOut", }}
@@ -66,7 +66,7 @@ export const SpadeHome = () => {
                     left={"50%"}
                   >
                     <img src={sidmain} alt="" />
-                  </MotionBox>
+                  </MotionBox> */}
                 </Box>
               </Box>
             </MotionBox>

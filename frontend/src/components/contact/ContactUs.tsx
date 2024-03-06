@@ -41,7 +41,7 @@ const contactOptions = [
     },
     {
         label: 'EMAIL',
-        value: 'hello@suhora.com',
+        value: 'hello[at]suhora.com',
         icon: HiOutlineMail,
         link: "mailto:hello@suhora.com"
     }
@@ -167,34 +167,34 @@ const ContactUs = ({ currentTheme }: contactProps) => {
                         p={{ base: 5, sm: 10 }}>
                         <Flex justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
                             <Text>
-                                <Text as="span">Filled </Text>
-                                <Text as="span" color={theme.companyTheme.color.secondry}>Your details</Text>
+                                <Text as="span">Get in</Text>
+                                <Text as="span" color={theme.companyTheme.color.secondry}> Touch</Text>
                             </Text>
                         </Flex>
                         <VStack spacing={4} w="100%">
                             <Stack w="100%" spacing={3} direction={{ base: 'column', md: 'row' }}>
                                 <FormControl id="name">
                                     <FormLabel></FormLabel>
-                                    <Input type="text" onChange={(e) => setName(e.target.value)} placeholder="Enter your name" rounded="md" />
+                                    <Input type="text" onChange={(e) => setName(e.target.value)} placeholder="Your Name" rounded="md" />
                                 </FormControl>
                                 <FormControl id="email">
                                     <FormLabel></FormLabel>
-                                    <Input type="email" onChange={(e) => setEmail(e.target.value)} placeholder="Enter your email" rounded="md" />
+                                    <Input type="email" onChange={(e) => setEmail(e.target.value)} placeholder="Your Email" rounded="md" />
                                 </FormControl>
                             </Stack>
                             <Stack w="100%" spacing={3} direction={{ base: 'column', md: 'row' }}>
                                 <FormControl id="phone">
                                     <FormLabel></FormLabel>
-                                    <Input type="text" onChange={(e) => SetPhone(e.target.value)} placeholder="Enter phone number" rounded="md" />
+                                    <Input type="text" onChange={(e) => SetPhone(e.target.value)} placeholder="Contact Number" rounded="md" />
                                 </FormControl>
                                 <FormControl id="sub">
                                     <FormLabel></FormLabel>
-                                    <Input type="text" onChange={(e) => setSubject(e.target.value)} placeholder="Enter your subject" rounded="md" />
+                                    <Input type="text" onChange={(e) => setSubject(e.target.value)} placeholder="Subject" rounded="md" />
                                 </FormControl>
                             </Stack>
                             <FormControl id="message">
                                 <FormLabel></FormLabel>
-                                <Textarea size="lg" placeholder="Enter your message" onChange={(e) => setMessage(e.target.value)} rounded="md" />
+                                <Textarea size="lg" placeholder="Message" onChange={(e) => setMessage(e.target.value)} rounded="md" />
                             </FormControl>
                         </VStack>
                         <VStack w="100%" >

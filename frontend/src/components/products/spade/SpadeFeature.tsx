@@ -5,7 +5,7 @@ import spademain from '../../../assets/img/products/spade_monitor_final.webp'
 import theme from "../../../theme"
 
 const SpadeFeature = () => {
-    const aspectRatio = 3 / 3
+    const aspectRatio = 3 / 2.5
     const spadeIconArray = [<RiTyphoonLine />]
 
     // const backgroundColor = currentTheme === 'light' ? 'gray.200' : '#282b3c';

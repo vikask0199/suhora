@@ -41,7 +41,7 @@ const features: IFeature[] = [
     },
     {
         heading: 'High Resolution Digital 3D Map',
-        content: 'Discover detailed digital 3D maps to enhance infrastructure monitoring and planning efforts.',
+        content: 'Access to high resolution DEM (50cm) resolution to enhance infrastructure monitoring and planning efforts.',
     },
     {
         heading: 'Monitoring & Planning',
@@ -115,7 +115,7 @@ const MiningCards = ({ currentTheme }: HomeServices) => {
                             <chakra.h3 fontWeight="semibold" fontSize={theme.fonts.subHeadingSecond.size} mt={6}>
                                 {feature.heading}
                             </chakra.h3>
-                            <Text fontSize="md" mt={4}>
+                            <Text fontSize="md" mt={4} textAlign="justify">
                                 {feature.content}
                             </Text>
                             {/* <Link href="#" mt={4} fontSize="sm" color="blue.400">

@@ -56,7 +56,7 @@ const categories = [
         name: 'Lance',
         imageUrl:
             lance,
-        url: '#/lance',
+        url: '/lance',
     },
 
 ]

@@ -19,7 +19,7 @@ const MiningOverlay = () => {
             <Flex justifyContent='center'>
               <Text mt='1em' fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>
                 {/* Beyond Boundaries - Satellite-driven Mining Excellence! */}
-                Unlocking Earth's Treasures Satellite Intelligence for Sustainable Resource Extraction
+                Unlocking Earth's Treasures via Satellite Intelligence for Sustainable Resource Extraction
               </Text>
             </Flex>
           </Box>

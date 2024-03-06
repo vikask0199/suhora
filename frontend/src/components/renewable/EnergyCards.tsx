@@ -29,11 +29,7 @@ const features: IFeature[] = [
         content: 'Optimize site selection with our comprehensive assessment tools.',
 
     },
-    {
-        heading: 'Environmental Impact Analysis ',
-        content: 'Automatically analyze environmental impacts with our integrated analytics.',
-
-    },
+   
     {
         heading: 'Infrastructure Monitoring',
         content: 'Seamlessly monitor infrastructure with our custom integrated solutions',
@@ -41,14 +37,20 @@ const features: IFeature[] = [
     },
     {
         heading: 'Resource Optimization ',
-        content: 'Enhance resource utilization with our efficient API solutions.',
+        content: 'Enhance resource utilization with our efficient and innovative solutions.',
 
     },
     {
         heading: 'Project Development Support',
-        content: 'Access comprehensive support for project development via our API.',
+        content: 'Get Expert guidance on design, implementation, and optimization, ensuring seamless project execution',
 
     },
+    {
+        heading: 'Environmental Impact Analysis ',
+        content: 'Evaluate ecological consequences with analysis of land cover, vegetation, and water bodies over time.',
+
+    },
+  
     // {
     //     heading: 'API Included',
     //     content: 'Roll your own API to easily connect with other apps or services. Pull in updates.',
@@ -111,7 +113,7 @@ const EnergyCards = ({ currentTheme }: HomeServices) => {
                             <chakra.h3 fontWeight="semibold" fontSize={theme.fonts.subHeadingSecond.size} mt={6}>
                                 {feature.heading}
                             </chakra.h3>
-                            <Text fontSize="md" mt={4}>
+                            <Text fontSize="md" mt={4} textAlign ="justify">
                                 {feature.content}
                             </Text>
                             {/* <Link href="#" mt={4} fontSize="sm" color="blue.400">

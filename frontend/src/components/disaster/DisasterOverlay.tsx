@@ -19,7 +19,7 @@ const DisasterOverlay = () => {
             <Flex justifyContent='center'>
               <Text mt='1em' fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>
                 {/* Data-driven insights for disaster preparedness and insurance planning. */}
-                Satellite to Ground Near Real Time Insights for Disaster Management and Insurance Transformation
+                Satellite to Ground NRT Insights for Disaster Management & Insurance Transformation
               </Text>
             </Flex>
           </Box>

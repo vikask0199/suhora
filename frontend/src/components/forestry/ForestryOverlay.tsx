@@ -18,7 +18,7 @@ const ForestryOverlay = () => {
             </Flex>
             <Flex justifyContent='center'>
               <Text mt='1em' fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>
-                From Space to Safety: Satellite Insight for Fire-Free Forests.
+              Empowering Forest Conservation Through Advanced Satellite Technology
               </Text>
             </Flex>
           </Box>

@@ -14,11 +14,12 @@ export const DocumentPopoverResources = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const routes = [
     { name: "About us", path: "/aboutus", openInNewTab: false  },
-    { name: "Blogs", path: "https://blogs.suhora.com",openInNewTab: true },
+    { name: "Imaging Capabilities", path: "/gallery", openInNewTab: false },
     { name: "Our Team", path: "/our-team",  openInNewTab: false},
     { name: "Events & News", path: "https://blogs.suhora.com",openInNewTab: true },
+    { name: "Blogs", path: "https://blogs.suhora.com",openInNewTab: true },
     { name: "Careers", path: "/career",  openInNewTab: false },
-    { name: "Imaging Capabilities", path: "/gallery", openInNewTab: false },
+    
   ]
 
   return (

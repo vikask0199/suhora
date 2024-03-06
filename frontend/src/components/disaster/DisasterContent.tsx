@@ -36,13 +36,13 @@ export const DisasterContent = () => {
                             </Text>
                         </Flex>
                         <Text color={theme.companyTheme.color.third} fontSize={theme.fonts.subHeading.size} fontWeight={theme.fonts.subHeading.weight} maxW="6xl" >
-                            Multi band high resolution image from various satellite.
+                            Multi band high resolution image from numerous satellites
                         </Text>
                         <Text textAlign="justify">
-                            We revolutionize disaster management and insurance processes through the strategic use of near real-time satellite data. This innovative platform is designed to empower communities and industries with advanced analytical tools, enhancing preparedness and resilience against natural catastrophes.
+                            We revolutionize disaster management and insurance processes through the strategic use of near real-time (NRT) satellite data and insights. Our innovative platform (SID) is designed to empower communities, governments and industries with advanced analytical tools, enhancing preparedness and resilience against natural catastrophes.
                             <br />
                             <br />
-                            Our innovative platform SID harnesses satellite technology to provide continuous observation of Earth's surface, delivering crucial data on environmental changes and potential disaster zones.
+                            SID harnesses satellite technology to provide continuous observation of Earth's surface, delivering crucial data with insights on environmental changes and potential disaster zones.
 
                             {/* At SUHORA, we're driven by a passion to make the universe's data accessible and actionable for those who need it most. Founded on the principle that space analytics should empower, not overwhelm, we've dedicated ourselves to demystifying satellite data for practical, everyday applications.
                             <br />

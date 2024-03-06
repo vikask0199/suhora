@@ -18,8 +18,8 @@ const AgricultureOverlay = () => {
             </Flex>
             <Flex justifyContent='center'>
               <Text mt='1em' fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>
-                
-              Satellite data powered harvest Optimize yield minimize risk
+
+                Satellite data powered Harvest, Optimize yield, Minimize risk
 
               </Text>
             </Flex>

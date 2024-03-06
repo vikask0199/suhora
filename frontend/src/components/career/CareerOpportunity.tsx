@@ -14,6 +14,7 @@ import {
 } from '@chakra-ui/react'
 import theme from '../../theme'
 import { MdAccessTime, MdLocationOn } from 'react-icons/md'
+import { Link } from 'react-router-dom'
 
 
 const CareerOpportunity = () => (
@@ -61,7 +62,9 @@ const CareerOpportunity = () => (
                                             </HStack>
                                         </HStack>
                                     </Stack>
+                                    <Link to="https://forms.gle/WuPup8tB797ENhVm8" target='_blank'>
                                     <Button bgColor={theme.companyTheme.color.secondry} color='white' alignSelf="start">Apply Now</Button>
+                                    </Link>
                                 </Stack>
                             </AccordionPanel>
 

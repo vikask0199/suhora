@@ -31,7 +31,7 @@ export const MiningContent = () => {
                             </Text>
                         </Flex>
                         <Text color={theme.companyTheme.color.third} fontSize={theme.fonts.subHeading.size} fontWeight={theme.fonts.subHeading.weight} maxW="6xl" >
-                            Beyond Boundaries - Satellite-driven Mining Excellence!
+                            Beyond Boundaries Satellite driven Mining Excellence
                         </Text>
                         <Text textAlign="justify">
                             Suhora harnessed advanced satellite technology with Machine Learning capabilities

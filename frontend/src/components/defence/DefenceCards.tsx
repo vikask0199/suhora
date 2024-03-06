@@ -14,7 +14,7 @@ import integrated from "../../assets/img/industries/IntegratedGlobalView.webp";
 import maritime from "../../assets/img/industries/MaritimeDomainAwareness.webp";
 import servilliance from "../../assets/img/industries/Surveillance_Intelligence.webp";
 import tailored from "../../assets/img/industries/Tailored.webp";
-import terrains from "../../assets/img/industries/terrains.webp";
+import terrains from "../../assets/img/industries/terrains.svg";
 import theme from '../../theme';
 
 
@@ -26,16 +26,16 @@ interface IFeature {
 const features: IFeature[] = [
     {
         heading: 'Surveillance & Intelligence',
-        content: 'We leverage state-of-the-art imagery, EO, and SIGINT for superior surveillance and swift defense insights, covering both maritime and terrestrial domains.',
+        content: 'We leverage state-of-the-art EO imagery data with precise intelligence algorithms for superior surveillance and swift defense insights, covering both maritime and terrestrial domains.',
 
     },
     {
         heading: 'Integrated Global View',
-        content: 'Suhora’s powerful fusion Engine of optical, SAR, thermal, AIS, and RF data to deliver a unified perspective on worldwide activities.',
+        content: "Suhora provides advanced fusion engine for multi-resolution optical, SAR, thermal imagery along with AIS, and RF data to deliver a unified perspective on worldwide activities.",
     },
     {
         heading: 'Data Security',
-        content: 'We commit the highest level of intelligence protection with our robust encryption protocols for all communications.',
+        content: 'We commit the highest level of intelligence protection with our robust encryption protocols to ensure data confidentiality and integrity for all communications.',
 
     },
     {
@@ -74,7 +74,7 @@ const DefenceCards = ({ currentTheme }: HomeServices) => {
                         </Text>
                     </Flex>
                     <Text fontSize={theme.fonts.subHeading.size} color={theme.companyTheme.color.third} fontWeight={theme.fonts.subHeading.weight} textAlign="center">
-                    Adaptive. Scalable. Secure.
+                    Adaptive Scalable Secure
                     </Text>
                 </Stack>
                 <SimpleGrid columns={{ base: 1, sm: 2, md: 3 }} placeItems="center" spacing={10} mb={4} mt={12}>
@@ -104,7 +104,7 @@ const DefenceCards = ({ currentTheme }: HomeServices) => {
                             <chakra.h3 fontWeight="semibold" fontSize={theme.fonts.subHeadingSecond.size} mt={5}>
                                 {feature.heading}
                             </chakra.h3>
-                            <Text fontSize="md" mt={4}>
+                            <Text fontSize="md" mt={4} textAlign="justify">
                                 {feature.content}
                             </Text>
                             {/* <Link href="#" mt={6} fontSize="sm" color="blue.400">

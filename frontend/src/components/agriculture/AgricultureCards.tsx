@@ -39,19 +39,19 @@ const features: IFeature[] = [
     {
         heading: 'NDVI',
         // content: 'Our platform SPADE generates on the fly NDVI & delivers to the customer on their purchased optical data.',
-        content: "Leverage our SPADE platform to generate NDVI on demand, seamlessly integrated purchased optical data.",
+        content: "Leverage our SPADE platform to generate NDVI on demand, seamlessly integrated optical data.",
 
     },
     {
         heading: 'Acreage Estimation',
         // content: 'We provide very accurate acreage estimates of any corps in India.',
-        content: "Obtain precise acreage estimates for crops across India, facilitating informed decision-making.",
+        content: "Obtain precise acreage estimates for crops across India, facilitating informed decision making.",
 
     },
     {
         heading: 'Crop Health',
         // content: 'To ensure the maximum yield for crops periodic crop health monitoring is very important we offer week, fortnight and monthly crop health reports through our platform SPADE.',
-        content: "Enhance crop productivity with regular health monitoring reports available weekly, fortnightly, and monthly via SPADE.",
+        content: "Enhance crop productivity with regular health monitoring reports available weekly, fortnightly, and monthly.",
 
     },
 
@@ -76,7 +76,7 @@ const AgricultureCards = ({ currentTheme }: HomeServices) => {
                         </Text>
                     </Flex>
                     <Text fontSize={theme.fonts.subHeading.size} color={theme.companyTheme.color.third} fontWeight={theme.fonts.subHeading.weight} textAlign="center">
-                        Harvest Optimization Powered by Satellite Data: Maximize Yield, Minimize Risk.
+                        Elevating Agriculture with Precision Satellite Analytics
                     </Text>
                 </Stack>
                 <SimpleGrid columns={{ base: 1, sm: 2, md: 3 }} placeItems="center" spacing={10} mb={4} mt={12}>
@@ -107,7 +107,7 @@ const AgricultureCards = ({ currentTheme }: HomeServices) => {
                             <chakra.h3 fontWeight="semibold" fontSize={theme.fonts.subHeadingSecond.size} mt={6}>
                                 {feature.heading}
                             </chakra.h3>
-                            <Text fontSize="md" mt={4}>
+                            <Text fontSize="md" mt={4} textAlign="justify">
                                 {feature.content}
                             </Text>
                             {/* <Link href="#" mt={4} fontSize="sm" color="blue.400">

@@ -72,7 +72,7 @@ const HomeCarousel = () => {
                      {/* <div className="author">VIKAS</div> */}
                     <div className="title">Defence & Intelligence</div>
                     <div className="des">
-                    Adapts to your mission. Scales to your needs.
+                    Empowering defense & intelligence with cutting-edge technology
                     </div>
                     <NavLink to="/defence-and-intelligence" className="buttons">
                         <button>Learn More</button>
@@ -84,7 +84,7 @@ const HomeCarousel = () => {
                 <div className="content">
                      {/* <div className="author">VIKAS</div> */}
                     <div className="title">Disaster & Insurance</div>
-                    <div className="des">Data-driven insights for disaster preparedness and insurance planning.</div>
+                    <div className="des">Satellite to Ground NRT Insights for Disaster Management & Insurance Transformation</div>
                     <NavLink to="/disaster-and-insurance" className="buttons">
                         <button>Learn More</button>
                     </NavLink>
@@ -95,7 +95,7 @@ const HomeCarousel = () => {
                 <div className="content">
                      {/* <div className="author">VIKAS</div> */}
                     <div className="title">Renewable Energy</div>
-                    <div className="des">Orbit to Outlet: Satellite-Driven Solar Innovation.</div>
+                    <div className="des">Orbit to Outlet Satellite Driven Solar Innovation</div>
                     <NavLink to="/renewable-energy" className="buttons">
                         <button>Learn More</button>
                     </NavLink>
@@ -106,7 +106,7 @@ const HomeCarousel = () => {
                 <div className="content">
                      {/* <div className="author">VIKAS</div> */}
                     <div className="title">Mining</div>
-                    <div className="des">Beyond Boundaries - Satellite-driven Mining Excellence!</div>
+                    <div className="des">Unlocking Earth's Treasures via Satellite Intelligence for Sustainable Resource Extraction</div>
                     <NavLink to="/mining" className="buttons">
                         <button>Learn More</button>
                     </NavLink>
@@ -117,7 +117,7 @@ const HomeCarousel = () => {
                 <div className="content">
                      {/* <div className="author">VIKAS</div> */}
                     <div className="title">Infrastructure</div>
-                    <div className="des">Sky-Built Precision: AI-Powered Construction Monitoring.</div>
+                    <div className="des">Modernize Infrastructure using Satellite Insights Enhanced by AI & Automation</div>
                     <NavLink to="/infrastructure" className="buttons">
                         <button>Learn More</button>
                     </NavLink>
@@ -128,7 +128,7 @@ const HomeCarousel = () => {
                 <div className="content">
                      {/* <div className="author">VIKAS</div> */}
                     <div className="title">Forestry</div>
-                    <div className="des">From Space to Safety: Satellite Insight for Fire-Free Forests.</div>
+                    <div className="des">Empowering Forest Conservation Through Advanced Satellite Technology</div>
                     <NavLink to="/forestry" className="buttons">
                         <button>Learn More</button>
                     </NavLink>
@@ -139,7 +139,7 @@ const HomeCarousel = () => {
                 <div className="content">
                      {/* <div className="author">VIKAS</div> */}
                     <div className="title">Agriculture</div>
-                    <div className="des">Satellite data-powered harvest. Optimize yield, minimize risk.</div>
+                    <div className="des">Satellite data powered Harvest, Optimize yield, Minimize risk</div>
                     <NavLink to="/agriculture" className="buttons">
                         <button>Learn More</button>
                     </NavLink>

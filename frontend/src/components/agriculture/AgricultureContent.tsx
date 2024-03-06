@@ -20,16 +20,16 @@ export const AgricultureContent = () => {
                     <Stack spacing={{ base: '4', md: '5' }}>
                         <Flex justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
                             <Text>
-                    
+
                                 <Text as="span" color={theme.companyTheme.color.secondry}>Agriculture </Text>
                                 <Text as="span">Solution </Text>
                             </Text>
                         </Flex>
                         <Text color={theme.companyTheme.color.third} fontSize={theme.fonts.subHeading.size} fontWeight={theme.fonts.subHeading.weight} maxW="6xl" >
-                        Satellite data powered harvest Optimize yield minimize risk
+                            Transforming Crop Management Through Satellite Insights
                         </Text>
                         <Text textAlign="justify">
-                              Suhora's advanced satellite data analytics platform revolutionizes the assessment of crop health, acreage, yield estimation, and damage assessment, offering invaluable insights for various stakeholders, particularly insurance companies.
+                            Suhora's advanced satellite data analytics platform revolutionizes the assessment of crop health, acreage, yield estimation, and damage assessment, offering invaluable insights for various stakeholders, particularly insurance companies.
                             <br />
                             <br />
                             Crop health assessment lies at the core of Suhora's capabilities. By analyzing various spectral bands and temporal changes in vegetation indices, the platform provides precise information about the health status of crops throughout their growth cycles.This enables farmers, agronomists, and policymakers to make informed decisions regarding irrigation, fertilization, pest control, and overall crop management strategies.

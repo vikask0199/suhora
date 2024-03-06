@@ -11,14 +11,14 @@ const EnergyOverlay = () => {
           <Box maxW='5xl' mx="auto" px={{ base: '6', md: '8' }} color="white" >
             <Flex justifyContent='center' fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
               <Heading  >
-              Renewable Energy
+                Renewable Energy
               </Heading>
 
 
             </Flex>
             <Flex justifyContent='center'>
               <Text mt='1em' fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>
-                Orbit to Outlet: Satellite-Driven Solar Innovation.
+                Orbit to Outlet Satellite Driven Solar Innovation
 
               </Text>
             </Flex>

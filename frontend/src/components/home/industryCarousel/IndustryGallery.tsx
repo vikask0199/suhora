@@ -54,7 +54,7 @@ export const IndustryGallery = () => {
           {industryCarouselData.map((image, i) => (
             <CarouselSlide key={i}>
               <Flex direction={{ base: "column", md: "row-reverse" }}>
-                <Box w={{ base: "100%", md: "50%" }} padding={7}>
+                <Box w={{ base: "100%", md: "50%" }} padding={7} height="100%" alignContent="justify">
                   <AspectRatio ratio={aspectRatio}>
                     <Image src={image.imageUrl} />
                   </AspectRatio>

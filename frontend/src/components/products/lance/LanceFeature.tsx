@@ -6,7 +6,7 @@ import lancemain from "../../../assets/img/products/lance_monitor_final.webp"
 
 
 const LanceFeature = () => {
-    const aspectRatio = 3 / 3
+    const aspectRatio = 3 / 2.5
     const spadeIconArray = [<RiTyphoonLine />]
 
     // const backgroundColor = currentTheme === 'light' ? 'gray.200' : '#282b3c';

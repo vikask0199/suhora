@@ -25,7 +25,7 @@ interface IFeature {
 const features: IFeature[] = [
     {
         heading: 'Comprehensive Disaster Monitoring',
-        content: 'Our platform leverages multispectral satellite imagery and ground data to monitor and predict disaster events, providing a full-scale overview for proactive management.',
+        content: 'Our platform leverages multi source satellite imagery and ground data to monitor and predict disaster events providing a full-scale overview for proactive management.',
     },
     {
         heading: 'Risk Assessment & Management',
@@ -39,12 +39,12 @@ const features: IFeature[] = [
     },
     {
         heading: 'B2B API Integration for Seamless Data Access',
-        content: 'Our robust API framework facilitates seamless integration with business platforms, enabling access to real-time disaster data and analytics.',
+        content: 'Our robust API framework facilitates seamless integration with business platforms, enabling access to near real-time disaster data and analytics.',
 
     },
     {
         heading: 'Tailored Insurance Solutions',
-        content: 'We offer custom insurance solutions powered by satellite intelligence, providing insurers with the data needed for policy customization and risk mitigation.',
+        content: 'We offer custom insurance solutions powered by satellite based data and intelligence, providing insurers with the data needed for policy customization and risk mitigation.',
 
     },
 
@@ -70,7 +70,7 @@ const DisasterCards = ({ currentTheme }: HomeServices) => {
                         </Text>
                     </Flex>
                     <Text fontSize={theme.fonts.subHeading.size} color={theme.companyTheme.color.third} fontWeight={theme.fonts.subHeading.weight} textAlign="center">
-                    Transforming Disaster Management with Satellite Insights
+                    Transforming disaster management with satellite based insights
                     </Text>
                 </Stack>
                 <SimpleGrid columns={{ base: 1, sm: 2, md: 3 }} placeItems="center" spacing={10} mb={4} mt={12}>
@@ -101,7 +101,7 @@ const DisasterCards = ({ currentTheme }: HomeServices) => {
                             <chakra.h3 fontWeight="semibold" fontSize={theme.fonts.subHeadingSecond.size} mt={6}>
                                 {feature.heading}
                             </chakra.h3>
-                            <Text fontSize="md" mt={4}>
+                            <Text fontSize="md" mt={4} textAlign="justify">
                                 {feature.content}
                             </Text>
                             {/* <Link href="#" mt={4} fontSize="sm" color="blue.400">
