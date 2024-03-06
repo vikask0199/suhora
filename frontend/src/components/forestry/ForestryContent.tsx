@@ -9,7 +9,7 @@ import {
 
 } from '@chakra-ui/react';
 import theme from '../../theme';
-import { RiTyphoonLine } from 'react-icons/ri';
+// import { RiTyphoonLine } from 'react-icons/ri';
 export const ForestryContent = () => {
     // const aspectRatio = 3 / 3
 
