@@ -1,7 +1,7 @@
 import {
     Box,
     Flex,
-    Link,
+
     SimpleGrid,
     Stack
 } from '@chakra-ui/react';
@@ -50,7 +50,7 @@ const categories = [
         name: 'Spade',
         imageUrl:
             spade,
-        url: '/spadepage',
+        url: '/spade',
     },
     // {
     //     name: 'Lance',
@@ -81,6 +81,7 @@ export type Category = ElementType<typeof categories>
 import { AspectRatio, BoxProps, Image, Skeleton, Text } from '@chakra-ui/react';
 import { useState } from 'react';
 import theme from '../../theme';
+import { Link } from 'react-router-dom';
 
 interface Props {
     category: Category
@@ -101,7 +102,7 @@ const CategoryCard = (props: Props) => {
 
     return (
         <Box position="relative" w="60" h="60" key={category.name} borderRadius="lg" overflow="hidden" {...rootProps} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-            <Link>
+            <Link to={category.url}>
                 <AspectRatio ratio={1 / 1}>
                     <Image src={category.imageUrl} alt={category.name} fallback={<Skeleton />} />
                 </AspectRatio>
