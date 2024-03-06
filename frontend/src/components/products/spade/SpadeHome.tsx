@@ -45,11 +45,11 @@ export const SpadeHome = () => {
               top={"50%"}
               left={"50%"}>
               <img src={monitor} alt="" />
-              <Box position="absolute" top={1.5} left={1.5} height="62.5%" width="95%">
-                <Box height="100%" width="100%" position="relative">
+              <Box position="absolute" top={0} left={0} height="67%" width="100%">
+                <Box height="100%" width="100%" position="relative"  overflow="hidden">
                   <MotionBox
                     initial={{ scale: 0, x: "-50%", y: "-50%" }}
-                    animate={{ scale: 2.1, x: "-50%", y: "-50%" }}
+                    animate={{ scale: 2.0, x: "-50%", y: "-50%" }}
                     transition={{ delay: 3, duration: 2, stiffness: 100, ease: "easeInOut", }}
                     position="absolute"
                     top={"50%"}
@@ -59,7 +59,7 @@ export const SpadeHome = () => {
                   </MotionBox>
                   <MotionBox
                     initial={{ scale: 0, x: "-50%", y: "-50%" }}
-                    animate={{ scale: 2.1, x: "-50%", y: "-50%" }}
+                    animate={{ scale: 2.0, x: "-50%", y: "-50%" }}
                     transition={{ delay: 6, duration: 2, stiffness: 100, ease: "easeInOut", }}
                     position="absolute"
                     top={"50%"}
