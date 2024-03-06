@@ -20,6 +20,8 @@ import { links } from "../../../constant/footerData"
 import theme from '../../../theme'
 import { FaLocationDot } from "react-icons/fa6";
 import { FaPhoneAlt } from "react-icons/fa";
+import { motion } from 'framer-motion'
+import { textVarient } from '../../../animation'
 
 
 type footerThemeProps = {
@@ -27,10 +29,14 @@ type footerThemeProps = {
 }
 const Footer = ({ currentTheme }: footerThemeProps) => {
     const backgroundColor = currentTheme === 'light' ? 'gray.200' : '#282B3C';
+
+    const AnimatedBox = motion(Stack)
+
     return (
         <Box background={backgroundColor} pt={{ base: '16', md: '12' }} >
             <Container as="footer" role="contentinfo" maxW="6xl">
-                <Stack
+                <AnimatedBox
+                    variants={textVarient} whileInView="show" initial="hidden"
                     justify="space-between"
                     align="start"
                     direction={{ base: 'column', lg: 'row' }}
@@ -84,9 +90,10 @@ const Footer = ({ currentTheme }: footerThemeProps) => {
                             </Stack>
                         ))}
                     </SimpleGrid>
-                </Stack>
+                </AnimatedBox>
                 <Divider />
-                <Stack
+                <AnimatedBox
+                    variants={textVarient} whileInView="show" initial="hidden"
                     pt="2"
                     pb="2"
                     justify="space-between"
@@ -100,7 +107,7 @@ const Footer = ({ currentTheme }: footerThemeProps) => {
                         <IconButton as="a" href="https://wa.me/+919999664437" target="_blank" aria-label="GitHub" icon={<FaWhatsapp />} _hover={{ color: theme.companyTheme.color.secondry }} />
                         <IconButton as="a" href="https://twitter.com/suhoratech" target="_blank" aria-label="Twitter" icon={<FaXTwitter />} _hover={{ color: theme.companyTheme.color.secondry }} />
                     </ButtonGroup>
-                </Stack>
+                </AnimatedBox>
             </Container>
         </Box>
     )

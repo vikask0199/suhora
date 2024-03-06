@@ -13,14 +13,16 @@ import {
   UnorderedList,
   useColorModeValue
 } from '@chakra-ui/react'
+import { motion } from 'framer-motion'
 import { useState } from 'react'
 import { GiCircleCage } from 'react-icons/gi'
 import { IoBaseballOutline, IoChevronBackOutline, IoChevronForwardOutline } from 'react-icons/io5'
 import { RiTyphoonLine } from "react-icons/ri"
+import { Link } from 'react-router-dom'
+import { boxVariant, homeProductLeftToRight } from '../../../animation.ts'
 import { products } from "../../../constant/productCarouselData.ts"
 import theme from "../../../theme.ts"
 import { Carousel, CarouselSlide, useCarousel } from './Carousel.tsx'
-import { Link } from 'react-router-dom'
 
 
 
@@ -40,6 +42,9 @@ export const Gallery = () => {
   const hasPrevious = currentSlide !== 0
   const hasNext = currentSlide < products.length - 1
 
+  const AnimateBox = motion(Box)
+  const AnimateFlex = motion(Flex)
+
   return (
     <Stack spacing="4" >
       <Box
@@ -55,14 +60,12 @@ export const Gallery = () => {
           {products.map((image, i) => (
             <CarouselSlide key={i}>
               <Flex direction={{ base: "column", md: "row" }} alignItems="center" height="100%">
-               
-                  <Box w={{ base: "100%", md: "50%" }} padding={7}>
-                    <AspectRatio ratio={aspectRatio}>
-                      <Image src={image.imageUrl} />
-                    </AspectRatio>
-                  </Box>
-                
-                <Flex w={{ base: "100%", md: "50%" }} p={8} direction="column" rowGap={4} justifyContent="space-between">
+                <AnimateBox variants={boxVariant} whileInView="show" initial="hidden" w={{ base: "100%", md: "50%" }} height="fit-content" padding={7} >
+                  <AspectRatio ratio={aspectRatio}>
+                    <Image src={image.imageUrl} />
+                  </AspectRatio>
+                </AnimateBox>
+                <AnimateFlex variants={homeProductLeftToRight} whileInView="show" initial="hidden" w={{ base: "100%", md: "50%" }} p={8} direction="column" rowGap={4} justifyContent="space-between">
                   <Box fontSize={theme.fonts.subHeading.size} fontWeight={theme.fonts.subHeading.weight} color={theme.companyTheme.color.third}>{image.name}</Box>
                   {/* <Box backgroundColor="#BEC1DD" color="#3F53E9" w="fit-content" px="8" fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>SUHORA</Box> */}
                   <Box fontSize={theme.fonts.description}>{image.description}</Box>
@@ -124,7 +127,7 @@ export const Gallery = () => {
                       </Button>
                     </Link>
                   </Flex>
-                </Flex>
+                </AnimateFlex>
               </Flex>
             </CarouselSlide>
           ))}

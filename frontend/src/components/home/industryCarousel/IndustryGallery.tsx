@@ -21,6 +21,8 @@ import { industryCarouselData } from "../../../constant/industryCarouselData.ts"
 import theme from "../../../theme.ts"
 import { CarouselSlide, IndustryCarousel, useCarousel } from './IndustryCarousel.tsx'
 import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
+import { boxVariant, homeProductRightToLeft } from '../../../animation.ts'
 
 
 export const IndustryGallery = () => {
@@ -38,6 +40,8 @@ export const IndustryGallery = () => {
   const hasPrevious = currentSlide !== 0
   const hasNext = currentSlide < industryCarouselData.length - 1
 
+  const AnimateBox = motion(Box)
+  const AnimateFlex = motion(Flex)
 
   return (
     <Stack spacing="4" >
@@ -54,12 +58,12 @@ export const IndustryGallery = () => {
           {industryCarouselData.map((image, i) => (
             <CarouselSlide key={i}>
               <Flex direction={{ base: "column", md: "row-reverse" }}>
-                <Box w={{ base: "100%", md: "50%" }} padding={7} height="100%" alignContent="justify">
+                <AnimateBox w={{ base: "100%", md: "50%" }} padding={7} variants={boxVariant} whileInView="show" initial="hidden" height="100%" alignContent="justify">
                   <AspectRatio ratio={aspectRatio}>
                     <Image src={image.imageUrl} />
                   </AspectRatio>
-                </Box>
-                <Flex w={{ base: "100%", md: "50%" }} p={8} direction="column" rowGap={4} justifyContent="space-between">
+                </AnimateBox>
+                <AnimateFlex variants={homeProductRightToLeft} whileInView="show" initial="hidden" w={{ base: "100%", md: "50%" }} p={8} direction="column" rowGap={4} justifyContent="space-between">
                   <Box fontSize={theme.fonts.subHeading.size} fontWeight={theme.fonts.subHeading.weight} color={theme.companyTheme.color.third}>{image.name}</Box>
                   {/* <Box backgroundColor="#BEC1DD" color="#3F53E9" w="fit-content" px="8" fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>SUHORA</Box> */}
                   <Box fontSize={theme.fonts.description}>{image.description}</Box>
@@ -119,7 +123,7 @@ export const IndustryGallery = () => {
                       Explore More
                     </Button>
                   </Link>
-                </Flex>
+                </AnimateFlex>
               </Flex>
             </CarouselSlide>
           ))}
