@@ -2,7 +2,11 @@ import { Button, Collapse, Stack, Text, useDisclosure } from '@chakra-ui/react'
 import { NavLink } from 'react-router-dom'
 import { PopoverIcon } from './PopoverIcon'
 
-export const DocumentCollapseProducts = () => {
+type documentCollapseProps = {
+  closeFunction: () => void
+}
+
+export const DocumentCollapseProducts = ({ closeFunction }: documentCollapseProps) => {
   const { isOpen, onToggle } = useDisclosure()
 
   const routes = [
@@ -21,7 +25,7 @@ export const DocumentCollapseProducts = () => {
       <Collapse in={isOpen} animateOpacity>
         <Stack spacing="1" alignItems="stretch" ps="4">
           {routes.map((route) => (
-            <NavLink key={route.path} to={route.path} style={{ textDecoration: 'none' }}>
+            <NavLink key={route.path} to={route.path}  onClick={closeFunction} style={{ textDecoration: 'none' }}>
               <Button justifyContent="start" variant="" as={Text} _hover={{ color: "#1266A0" }}>
                 {route.name}
               </Button>

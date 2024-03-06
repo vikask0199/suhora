@@ -1,2 +1,2 @@
 gallery image name = sensor_resolutin_imagename
-exp:- Optical_50_cm_Dubai.webp
+exp:- Optical_50_CM_Dubai.webp

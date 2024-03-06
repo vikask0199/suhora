@@ -2,16 +2,20 @@ import { Button, Collapse, Stack, Text, useDisclosure } from '@chakra-ui/react'
 import { NavLink } from 'react-router-dom'
 import { PopoverIcon } from './PopoverIcon'
 
-export const DocumentCollapseResources = () => {
+type documentCollapseProps = {
+    closeFunction: () => void
+}
+
+export const DocumentCollapseResources = ({ closeFunction }: documentCollapseProps) => {
     const { isOpen, onToggle } = useDisclosure()
     const routes = [
-        { name: "About us", path: "/aboutus", openInNewTab: false  },
-        { name: "Blogs", path: "https://blogs.suhora.com",openInNewTab: true },
-        { name: "Our Team", path: "/our-team",  openInNewTab: false},
-        { name: "Events & News", path: "https://blogs.suhora.com",openInNewTab: true },
-        { name: "Careers", path: "/career",  openInNewTab: false },
+        { name: "About us", path: "/aboutus", openInNewTab: false },
+        { name: "Blogs", path: "https://blogs.suhora.com", openInNewTab: true },
+        { name: "Our Team", path: "/our-team", openInNewTab: false },
+        { name: "Events & News", path: "https://blogs.suhora.com", openInNewTab: true },
+        { name: "Careers", path: "/career", openInNewTab: false },
         { name: "Imaging Capabilities", path: "/gallery", openInNewTab: false },
-      ]
+    ]
 
     return (
         <>
@@ -22,7 +26,7 @@ export const DocumentCollapseResources = () => {
             <Collapse in={isOpen} animateOpacity>
                 <Stack spacing="1" alignItems="stretch" ps="4">
                     {routes.map((route, index) => (
-                        <NavLink key={index} to={route.path} style={{ textDecoration: 'none' }} target={route.openInNewTab ? "_blank" : "_self"}>
+                        <NavLink key={index} to={route.path} onClick={closeFunction} style={{ textDecoration: 'none' }} target={route.openInNewTab ? "_blank" : "_self"}>
                             <Button justifyContent="start" as={Text} variant="" _hover={{ color: "#1266A0" }}>
                                 {route.name}
                             </Button>

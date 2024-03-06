@@ -15,6 +15,9 @@ type mobileDrawerprops = {
 export const MobileDrawer = ({ toggleTheme, currentTheme }: mobileDrawerprops) => {
   const { isOpen, onToggle, onClose } = useDisclosure()
 
+  const closeFromItem = () => {
+    onClose()
+  }
 
   return (
     <>
@@ -31,10 +34,10 @@ export const MobileDrawer = ({ toggleTheme, currentTheme }: mobileDrawerprops) =
               <Button size="lg" _hover={{ color: "#1266A0" }} variant="" as={Text} justifyContent="start">
                 Home
               </Button>
-              <DocumentCollapseIndustries />
-              <DocumentCollapseProducts />
-              <DocumentCollapseServices />
-              <DocumentCollapseResources />
+              <DocumentCollapseIndustries closeFunction={closeFromItem}/>
+              <DocumentCollapseProducts closeFunction={closeFromItem}/>
+              <DocumentCollapseServices closeFunction={closeFromItem}/>
+              <DocumentCollapseResources closeFunction={closeFromItem} />
               <NavLink to="/contact-us">
                 <Button size="lg" _hover={{ color: "#1266A0" }} as={Text} variant="" justifyContent="start">
                   Contact us
