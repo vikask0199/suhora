@@ -73,8 +73,8 @@ const Footer = ({ currentTheme }: footerThemeProps) => {
                                     {group.title}
                                 </Text>
                                 <Stack spacing="" shouldWrapChildren>
-                                    {group.links.map((link) => (
-                                        <NavLink key={link.href} to={link.href} style={{ textDecoration: 'none' }} >
+                                    {group.links.map((link, index) => (
+                                        <NavLink key={index} to={link.href} style={{ textDecoration: 'none' }} >
                                             <Button variant="tertiary" justifyContent="start" fontSize="sm" fontWeight="normal" _hover={{ color: theme.companyTheme.color.secondry }}>
                                                 {link.label}
                                             </Button>

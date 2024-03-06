@@ -13,12 +13,12 @@ import { NavLink } from 'react-router-dom'
 export const DocumentPopoverResources = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const routes = [
-    { name: "About us", path: "/aboutus" },
-    { name: "Blogs", path: "/" },
-    { name: "Our Team", path: "/our-team" },
-    { name: "Events & News", path: "/" },
-    { name: "Careers", path: "/career" },
-    { name: "Gallery", path: "/gallery" },
+    { name: "About us", path: "/aboutus", openInNewTab: false  },
+    { name: "Blogs", path: "https://blogs.suhora.com",openInNewTab: true },
+    { name: "Our Team", path: "/our-team",  openInNewTab: false},
+    { name: "Events & News", path: "https://blogs.suhora.com",openInNewTab: true },
+    { name: "Careers", path: "/career",  openInNewTab: false },
+    { name: "Imaging Capabilities", path: "/gallery", openInNewTab: false },
   ]
 
   return (
@@ -28,8 +28,8 @@ export const DocumentPopoverResources = () => {
       </PopoverTrigger>
       <PopoverContent p="2" maxW="fit-content" mr="-180" mt="3">
         <Stack spacing="0" alignItems="stretch">
-          {routes.map((route) => (
-            <NavLink key={route.path} to={route.path} style={{ textDecoration: 'none' }}>
+          {routes.map((route, index) => (
+            <NavLink key={index} to={route.path} style={{ textDecoration: 'none' }} target={route.openInNewTab ? "_blank" : "_self"}>
               <Button justifyContent="start" as={Text} _hover={{ color: "#1266A0" }}>
                 {route.name}
               </Button>

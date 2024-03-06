@@ -24,7 +24,7 @@ export const links = [
   {
     title: 'Services',
     links: [
-      { label: 'Tailored Services', href: '/services' },
+      { label: 'Tailored Services', href: '/services'},
       { label: 'Hyrdology', href: '/product-hyrdology' },
       { label: 'Terrain Mapping', href: '/prodcust-terrainmapping' },
       { label: 'Land Deformation Monitoring', href: '/land-deformation-monitoring' },
@@ -34,11 +34,11 @@ export const links = [
     title: 'Company',
     links: [
       { label: 'About Us', href: '/aboutus' },
-      { label: 'Blogs', href: '#' },
+      { label: 'Blogs', href: 'https://blogs.suhora.com' },
       { label: 'Our Team', href: '/our-team' },
-      { label: 'Events & News', href: '#' },
+      { label: 'Events & News', href: 'https://blogs.suhora.com' },
       { label: 'Careers', href: '/career' },
-      { label: 'Gallery', href: '/gallery' },
+      { label: 'Imaging Capabilities', href: '/gallery' },
     ],
   },
 ]
