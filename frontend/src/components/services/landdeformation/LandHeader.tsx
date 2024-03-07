@@ -2,10 +2,16 @@
 import { Box, Flex, Heading, Img, Text } from '@chakra-ui/react'
 import landdeformation from "../../../assets/img/services/landdeformation.webp"
 import theme from '../../../theme'
+import { motion } from 'framer-motion'
+import { textVarient, textVarientSecond } from '../../../animation'
 
 // type hydrologyHeaderProps = {
 //   currentTheme: string
 // }
+
+const AnimateText = motion(Text)
+const AnimateHeading = motion(Heading)
+
 
 const LandHeader = () => {
 
@@ -15,14 +21,14 @@ const LandHeader = () => {
         <Box py="32" position="relative" zIndex={1} >
           <Box maxW='5xl' mx="auto" px={{ base: '6', md: '8' }} color="white" >
             <Flex justifyContent='center' fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
-              <Heading  >
+              <AnimateHeading variants={textVarient} whileInView="show" initial="hidden"  >
                 Land Deformation
-              </Heading>
+              </AnimateHeading>
             </Flex>
             <Flex justifyContent='center'>
-              <Text mt='1em' fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>
+              <AnimateText variants={textVarientSecond} whileInView="show" initial="hidden" mt='1em' fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>
                 Mapping Earth's shifts, informing decisions with millimeter precision.
-              </Text>
+              </AnimateText>
             </Flex>
           </Box>
         </Box>

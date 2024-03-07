@@ -22,7 +22,7 @@ import theme from "../../../theme.ts"
 import { CarouselSlide, IndustryCarousel, useCarousel } from './IndustryCarousel.tsx'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { boxVariant, homeProductRightToLeft } from '../../../animation.ts'
+import { boxVariant, homeProductLeftToRight, homeProductRightToLeft } from '../../../animation.ts'
 
 
 export const IndustryGallery = () => {
@@ -58,7 +58,7 @@ export const IndustryGallery = () => {
           {industryCarouselData.map((image, i) => (
             <CarouselSlide key={i}>
               <Flex direction={{ base: "column", md: "row-reverse" }}>
-                <AnimateBox w={{ base: "100%", md: "50%" }} padding={7} variants={boxVariant} whileInView="show" initial="hidden" height="100%" alignContent="justify">
+                <AnimateBox w={{ base: "100%", md: "50%" }} padding={7} variants={homeProductLeftToRight} whileInView="show" initial="hidden" height="100%" alignContent="justify">
                   <AspectRatio ratio={aspectRatio}>
                     <Image src={image.imageUrl} />
                   </AspectRatio>

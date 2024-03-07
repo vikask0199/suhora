@@ -5,11 +5,15 @@ import {
     Stack,
     Text,
 } from '@chakra-ui/react';
+import { motion } from 'framer-motion';
+import { textVarient, textVarientDelayMedium, textVarientSecond } from '../../../animation';
 import theme from "../../../theme";
 
 type aboutCurrentTHeme = {
     currentTheme: string;
 }
+
+const AnimatedText = motion(Text)
 
 
 export const AboutLance = ({ currentTheme }: aboutCurrentTHeme) => {
@@ -21,15 +25,15 @@ export const AboutLance = ({ currentTheme }: aboutCurrentTHeme) => {
                 <Stack spacing={{ base: '12', md: '12' }} textAlign="center" align="center">
                     <Stack spacing={{ base: '4', md: '5' }}>
                         <Flex justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
-                            <Text>
+                            <AnimatedText variants={textVarientSecond} whileInView="show" initial="hidden">
                                 <Text as="span">About </Text>
                                 <Text as="span" color={theme.companyTheme.color.secondry}>LANCE</Text>
-                            </Text>
+                            </AnimatedText>
                         </Flex>
-                        <Text color={theme.companyTheme.color.third} fontSize={theme.fonts.subHeading.size} fontWeight={theme.fonts.subHeading.weight} maxW="6xl" >
+                        <AnimatedText variants={textVarientDelayMedium} whileInView="show" initial="hidden" color={theme.companyTheme.color.third} fontSize={theme.fonts.subHeading.size} fontWeight={theme.fonts.subHeading.weight} maxW="6xl" >
                             See beyond the horizon. Advanced SAR & Optical imagery for critical ISR missions.
-                        </Text>
-                        <Text textAlign="justify">
+                        </AnimatedText>
+                        <AnimatedText variants={textVarient} whileInView="show" initial="hidden" textAlign="justify">
                             In the rapidly evolving defense sector, LANCE emerges as a groundbreaking fusion of human expertise and artificial intelligence, reshaping strategic operations. This advanced ISR platform offers real-time insights, allowing defense and intelligence agencies to transition from reactive to proactive strategies, ensuring critical targets are never missed.
                             <br />
                             <br />
@@ -37,7 +41,7 @@ export const AboutLance = ({ currentTheme }: aboutCurrentTHeme) => {
                             <br />
                             <br />
                             Designed for versatility, LANCE integrates AI's analytical power with strategic foresight, delivering unparalleled situational awareness. This synergy between technology and human judgment not only sets a new benchmark in defense readiness but also ensures a more secure, strategically prepared world.
-                        </Text>
+                        </AnimatedText>
                     </Stack>
                 </Stack>
             </Container>

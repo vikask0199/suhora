@@ -23,7 +23,15 @@ import contact2 from '../../assets/img/contact/Contactus2.jpg';
 import theme from '../../theme';
 import { Link } from 'react-router-dom';
 import axios from "axios"
+import { motion } from 'framer-motion';
+import { textVarient, textVarientDelayMedium, textVarientSecond, textvarientOneSecondDelay } from '../../animation';
 
+
+const AnimatedHeading = motion(Heading)
+const AnimatedText = motion(Text)
+const AnimatedStack = motion(Stack)
+const AnimatedFormControl = motion(FormControl)
+const AnimatedVStack = motion(VStack)
 
 const contactOptions = [
     {
@@ -92,14 +100,14 @@ const ContactUs = ({ currentTheme }: contactProps) => {
                 <Box py="32" position="relative" zIndex={1} >
                     <Box maxW='6xl' mx="auto" px={{ base: '6', md: '8' }} color="white" >
                         <Flex justifyContent='center' fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
-                            <Heading  >
+                            <AnimatedHeading variants={textVarient} whileInView="show" initial="hidden"  >
                                 Contact Us
-                            </Heading>
+                            </AnimatedHeading>
                         </Flex>
                         <Flex justifyContent='center'>
-                            <Text mt='1em' fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>
+                            <AnimatedText variants={textVarientSecond} whileInView="show" initial="hidden" mt='1em' fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>
                                 We believe in the power of communication. Reach out to us and let's build something amazing together.
-                            </Text>
+                            </AnimatedText>
                         </Flex>
                     </Box>
                 </Box>
@@ -135,7 +143,7 @@ const ContactUs = ({ currentTheme }: contactProps) => {
                         justifyContent="space-between">
                         {contactOptions.map((option, index) => (
                             <Fragment key={index}>
-                                <Stack
+                                <AnimatedStack variants={textVarientDelayMedium} initial="hidden" whileInView="show"
                                     spacing={1}
                                     direction="column"
                                     justifyContent="center"
@@ -152,7 +160,7 @@ const ContactUs = ({ currentTheme }: contactProps) => {
                                         </Text>
                                     </Link>
                                     <Text fontSize="lg" textAlign="end">{option.valuee}</Text>
-                                </Stack>
+                                </AnimatedStack>
                             </Fragment>
                         ))}
                     </Stack>
@@ -166,13 +174,13 @@ const ContactUs = ({ currentTheme }: contactProps) => {
                         boxShadow="lg"
                         p={{ base: 5, sm: 10 }}>
                         <Flex justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
-                            <Text>
+                            <AnimatedText variants={textVarient} initial="hidden" whileInView="show">
                                 <Text as="span">Get in</Text>
                                 <Text as="span" color={theme.companyTheme.color.secondry}> Touch</Text>
-                            </Text>
+                            </AnimatedText>
                         </Flex>
                         <VStack spacing={4} w="100%">
-                            <Stack w="100%" spacing={3} direction={{ base: 'column', md: 'row' }}>
+                            <AnimatedStack variants={textVarientSecond} whileInView="show" initial="hidden" w="100%" spacing={3} direction={{ base: 'column', md: 'row' }}>
                                 <FormControl id="name">
                                     <FormLabel></FormLabel>
                                     <Input type="text" onChange={(e) => setName(e.target.value)} placeholder="Your Name" rounded="md" />
@@ -181,8 +189,8 @@ const ContactUs = ({ currentTheme }: contactProps) => {
                                     <FormLabel></FormLabel>
                                     <Input type="email" onChange={(e) => setEmail(e.target.value)} placeholder="Your Email" rounded="md" />
                                 </FormControl>
-                            </Stack>
-                            <Stack w="100%" spacing={3} direction={{ base: 'column', md: 'row' }}>
+                            </AnimatedStack>
+                            <AnimatedStack variants={textVarientDelayMedium} whileInView="show" initial="hidden" w="100%" spacing={3} direction={{ base: 'column', md: 'row' }}>
                                 <FormControl id="phone">
                                     <FormLabel></FormLabel>
                                     <Input type="text" onChange={(e) => SetPhone(e.target.value)} placeholder="Contact Number" rounded="md" />
@@ -191,17 +199,17 @@ const ContactUs = ({ currentTheme }: contactProps) => {
                                     <FormLabel></FormLabel>
                                     <Input type="text" onChange={(e) => setSubject(e.target.value)} placeholder="Subject" rounded="md" />
                                 </FormControl>
-                            </Stack>
-                            <FormControl id="message">
+                            </AnimatedStack>
+                            <AnimatedFormControl id="message" variants={textvarientOneSecondDelay} whileInView="show" initial="hidden">
                                 <FormLabel></FormLabel>
                                 <Textarea size="lg" placeholder="Message" onChange={(e) => setMessage(e.target.value)} rounded="md" />
-                            </FormControl>
+                            </AnimatedFormControl>
                         </VStack>
-                        <VStack w="100%" >
+                        <AnimatedVStack w="100%" variants={textvarientOneSecondDelay} whileInView="show" initial="hidden">
                             <Button onClick={handleClick} width="fit-content" px="8" border="1px solid #1266A0" variant="outline" color={`${currentTheme === 'light' ? "#1266A0" : "white"}`} _hover={{ backgroundColor: theme.companyTheme.color.secondry, color: "white" }} >
                                 Submit
                             </Button>
-                        </VStack>
+                        </AnimatedVStack>
                     </VStack>
                 </Stack>
             </Container>

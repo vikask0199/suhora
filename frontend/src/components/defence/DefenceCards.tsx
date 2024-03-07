@@ -16,7 +16,12 @@ import servilliance from "../../assets/img/industries/Surveillance_Intelligence.
 import tailored from "../../assets/img/industries/Tailored.webp";
 import terrains from "../../assets/img/industries/terrains.svg";
 import theme from '../../theme';
+import { motion } from 'framer-motion';
+import { textVarient, textVarientSecond } from '../../animation';
 
+
+const AnimatedText = motion(Text)
+const AnimatedBox = motion(Box)
 
 interface IFeature {
     heading: string;
@@ -68,18 +73,19 @@ const DefenceCards = ({ currentTheme }: HomeServices) => {
             <Container maxW="6xl" py={{ base: '4', md: '8', lg: '12' }}>
                 <Stack spacing={{ base: '4', md: '5' }} direction="column">
                     <Flex justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
-                        <Text>
+                        <AnimatedText variants={textVarient} whileInView="show" initial="hidden">
                             <Text as="span">What We </Text>
                             <Text as="span" color={theme.companyTheme.color.secondry}>Offer</Text>
-                        </Text>
+                        </AnimatedText>
                     </Flex>
-                    <Text fontSize={theme.fonts.subHeading.size} color={theme.companyTheme.color.third} fontWeight={theme.fonts.subHeading.weight} textAlign="center">
-                    Adaptive Scalable Secure
-                    </Text>
+                    <AnimatedText variants={textVarientSecond} whileInView="show" initial="hidden" fontSize={theme.fonts.subHeading.size} color={theme.companyTheme.color.third} fontWeight={theme.fonts.subHeading.weight} textAlign="center">
+                        Adaptive Scalable Secure
+                    </AnimatedText>
                 </Stack>
                 <SimpleGrid columns={{ base: 1, sm: 2, md: 3 }} placeItems="center" spacing={10} mb={4} mt={12}>
                     {features.map((feature, index) => (
-                        <Box
+                        <AnimatedBox
+                            variants={textVarient} whileInView="show" initial="hidden"
                             key={index}
                             bg={useColorModeValue('gray.100', 'gray.700')}
                             p={6}
@@ -110,7 +116,7 @@ const DefenceCards = ({ currentTheme }: HomeServices) => {
                             {/* <Link href="#" mt={6} fontSize="sm" color="blue.400">
                                 Learn more →
                             </Link> */}
-                        </Box>
+                        </AnimatedBox>
                     ))}
                 </SimpleGrid>
             </Container>

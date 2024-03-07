@@ -10,6 +10,9 @@ type lanceCurentTheme = {
     currentTheme: string
 }
 
+const AnimatedText = motion(Text)
+const AnimatedBox = motion(Box)
+
 export const LanceIndutryWeServe = ({ currentTheme }: lanceCurentTheme) => {
     const backgroundColor = currentTheme === 'light' ? 'gray.200' : '#282b3c';
 
@@ -22,10 +25,10 @@ export const LanceIndutryWeServe = ({ currentTheme }: lanceCurentTheme) => {
                 py={{ base: '16', md: '12' }}>
                 <Stack spacing={{ base: '6', md: '8', lg: '12' }}>
                     <Flex justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
-                        <Text>
+                        <AnimatedText variants={textVarient} whileInView="show" initial="hidden">
                             <Text as="span">Industry We </Text>
                             <Text as="span" color={theme.companyTheme.color.secondry}>Supports </Text>
-                        </Text>
+                        </AnimatedText>
                     </Flex>
                     <Flex justifyContent="center">
                         <SimpleGrid columns={{ base: 1, md: 1, lg: 1 }} gap={{ base: '4', md: '6', lg: '8' }}>
@@ -111,6 +114,8 @@ export type Category = ElementType<typeof categories>
 import { AspectRatio, BoxProps, Image, Skeleton, Text } from '@chakra-ui/react'
 import theme from '../../../theme'
 import { useState } from 'react'
+import { motion } from 'framer-motion'
+import { textVarient, textVarientSecond } from '../../../animation'
 
 interface Props {
     category: Category
@@ -130,7 +135,7 @@ const CategoryCard = (props: Props) => {
     };
 
     return (
-        <Box position="relative" h="60" w="60" key={category.name} borderRadius="lg" overflow="hidden" {...rootProps} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+        <AnimatedBox position="relative" h="60" w="60" key={category.name} borderRadius="lg" variants={textVarientSecond} whileInView="show" initial="hidden" overflow="hidden" {...rootProps} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
             <Link>
                 <AspectRatio ratio={1 / 1}>
                     <Image src={category.imageUrl} alt={category.name} fallback={<Skeleton />} />
@@ -148,6 +153,6 @@ const CategoryCard = (props: Props) => {
                     </Text>
                 </Box>
             </Link>
-        </Box>
+        </AnimatedBox>
     )
 }

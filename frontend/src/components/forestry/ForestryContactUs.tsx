@@ -2,6 +2,11 @@ import { Box, Button, Flex } from '@chakra-ui/react'
 import bgImage from "../../assets/img/satellites-jpg.webp"
 import theme from '../../theme'
 import {Link} from 'react-router-dom'
+import { motion } from 'framer-motion'
+import { textVarient } from '../../animation'
+
+const AnimateButton = motion(Button)
+
 
 const ForestryContactUs = () => {
     return (
@@ -33,9 +38,9 @@ const ForestryContactUs = () => {
                 position="relative">
                 <Flex direction={{ base: 'column', md: 'row' }} height="100%" justifyContent="center" alignItems="center">
                 <Link to="/contact-us">
-                    <Button width="fit-content" px="8" border="1px solid white" variant="outline" color="white" _hover={{ backgroundColor: theme.companyTheme.color.secondry, border: "1px solid #1266A0" }} >
+                    <AnimateButton variants={textVarient} whileInView="show" initial="hidden" width="fit-content" px="8" border="1px solid white" variant="outline" color="white" _hover={{ backgroundColor: theme.companyTheme.color.secondry, border: "1px solid #1266A0" }} >
                         Contact Sales
-                    </Button>
+                    </AnimateButton>
                     </Link>
                 </Flex>
             </Box>

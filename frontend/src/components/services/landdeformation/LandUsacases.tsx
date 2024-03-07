@@ -10,9 +10,11 @@ import {
     useColorModeValue
 } from '@chakra-ui/react';
 
+import { motion } from 'framer-motion';
 import { FaTreeCity } from "react-icons/fa6";
 import { GiFuelTank, GiHorizonRoad, GiMining } from "react-icons/gi";
 import { MdFlood } from "react-icons/md";
+import { textVarient, textVarientDelayMedium, textVarientSecond } from '../../../animation';
 import theme from '../../../theme';
 
 
@@ -45,6 +47,9 @@ const features: IFeature[] = [
     },
 ];
 
+const AnimateText = motion(Text)
+const AnimatedBox = motion(Box)
+
 
 const LandUsacases = () => {
     const iconArray = [<MdFlood />, <FaTreeCity />, <GiFuelTank />, <GiHorizonRoad />, <GiMining />]
@@ -55,18 +60,19 @@ const LandUsacases = () => {
             <Container maxW="6xl" py={{ base: '4', md: '8', lg: '12' }}>
                 <Stack spacing={{ base: '4', md: '5' }} direction="column">
                     <Flex justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
-                        <Text>
+                        <AnimateText variants={textVarient} whileInView="show" initial="hidden">
                             <Text as="span" color={theme.companyTheme.color.secondry}>Land Deformation </Text>
                             <Text as="span">Usecases</Text>
-                        </Text>
+                        </AnimateText>
                     </Flex>
-                    <Text fontSize={theme.fonts.subHeading.size} color={theme.companyTheme.color.third} fontWeight={theme.fonts.subHeading.weight} textAlign="center">
+                    <AnimateText variants={textVarientSecond} whileInView="show" initial="hidden" fontSize={theme.fonts.subHeading.size} color={theme.companyTheme.color.third} fontWeight={theme.fonts.subHeading.weight} textAlign="center">
                         Mapping Earth's shifts, informing decisions with millimeter precision.
-                    </Text>
+                    </AnimateText>
                 </Stack>
                 <SimpleGrid columns={{ base: 1, sm: 2, md: 3 }} placeItems="center" spacing={10} mb={4} mt={12}>
                     {features.map((feature, index) => (
-                        <Box
+                        <AnimatedBox
+                            variants={textVarientDelayMedium} whileInView="show" initial="hidden"
                             mb={4}
                             key={index}
                             bg={useColorModeValue('gray.100', 'gray.700')}
@@ -97,7 +103,7 @@ const LandUsacases = () => {
                             {/* <Link href="#" fontSize={theme.fonts.subHeadingSecond.size} color={theme.companyTheme.color.secondry}>
                                 Learn more →
                             </Link> */}
-                        </Box>
+                        </AnimatedBox>
                     ))}
                 </SimpleGrid>
             </Container>

@@ -19,12 +19,17 @@ import infra_monitoring from '../../assets/img/industries/infra_monitoring_const
 import infra_remote from '../../assets/img/industries/infra_remote_monitoringandInspection.webp';
 import infra_site from '../../assets/img/industries/infra_site_selection.webp';
 import theme from '../../theme';
+import { motion } from 'framer-motion';
+import { textVarient } from '../../animation';
 
 interface IFeature {
     heading: string;
     content: string;
 
 }
+
+const AnimateText = motion(Text)
+const AnimateBox = motion(Box)
 
 const features: IFeature[] = [
     {
@@ -77,18 +82,19 @@ const InfrastructureCards = ({ currentTheme }: HomeServices) => {
             <Container maxW="6xl" py={{ base: '4', md: '8', lg: '12' }}>
                 <Stack spacing={{ base: '4', md: '5' }} direction="column">
                     <Flex justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
-                        <Text>
+                        <AnimateText variants={textVarient} whileInView="show" initial="hidden" >
                             <Text as="span">What We </Text>
                             <Text as="span" color={theme.companyTheme.color.secondry}>Offer</Text>
-                        </Text>
+                        </AnimateText>
                     </Flex>
-                    <Text fontSize={theme.fonts.subHeading.size} color={theme.companyTheme.color.third} fontWeight={theme.fonts.subHeading.weight} textAlign="center">
+                    <AnimateText variants={textVarient} whileInView="show" initial="hidden" fontSize={theme.fonts.subHeading.size} color={theme.companyTheme.color.third} fontWeight={theme.fonts.subHeading.weight} textAlign="center">
                         Elevating Infrastructure Monitoring with AI-Powered Insights
-                    </Text>
+                    </AnimateText>
                 </Stack>
                 <SimpleGrid columns={{ base: 1, sm: 2, md: 3 }} placeItems="center" spacing={10} mb={4} mt={12}>
                     {features.map((feature, index) => (
-                        <Box
+                        <AnimateBox
+                            variants={textVarient} whileInView="show" initial="hidden"
                             key={index}
                             bg={useColorModeValue('gray.100', 'gray.700')}
                             p={6}
@@ -120,7 +126,7 @@ const InfrastructureCards = ({ currentTheme }: HomeServices) => {
                             {/* <Link href="#" mt={4} fontSize="sm" color="blue.400">
                                 Learn more →
                             </Link> */}
-                        </Box>
+                        </AnimateBox>
                     ))}
                 </SimpleGrid>
             </Container>

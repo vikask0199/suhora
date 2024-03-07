@@ -9,7 +9,13 @@ import {
     // UnorderedList
 } from '@chakra-ui/react';
 import theme from '../../theme';
+import { motion } from 'framer-motion';
+import { textVarient, textVarientSecond } from '../../animation';
 // import { RiTyphoonLine } from 'react-icons/ri';
+
+const AnimateText = motion(Text)
+
+
 export const InfrastructureContent = () => {
     // const aspectRatio = 3 / 3
     // const spadeIconArray = [<RiTyphoonLine />]
@@ -19,16 +25,15 @@ export const InfrastructureContent = () => {
                 <Stack spacing={{ base: '12', md: '12' }} textAlign="center" align="center">
                     <Stack spacing={{ base: '4', md: '5' }}>
                         <Flex justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
-                            <Text>
-                               
+                            <AnimateText variants={textVarient} whileInView="show" initial="hidden" >
                                 <Text as="span" color={theme.companyTheme.color.secondry}>Infrastructure </Text>
                                 <Text as="span">Solution </Text>
-                            </Text>
+                            </AnimateText>
                         </Flex>
-                        <Text color={theme.companyTheme.color.third} fontSize={theme.fonts.subHeading.size} fontWeight={theme.fonts.subHeading.weight} maxW="6xl" >
+                        <AnimateText variants={textVarientSecond} whileInView="show" initial="hidden"  color={theme.companyTheme.color.third} fontSize={theme.fonts.subHeading.size} fontWeight={theme.fonts.subHeading.weight} maxW="6xl" >
                             Sky Built Precision AI Powered Automation
-                        </Text>
-                        <Text textAlign="justify">
+                        </AnimateText>
+                        <AnimateText variants={textVarient} whileInView="show" initial="hidden"  textAlign="justify" >
                             Suhora harnessing the vast repository of satellite data, ranging from high-resolution electro optical imagery to SAR (Synthetic Aperture Radar) coupling satellite data with enhanced AI and automation offers unprecedented insights for condition, performance, and dynamics of critical infrastructure assets.
                             <br />
                             <br />
@@ -37,7 +42,7 @@ export const InfrastructureContent = () => {
                             <br />
                             <br />
                             Urbanization in countries like India brings with it a myriad of challenges, including increased strain on existing infrastructure, heightened demand for essential services, and greater environmental impact. */}
-                        </Text>
+                        </AnimateText>
                         {/* <Flex w="100%" direction="column" rowGap={4} justifyContent="space-between">
                             <UnorderedList listStyleType="hidden" fontSize={theme.fonts.list} marginLeft={0}>
                                 <ListItem display="flex" mb="2" alignItems="center" marginTop={4} gap={2}>

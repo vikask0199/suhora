@@ -11,7 +11,7 @@ type currentThemeProps = {
 const SIDPage = ({ currentTheme }: currentThemeProps) => {
     return (
         <>
-            <SidHome />
+            <SidHome currentTheme={currentTheme}/>
             <AboutSid currentTheme={currentTheme}/>
             <SidFeature />
             <SidIndutryWeServe currentTheme={currentTheme}/>

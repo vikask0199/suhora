@@ -1,8 +1,15 @@
 import { AspectRatio, Box, Button, Flex, Image, ListItem, Text, UnorderedList } from "@chakra-ui/react"
+import { motion } from "framer-motion"
 import { RiTyphoonLine } from "react-icons/ri"
-import theme from "../../../theme"
-import terrain from "../../../assets/img/services/terrain.webp"
 import { NavLink } from "react-router-dom"
+import { homeProductLeftToRight, homeProductRightToLeft, textVarient } from "../../../animation"
+import terrain from "../../../assets/img/services/terrain.webp"
+import theme from "../../../theme"
+
+
+const AnimateText = motion(Text)
+const AnimateBox = motion(Box)
+const AnimateFlex = motion(Flex)
 
 
 const TerrainFeature = () => {
@@ -20,18 +27,18 @@ const TerrainFeature = () => {
                 direction="column"
                 gap="4">
                 <Flex justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
-                    <Text>
+                    <AnimateText variants={textVarient} whileInView="show" initial="hidden">
                         <Text as="span" color={theme.companyTheme.color.secondry}>Feature of </Text>
                         <Text as="span">Terrain Mapping</Text>
-                    </Text>
+                    </AnimateText>
                 </Flex>
                 <Flex direction={{ base: "column", md: "row" }} boxShadow='rgba(0, 0, 0, 0.35) 0px 5px 15px' justifyContent="center" alignItems="center">
-                    <Box w={{ base: "100%", md: "50%" }} padding={7}>
+                    <AnimateBox variants={homeProductRightToLeft} whileInView="show" initial="hidden" w={{ base: "100%", md: "50%" }} padding={7}>
                         <AspectRatio ratio={aspectRatio}>
                             <Image src={terrain} />
                         </AspectRatio>
-                    </Box>
-                    <Flex w={{ base: "100%", md: "50%" }} p={8} direction="column" rowGap={4} justifyContent="space-between">
+                    </AnimateBox>
+                    <AnimateFlex variants={homeProductLeftToRight} whileInView="show" initial="hidden" w={{ base: "100%", md: "50%" }} p={8} direction="column" rowGap={4} justifyContent="space-between">
                         <Box fontSize={theme.fonts.subHeading.size} fontWeight={theme.fonts.subHeading.weight} color={theme.companyTheme.color.third}>Features</Box>
                         <Box fontSize={theme.fonts.description}>At Suhora we work on a multi pronged data analysis approach . These data and anlysis include: </Box>
                         <UnorderedList listStyleType="hidden" fontSize={theme.fonts.list} marginLeft={0}>
@@ -79,7 +86,7 @@ const TerrainFeature = () => {
                                 </Button>
                             </NavLink>
                         </Flex>
-                    </Flex>
+                    </AnimateFlex>
                 </Flex>
             </Flex>
         </Box>

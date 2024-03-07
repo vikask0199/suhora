@@ -2,10 +2,16 @@
 import { Box, Flex, Heading, Img, Text } from '@chakra-ui/react'
 import hydrologymainimage from '../../../assets/img/services/hydrologymainimage.webp'
 import theme from '../../../theme'
+import { motion } from 'framer-motion'
+import { textVarient, textVarientSecond } from '../../../animation'
 
 // type hydrologyHeaderProps = {
 //   currentTheme: string
 // }
+
+const AnimateHeading = motion(Heading)
+const AnimatedText = motion(Text)
+
 
 const HydrologyHeader = () => {
 
@@ -15,14 +21,14 @@ const HydrologyHeader = () => {
         <Box py="32" position="relative" zIndex={1} >
           <Box maxW='5xl' mx="auto" px={{ base: '6', md: '8' }} color="white" >
             <Flex justifyContent='center' fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
-              <Heading  >
+              <AnimateHeading variants={textVarient} whileInView="show" initial="hidden"  >
                 Hydrology
-              </Heading>
+              </AnimateHeading>
             </Flex>
             <Flex justifyContent='center'>
-              <Text mt='1em' fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>
+              <AnimatedText variants={textVarientSecond} whileInView="show" initial="hidden" mt='1em' fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>
                 Mitigating flood risks for critical infrastructure worldwide.
-              </Text>
+              </AnimatedText>
             </Flex>
           </Box>
         </Box>

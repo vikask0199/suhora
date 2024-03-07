@@ -8,11 +8,15 @@ import {
 
 import spade from "../../assets/img/products/spade.png";
 
+const AnimateBox = motion(Box)
+const AnimateText = motion(Text)
+
+
 export const InfrastructureProduct = () => {
     // const backgroundColor = currentTheme === 'light' ? 'gray.200' : '#282b3c';
 
     return (
-        <Box  >
+        <Box>
             <Box
                 maxW="6xl"
                 mx="auto"
@@ -20,10 +24,10 @@ export const InfrastructureProduct = () => {
                 py={{ base: '16', md: '12' }}>
                 <Stack spacing={{ base: '6', md: '8', lg: '12' }}>
                     <Flex justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
-                        <Text>
+                        <AnimateText variants={textVarient} whileInView="show" initial="hidden" >
                             <Text as="span">Suhora </Text>
                             <Text as="span" color={theme.companyTheme.color.secondry}>Product </Text>
-                        </Text>
+                        </AnimateText>
                     </Flex>
 
                     <Flex justifyContent='center'>
@@ -83,6 +87,8 @@ import { AspectRatio, BoxProps, Image, Skeleton, Text } from '@chakra-ui/react';
 import { useState } from 'react';
 import theme from '../../theme';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { textVarient } from '../../animation';
 
 interface Props {
     category: Category
@@ -102,7 +108,7 @@ const CategoryCard = (props: Props) => {
     };
 
     return (
-        <Box position="relative" key={category.name} borderRadius="lg" h='60' w='60' overflow="hidden" {...rootProps} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+        <AnimateBox variants={textVarient} whileInView="show" initial="hidden"  position="relative" key={category.name} borderRadius="lg" h='60' w='60' overflow="hidden" {...rootProps} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
             <Link to={category.url} >
                 <AspectRatio ratio={1 / 1}>
                     <Image src={category.imageUrl} alt={category.name} fallback={<Skeleton />} />
@@ -119,6 +125,6 @@ const CategoryCard = (props: Props) => {
                     </Text>
                 </Box>
             </Link>
-        </Box>
+        </AnimateBox>
     )
 }

@@ -1,15 +1,16 @@
 import {
     Box,
-    // Button,
     Container,
     Flex,
-    // ListItem,
     Stack,
     Text,
-    // UnorderedList
 } from '@chakra-ui/react';
 import theme from '../../theme';
-// import { RiTyphoonLine } from 'react-icons/ri';
+import { motion } from 'framer-motion';
+import { textVarient, textVarientDelayMedium, textVarientSecond } from '../../animation';
+
+const AnimateText = motion(Text)
+
 export const AgricultureContent = () => {
     // const aspectRatio = 3 / 3
     // const spadeIconArray = [<RiTyphoonLine />]
@@ -19,21 +20,20 @@ export const AgricultureContent = () => {
                 <Stack spacing={{ base: '12', md: '12' }} textAlign="center" align="center">
                     <Stack spacing={{ base: '4', md: '5' }}>
                         <Flex justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
-                            <Text>
-
+                            <AnimateText variants={textVarient} whileInView="show" initial="hidden">
                                 <Text as="span" color={theme.companyTheme.color.secondry}>Agriculture </Text>
                                 <Text as="span">Solution </Text>
-                            </Text>
+                            </AnimateText>
                         </Flex>
-                        <Text color={theme.companyTheme.color.third} fontSize={theme.fonts.subHeading.size} fontWeight={theme.fonts.subHeading.weight} maxW="6xl" >
+                        <AnimateText variants={textVarientSecond} whileInView="show" initial="hidden" color={theme.companyTheme.color.third} fontSize={theme.fonts.subHeading.size} fontWeight={theme.fonts.subHeading.weight} maxW="6xl" >
                             Transforming Crop Management Through Satellite Insights
-                        </Text>
-                        <Text textAlign="justify">
+                        </AnimateText>
+                        <AnimateText variants={textVarientDelayMedium} whileInView="show" initial="hidden" textAlign="justify" >
                             Suhora's advanced satellite data analytics platform revolutionizes the assessment of crop health, acreage, yield estimation, and damage assessment, offering invaluable insights for various stakeholders, particularly insurance companies.
                             <br />
                             <br />
                             Crop health assessment lies at the core of Suhora's capabilities. By analyzing various spectral bands and temporal changes in vegetation indices, the platform provides precise information about the health status of crops throughout their growth cycles.This enables farmers, agronomists, and policymakers to make informed decisions regarding irrigation, fertilization, pest control, and overall crop management strategies.
-                        </Text>
+                        </AnimateText>
                         {/* <Flex w="100%" direction="column" rowGap={4} justifyContent="space-between">
                             <UnorderedList listStyleType="hidden" fontSize={theme.fonts.list} marginLeft={0}>
                                 <ListItem display="flex" mb="2" alignItems="center" marginTop={4} gap={2}>

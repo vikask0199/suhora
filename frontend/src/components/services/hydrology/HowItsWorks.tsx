@@ -1,9 +1,11 @@
 import { Box, Container, Flex, Stack } from '@chakra-ui/react'
 
+const AnimateText = motion(Text)
+const AnimateStack = motion(Stack)
+
 type howWorks = {
     currentTheme: string
 }
-
 
 export const HowItsWorks = ({ currentTheme }: howWorks) => {
     const [currentStep] = useStep({ maxStep: steps.length, initialStep: 2 })
@@ -12,15 +14,15 @@ export const HowItsWorks = ({ currentTheme }: howWorks) => {
         <Box py={{ base: '4', md: '8', lg: '16' }} backgroundColor={backgroundColor}>
             <Container maxW="6xl">
                 <Flex mb={{ base: '2', md: '4' }} justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight} >
-                    <Text>
+                    <AnimateText variants={textVarient} whileInView="show" initial="hidden">
                         <Text as="span">Hydrology </Text>
                         <Text as="span" color={theme.companyTheme.color.secondry}>Workflow</Text>
-                    </Text>
+                    </AnimateText>
                 </Flex>
-                <Text mb={{ base: '2', md: '4' }} color={theme.companyTheme.color.third} fontSize={theme.fonts.subHeading.size} fontWeight={theme.fonts.subHeading.weight} maxW="6xl" pb={{ base: '4', md: '8' }} textAlign="center">
+                <AnimateText variants={textVarientSecond} whileInView="show" initial="hidden" mb={{ base: '2', md: '4' }} color={theme.companyTheme.color.third} fontSize={theme.fonts.subHeading.size} fontWeight={theme.fonts.subHeading.weight} maxW="6xl" pb={{ base: '4', md: '8' }} textAlign="center">
                     Mitigating flood risks for critical infrastructure worldwide, expertly.
-                </Text>
-                <Stack spacing="0" direction={{ base: 'column', md: 'row' }} >
+                </AnimateText>
+                <AnimateStack variants={textVarientDelayMedium} whileInView="show" initial="hidden" spacing="0" direction={{ base: 'column', md: 'row' }} >
                     {steps.map((step, id) => (
                         <Step
                             key={id}
@@ -32,7 +34,7 @@ export const HowItsWorks = ({ currentTheme }: howWorks) => {
                             isLastStep={steps.length === id + 1}
                         />
                     ))}
-                </Stack>
+                </AnimateStack>
             </Container>
         </Box>
     )
@@ -133,6 +135,8 @@ const StepCircle = (props: RadioCircleProps) => {
 
 import { Dispatch, SetStateAction, useCallback, useMemo, useState } from 'react'
 import theme from '../../../theme'
+import { motion } from 'framer-motion'
+import { textVarient, textVarientDelayMedium, textVarientSecond } from '../../../animation'
 interface Helpers {
     goToNextStep: () => void
     goToPrevStep: () => void

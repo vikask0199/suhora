@@ -13,6 +13,12 @@ import {
 import { GiFuelTank, GiModernCity } from "react-icons/gi";
 import { MdSolarPower } from "react-icons/md";
 import theme from '../../../theme';
+import { motion } from 'framer-motion';
+import { textVarient, textVarientSecond } from '../../../animation';
+
+
+const AnimateText = motion(Text)
+const AnimateBox = motion(Box)
 
 
 interface IFeature {
@@ -48,18 +54,19 @@ const HydrologyUsacases = () => {
             <Container maxW="6xl">
                 <Stack spacing={{ base: '4', md: '5' }} direction="column">
                     <Flex justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
-                        <Text>
+                        <AnimateText variants={textVarient} whileInView="show" initial="hidden">
                             <Text as="span" color={theme.companyTheme.color.secondry}>Hydrology </Text>
                             <Text as="span">Usecases</Text>
-                        </Text>
+                        </AnimateText>
                     </Flex>
-                    <Text fontSize={theme.fonts.subHeading.size} color={theme.companyTheme.color.third} fontWeight={theme.fonts.subHeading.weight} textAlign="center">
+                    <AnimateText variants={textVarientSecond} whileInView="show" initial="hidden" fontSize={theme.fonts.subHeading.size} color={theme.companyTheme.color.third} fontWeight={theme.fonts.subHeading.weight} textAlign="center">
                         Mitigating flood risks for critical infrastructure worldwide.
-                    </Text>
+                    </AnimateText>
                 </Stack>
                 <SimpleGrid columns={{ base: 1, sm: 2, md: 3 }} placeItems="center" spacing={10} mb={4} mt={20}>
                     {features.map((feature, index) => (
-                        <Box
+                        <AnimateBox
+                        variants={textVarientSecond} whileInView="show" initial="hidden"
                             mb={4}
                             key={index}
                             bg={useColorModeValue('gray.100', 'gray.700')}
@@ -90,7 +97,7 @@ const HydrologyUsacases = () => {
                             {/* <Link href="#" fontSize={theme.fonts.subHeadingSecond.size} color={theme.companyTheme.color.secondry}>
                                 Learn more →
                             </Link> */}
-                        </Box>
+                        </AnimateBox>
                     ))}
                 </SimpleGrid>
             </Container>

@@ -1,5 +1,9 @@
 import { Box, Container, Flex, Stack } from '@chakra-ui/react'
 
+const AnimateText = motion(Text)
+const AnimateStack = motion(Stack)
+
+
 type howWorks = {
     currentTheme: string
 }
@@ -12,14 +16,14 @@ export const HowItsWorks = ({ currentTheme }: howWorks) => {
         <Box py={{ base: '4', md: '8', lg: '16' }} backgroundColor={backgroundColor}>
             <Container maxW="6xl">
                 <Flex mb={{ base: '2', md: '4' }} justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight} >
-                    <Text>
+                    <AnimateText variants={textVarient} whileInView="show" initial="hidden">
                         <Text as="span">How It </Text>
                         <Text as="span" color={theme.companyTheme.color.secondry}>Works</Text>
-                    </Text>
+                    </AnimateText>
                 </Flex>
-                <Text mb={{ base: '2', md: '4' }} color={theme.companyTheme.color.third} fontSize={theme.fonts.subHeading.size} fontWeight={theme.fonts.subHeading.weight} maxW="6xl" pb={{ base: '4', md: '8' }} textAlign="center">
+                <AnimateText variants={textVarientSecond} whileInView="show" initial="hidden" mb={{ base: '2', md: '4' }} color={theme.companyTheme.color.third} fontSize={theme.fonts.subHeading.size} fontWeight={theme.fonts.subHeading.weight} maxW="6xl" pb={{ base: '4', md: '8' }} textAlign="center">
                     Mapping Earth's shifts, informing decisions with millimeter precision.
-                </Text>
+                </AnimateText>
                 <Stack spacing="0" direction={{ base: 'column', md: 'row' }} >
                     {steps.map((step, id) => (
                         <Step
@@ -80,7 +84,7 @@ const Step = (props: StepProps) => {
         md: 'horizontal',
     })
     return (
-        <Stack spacing="4" direction={{ base: 'row', md: 'column' }} flex="1" {...stackProps}>
+        <AnimateStack variants={textVarientDelayMedium} whileInView="show" initial="hidden" spacing="4" direction={{ base: 'row', md: 'column' }} flex="1" {...stackProps}>
             <Stack spacing="0" align="center" direction={{ base: 'column', md: 'row' }}>
                 <Divider
                     display={isMobile ? 'none' : 'initial'}
@@ -105,7 +109,7 @@ const Step = (props: StepProps) => {
                 </Text>
                 <Text color="fg.muted">{description}</Text>
             </Stack>
-        </Stack>
+        </AnimateStack>
     )
 }
 
@@ -133,6 +137,8 @@ const StepCircle = (props: RadioCircleProps) => {
 
 import { Dispatch, SetStateAction, useCallback, useMemo, useState } from 'react'
 import theme from '../../../theme'
+import { motion } from 'framer-motion'
+import { textVarient, textVarientDelayMedium, textVarientSecond } from '../../../animation'
 interface Helpers {
     goToNextStep: () => void
     goToPrevStep: () => void

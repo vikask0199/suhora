@@ -19,7 +19,7 @@ import { GiCircleCage } from 'react-icons/gi'
 import { IoBaseballOutline, IoChevronBackOutline, IoChevronForwardOutline } from 'react-icons/io5'
 import { RiTyphoonLine } from "react-icons/ri"
 import { Link } from 'react-router-dom'
-import { boxVariant, homeProductLeftToRight } from '../../../animation.ts'
+import { boxVariant, homeProductLeftToRight, homeProductRightToLeft } from '../../../animation.ts'
 import { products } from "../../../constant/productCarouselData.ts"
 import theme from "../../../theme.ts"
 import { Carousel, CarouselSlide, useCarousel } from './Carousel.tsx'
@@ -60,7 +60,7 @@ export const Gallery = () => {
           {products.map((image, i) => (
             <CarouselSlide key={i}>
               <Flex direction={{ base: "column", md: "row" }} alignItems="center" height="100%">
-                <AnimateBox variants={boxVariant} whileInView="show" initial="hidden" w={{ base: "100%", md: "50%" }} height="fit-content" padding={7} >
+                <AnimateBox variants={homeProductRightToLeft} whileInView="show" initial="hidden" w={{ base: "100%", md: "50%" }} height="fit-content" padding={7} >
                   <AspectRatio ratio={aspectRatio}>
                     <Image src={image.imageUrl} />
                   </AspectRatio>

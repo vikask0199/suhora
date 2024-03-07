@@ -2,6 +2,10 @@ import { Box, Button, Flex } from '@chakra-ui/react'
 import bgImage from "../../../assets/img/satellites-jpg.webp"
 import theme from '../../../theme'
 import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
+import { textVarient } from '../../../animation'
+
+const AnimatedButton = motion(Button)
 
 export const SidDemo = () => {
     return (
@@ -33,9 +37,9 @@ export const SidDemo = () => {
                 position="relative">
                 <Flex direction={{ base: 'column', md: 'row' }} height="100%" justifyContent="center" alignItems="center">
                     <Link to="/contact-us">
-                        <Button width="fit-content" px="8" border="1px solid white" variant="outline" color="white" _hover={{ backgroundColor: theme.companyTheme.color.secondry, border: "1px solid #1266A0" }} >
+                        <AnimatedButton variants={textVarient} whileInView="show" initial="hidden" width="fit-content" px="8" border="1px solid white" variant="outline" color="white" _hover={{ backgroundColor: theme.companyTheme.color.secondry, border: "1px solid #1266A0" }} >
                             Request Demo
-                        </Button>
+                        </AnimatedButton>
                     </Link>
                 </Flex>
             </Box>

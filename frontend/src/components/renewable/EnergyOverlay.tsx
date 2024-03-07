@@ -2,6 +2,12 @@
 import { Box, Flex, Heading, Img, Text } from '@chakra-ui/react'
 import AgricultureImg from '../../assets/img/industries/energy.webp'
 import theme from '../../theme'
+import { motion } from 'framer-motion'
+import { textVarient, textVarientSecond } from '../../animation'
+
+const AnimateHeading = motion(Heading)
+const AnimateText = motion(Text)
+
 const EnergyOverlay = () => {
 
   return (
@@ -10,17 +16,15 @@ const EnergyOverlay = () => {
         <Box py="32" position="relative" zIndex={1} >
           <Box maxW='5xl' mx="auto" px={{ base: '6', md: '8' }} color="white" >
             <Flex justifyContent='center' fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
-              <Heading  >
+              <AnimateHeading variants={textVarient} whileInView="show" initial="hidden"  >
                 Renewable Energy
-              </Heading>
-
+              </AnimateHeading>
 
             </Flex>
             <Flex justifyContent='center'>
-              <Text mt='1em' fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>
+              <AnimateText variants={textVarientSecond} whileInView="show" initial="hidden"  mt='1em' fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>
                 Orbit to Outlet Satellite Driven Solar Innovation
-
-              </Text>
+              </AnimateText>
             </Flex>
           </Box>
         </Box>

@@ -15,6 +15,12 @@ import {
 import theme from '../../theme'
 import { MdAccessTime, MdLocationOn } from 'react-icons/md'
 import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
+import { textVarient, textVarientDelayMedium, textVarientSecond } from '../../animation'
+
+const AnimateHeading = motion(Heading)
+const AnimateText = motion(Text)
+const AnimateAccordionItem = motion(AccordionItem)
 
 
 const CareerOpportunity = () => (
@@ -23,24 +29,22 @@ const CareerOpportunity = () => (
             <SimpleGrid columns={{ base: 1, md: 2 }} gap={12}>
                 <Stack spacing={{ base: '4', md: '6' }}>
                     <Stack spacing="4">
-
                         <Flex alignContent='center'>
-                            <Heading fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight} color={theme.companyTheme.color.secondry}>
+                            <AnimateHeading variants={textVarient} whileInView="show" initial="hidden"  fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight} color={theme.companyTheme.color.secondry}>
                                 Open Positions
-                            </Heading>
+                            </AnimateHeading>
                         </Flex>
 
                     </Stack>
-                    <Text fontSize={theme.fonts.description}>
+                    <AnimateText variants={textVarientSecond} whileInView="show" initial="hidden" fontSize={theme.fonts.description}>
                         Explore exciting job opportunities at our company and join a dynamic team dedicated to
                         innovation and excellence.
-                    </Text>
+                    </AnimateText>
                 </Stack>
                 <Accordion allowMultiple >
                     {jobListings.map((listing, id) => (
-                        <AccordionItem py="4" key={id}>
+                        <AnimateAccordionItem py="4" key={id} variants={textVarientDelayMedium} whileInView="show" initial="hidden">
                             <AccordionButton gap={4} px="0" >
-
                                 <Text as="h2" fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight} color={theme.companyTheme.color.secondry}>
                                     {listing.title}
                                 </Text>
@@ -68,7 +72,7 @@ const CareerOpportunity = () => (
                                 </Stack>
                             </AccordionPanel>
 
-                        </AccordionItem>
+                        </AnimateAccordionItem>
                     ))}
                 </Accordion>
             </SimpleGrid>

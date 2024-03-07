@@ -9,7 +9,12 @@ import {
 
 import spade from "../../assets/img/products/spade.png";
 
+const AnimateText = motion(Text)
+const AnimateBox = motion(Box)
+
+
 export const AgricultureProduct = () => {
+
     // const backgroundColor = currentTheme === 'light' ? 'gray.200' : '#282b3c';
 
     return (
@@ -21,19 +26,19 @@ export const AgricultureProduct = () => {
                 py={{ base: '16', md: '12' }}>
                 <Stack spacing={{ base: '6', md: '8', lg: '12' }}>
                     <Flex justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
-                        <Text>
+                        <AnimateText variants={textVarient} whileInView="show" initial="hidden">
                             <Text as="span">Suhora </Text>
                             <Text as="span" color={theme.companyTheme.color.secondry}>Product </Text>
-                        </Text>
+                        </AnimateText>
                     </Flex>
 
-                      <Flex justifyContent='center'>
-                    <SimpleGrid columns={{ base: 1, md: 1, lg: 1 }} gap={{ base: '4', md: '6', lg: '8' }}>
-                        {categories.map((category) => (
-                            <CategoryCard key={category.name} category={category} />
-                        ))}
-                    </SimpleGrid>
-                   </Flex>
+                    <Flex justifyContent='center'>
+                        <SimpleGrid columns={{ base: 1, md: 1, lg: 1 }} gap={{ base: '4', md: '6', lg: '8' }}>
+                            {categories.map((category) => (
+                                <CategoryCard key={category.name} category={category} />
+                            ))}
+                        </SimpleGrid>
+                    </Flex>
                 </Stack>
             </Box>
         </Box>
@@ -81,6 +86,8 @@ export type Category = ElementType<typeof categories>
 import { AspectRatio, BoxProps, Image, Skeleton, Text } from '@chakra-ui/react';
 import { useState } from 'react';
 import theme from '../../theme';
+import { motion } from 'framer-motion';
+import { textVarient, textVarientSecond } from '../../animation';
 
 interface Props {
     category: Category
@@ -100,7 +107,7 @@ const CategoryCard = (props: Props) => {
     };
 
     return (
-        <Box position="relative" key={category.name} borderRadius="lg" h='60' w='60' overflow="hidden" {...rootProps} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+        <AnimateBox variants={textVarientSecond} whileInView="show" initial="hidden" position="relative" key={category.name} borderRadius="lg" h='60' w='60' overflow="hidden" {...rootProps} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
             <Link>
                 <AspectRatio ratio={1 / 1}>
                     <Image src={category.imageUrl} alt={category.name} fallback={<Skeleton />} />
@@ -117,6 +124,6 @@ const CategoryCard = (props: Props) => {
                     </Text>
                 </Box>
             </Link>
-        </Box>
+        </AnimateBox>
     )
 }

@@ -63,7 +63,7 @@ function App() {
           <Route path="/" element={<PublicOutlet toggleTheme={toggleColorMode} currentTheme={colorMode} />}>
             <Route index element={<HomePage currentTheme={colorMode} />} />
             <Route path="contact-us" element={<ContactPage currentTheme={colorMode} />} />
-            <Route path="gallery" element={<GalleryPage />} />
+            <Route path="gallery" element={<GalleryPage  currentTheme={colorMode}/>} />
 
             {/* product */}
             <Route path="spade" element={<SpadePage currentTheme={colorMode} />} />

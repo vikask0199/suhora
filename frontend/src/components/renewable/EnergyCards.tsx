@@ -16,6 +16,8 @@ import renew_project from '../../assets/img/industries/renew_Project_Development
 import renew_resource from '../../assets/img/industries/renew_Resource_Optimization.webp';
 import renew_site_assessment from '../../assets/img/industries/renew_Site_Assessment_Selection.webp';
 import theme from '../../theme';
+import { motion } from 'framer-motion';
+import { textVarient, textVarientSecond } from '../../animation';
 
 interface IFeature {
     heading: string;
@@ -23,13 +25,16 @@ interface IFeature {
 
 }
 
+const AnimateText = motion(Text)
+const AnimateBox = motion(Box)
+
 const features: IFeature[] = [
     {
         heading: 'Site Assessment & Selection',
         content: 'Optimize site selection with our comprehensive assessment tools.',
 
     },
-   
+
     {
         heading: 'Infrastructure Monitoring',
         content: 'Seamlessly monitor infrastructure with our custom integrated solutions',
@@ -50,7 +55,7 @@ const features: IFeature[] = [
         content: 'Evaluate ecological consequences with analysis of land cover, vegetation, and water bodies over time.',
 
     },
-  
+
     // {
     //     heading: 'API Included',
     //     content: 'Roll your own API to easily connect with other apps or services. Pull in updates.',
@@ -76,18 +81,19 @@ const EnergyCards = ({ currentTheme }: HomeServices) => {
             <Container maxW="6xl" py={{ base: '4', md: '8', lg: '12' }}>
                 <Stack spacing={{ base: '4', md: '5' }} direction="column">
                     <Flex justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
-                        <Text>
+                        <AnimateText variants={textVarient} whileInView="show" initial="hidden" >
                             <Text as="span">What We </Text>
                             <Text as="span" color={theme.companyTheme.color.secondry}>Offer</Text>
-                        </Text>
+                        </AnimateText>
                     </Flex>
-                    <Text fontSize={theme.fonts.subHeading.size} color={theme.companyTheme.color.third} fontWeight={theme.fonts.subHeading.weight} textAlign="center">
+                    <AnimateText variants={textVarientSecond} whileInView="show" initial="hidden" fontSize={theme.fonts.subHeading.size} color={theme.companyTheme.color.third} fontWeight={theme.fonts.subHeading.weight} textAlign="center">
                         Satellite Driven Solar Innovation
-                    </Text>
+                    </AnimateText>
                 </Stack>
                 <SimpleGrid columns={{ base: 1, sm: 2, md: 3 }} placeItems="center" spacing={10} mb={4} mt={12}>
                     {features.map((feature, index) => (
-                        <Box
+                        <AnimateBox
+                            variants={textVarient} whileInView="show" initial="hidden"
                             key={index}
                             bg={useColorModeValue('gray.100', 'gray.700')}
                             p={6}
@@ -113,13 +119,13 @@ const EnergyCards = ({ currentTheme }: HomeServices) => {
                             <chakra.h3 fontWeight="semibold" fontSize={theme.fonts.subHeadingSecond.size} mt={6}>
                                 {feature.heading}
                             </chakra.h3>
-                            <Text fontSize="md" mt={4} textAlign ="justify">
+                            <Text fontSize="md" mt={4} textAlign="justify">
                                 {feature.content}
                             </Text>
                             {/* <Link href="#" mt={4} fontSize="sm" color="blue.400">
                                 Learn more →
                             </Link> */}
-                        </Box>
+                        </AnimateBox>
                     ))}
                 </SimpleGrid>
             </Container>

@@ -1,8 +1,20 @@
 import { AspectRatio, Box, Flex, Image, Modal, ModalContent, ModalOverlay, Spinner, Stack, Tab, TabPanel, TabPanels, Tabs, Text, useDisclosure } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
+import { tab1, tab2, tab3, tab4, textVarientDelayMedium, textVarientSecond } from "../../animation";
 import theme from "../../theme";
 
-function Galleries() {
+
+const AnimatedText = motion(Text)
+const AnimatedTab = motion(Tab)
+const AnimatedBox = motion(Box)
+
+type galleryCurrentTheme = {
+    currentTheme: string
+}
+
+
+function Galleries({ currentTheme }: galleryCurrentTheme) {
 
     const [images, setImages] = useState<{ name: string; url: string }[]>([]);
     const [sarImages, setSarImages] = useState<{ name: string; url: string }[]>([]);
@@ -56,10 +68,10 @@ function Galleries() {
             <Stack >
                 <Stack >
                     <Flex justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight} >
-                        <Text>
+                        <AnimatedText variants={textVarientDelayMedium} whileInView="show" initial="hidden">
                             <Text as="span" color={theme.companyTheme.color.secondry} >Our </Text>
                             <Text as="span">Gallery </Text>
-                        </Text>
+                        </AnimatedText>
                     </Flex>
 
                 </Stack>
@@ -67,10 +79,10 @@ function Galleries() {
 
             <Tabs >
                 <Flex justifyContent="center" mt="5">
-                    <Tab onClick={() => handleTabSelect('All Images')} color={`${selectedTab === "All Images" ? `${theme.companyTheme.color.secondry}` : ''}`} fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>All Images</Tab>
-                    <Tab onClick={() => handleTabSelect('SAR')} color={`${selectedTab === "SAR" ? `${theme.companyTheme.color.secondry}` : ''}`} fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>SAR</Tab>
-                    <Tab onClick={() => handleTabSelect('Thermal')} color={`${selectedTab === "Thermal" ? `${theme.companyTheme.color.secondry}` : ''}`} fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>Thermal</Tab>
-                    <Tab onClick={() => handleTabSelect('Optical')} color={`${selectedTab === "Optical" ? `${theme.companyTheme.color.secondry}` : ''}`} fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>Optical</Tab>
+                    <AnimatedTab variants={tab1} whileInView="show" initial="hidden" onClick={() => handleTabSelect('All Images')} color={`${selectedTab === "All Images" ? `${theme.companyTheme.color.secondry}` : ''}`} fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>All Images</AnimatedTab>
+                    <AnimatedTab variants={tab2} whileInView="show" initial="hidden" onClick={() => handleTabSelect('SAR')} color={`${selectedTab === "SAR" ? `${theme.companyTheme.color.secondry}` : ''}`} fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>SAR</AnimatedTab>
+                    <AnimatedTab variants={tab3} whileInView="show" initial="hidden" onClick={() => handleTabSelect('Thermal')} color={`${selectedTab === "Thermal" ? `${theme.companyTheme.color.secondry}` : ''}`} fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>Thermal</AnimatedTab>
+                    <AnimatedTab variants={tab4} whileInView="show" initial="hidden" onClick={() => handleTabSelect('Optical')} color={`${selectedTab === "Optical" ? `${theme.companyTheme.color.secondry}` : ''}`} fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>Optical</AnimatedTab>
                 </Flex>
                 <TabPanels maxW="6xl" h="auto" mt="5">
                     <TabPanel>
@@ -79,7 +91,7 @@ function Galleries() {
                                 images.length > 0 ? (
                                     images.map((image, index) => {
                                         return (
-                                            <Box key={index} boxSize='xs' position="relative" _hover={{ transform: 'scale(1.1)', transition: 'transform 0.3s ease' }}>
+                                            <AnimatedBox variants={textVarientSecond} whileInView="show" initial="hidden" key={index} boxSize='xs' position="relative" _hover={{ transform: 'scale(1.1)', transition: 'transform 0.3s ease' }}>
                                                 <AspectRatio ratio={3 / 3}>
                                                     <Image
                                                         rounded="xl"
@@ -95,7 +107,7 @@ function Galleries() {
                                                         }}
                                                     />
                                                 </AspectRatio>
-                                                <Flex justifyContent="center" flexDirection="column" alignItems="center" textAlign="center" width="90%" rounded="lg" background="white" position="absolute" boxShadow="xl" height="20" bottom="-10" left="4">
+                                                <Flex justifyContent="center" flexDirection="column"  color="#174773" alignItems="center" textAlign="center" width="90%" rounded="lg" background="white" position="absolute" boxShadow="xl" height="20" bottom="-10" left="4">
                                                     <Flex gap="1">
                                                         <Text>
                                                             {image.name.split("_")[0]}
@@ -111,7 +123,7 @@ function Galleries() {
                                                         {image.name.split("_")[3]}
                                                     </Text>
                                                 </Flex>
-                                            </Box>
+                                            </AnimatedBox>
                                         )
                                     })
                                 ) : (
@@ -136,7 +148,7 @@ function Galleries() {
                                 sarImages.length > 0 ? (
                                     sarImages.map((image, index) => {
                                         return (
-                                            <Box key={index} boxSize='xs' position="relative" _hover={{ transform: 'scale(1.1)', transition: 'transform 0.3s ease' }}>
+                                            <AnimatedBox variants={textVarientSecond} whileInView="show" initial="hidden" key={index} boxSize='xs' position="relative" _hover={{ transform: 'scale(1.1)', transition: 'transform 0.3s ease' }}>
                                                 <AspectRatio ratio={3 / 3}>
                                                     <Image
                                                         rounded="xl"
@@ -152,7 +164,7 @@ function Galleries() {
                                                         }}
                                                     />
                                                 </AspectRatio>
-                                                <Flex justifyContent="center" flexDirection="column" alignItems="center" textAlign="center" width="90%" rounded="lg" background="white" position="absolute" boxShadow="xl" height="20" bottom="-10" left="4">
+                                                <Flex justifyContent="center" flexDirection="column"  color="#174773" alignItems="center" textAlign="center" width="90%" rounded="lg" background="white" position="absolute" boxShadow="xl" height="20" bottom="-10" left="4">
                                                     <Flex gap="1">
                                                         <Text>
                                                             {image.name.split("_")[0]}
@@ -168,7 +180,7 @@ function Galleries() {
                                                         {image.name.split("_")[3]}
                                                     </Text>
                                                 </Flex>
-                                            </Box>
+                                            </AnimatedBox>
                                         )
                                     })
                                 ) : (
@@ -193,7 +205,7 @@ function Galleries() {
                                 thermalImages.length > 0 ? (
                                     thermalImages.map((image, index) => {
                                         return (
-                                            <Box key={index} boxSize='xs' position="relative" _hover={{ transform: 'scale(1.1)', transition: 'transform 0.3s ease' }}>
+                                            <AnimatedBox variants={textVarientSecond} whileInView="show" initial="hidden" key={index} boxSize='xs' position="relative" _hover={{ transform: 'scale(1.1)', transition: 'transform 0.3s ease' }}>
                                                 <AspectRatio ratio={3 / 3}>
                                                     <Image
                                                         rounded="xl"
@@ -209,7 +221,7 @@ function Galleries() {
                                                         }}
                                                     />
                                                 </AspectRatio>
-                                                <Flex justifyContent="center" flexDirection="column" alignItems="center" textAlign="center" width="90%" rounded="lg" background="white" position="absolute" boxShadow="xl" height="20" bottom="-10" left="4">
+                                                <Flex justifyContent="center" flexDirection="column"  color="#174773" alignItems="center" textAlign="center" width="90%" rounded="lg" background="white" position="absolute" boxShadow="xl" height="20" bottom="-10" left="4">
                                                     <Flex gap="1">
                                                         <Text>
                                                             {image.name.split("_")[0]}
@@ -225,7 +237,7 @@ function Galleries() {
                                                         {image.name.split("_")[3]}
                                                     </Text>
                                                 </Flex>
-                                            </Box>
+                                            </AnimatedBox>
                                         )
                                     })
                                 ) : (
@@ -250,7 +262,7 @@ function Galleries() {
                                 opticalImages.length > 0 ? (
                                     opticalImages.map((image, index) => {
                                         return (
-                                            <Box key={index} boxSize='xs' position="relative" _hover={{ transform: 'scale(1.1)', transition: 'transform 0.3s ease' }}>
+                                            <AnimatedBox variants={textVarientSecond} whileInView="show" initial="hidden" key={index} boxSize='xs' position="relative" _hover={{ transform: 'scale(1.1)', transition: 'transform 0.3s ease' }}>
                                                 <AspectRatio ratio={3 / 3}>
                                                     <Image
                                                         rounded="xl"
@@ -266,7 +278,7 @@ function Galleries() {
                                                         }}
                                                     />
                                                 </AspectRatio>
-                                                <Flex justifyContent="center" flexDirection="column" alignItems="center" textAlign="center" width="90%" rounded="lg" background="white" position="absolute" boxShadow="xl" height="20" bottom="-10" left="4">
+                                                <Flex justifyContent="center" flexDirection="column"  color="#174773" alignItems="center" textAlign="center" width="90%" rounded="lg" background="white" position="absolute" boxShadow="xl" height="20" bottom="-10" left="4">
                                                     <Flex gap="1">
                                                         <Text>
                                                             {image.name.split("_")[0]}
@@ -282,7 +294,7 @@ function Galleries() {
                                                         {image.name.split("_")[3]}
                                                     </Text>
                                                 </Flex>
-                                            </Box>
+                                            </AnimatedBox>
                                         )
                                     })
                                 ) : (

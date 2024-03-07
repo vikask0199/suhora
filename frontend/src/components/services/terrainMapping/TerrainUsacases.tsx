@@ -14,7 +14,12 @@ import { FaDiagramProject } from "react-icons/fa6";
 import { GiFlood, GiHeavyThornyTriskelion } from "react-icons/gi";
 import { GrPlan } from "react-icons/gr";
 import theme from '../../../theme';
+import { motion } from 'framer-motion';
+import { textVarient, textVarientDelayMedium, textVarientSecond } from '../../../animation';
 
+
+const AnimateText = motion(Text)
+const AnimateBox = motion(Box)
 
 interface IFeature {
     heading: string;
@@ -51,18 +56,19 @@ const TerrainUsacases = () => {
             <Container maxW="6xl" py={{ base: '4', md: '8', lg: '12' }}>
                 <Stack spacing={{ base: '4', md: '5' }} direction="column">
                     <Flex justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
-                        <Text>
+                        <AnimateText variants={textVarient} whileInView="show" initial="hidden">
                             <Text as="span" color={theme.companyTheme.color.secondry}>Terrain </Text>
                             <Text as="span">Usecases</Text>
-                        </Text>
+                        </AnimateText>
                     </Flex>
-                    <Text fontSize={theme.fonts.subHeading.size} color={theme.companyTheme.color.third} fontWeight={theme.fonts.subHeading.weight} textAlign="center">
-                    Elevating decisions with precision in 3D terrain solutions.
-                    </Text>
+                    <AnimateText variants={textVarientSecond} whileInView="show" initial="hidden" fontSize={theme.fonts.subHeading.size} color={theme.companyTheme.color.third} fontWeight={theme.fonts.subHeading.weight} textAlign="center">
+                        Elevating decisions with precision in 3D terrain solutions.
+                    </AnimateText>
                 </Stack>
                 <SimpleGrid columns={{ base: 1, sm: 2, md: 2, lg: 4 }} placeItems="center" spacing={10} mb={4} mt={12}>
                     {features.map((feature, index) => (
-                        <Box
+                        <AnimateBox 
+                        variants={textVarientDelayMedium} whileInView="show" initial="hidden"
                             mb={4}
                             key={index}
                             bg={useColorModeValue('gray.100', 'gray.700')}
@@ -93,7 +99,7 @@ const TerrainUsacases = () => {
                             {/* <Link href="#" fontSize={theme.fonts.subHeadingSecond.size} color={theme.companyTheme.color.secondry}>
                                 Learn more →
                             </Link> */}
-                        </Box>
+                        </AnimateBox>
                     ))}
                 </SimpleGrid>
             </Container>

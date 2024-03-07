@@ -12,7 +12,7 @@ type lancePageProps = {
 const LancePage = ({ currentTheme }: lancePageProps) => {
     return (
         <>
-            <LanceHome />
+            <LanceHome currentTheme = {currentTheme}/>
             <AboutLance currentTheme={currentTheme}/>
             <LanceFeature />
             <LanceIndutryWeServe  currentTheme={currentTheme}/>

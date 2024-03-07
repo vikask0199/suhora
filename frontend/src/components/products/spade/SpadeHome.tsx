@@ -7,8 +7,12 @@ import theme from '../../../theme';
 import agre from "../../../assets/img/industries/defense.webp"
 
 
+type spadeProps = {
+  currentTheme: string
+}
 
-export const SpadeHome = () => {
+
+export const SpadeHome = ({currentTheme}:spadeProps) => {
   const aspectRatio = 3 / 4
   const AnimatedBox = motion(Box);
   const MotionBox = motion(Box);
@@ -29,7 +33,7 @@ export const SpadeHome = () => {
               </Text>
               <Stack direction={{ base: 'column', md: 'row' }} mt="10" spacing="4">
                 <Link to="/contact-us">
-                  <Button width="fit-content" px="8" border="1px solid white" variant="outline" color="white" _hover={{ backgroundColor: theme.companyTheme.color.secondry, border: "1px solid #1266A0" }} >
+                  <Button width="fit-content" px="8" border={`1px solid ${currentTheme === 'light' ? '#174773': 'white'}`} variant="outline" color={`${currentTheme === 'light' ? '#174773': 'white'}`} _hover={{ backgroundColor: theme.companyTheme.color.secondry, border: `1px solid #1266A0`, color: currentTheme === 'light' ? '#fff' : undefined  }} >
                     Request Demo
                   </Button>
                 </Link>

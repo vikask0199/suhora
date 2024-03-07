@@ -7,6 +7,11 @@ import {
 } from '@chakra-ui/react'
 import AgricultureImg from '../../assets/img/team.webp'
 import theme from '../../theme'
+import { motion } from 'framer-motion'
+import { textVarient, textVarientSecond } from '../../animation'
+
+const AnimatedHeading = motion(Heading)
+const AnimatedFlex = motion(Flex)
 
 const Team = () => {
 
@@ -17,18 +22,17 @@ const Team = () => {
                 <Box py="32" position="relative" zIndex={1} >
                     <Box maxW='5xl' mx="auto" px={{ base: '6', md: '8' }} color="white" >
                         <Flex justifyContent='center' fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
-                            <Heading  >
+                            <AnimatedHeading variants={textVarient} whileInView="show" initial="hidden" >
                                 Meet Our Team
-                            </Heading>
+                            </AnimatedHeading>
 
 
                         </Flex>
-                        <Flex justifyContent='center'>
+                        <AnimatedFlex justifyContent='center' variants={textVarientSecond} whileInView="show" initial="hidden">
                             <Text mt='1em' fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight} textAlign='center'>
                                 We’re a dynamic group of individuals who are passionate about what we do.
-
                             </Text>
-                        </Flex>
+                        </AnimatedFlex>
                     </Box>
                 </Box>
                 <Flex

@@ -1,11 +1,15 @@
 import { Box, Flex, Heading, Img, Text } from '@chakra-ui/react'
 import theme from '../../theme'
 import AgricultureImg from '../../assets/img/aboutussImg.webp'
-
+import 'animate.css';
+import { motion } from 'framer-motion';
+import { textVarient, textVarientSecond } from '../../animation';
 
 
 const AboutusHeader = () => {
 
+  const AnimateHeading = motion(Heading)
+  const AnimateText = motion(Text)
 
   return (
     <>
@@ -13,17 +17,14 @@ const AboutusHeader = () => {
         <Box py="32" position="relative" zIndex={1} >
           <Box maxW='5xl' mx="auto" px={{ base: '6', md: '8' }} color="white" >
             <Flex justifyContent='center' fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
-              <Heading  >
+              <AnimateHeading variants={textVarient} whileInView="show" initial="hidden" >
                 About Us
-              </Heading>
-
-
+              </AnimateHeading>
             </Flex>
-            <Flex justifyContent='center'>
-              <Text mt='1em' fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>
-              Transforming industries with AI-driven spatial insights for informed decision-making.
-
-              </Text>
+            <Flex justifyContent='center' >
+              <AnimateText mt='1em' fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight} variants={textVarientSecond} whileInView="show" initial="hidden">
+                Transforming industries with AI-driven spatial insights for informed decision making
+              </AnimateText>
             </Flex>
           </Box>
         </Box>
@@ -44,7 +45,7 @@ const AboutusHeader = () => {
               h="full"
               objectFit="cover"
               objectPosition="top bottom"
-              position="absolute"/>
+              position="absolute" />
             <Box position="absolute" w="full" h="full" bg="blackAlpha.600" />
           </Box>
         </Flex>

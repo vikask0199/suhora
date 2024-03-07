@@ -1,6 +1,13 @@
 import { Box, Flex, Heading, Text, Img } from '@chakra-ui/react'
 import theme from '../../theme'
 import careerIamge from '../../assets/img/career.jpg'
+import { motion } from 'framer-motion'
+import { textVarient, textVarientSecond } from '../../animation'
+
+const AnimateHeading = motion(Heading)
+const AnimateText = motion(Text)
+
+
 const CareerHeader = () => {
   return (
     <>
@@ -8,14 +15,14 @@ const CareerHeader = () => {
         <Box py="32" position="relative" zIndex={1} >
           <Box maxW='5xl' mx="auto" px={{ base: '6', md: '8' }} color="white" >
             <Flex justifyContent='center' fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
-              <Heading  >
+              <AnimateHeading variants={textVarient} whileInView="show" initial="hidden" >
                 Career @ Suhora
-              </Heading>
+              </AnimateHeading>
             </Flex>
             <Flex justifyContent='center'>
-              <Text mt='1em' fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>
-                "Embrace each new opportunity as a stepping stone toward your professional growth and fulfillment."
-              </Text>
+              <AnimateText variants={textVarientSecond} whileInView="show" initial="hidden" mt='1em' fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>
+                Embrace each new opportunity as a stepping stone toward your professional growth and fulfillment
+              </AnimateText>
             </Flex>
           </Box>
         </Box>

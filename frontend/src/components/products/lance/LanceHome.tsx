@@ -1,14 +1,16 @@
 import { AspectRatio, Box, Button, Flex, Img, Stack, Text } from '@chakra-ui/react';
-import { motion } from 'framer-motion';
+import { color, motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import lance from "../../../assets/img/products/lance.png";
 import monitor from "../../../assets/img/products/lance_header_image.webp";
 import theme from '../../../theme';
 import agre from "../../../assets/img/industries/defense.webp"
 
+type lanceProps = {
+  currentTheme: string
+}
 
-
-export const LanceHome = () => {
+export const LanceHome = ({ currentTheme }: lanceProps) => {
   const aspectRatio = 3 / 4
   const AnimatedBox = motion(Box);
   const MotionBox = motion(Box);
@@ -25,11 +27,11 @@ export const LanceHome = () => {
                 LANCE
               </Text>
               <Text fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight} mt="4" maxW="lg">
-              Powering defense with human-AI synergy for unparalleled situational awareness and strategic readiness in a rapidly evolving world.
+                Powering defense with human-AI synergy for unparalleled situational awareness and strategic readiness in a rapidly evolving world.
               </Text>
               <Stack direction={{ base: 'column', md: 'row' }} mt="10" spacing="4">
                 <Link to="/contact-us">
-                  <Button width="fit-content" px="8" border="1px solid white" variant="outline" color="white" _hover={{ backgroundColor: theme.companyTheme.color.secondry, border: "1px solid #1266A0" }} >
+                  <Button width="fit-content" px="8" border={`1px solid ${currentTheme === 'light' ? '#174773' : 'white'}`} variant="outline" color={`${currentTheme === 'light' ? '#174773' : 'white'}`} _hover={{ backgroundColor: theme.companyTheme.color.secondry, border: `1px solid #1266A0`, color: currentTheme === 'light' ? '#fff' : undefined  }}>
                     Request Demo
                   </Button>
                 </Link>
@@ -46,7 +48,7 @@ export const LanceHome = () => {
               left={"50%"}>
               <img src={monitor} alt="" />
               <Box position="absolute" top={0} left={0} height="67%" width="100%">
-                <Box height="100%" width="100%" position="relative"  overflow="hidden">
+                <Box height="100%" width="100%" position="relative" overflow="hidden">
                   <MotionBox
                     initial={{ scale: 0, x: "-50%", y: "-50%" }}
                     animate={{ scale: 2.0, x: "-50%", y: "-50%" }}

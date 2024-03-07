@@ -13,6 +13,11 @@ import {
 import { GiImpactPoint } from "react-icons/gi";
 import { SiInteractjs, SiSololearn } from "react-icons/si";
 import theme from '../../theme';
+import { motion } from 'framer-motion';
+import { textVarient, textVarientSecond } from '../../animation';
+
+const AnimateText = motion(Text)
+const AnimatedBox = motion(Box)
 
 
 interface IFeature {
@@ -49,18 +54,18 @@ const CareerHeading = ({ currentTheme }: cardHeadingCurrentTheme) => {
       <Container maxW="6xl" >
         <Stack spacing={{ base: '2', md: '3' }} pb={{ base: '4', md: '8', lg: '12' }} direction="column">
           <Flex justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
-            <Text>
+            <AnimateText variants={textVarient} whileInView="show" initial="hidden">
               <Text as="span" color={theme.companyTheme.color.secondry}>Join </Text>
               <Text as="span">Us</Text>
-            </Text>
+            </AnimateText>
           </Flex>
-          <Text fontSize={theme.fonts.subHeading.size} color={theme.companyTheme.color.third} fontWeight={theme.fonts.subHeading.weight} textAlign="center">
+          <AnimateText variants={textVarientSecond} whileInView="show" initial="hidden" fontSize={theme.fonts.subHeading.size} color={theme.companyTheme.color.third} fontWeight={theme.fonts.subHeading.weight} textAlign="center">
             Building tomorrow's success, together - join our vibrant team now!
-          </Text>
+          </AnimateText>
         </Stack>
         <SimpleGrid columns={{ base: 1, sm: 2, md: 3 }} placeItems="center" spacing={10} mb={4} mt={12}>
           {features.map((feature, index) => (
-            <Box
+            <AnimatedBox variants={textVarient} whileInView="show" initial="hidden"
               mb={4}
               key={index}
               bg={useColorModeValue('gray.100', 'gray.700')}
@@ -91,7 +96,7 @@ const CareerHeading = ({ currentTheme }: cardHeadingCurrentTheme) => {
               {/* <Link href="#" fontSize={theme.fonts.subHeadingSecond.size} color={theme.companyTheme.color.secondry}>
                 Learn more →
               </Link> */}
-            </Box>
+            </AnimatedBox>
           ))}
         </SimpleGrid>
       </Container>

@@ -3,7 +3,8 @@ import { Box, Container, Flex, Stack } from '@chakra-ui/react'
 type howSpadeWorks = {
     currentTheme: string
 }
-
+const AnimatedText  =  motion(Text)
+const AnimatedStack = motion(Stack)
 
 export const HowItsWorksSpade = ({ currentTheme }: howSpadeWorks) => {
     const [currentStep] = useStep({ maxStep: steps.length, initialStep: 2 })
@@ -13,15 +14,15 @@ export const HowItsWorksSpade = ({ currentTheme }: howSpadeWorks) => {
         <Box py={{ base: '4', md: '8', lg: '16' }} background={backgroundColor}>
             <Container maxW="6xl">
                 <Flex mb={{ base: '2', md: '4' }} justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight} >
-                    <Text>
+                    <AnimatedText variants={textVarient} whileInView="show" initial="hidden">
                         <Text as="span">How Spade </Text>
                         <Text as="span" color={theme.companyTheme.color.secondry}>Works</Text>
-                    </Text>
+                    </AnimatedText>
                 </Flex>
-                <Text mb={{ base: '2', md: '4' }} color={theme.companyTheme.color.third} fontSize={theme.fonts.subHeading.size} fontWeight={theme.fonts.subHeading.weight} maxW="6xl" pb={{ base: '4', md: '8' }} textAlign="center">
+                <AnimatedText variants={textVarientSecond} whileInView="show" initial="hidden" mb={{ base: '2', md: '4' }} color={theme.companyTheme.color.third} fontSize={theme.fonts.subHeading.size} fontWeight={theme.fonts.subHeading.weight} maxW="6xl" pb={{ base: '4', md: '8' }} textAlign="center">
                     Mapping Earth's shifts, informing decisions with millimeter precision.
-                </Text>
-                <Stack spacing="0" direction={{ base: 'column', md: 'row' }} >
+                </AnimatedText>
+                <AnimatedStack variants={textVarientDelayMedium} whileInView="show" initial="hidden" spacing="0" direction={{ base: 'column', md: 'row' }} >
                     {steps.map((step, id) => (
                         <Step
                             key={id}
@@ -33,7 +34,7 @@ export const HowItsWorksSpade = ({ currentTheme }: howSpadeWorks) => {
                             isLastStep={steps.length === id + 1}
                         />
                     ))}
-                </Stack>
+                </AnimatedStack>
             </Container>
         </Box>
     )
@@ -138,6 +139,8 @@ const StepCircle = (props: RadioCircleProps) => {
 
 import { Dispatch, SetStateAction, useCallback, useMemo, useState } from 'react'
 import theme from '../../../theme'
+import { motion } from 'framer-motion'
+import { textVarient, textVarientDelayMedium, textVarientSecond } from '../../../animation'
 interface Helpers {
     goToNextStep: () => void
     goToPrevStep: () => void

@@ -3,7 +3,13 @@ import { RiTyphoonLine } from "react-icons/ri"
 import theme from "../../../theme"
 import { Link } from "react-router-dom"
 import sidmain from "../../../assets/img/products/sid_monitor_final.webp"
+import { motion } from "framer-motion"
+import { homeProductLeftToRight, homeProductRightToLeft, textVarient } from "../../../animation"
 
+
+const AnimatedText = motion(Text)
+const AnimatedBox = motion(Box)
+const AnimatedFlex = motion(Flex)
 
 const SidFeature = () => {
     const aspectRatio = 3 / 2.5
@@ -19,18 +25,18 @@ const SidFeature = () => {
                 direction="column"
                 gap="4">
                 <Flex justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
-                    <Text>
+                    <AnimatedText variants={textVarient} whileInView="show" initial="hidden">
                         <Text as="span" color={theme.companyTheme.color.secondry}>Feature of </Text>
                         <Text as="span">SID</Text>
-                    </Text>
+                    </AnimatedText>
                 </Flex>
                 <Flex direction={{ base: "column", md: "row" }} boxShadow='rgba(0, 0, 0, 0.35) 0px 5px 15px'>
-                    <Box w={{ base: "100%", md: "50%" }} padding={7}>
+                    <AnimatedBox w={{ base: "100%", md: "50%" }} padding={7} variants={homeProductRightToLeft} whileInView="show" initial="hidden">
                         <AspectRatio ratio={aspectRatio}>
                             <Image src={sidmain} />
                         </AspectRatio>
-                    </Box>
-                    <Flex w={{ base: "100%", md: "50%" }} p={8} direction="column" rowGap={4} justifyContent="space-between">
+                    </AnimatedBox>
+                    <AnimatedFlex w={{ base: "100%", md: "50%" }} p={8} direction="column" rowGap={4} justifyContent="space-between" variants={homeProductLeftToRight} whileInView="show" initial="hidden">
                         <Box fontSize={theme.fonts.subHeading.size} fontWeight={theme.fonts.subHeading.weight} color={theme.companyTheme.color.third}>SID</Box>
                         <Box fontSize={theme.fonts.description}>SID harnesses satellite data for disaster management and insurance, shaping a safer, prepared world through technology.</Box>
                         <UnorderedList listStyleType="hidden" fontSize={theme.fonts.list} marginLeft={0}>
@@ -82,7 +88,7 @@ const SidFeature = () => {
                                 </Button>
                             </Link>
                         </Flex>
-                    </Flex>
+                    </AnimatedFlex>
                 </Flex>
             </Flex>
         </Box>

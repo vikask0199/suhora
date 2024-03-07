@@ -15,6 +15,11 @@ import RiskManagement from '../../assets/img/industries/Risk-management.webp'
 import TailoredInsurance from '../../assets/img/industries/Tailored-insurance.webp'
 
 import theme from '../../theme';
+import { motion } from 'framer-motion';
+import { textVarient, textVarientSecond } from '../../animation';
+
+const AnimateText = motion(Text)
+const AnimateBox = motion(Box)
 
 
 interface IFeature {
@@ -55,7 +60,7 @@ type HomeServices = {
 }
 
 const DisasterCards = ({ currentTheme }: HomeServices) => {
-    const iconArray = [disaster, RiskManagement, DisasterProcessing, b2b, TailoredInsurance ]
+    const iconArray = [disaster, RiskManagement, DisasterProcessing, b2b, TailoredInsurance]
     // const iconArray = [servilliance, integrated, dataSecurity, tailored, terrains, maritime]
     const backgroundColor = currentTheme === 'light' ? 'gray.200' : '#282b3c';
 
@@ -64,18 +69,19 @@ const DisasterCards = ({ currentTheme }: HomeServices) => {
             <Container maxW="6xl" py={{ base: '4', md: '8', lg: '12' }}>
                 <Stack spacing={{ base: '4', md: '5' }} direction="column">
                     <Flex justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
-                        <Text>
+                        <AnimateText variants={textVarient} whileInView="show" initial="hidden">
                             <Text as="span">What We </Text>
                             <Text as="span" color={theme.companyTheme.color.secondry}>Offer</Text>
-                        </Text>
+                        </AnimateText>
                     </Flex>
-                    <Text fontSize={theme.fonts.subHeading.size} color={theme.companyTheme.color.third} fontWeight={theme.fonts.subHeading.weight} textAlign="center">
-                    Transforming disaster management with satellite based insights
-                    </Text>
+                    <AnimateText variants={textVarientSecond} whileInView="show" initial="hidden" fontSize={theme.fonts.subHeading.size} color={theme.companyTheme.color.third} fontWeight={theme.fonts.subHeading.weight} textAlign="center">
+                        Transforming disaster management with satellite based insights
+                    </AnimateText>
                 </Stack>
                 <SimpleGrid columns={{ base: 1, sm: 2, md: 3 }} placeItems="center" spacing={10} mb={4} mt={12}>
                     {features.map((feature, index) => (
-                        <Box
+                        <AnimateBox
+                            variants={textVarient} whileInView="show" initial="hidden"
                             key={index}
                             bg={useColorModeValue('gray.100', 'gray.700')}
                             p={6}
@@ -83,7 +89,7 @@ const DisasterCards = ({ currentTheme }: HomeServices) => {
                             textAlign="center"
                             pos="relative"
                         >
-                             <Flex
+                            <Flex
                                 p={1}
                                 w="max-content"
                                 color="white"
@@ -107,7 +113,7 @@ const DisasterCards = ({ currentTheme }: HomeServices) => {
                             {/* <Link href="#" mt={4} fontSize="sm" color="blue.400">
                                 Learn more →
                             </Link> */}
-                        </Box>
+                        </AnimateBox>
                     ))}
                 </SimpleGrid>
             </Container>

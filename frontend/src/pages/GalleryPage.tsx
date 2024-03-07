@@ -1,13 +1,15 @@
 import Galleries from "../components/gallery/Galleries"
 import GalleryHeader from "../components/gallery/GalleryHeader"
 
+type galleryCurrentTheme = {
+  currentTheme: string
+}
 
-
-const GalleryPage = () => {
+const GalleryPage = ({ currentTheme }: galleryCurrentTheme) => {
   return (
     <>
       <GalleryHeader />
-      <Galleries />
+      <Galleries currentTheme = {currentTheme}/>
     </>
   )
 }

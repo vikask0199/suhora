@@ -20,6 +20,11 @@ import Amit from '../../assets/img/Amit.jpg'
 import tanmoy from '../../assets/img/Tanmoy.webp'
 import surojit from '../../assets/img/Surojit-Bose.jpg'
 import Navneet from '../../assets/img/NavneetKaushik.jpg'
+import { motion } from 'framer-motion'
+import { textVarient, textVarientDelayMedium, textVarientSecond } from '../../animation'
+
+const AnimatedText  = motion(Text)
+const AnimatedStack = motion(Stack)
 
 const TeamCards = () => {
   const arrayHeading = ["", "Board Of Directors", "Advisors"]
@@ -33,10 +38,10 @@ const TeamCards = () => {
         <Stack>
           <Stack spacing={{ base: '4', md: '5' }}>
             <Flex justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
-              <Text>
+              <AnimatedText variants={textVarientDelayMedium} whileInView="show" initial="hidden">
                 <Text as="span" color={theme.companyTheme.color.secondry} >Leadership </Text>
                 <Text as="span">Team </Text>
-              </Text>
+              </AnimatedText>
             </Flex>
             {/* <Text textAlign="center" maxW="6xl" color={theme.companyTheme.color.third} fontSize={theme.fonts.subHeading.size} fontWeight={theme.fonts.subHeading.weight}>
               Multi-band high-resolution images from various satellites.
@@ -58,7 +63,7 @@ const TeamCards = () => {
                   spacing={{ base: '8', md: '10' }}
                   direction={{ base: 'column', lg: 'row' }}
                   justifyContent="center">
-                  <Text fontSize={theme.fonts.subHeading.size} fontWeight={theme.fonts.subHeading.weight} color={theme.companyTheme.color.secondry}>{arrayHeading[index]}</Text>
+                  <AnimatedText variants={textVarient} whileInView="show" initial="hidden" fontSize={theme.fonts.subHeading.size} fontWeight={theme.fonts.subHeading.weight} color={theme.companyTheme.color.secondry}>{arrayHeading[index]}</AnimatedText>
                 </Stack>
                 <SimpleGrid
                   columns={{ base: 1, md: 2, lg: 3 }}
@@ -66,7 +71,7 @@ const TeamCards = () => {
                   rowGap={{ base: '10', lg: '16' }}>
                   {
                     member.map((item, index) => (
-                      <Stack key={index} spacing="4">
+                      <AnimatedStack variants={textVarientSecond} whileInView="show" initial="hidden" key={index} spacing="4">
                         <Stack spacing="5">
                           <AspectRatio ratio={3 / 3}>
                             <Img src={item.image} alt={item.name} objectFit="cover" />
@@ -85,7 +90,7 @@ const TeamCards = () => {
                             {arraIcon[0]}
                           </Link>
                         </HStack>
-                      </Stack>
+                      </AnimatedStack>
                     ))
                   }
                 </SimpleGrid>

@@ -8,7 +8,10 @@ import {
 } from '@chakra-ui/react';
 
 import theme from "../../../theme";
+import { motion } from 'framer-motion';
+import { textVarient, textVarientDelayMedium, textVarientSecond } from '../../../animation';
 
+const AnimateText = motion(Text)
 
 interface aboutSuhoraProps {
   currentTheme: string
@@ -23,15 +26,15 @@ export const AboutLand = ({ currentTheme }: aboutSuhoraProps) => {
         <Stack spacing={{ base: '12', md: '12' }} textAlign="center" align="center">
           <Stack spacing={{ base: '4', md: '5' }}>
             <Flex justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
-              <Text>
+              <AnimateText variants={textVarient} whileInView="show" initial="hidden">
                 <Text as="span">Land </Text>
                 <Text as="span" color={theme.companyTheme.color.secondry}>Deformation Mapping </Text>
-              </Text>
+              </AnimateText>
             </Flex>
-            <Text color={theme.companyTheme.color.third} fontSize={theme.fonts.subHeading.size} fontWeight={theme.fonts.subHeading.weight} maxW="6xl" >
-            Mapping Earth's shifts, informing decisions with millimeter precision.
-            </Text>
-            <Text textAlign="justify">
+            <AnimateText variants={textVarientSecond} whileInView="show" initial="hidden" color={theme.companyTheme.color.third} fontSize={theme.fonts.subHeading.size} fontWeight={theme.fonts.subHeading.weight} maxW="6xl" >
+              Mapping Earth's shifts, informing decisions with millimeter precision.
+            </AnimateText>
+            <AnimateText variants={textVarientDelayMedium} whileInView="show" initial="hidden" textAlign="justify" >
               Advances in space based imaging have greatly enhanced our ability to monitor and understand
               land surface deformation. Imagine a constellation of orbiting eyes, peering down at our planet
               with radar vision. These eyes capture subtle ground movements caused by tectonic forces,
@@ -45,7 +48,7 @@ export const AboutLand = ({ currentTheme }: aboutSuhoraProps) => {
               This ability provides immense value to many public and private organizations since the changes
               that are detected are in millimeters. This can effectively provide early warning of stresses on
               critical infrastructure such as bridges, dams, roads and railway lines.
-            </Text>
+            </AnimateText>
           </Stack>
         </Stack>
       </Container>

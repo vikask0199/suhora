@@ -3,6 +3,12 @@ import { RiTyphoonLine } from "react-icons/ri"
 import { Link } from "react-router-dom"
 import spademain from '../../../assets/img/products/spade_monitor_final.webp'
 import theme from "../../../theme"
+import { motion } from "framer-motion"
+import { homeProductLeftToRight, homeProductRightToLeft, textVarient } from "../../../animation"
+
+const AnimatedBox  = motion(Box)
+const AnimatedFlex = motion(Flex)
+const AnimatedText = motion(Text)
 
 const SpadeFeature = () => {
     const aspectRatio = 3 / 2.5
@@ -20,18 +26,18 @@ const SpadeFeature = () => {
                 direction="column"
                 gap="4">
                 <Flex justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
-                    <Text>
+                    <AnimatedText variants={textVarient} initial="hidden" whileInView="show">
                         <Text as="span" color={theme.companyTheme.color.secondry}>Feature of </Text>
                         <Text as="span">SPADE</Text>
-                    </Text>
+                    </AnimatedText>
                 </Flex>
                 <Flex direction={{ base: "column", md: "row" }} boxShadow='rgba(0, 0, 0, 0.35) 0px 5px 15px'>
-                    <Box w={{ base: "100%", md: "50%" }} padding={7}>
+                    <AnimatedBox variants={homeProductRightToLeft} whileInView="show" initial="hidden" w={{ base: "100%", md: "50%" }} padding={7}>
                         <AspectRatio ratio={aspectRatio}>
                             <Image src={spademain} />
                         </AspectRatio>
-                    </Box>
-                    <Flex w={{ base: "100%", md: "50%" }} p={8} direction="column" rowGap={4} justifyContent="space-between">
+                    </AnimatedBox>
+                    <AnimatedFlex variants={homeProductLeftToRight} whileInView="show" initial="hidden" w={{ base: "100%", md: "50%" }} p={8} direction="column" rowGap={4} justifyContent="space-between">
                         <Box fontSize={theme.fonts.subHeading.size} fontWeight={theme.fonts.subHeading.weight} color={theme.companyTheme.color.third}>SPADE</Box>
                         <Box fontSize={theme.fonts.description}>A seamless SaaS platform delivering comprehensive access to multi-sensor satellite data for a spectrum of commercial applications.</Box>
                         <UnorderedList listStyleType="hidden" fontSize={theme.fonts.list} marginLeft={0}>
@@ -83,7 +89,7 @@ const SpadeFeature = () => {
                                 </Button>
                             </Link>
                         </Flex>
-                    </Flex>
+                    </AnimatedFlex>
                 </Flex>
             </Flex>
         </Box>
