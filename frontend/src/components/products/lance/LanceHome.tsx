@@ -1,10 +1,10 @@
 import { AspectRatio, Box, Button, Flex, Img, Stack, Text } from '@chakra-ui/react';
-import { color, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import agre from "../../../assets/img/industries/defense.webp";
 import lance from "../../../assets/img/products/lance.png";
 import monitor from "../../../assets/img/products/lance_header_image.webp";
 import theme from '../../../theme';
-import agre from "../../../assets/img/industries/defense.webp"
 
 type lanceProps = {
   currentTheme: string
@@ -31,7 +31,7 @@ export const LanceHome = ({ currentTheme }: lanceProps) => {
               </Text>
               <Stack direction={{ base: 'column', md: 'row' }} mt="10" spacing="4">
                 <Link to="/contact-us">
-                  <Button width="fit-content" px="8" border={`1px solid ${currentTheme === 'light' ? '#174773' : 'white'}`} variant="outline" color={`${currentTheme === 'light' ? '#174773' : 'white'}`} _hover={{ backgroundColor: theme.companyTheme.color.secondry, border: `1px solid #1266A0`, color: currentTheme === 'light' ? '#fff' : undefined  }}>
+                  <Button width="fit-content" px="8" border={`1px solid ${currentTheme === 'light' ? '#174773' : 'white'}`} variant="outline" color={`${currentTheme === 'light' ? '#174773' : 'white'}`} _hover={{ backgroundColor: theme.companyTheme.color.secondry, border: `1px solid #1266A0`, color: currentTheme === 'light' ? '#fff' : undefined }}>
                     Request Demo
                   </Button>
                 </Link>

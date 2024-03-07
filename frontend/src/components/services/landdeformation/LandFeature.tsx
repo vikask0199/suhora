@@ -1,10 +1,10 @@
 import { AspectRatio, Box, Button, Flex, Image, ListItem, Text, UnorderedList } from "@chakra-ui/react"
-import { RiTyphoonLine } from "react-icons/ri"
-import theme from "../../../theme"
-import landdeformation from "../../../assets/img/services/landdeformation.webp"
-import { NavLink } from "react-router-dom"
 import { motion } from "framer-motion"
-import { homeProductLeftToRight, homeProductRightToLeft, textVarient, textVarientSecond } from "../../../animation"
+import { RiTyphoonLine } from "react-icons/ri"
+import { NavLink } from "react-router-dom"
+import { homeProductLeftToRight, homeProductRightToLeft, textVarient } from "../../../animation"
+import landdeformation from "../../../assets/img/services/landdeformation.webp"
+import theme from "../../../theme"
 
 
 const AnimateText = motion(Text)

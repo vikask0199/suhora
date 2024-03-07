@@ -9,12 +9,9 @@ const AnimatedText = motion(Text)
 const AnimatedTab = motion(Tab)
 const AnimatedBox = motion(Box)
 
-type galleryCurrentTheme = {
-    currentTheme: string
-}
 
 
-function Galleries({ currentTheme }: galleryCurrentTheme) {
+function Galleries() {
 
     const [images, setImages] = useState<{ name: string; url: string }[]>([]);
     const [sarImages, setSarImages] = useState<{ name: string; url: string }[]>([]);

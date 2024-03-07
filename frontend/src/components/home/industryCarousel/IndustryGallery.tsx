@@ -13,16 +13,16 @@ import {
   UnorderedList,
   useColorModeValue
 } from '@chakra-ui/react'
+import { motion } from 'framer-motion'
 import { useState } from 'react'
 import { GiCircleCage } from 'react-icons/gi'
 import { IoBaseballOutline, IoChevronBackOutline, IoChevronForwardOutline } from 'react-icons/io5'
 import { RiTyphoonLine } from 'react-icons/ri'
+import { Link } from 'react-router-dom'
+import { homeProductLeftToRight, homeProductRightToLeft } from '../../../animation.ts'
 import { industryCarouselData } from "../../../constant/industryCarouselData.ts"
 import theme from "../../../theme.ts"
 import { CarouselSlide, IndustryCarousel, useCarousel } from './IndustryCarousel.tsx'
-import { Link } from 'react-router-dom'
-import { motion } from 'framer-motion'
-import { boxVariant, homeProductLeftToRight, homeProductRightToLeft } from '../../../animation.ts'
 
 
 export const IndustryGallery = () => {

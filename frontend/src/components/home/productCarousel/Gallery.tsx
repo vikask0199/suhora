@@ -19,7 +19,7 @@ import { GiCircleCage } from 'react-icons/gi'
 import { IoBaseballOutline, IoChevronBackOutline, IoChevronForwardOutline } from 'react-icons/io5'
 import { RiTyphoonLine } from "react-icons/ri"
 import { Link } from 'react-router-dom'
-import { boxVariant, homeProductLeftToRight, homeProductRightToLeft } from '../../../animation.ts'
+import { homeProductLeftToRight, homeProductRightToLeft } from '../../../animation.ts'
 import { products } from "../../../constant/productCarouselData.ts"
 import theme from "../../../theme.ts"
 import { Carousel, CarouselSlide, useCarousel } from './Carousel.tsx'

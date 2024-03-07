@@ -1,9 +1,9 @@
 import { AspectRatio, Box, Button, Flex, Image, Text, VStack } from "@chakra-ui/react"
-import theme from "../../theme"
-import earthImage from '../../assets/video/Rotating_earth_(huge).gif'
-import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
-import { homeProductLeftToRight, rotationEarthTopToBottom, textVarient, textVarientDelayMedium } from "../../animation"
+import { Link } from "react-router-dom"
+import { rotationEarthTopToBottom, textVarient, textVarientDelayMedium } from "../../animation"
+import earthImage from '../../assets/video/Rotating_earth_(huge).gif'
+import theme from "../../theme"
 
 
 const AnimatedText = motion(Text)
