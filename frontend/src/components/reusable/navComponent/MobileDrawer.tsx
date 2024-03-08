@@ -31,7 +31,7 @@ export const MobileDrawer = ({ toggleTheme, currentTheme }: mobileDrawerprops) =
         <DrawerContent marginTop={20}>
           <DrawerBody p="4">
             <Stack spacing="1">
-              <Button size="lg" _hover={{ color: "#1266A0" }} variant="" as={Text} justifyContent="start">
+              <Button  onClick={()=> closeFromItem()} size="lg" _hover={{ color: "#1266A0" }} variant="" as={Text} justifyContent="start">
                 Home
               </Button>
               <DocumentCollapseIndustries closeFunction={closeFromItem}/>
@@ -39,7 +39,7 @@ export const MobileDrawer = ({ toggleTheme, currentTheme }: mobileDrawerprops) =
               <DocumentCollapseServices closeFunction={closeFromItem}/>
               <DocumentCollapseResources closeFunction={closeFromItem} />
               <NavLink to="/contact-us">
-                <Button size="lg" _hover={{ color: "#1266A0" }} as={Text} variant="" justifyContent="start">
+                <Button size="lg" _hover={{ color: "#1266A0" }} as={Text} variant="" justifyContent="start" onClick={onClose}>
                   Contact us
                 </Button>
               </NavLink>

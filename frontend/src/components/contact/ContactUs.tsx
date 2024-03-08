@@ -79,7 +79,7 @@ const ContactUs = ({ currentTheme }: contactProps) => {
             subject: subject
         };
 
-        axios.post('https://review.suhora.com/send', postData)
+        axios.post('https://review.suhora.com/send/', postData)
             .then((response) => {
                 console.log(response);
                 setName(""),
