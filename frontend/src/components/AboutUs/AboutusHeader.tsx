@@ -1,7 +1,7 @@
 import { Box, Flex, Heading, Img, Text } from '@chakra-ui/react'
 import theme from '../../theme'
 import AgricultureImg from '../../assets/img/aboutussImg.webp'
-import 'animate.css';
+// import 'animate.css';
 import { motion } from 'framer-motion';
 import { textVarient, textVarientSecond } from '../../animation';
 
