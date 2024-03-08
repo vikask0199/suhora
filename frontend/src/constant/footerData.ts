@@ -14,7 +14,7 @@ export const links = [
     links: [
       { label: 'Defence & Intelligence', href: '/defence-and-intelligence' },
       { label: 'Disaster & Insurance', href: '/disaster-and-insurance' },
-      { label: 'Renwable Energy', href: '/renewable-energy' },
+      { label: 'Renewable Energy', href: '/renewable-energy' },
       { label: 'Mining', href: '/mining' },
       { label: 'Infrastructure', href: '/infrastructure' },
       { label: 'Agriculture', href: '/agriculture' },
@@ -25,8 +25,8 @@ export const links = [
     title: 'Services',
     links: [
       { label: 'Tailored Services', href: '/services'},
-      { label: 'Hyrdology', href: '/product-hyrdology' },
-      { label: 'Terrain Mapping', href: '/prodcust-terrainmapping' },
+      { label: 'Hyrdology', href: '/product-hydrology' },
+      { label: 'Terrain Mapping', href: '/product-terrainmapping' },
       { label: 'Land Deformation Monitoring', href: '/land-deformation-monitoring' },
     ],
   },

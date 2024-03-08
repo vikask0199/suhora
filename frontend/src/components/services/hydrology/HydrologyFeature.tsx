@@ -64,14 +64,14 @@ const HydrologyFeature = () => {
                                 </Box>
                                 Rainfall and basin modeling
                             </ListItem>
-                            <ListItem display="flex" mb="2" alignItems="center" marginTop={4} gap={2}>
+                            {/* <ListItem display="flex" mb="2" alignItems="center" marginTop={4} gap={2}>
                                 <Box fontSize={theme.fonts.subHeadingSecond.size} color={theme.companyTheme.color.secondry}>
                                     {
                                         spadeIconArray[0]
                                     }
                                 </Box>
                                 hello java how are you can we work together
-                            </ListItem>
+                            </ListItem> */}
                             <ListItem display="flex" mb="2" alignItems="center" marginTop={4} gap={2}>
                                 <Box fontSize={theme.fonts.subHeadingSecond.size} color={theme.companyTheme.color.secondry}>
                                     {
