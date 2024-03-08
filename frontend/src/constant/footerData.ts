@@ -25,7 +25,7 @@ export const links = [
     title: 'Services',
     links: [
       { label: 'Tailored Services', href: '/services'},
-      { label: 'Hyrdology', href: '/product-hydrology' },
+      { label: 'Hydrology', href: '/product-hydrology' },
       { label: 'Terrain Mapping', href: '/product-terrainmapping' },
       { label: 'Land Deformation Monitoring', href: '/land-deformation-monitoring' },
     ],
