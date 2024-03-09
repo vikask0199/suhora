@@ -1,10 +1,11 @@
 import {
     Box,
     Flex,
-    Link,
+
     SimpleGrid,
     Stack
 } from '@chakra-ui/react'
+
 
 type lanceCurentTheme = {
     currentTheme: string
@@ -54,49 +55,12 @@ import defence from "../../../assets/img/industries/defense.webp";
 // import mining from "../../../assets/img/industries/mining.png";
 
 const categories = [
-    // {
-    //     name: 'Forestry',
-    //     imageUrl:
-    //         forest,
-    //     url: '#',
-    // },
-    // {
-    //     name: 'Agriculture',
-    //     imageUrl:
-    //         agri,
-    //     url: '#',
-    // },
-    // {
-    //     name: 'Disaster & Insurance',
-    //     imageUrl:
-    //         disaster,
-    //     url: '#',
-    // },
-    // {
-    //     name: 'Renewable Energy',
-    //     imageUrl:
-    //         energy,
-    //     url: '#',
-    // },
-    // {
-    //     name: 'Mining',
-    //     imageUrl:
-    //         mining,
-    //     url: '#',
-    // },
-    // {
-    //     name: 'Infrastructure',
-    //     imageUrl:
-    //         infra,
-    //     url: '#',
-    // },
     {
         name: 'Defence & Intelligence',
         imageUrl:
             defence,
-        url: '#',
+        url: '/defence-and-intelligence',
     },
-
 ]
 
 export type ElementType<T extends ReadonlyArray<unknown>> = T extends ReadonlyArray<
@@ -116,6 +80,7 @@ import theme from '../../../theme'
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { textVarient, textVarientSecond } from '../../../animation'
+import { Link } from 'react-router-dom'
 
 interface Props {
     category: Category
@@ -136,7 +101,7 @@ const CategoryCard = (props: Props) => {
 
     return (
         <AnimatedBox position="relative" h="60" w="60" key={category.name} borderRadius="lg" variants={textVarientSecond} whileInView="show" initial="hidden" overflow="hidden" {...rootProps} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-            <Link>
+            <Link to={category.url}>
                 <AspectRatio ratio={1 / 1}>
                     <Image src={category.imageUrl} alt={category.name} fallback={<Skeleton />} />
                 </AspectRatio>
@@ -146,7 +111,7 @@ const CategoryCard = (props: Props) => {
                     bgGradient="linear(to-b, transparent 60%, gray.900)"
                     boxSize="full"
                 />
-
+            
                 <Box position="absolute" bottom="6" width="full" textAlign="center">
                     <Text color={`${isHovered ? `${theme.companyTheme.color.secondry}` : 'White'}`} fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>
                         {category.name}

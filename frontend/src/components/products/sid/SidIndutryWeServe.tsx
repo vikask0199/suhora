@@ -1,7 +1,6 @@
 import {
     Box,
     Flex,
-    Link,
     SimpleGrid,
     Stack
 } from '@chakra-ui/react';
@@ -64,7 +63,7 @@ const categories = [
         name: 'Disaster & Insurance',
         imageUrl:
             disaster,
-        url: '#',
+        url: '/disaster-and-insurance',
     },
     // {
     //     name: 'Renewable Energy',
@@ -110,6 +109,7 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { textVarient } from '../../../animation';
 import theme from '../../../theme';
+import { Link } from 'react-router-dom';
 
 interface Props {
     category: Category
@@ -130,7 +130,7 @@ const CategoryCard = (props: Props) => {
 
     return (
         <AnimatedBox variants={textVarient} whileInView="show" initial="hidden" position="relative" h="60" w="60" key={category.name} borderRadius="lg" overflow="hidden" {...rootProps} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-            <Link>
+            <Link to={category.url}>
                 <AspectRatio ratio={1 / 1}>
                     <Image src={category.imageUrl} alt={category.name} fallback={<Skeleton />} />
                 </AspectRatio>

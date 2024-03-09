@@ -54,8 +54,8 @@ const steps = [
         description: 'Requirments',
     },
     {
-        title: 'SAR processing and production of',
-        description: 'Time-series information',
+        title: 'SAR processing and production',
+        description: 'of Time-series information',
     },
     {
         title: 'Land movement map along with ',
