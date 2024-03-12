@@ -1,10 +1,9 @@
-import { AspectRatio, Box, Button, Flex, Img, Stack, Text } from '@chakra-ui/react';
+import { Box, Button, Flex, Stack, Text } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import sid from "../../../assets/img/products/sid.png";
 import monitor from "../../../assets/img/products/sid_header_image.webp";
 import theme from '../../../theme';
-import agre from "../../../assets/img/industries/defense.webp"
 
 
 type sidProps = {
@@ -13,7 +12,7 @@ type sidProps = {
 
 
 export const SidHome = ({ currentTheme }: sidProps) => {
-  const aspectRatio = 3 / 4
+  // const aspectRatio = 3 / 4
   const AnimatedBox = motion(Box);
   const MotionBox = motion(Box);
 
@@ -33,17 +32,17 @@ export const SidHome = ({ currentTheme }: sidProps) => {
               </Text>
               <Stack direction={{ base: 'column', md: 'row' }} mt="10" spacing="4">
                 <Link to="/contact-us">
-                  <Button width="fit-content" px="8" border={`1px solid ${currentTheme === 'light' ? '#174773' : 'white'}`} variant="outline" color={`${currentTheme === 'light' ? '#174773' : 'white'}`} _hover={{ backgroundColor: theme.companyTheme.color.secondry, border: `1px solid #1266A0`, color: currentTheme === 'light' ? '#fff' : undefined  }} >
+                  <Button width="fit-content" px="8" border={`1px solid ${currentTheme === 'light' ? '#174773' : 'white'}`} variant="outline" color={`${currentTheme === 'light' ? '#174773' : 'white'}`} _hover={{ backgroundColor: theme.companyTheme.color.secondry, border: `1px solid #1266A0`, color: currentTheme === 'light' ? '#fff' : undefined }} >
                     Request Demo
                   </Button>
                 </Link>
               </Stack>
             </Box>
           </AnimatedBox>
-          <Box width={{ base: "100%", md: "40%" }} position="relative" marginTop="90px" display={{ base: "none", md: "block" }}>
+          <Box width={{ base: "100%", md: "35%" }} position="relative" marginTop="90px" display={{ base: "none", md: "block" }}>
             <MotionBox
-              initial={{ scale: 0, x: "-50%", y: "-50%" }}
-              animate={{ scale: 1.1, x: "-50%", y: "-50%" }}
+              initial={{ scale: 0, x: "-110%", y: "-50%" }}
+              animate={{ scale: 1.1, x: "-110%", y: "-50%" }}
               transition={{ delay: 1, duration: 2, stiffness: 100, ease: "easeInOut", }}
               position="absolute"
               top={"50%"}
@@ -77,7 +76,7 @@ export const SidHome = ({ currentTheme }: sidProps) => {
           </Box>
         </Flex>
       </Box>
-      <Flex
+      {/* <Flex
         id="image-wrapper"
         position="absolute"
         insetX="0"
@@ -101,7 +100,7 @@ export const SidHome = ({ currentTheme }: sidProps) => {
           </AspectRatio>
           <Box position="absolute" w="full" h="full" bg="blackAlpha.600" />
         </Box>
-      </Flex>
+      </Flex> */}
     </Box>
   )
 }

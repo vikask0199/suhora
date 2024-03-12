@@ -34,16 +34,16 @@ export const MobileDrawer = ({ toggleTheme, currentTheme }: mobileDrawerprops) =
               <Button size="lg" _hover={{ color: "#1266A0" }} variant="" as={Text} justifyContent="start">
                 Home
               </Button>
-              <DocumentCollapseIndustries closeFunction={closeFromItem}/>
-              <DocumentCollapseProducts closeFunction={closeFromItem}/>
-              <DocumentCollapseServices closeFunction={closeFromItem}/>
+              <DocumentCollapseIndustries closeFunction={closeFromItem} />
+              <DocumentCollapseProducts closeFunction={closeFromItem} />
+              <DocumentCollapseServices closeFunction={closeFromItem} />
               <DocumentCollapseResources closeFunction={closeFromItem} />
               <NavLink to="/contact-us">
                 <Button size="lg" _hover={{ color: "#1266A0" }} as={Text} variant="" justifyContent="start">
                   Contact us
                 </Button>
               </NavLink>
-              <Button onClick={toggleTheme}>
+              <Button onClick={() => (toggleTheme(), closeFromItem())}  >
                 {
                   currentTheme === 'dark' ? <SunIcon /> : <MoonIcon />
                 }

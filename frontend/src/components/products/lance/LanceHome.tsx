@@ -1,7 +1,6 @@
-import { AspectRatio, Box, Button, Flex, Img, Stack, Text } from '@chakra-ui/react';
+import { Box, Button, Flex, Stack, Text } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import agre from "../../../assets/img/industries/defense.webp";
 import lance from "../../../assets/img/products/lance.png";
 import monitor from "../../../assets/img/products/lance_header_image.webp";
 import theme from '../../../theme';
@@ -11,7 +10,7 @@ type lanceProps = {
 }
 
 export const LanceHome = ({ currentTheme }: lanceProps) => {
-  const aspectRatio = 3 / 4
+  // const aspectRatio = 3 / 4
   const AnimatedBox = motion(Box);
   const MotionBox = motion(Box);
 
@@ -38,10 +37,10 @@ export const LanceHome = ({ currentTheme }: lanceProps) => {
               </Stack>
             </Box>
           </AnimatedBox>
-          <Box width={{ base: "100%", md: "40%" }} marginTop="90px" position="relative" display={{ base: "none", md: "block" }}>
+          <Box width={{ base: "100%", md: "35%" }} marginTop="90px" position="relative" display={{ base: "none", md: "block" }}>
             <MotionBox
-              initial={{ scale: 0, x: "-50%", y: "-50%" }}
-              animate={{ scale: 1.1, x: "-50%", y: "-50%" }}
+              initial={{ scale: 0, x: "-110%", y: "-50%" }}
+              animate={{ scale: 1.1, x: "-110%", y: "-50%" }}
               transition={{ delay: 1, duration: 2, stiffness: 100, ease: "easeInOut", }}
               position="absolute"
               top={"50%"}
@@ -75,7 +74,7 @@ export const LanceHome = ({ currentTheme }: lanceProps) => {
           </Box>
         </Flex>
       </Box>
-      <Flex
+      {/* <Flex
         id="image-wrapper"
         position="absolute"
         insetX="0"
@@ -99,7 +98,7 @@ export const LanceHome = ({ currentTheme }: lanceProps) => {
           </AspectRatio>
           <Box position="absolute" w="full" h="full" bg="blackAlpha.600" />
         </Box>
-      </Flex>
+      </Flex> */}
     </Box>
   )
 }
