@@ -171,8 +171,8 @@ const ContactUs = ({ currentTheme }: contactProps) => {
                             setPhone(""),
                             setMessage(""),
                             setSubject("")
-                        window.alert("Our support team will get back to you.")
                         setIsSubmitting(false)
+                        window.alert("Our support team will get back to you.")
                         setTimeout(() => {
                             window.location.reload();
                         }, 1000)
