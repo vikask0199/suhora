@@ -21,16 +21,15 @@ const GalleryHeader = () => {
         <>
             <Box as="section" minH="140px" position="relative" p={10} >
                 <Box py="32" position="relative" zIndex={1} >
-                    <Box maxW='5xl' mx="auto" px={{ base: '6', md: '8' }} color="white" >
+                    <Box maxW='5xl' mx="auto" px={{ base: '3', md: '8' }} color="white" >
                         <Flex justifyContent='center' fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
                             <AnimatedHeading variants={textVarient} initial="hidden" whileInView="show"  >
                                 Imaging Capabilities
                             </AnimatedHeading>
 
-
                         </Flex>
-                        <Flex justifyContent='center'>
-                            <AnimatedText textAlign="center" variants={textVarientSecond} initial="hidden" whileInView="show" mt='1em' fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight} textAlign='center'>
+                        <Flex justifyContent='center' textAlign='center'>
+                            <AnimatedText textAlign="center" variants={textVarientSecond} initial="hidden" whileInView="show" mt='1em' fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight} >
                                 Showcasing Satellite Imaging Unrivaled Surveillance Solutions, Your Budget Friendly Choice
                             </AnimatedText>
                         </Flex>
