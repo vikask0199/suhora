@@ -24,7 +24,7 @@ const DisasterOverlay = () => {
 
             </Flex>
             <Flex justifyContent='center'>
-              <AnimateText variants={textVarientSecond} whileInView="show" initial="hidden" mt='1em' fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>
+              <AnimateText variants={textVarientSecond} textAlign="center" whileInView="show" initial="hidden" mt='1em' fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>
                 Satellite to Ground NRT Insights for Disaster Management & Insurance Transformation
               </AnimateText>
             </Flex>

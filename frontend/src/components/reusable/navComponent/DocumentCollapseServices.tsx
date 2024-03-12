@@ -1,5 +1,5 @@
 import { Button, Collapse, Stack, Text, useDisclosure } from '@chakra-ui/react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { PopoverIcon } from './PopoverIcon';
 type documentCollapseProps = {
     closeFunction: () => void
@@ -16,13 +16,15 @@ export const DocumentCollapseServices = ({ closeFunction }: documentCollapseProp
     return (
         <>
             <Button justifyContent="space-between" variant="tertiary" size="lg" onClick={onToggle}>
-                <Text as="span">Services</Text>
+                <Link to="/services" onClick={closeFunction}>
+                    <Text as="span">Services</Text>
+                </Link>
                 <PopoverIcon isOpen={isOpen} />
             </Button>
             <Collapse in={isOpen} animateOpacity>
                 <Stack spacing="1" alignItems="stretch" ps="4">
                     {routes.map((route) => (
-                        <NavLink key={route.path} to={route.path}  onClick={closeFunction} style={{ textDecoration: 'none' }}>
+                        <NavLink key={route.path} to={route.path} onClick={closeFunction} style={{ textDecoration: 'none' }}>
                             <Button as={Text} variant="" justifyContent="start" _hover={{ color: "#1266A0" }}>
                                 {route.name}
                             </Button>

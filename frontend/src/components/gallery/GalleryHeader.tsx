@@ -30,7 +30,7 @@ const GalleryHeader = () => {
 
                         </Flex>
                         <Flex justifyContent='center'>
-                            <AnimatedText variants={textVarientSecond} initial="hidden" whileInView="show" mt='1em' fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight} textAlign='center'>
+                            <AnimatedText textAlign="center" variants={textVarientSecond} initial="hidden" whileInView="show" mt='1em' fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight} textAlign='center'>
                                 Showcasing Satellite Imaging Unrivaled Surveillance Solutions, Your Budget Friendly Choice
                             </AnimatedText>
                         </Flex>

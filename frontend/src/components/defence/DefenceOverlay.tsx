@@ -22,7 +22,7 @@ const DefenceOverlay = () => {
               </AnimateHeading>
             </Flex>
             <Flex justifyContent='center'>
-              <AnimateText variants={textVarientSecond} whileInView="show" initial="hidden" mt='1em' fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>
+              <AnimateText variants={textVarientSecond} textAlign="center" whileInView="show" initial="hidden" mt='1em' fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>
                 Empowering defense and intelligence with cutting-edge technology
               </AnimateText>
             </Flex>

@@ -20,7 +20,7 @@ const CareerHeader = () => {
               </AnimateHeading>
             </Flex>
             <Flex justifyContent='center'>
-              <AnimateText variants={textVarientSecond} whileInView="show" initial="hidden" mt='1em' fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>
+              <AnimateText textAlign="center" variants={textVarientSecond} whileInView="show" initial="hidden" mt='1em' fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>
                 Embrace each new opportunity as a stepping stone toward your professional growth and fulfillment
               </AnimateText>
             </Flex>

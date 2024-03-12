@@ -22,7 +22,7 @@ const AboutusHeader = () => {
               </AnimateHeading>
             </Flex>
             <Flex justifyContent='center' >
-              <AnimateText mt='1em' fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight} variants={textVarientSecond} whileInView="show" initial="hidden">
+              <AnimateText mt='1em' textAlign="center" fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight} variants={textVarientSecond} whileInView="show" initial="hidden">
                 Transforming industries with AI-driven spatial insights for informed decision making
               </AnimateText>
             </Flex>

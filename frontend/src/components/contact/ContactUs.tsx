@@ -105,7 +105,7 @@ const ContactUs = ({ currentTheme }: contactProps) => {
                             </AnimatedHeading>
                         </Flex>
                         <Flex justifyContent='center'>
-                            <AnimatedText variants={textVarientSecond} whileInView="show" initial="hidden" mt='1em' fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>
+                            <AnimatedText variants={textVarientSecond} textAlign="center" whileInView="show" initial="hidden" mt='1em' fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>
                                 We believe in the power of communication. Reach out to us and let's build something amazing together.
                             </AnimatedText>
                         </Flex>

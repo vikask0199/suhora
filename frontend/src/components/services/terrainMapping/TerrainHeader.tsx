@@ -26,7 +26,7 @@ const TerrainHeader = () => {
               </AnimateHeading>
             </Flex>
             <Flex justifyContent='center'>
-              <AnimateText variants={textVarientSecond} whileInView="show" initial="hidden" mt='1em' fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>
+              <AnimateText variants={textVarientSecond} textAlign="center" whileInView="show" initial="hidden" mt='1em' fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>
                 Elevating decisions with precision in 3D terrain solutions.
               </AnimateText>
             </Flex>

@@ -4,7 +4,7 @@ import { DocumentCollapseIndustries } from './DocumentCollapseIndustries'
 import { ToggleButton } from './ToggleButton'
 import { DocumentCollapseProducts } from './DocumentCollapseProducts'
 import { DocumentCollapseResources } from './DocumentCollapseResources'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import { DocumentCollapseServices } from './DocumentCollapseServices'
 
 type mobileDrawerprops = {
@@ -31,9 +31,11 @@ export const MobileDrawer = ({ toggleTheme, currentTheme }: mobileDrawerprops) =
         <DrawerContent marginTop={20}>
           <DrawerBody p="4">
             <Stack spacing="1">
-              <Button  onClick={()=> closeFromItem()} size="lg" _hover={{ color: "#1266A0" }} variant="" as={Text} justifyContent="start">
-                Home
-              </Button>
+              <Link to="/">
+                <Button onClick={() => closeFromItem()} size="lg" _hover={{ color: "#1266A0" }} variant="" as={Text} justifyContent="start">
+                  Home
+                </Button>
+              </Link>
               <DocumentCollapseIndustries closeFunction={closeFromItem} />
               <DocumentCollapseProducts closeFunction={closeFromItem} />
               <DocumentCollapseServices closeFunction={closeFromItem} />

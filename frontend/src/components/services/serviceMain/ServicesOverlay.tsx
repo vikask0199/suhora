@@ -17,7 +17,7 @@ const ServicesOverlay = () => {
 
             </Flex>
             <Flex justifyContent='center'>
-              <Text mt='1em' fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>
+              <Text mt='1em' textAlign="center" fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>
                Worldwide infrastructure protected with precision mapping 
               </Text>
             </Flex>

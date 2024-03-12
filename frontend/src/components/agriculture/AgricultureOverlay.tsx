@@ -22,10 +22,8 @@ const AgricultureOverlay = () => {
               </AnimateHeading>
             </Flex>
             <Flex justifyContent='center'>
-              <AnimateText variants={textVarientSecond} whileInView="show" initial="hidden" mt='1em' fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>
-
+              <AnimateText variants={textVarientSecond} textAlign="center" whileInView="show" initial="hidden" mt='1em' fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>
                 Satellite data powered Harvest, Optimize yield, Minimize risk
-
               </AnimateText>
             </Flex>
           </Box>

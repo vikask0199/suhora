@@ -28,7 +28,7 @@ export const AboutLand = ({ currentTheme }: aboutSuhoraProps) => {
             <Flex justifyContent="center" fontSize={theme.fonts.mainHeading.size} fontWeight={theme.fonts.mainHeading.weight}>
               <AnimateText variants={textVarient} whileInView="show" initial="hidden">
                 <Text as="span">Land </Text>
-                <Text as="span" color={theme.companyTheme.color.secondry}>Deformation Mapping </Text>
+                <Text as="span" color={theme.companyTheme.color.secondry}>Deformation Monitoring</Text>
               </AnimateText>
             </Flex>
             <AnimateText variants={textVarientSecond} whileInView="show" initial="hidden" color={theme.companyTheme.color.third} fontSize={theme.fonts.subHeading.size} fontWeight={theme.fonts.subHeading.weight} maxW="6xl" >

@@ -22,15 +22,15 @@ export const DocumentPopoverServices = () => {
   return (
     <Popover isOpen={isOpen} onOpen={onOpen} onClose={onClose} trigger="hover" openDelay={0}>
       <PopoverTrigger>
-        <Link to = "/services" style={{ textDecoration: 'none' }}>
-        <Button rightIcon={<PopoverIcon isOpen={isOpen} />} as={Text} _hover={{color: "#1266A0"}}>Services</Button>
+        <Link to="/services" style={{ textDecoration: 'none' }}>
+          <Button rightIcon={<PopoverIcon isOpen={isOpen} />} as={Text} _hover={{ color: "#1266A0" }}>Services</Button>
         </Link>
       </PopoverTrigger>
       <PopoverContent p="2" maxW="fit-content" mr="-180" mt="3">
         <Stack spacing="0" alignItems="stretch">
           {routes.map((route) => (
             <NavLink key={route.path} to={route.path} style={{ textDecoration: 'none' }}>
-              <Button as={Text} justifyContent="start" _hover={{color: "#1266A0"}}>
+              <Button as={Text} justifyContent="start" _hover={{ color: "#1266A0" }}>
                 {route.name}
               </Button>
             </NavLink>

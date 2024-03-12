@@ -26,7 +26,7 @@ const HydrologyHeader = () => {
               </AnimateHeading>
             </Flex>
             <Flex justifyContent='center'>
-              <AnimatedText variants={textVarientSecond} whileInView="show" initial="hidden" mt='1em' fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>
+              <AnimatedText variants={textVarientSecond} textAlign="center" whileInView="show" initial="hidden" mt='1em' fontSize={theme.fonts.subHeadingSecond.size} fontWeight={theme.fonts.subHeadingSecond.weight}>
                 Mitigating flood risks for critical infrastructure worldwide.
               </AnimatedText>
             </Flex>
